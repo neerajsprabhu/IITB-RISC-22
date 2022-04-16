@@ -44,9 +44,9 @@ begin
 		  zero<='0';
 		end if;
     elsif S="10" then
-      temp := (A nand B);
-		Op<=temp;
-		if temp="0000000000000000" then
+      temp := '0'&(A nand B);
+		Op<=temp(15 downto 0);
+		if temp="00000000000000000" then
 		  zero<='1';
 		else
 		  zero <='0';
@@ -67,4 +67,3 @@ begin
   --end if;
 end process;
 end a1;
-    
