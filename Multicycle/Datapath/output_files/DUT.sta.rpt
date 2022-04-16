@@ -1,0 +1,1049 @@
+Timing Analyzer report for DUT
+Sat Apr 16 21:34:26 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Fmax Summary
+  6. Setup Summary
+  7. Hold Summary
+  8. Recovery Summary
+  9. Removal Summary
+ 10. Minimum Pulse Width Summary
+ 11. Setup: 'select_ALU[0]'
+ 12. Setup: 'clk'
+ 13. Setup: 'wr_inc'
+ 14. Hold: 'select_ALU[0]'
+ 15. Hold: 'clk'
+ 16. Hold: 'wr_inc'
+ 17. Setup Transfers
+ 18. Hold Transfers
+ 19. Report TCCS
+ 20. Report RSKM
+ 21. Unconstrained Paths Summary
+ 22. Clock Status Summary
+ 23. Unconstrained Input Ports
+ 24. Unconstrained Output Ports
+ 25. Unconstrained Input Ports
+ 26. Unconstrained Output Ports
+ 27. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; DUT                                                 ;
+; Device Family         ; MAX V                                               ;
+; Device Name           ; 5M2210ZF256C4                                       ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Slow Model                                          ;
+; Rise/Fall Delays      ; Unavailable                                         ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                       ;
++---------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------+
+; Clock Name    ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets           ;
++---------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------+
+; clk           ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }           ;
+; select_ALU[0] ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { select_ALU[0] } ;
+; wr_inc        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { wr_inc }        ;
++---------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------+
+
+
++----------------------------------------------------+
+; Fmax Summary                                       ;
++-----------+-----------------+---------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name    ; Note ;
++-----------+-----------------+---------------+------+
+; 65.09 MHz ; 65.09 MHz       ; clk           ;      ;
+; 82.55 MHz ; 82.55 MHz       ; select_ALU[0] ;      ;
++-----------+-----------------+---------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-----------------------------------------+
+; Setup Summary                           ;
++---------------+---------+---------------+
+; Clock         ; Slack   ; End Point TNS ;
++---------------+---------+---------------+
+; select_ALU[0] ; -16.941 ; -186.440      ;
+; clk           ; -14.363 ; -12789.113    ;
+; wr_inc        ; -8.570  ; -116.862      ;
++---------------+---------+---------------+
+
+
++----------------------------------------+
+; Hold Summary                           ;
++---------------+--------+---------------+
+; Clock         ; Slack  ; End Point TNS ;
++---------------+--------+---------------+
+; select_ALU[0] ; -3.611 ; -10.868       ;
+; clk           ; 1.141  ; 0.000         ;
+; wr_inc        ; 4.207  ; 0.000         ;
++---------------+--------+---------------+
+
+
+--------------------
+; Recovery Summary ;
+--------------------
+No paths to report.
+
+
+-------------------
+; Removal Summary ;
+-------------------
+No paths to report.
+
+
++----------------------------------------+
+; Minimum Pulse Width Summary            ;
++---------------+--------+---------------+
+; Clock         ; Slack  ; End Point TNS ;
++---------------+--------+---------------+
+; clk           ; -2.289 ; -2.289        ;
+; select_ALU[0] ; -2.289 ; -2.289        ;
+; wr_inc        ; -2.289 ; -2.289        ;
++---------------+--------+---------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'select_ALU[0]'                                                                                                 ;
++---------+-------------------+------------------+--------------+---------------+--------------+------------+------------+
+; Slack   ; From Node         ; To Node          ; Launch Clock ; Latch Clock   ; Relationship ; Clock Skew ; Data Delay ;
++---------+-------------------+------------------+--------------+---------------+--------------+------------+------------+
+; -16.941 ; reg:T2_reg|Op[3]  ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 1.901      ; 17.617     ;
+; -16.903 ; reg:T2_reg|Op[4]  ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 1.901      ; 17.579     ;
+; -16.849 ; reg:IR|Op[4]      ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 1.901      ; 17.525     ;
+; -16.794 ; reg:T2_reg|Op[0]  ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 1.901      ; 17.470     ;
+; -16.736 ; reg:T2_reg|Op[5]  ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 1.901      ; 17.412     ;
+; -16.703 ; reg:T2_reg|Op[2]  ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 1.901      ; 17.379     ;
+; -16.591 ; reg:T1_reg|Op[2]  ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 1.901      ; 17.267     ;
+; -16.577 ; reg:T2_reg|Op[1]  ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 1.901      ; 17.253     ;
+; -16.480 ; reg:T1_reg|Op[0]  ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 1.901      ; 17.156     ;
+; -16.322 ; reg:IR|Op[5]      ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 1.901      ; 16.998     ;
+; -16.247 ; reg:T2_reg|Op[3]  ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 1.902      ; 16.932     ;
+; -16.209 ; reg:T2_reg|Op[4]  ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 1.902      ; 16.894     ;
+; -16.155 ; reg:IR|Op[4]      ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 1.902      ; 16.840     ;
+; -16.113 ; reg:T1_reg|Op[4]  ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 1.901      ; 16.789     ;
+; -16.100 ; reg:T2_reg|Op[0]  ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 1.902      ; 16.785     ;
+; -16.042 ; reg:T2_reg|Op[5]  ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 1.902      ; 16.727     ;
+; -16.030 ; reg:T2_reg|Op[6]  ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 1.901      ; 16.706     ;
+; -16.009 ; reg:T2_reg|Op[2]  ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 1.902      ; 16.694     ;
+; -15.938 ; reg:T1_reg|Op[1]  ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 1.901      ; 16.614     ;
+; -15.897 ; reg:T1_reg|Op[2]  ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 1.902      ; 16.582     ;
+; -15.883 ; reg:T2_reg|Op[1]  ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 1.902      ; 16.568     ;
+; -15.786 ; reg:T1_reg|Op[0]  ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 1.902      ; 16.471     ;
+; -15.628 ; reg:IR|Op[5]      ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 1.902      ; 16.313     ;
+; -15.625 ; reg:T2_reg|Op[7]  ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 1.901      ; 16.301     ;
+; -15.419 ; reg:T1_reg|Op[4]  ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 1.902      ; 16.104     ;
+; -15.336 ; reg:T2_reg|Op[6]  ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 1.902      ; 16.021     ;
+; -15.334 ; reg:T1_reg|Op[6]  ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 1.901      ; 16.010     ;
+; -15.244 ; reg:T1_reg|Op[1]  ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 1.902      ; 15.929     ;
+; -14.998 ; reg:IR|Op[3]      ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 1.901      ; 15.674     ;
+; -14.931 ; reg:T2_reg|Op[7]  ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 1.902      ; 15.616     ;
+; -14.925 ; reg:T2_reg|Op[10] ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 1.901      ; 15.601     ;
+; -14.922 ; reg:IR|Op[1]      ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 1.901      ; 15.598     ;
+; -14.859 ; reg:T1_reg|Op[3]  ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 1.901      ; 15.535     ;
+; -14.842 ; reg:IR|Op[6]      ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 1.901      ; 15.518     ;
+; -14.800 ; reg:IR|Op[0]      ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 1.901      ; 15.476     ;
+; -14.769 ; reg:IR|Op[8]      ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 1.901      ; 15.445     ;
+; -14.640 ; reg:T1_reg|Op[6]  ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 1.902      ; 15.325     ;
+; -14.435 ; reg:T1_reg|Op[10] ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 1.901      ; 15.111     ;
+; -14.360 ; reg:T1_reg|Op[9]  ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 1.901      ; 15.036     ;
+; -14.304 ; reg:IR|Op[3]      ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 1.902      ; 14.989     ;
+; -14.247 ; reg:T1_reg|Op[5]  ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 1.901      ; 14.923     ;
+; -14.228 ; reg:IR|Op[1]      ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 1.902      ; 14.913     ;
+; -14.165 ; reg:T1_reg|Op[3]  ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 1.902      ; 14.850     ;
+; -14.155 ; reg:IR|Op[2]      ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 1.901      ; 14.831     ;
+; -14.153 ; reg:T2_reg|Op[8]  ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 1.901      ; 14.829     ;
+; -14.150 ; reg:T2_reg|Op[9]  ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 1.901      ; 14.826     ;
+; -14.148 ; reg:IR|Op[6]      ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 1.902      ; 14.833     ;
+; -14.106 ; reg:IR|Op[0]      ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 1.902      ; 14.791     ;
+; -14.075 ; reg:IR|Op[8]      ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 1.902      ; 14.760     ;
+; -13.666 ; reg:T1_reg|Op[9]  ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 1.902      ; 14.351     ;
+; -13.553 ; reg:T1_reg|Op[5]  ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 1.902      ; 14.238     ;
+; -13.552 ; reg:T2_reg|Op[3]  ; alu:ALU_1|Op[5]  ; clk          ; select_ALU[0] ; 0.500        ; 5.981      ; 18.316     ;
+; -13.514 ; reg:T2_reg|Op[4]  ; alu:ALU_1|Op[5]  ; clk          ; select_ALU[0] ; 0.500        ; 5.981      ; 18.278     ;
+; -13.481 ; reg:T2_reg|Op[0]  ; alu:ALU_1|Op[5]  ; clk          ; select_ALU[0] ; 0.500        ; 5.981      ; 18.245     ;
+; -13.461 ; reg:IR|Op[2]      ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 1.902      ; 14.146     ;
+; -13.460 ; reg:IR|Op[4]      ; alu:ALU_1|Op[5]  ; clk          ; select_ALU[0] ; 0.500        ; 5.981      ; 18.224     ;
+; -13.459 ; reg:T2_reg|Op[8]  ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 1.902      ; 14.144     ;
+; -13.456 ; reg:T2_reg|Op[9]  ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 1.902      ; 14.141     ;
+; -13.455 ; reg:T2_reg|Op[3]  ; alu:ALU_1|Op[11] ; clk          ; select_ALU[0] ; 0.500        ; 6.209      ; 18.364     ;
+; -13.440 ; reg:T2_reg|Op[2]  ; alu:ALU_1|Op[5]  ; clk          ; select_ALU[0] ; 0.500        ; 5.981      ; 18.204     ;
+; -13.417 ; reg:T2_reg|Op[4]  ; alu:ALU_1|Op[11] ; clk          ; select_ALU[0] ; 0.500        ; 6.209      ; 18.326     ;
+; -13.363 ; reg:IR|Op[4]      ; alu:ALU_1|Op[11] ; clk          ; select_ALU[0] ; 0.500        ; 6.209      ; 18.272     ;
+; -13.318 ; reg:T2_reg|Op[11] ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 1.901      ; 13.994     ;
+; -13.308 ; reg:T2_reg|Op[0]  ; alu:ALU_1|Op[11] ; clk          ; select_ALU[0] ; 0.500        ; 6.209      ; 18.217     ;
+; -13.278 ; reg:T1_reg|Op[2]  ; alu:ALU_1|Op[5]  ; clk          ; select_ALU[0] ; 0.500        ; 5.981      ; 18.042     ;
+; -13.264 ; reg:T2_reg|Op[1]  ; alu:ALU_1|Op[5]  ; clk          ; select_ALU[0] ; 0.500        ; 5.981      ; 18.028     ;
+; -13.250 ; reg:T2_reg|Op[5]  ; alu:ALU_1|Op[11] ; clk          ; select_ALU[0] ; 0.500        ; 6.209      ; 18.159     ;
+; -13.217 ; reg:T2_reg|Op[2]  ; alu:ALU_1|Op[11] ; clk          ; select_ALU[0] ; 0.500        ; 6.209      ; 18.126     ;
+; -13.202 ; reg:T2_reg|Op[10] ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 1.902      ; 13.887     ;
+; -13.173 ; reg:T1_reg|Op[4]  ; alu:ALU_1|Op[5]  ; clk          ; select_ALU[0] ; 0.500        ; 5.981      ; 17.937     ;
+; -13.167 ; reg:T1_reg|Op[0]  ; alu:ALU_1|Op[5]  ; clk          ; select_ALU[0] ; 0.500        ; 5.981      ; 17.931     ;
+; -13.137 ; reg:T2_reg|Op[3]  ; alu:ALU_1|Op[14] ; clk          ; select_ALU[0] ; 0.500        ; 5.926      ; 18.401     ;
+; -13.112 ; reg:IR|Op[7]      ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 1.901      ; 13.788     ;
+; -13.105 ; reg:T1_reg|Op[2]  ; alu:ALU_1|Op[11] ; clk          ; select_ALU[0] ; 0.500        ; 6.209      ; 18.014     ;
+; -13.099 ; reg:T2_reg|Op[4]  ; alu:ALU_1|Op[14] ; clk          ; select_ALU[0] ; 0.500        ; 5.926      ; 18.363     ;
+; -13.091 ; reg:T2_reg|Op[1]  ; alu:ALU_1|Op[11] ; clk          ; select_ALU[0] ; 0.500        ; 6.209      ; 18.000     ;
+; -13.045 ; reg:IR|Op[4]      ; alu:ALU_1|Op[14] ; clk          ; select_ALU[0] ; 0.500        ; 5.926      ; 18.309     ;
+; -12.994 ; reg:T1_reg|Op[0]  ; alu:ALU_1|Op[11] ; clk          ; select_ALU[0] ; 0.500        ; 6.209      ; 17.903     ;
+; -12.990 ; reg:T2_reg|Op[0]  ; alu:ALU_1|Op[14] ; clk          ; select_ALU[0] ; 0.500        ; 5.926      ; 18.254     ;
+; -12.932 ; reg:T2_reg|Op[5]  ; alu:ALU_1|Op[14] ; clk          ; select_ALU[0] ; 0.500        ; 5.926      ; 18.196     ;
+; -12.899 ; reg:T2_reg|Op[2]  ; alu:ALU_1|Op[14] ; clk          ; select_ALU[0] ; 0.500        ; 5.926      ; 18.163     ;
+; -12.836 ; reg:IR|Op[5]      ; alu:ALU_1|Op[11] ; clk          ; select_ALU[0] ; 0.500        ; 6.209      ; 17.745     ;
+; -12.787 ; reg:T1_reg|Op[2]  ; alu:ALU_1|Op[14] ; clk          ; select_ALU[0] ; 0.500        ; 5.926      ; 18.051     ;
+; -12.773 ; reg:T2_reg|Op[3]  ; alu:ALU_1|Op[15] ; clk          ; select_ALU[0] ; 0.500        ; 5.905      ; 18.015     ;
+; -12.773 ; reg:T2_reg|Op[1]  ; alu:ALU_1|Op[14] ; clk          ; select_ALU[0] ; 0.500        ; 5.926      ; 18.037     ;
+; -12.735 ; reg:T2_reg|Op[4]  ; alu:ALU_1|Op[15] ; clk          ; select_ALU[0] ; 0.500        ; 5.905      ; 17.977     ;
+; -12.681 ; reg:IR|Op[4]      ; alu:ALU_1|Op[15] ; clk          ; select_ALU[0] ; 0.500        ; 5.905      ; 17.923     ;
+; -12.676 ; reg:T1_reg|Op[0]  ; alu:ALU_1|Op[14] ; clk          ; select_ALU[0] ; 0.500        ; 5.926      ; 17.940     ;
+; -12.627 ; reg:T1_reg|Op[4]  ; alu:ALU_1|Op[11] ; clk          ; select_ALU[0] ; 0.500        ; 6.209      ; 17.536     ;
+; -12.626 ; reg:T2_reg|Op[0]  ; alu:ALU_1|Op[15] ; clk          ; select_ALU[0] ; 0.500        ; 5.905      ; 17.868     ;
+; -12.625 ; reg:T1_reg|Op[1]  ; alu:ALU_1|Op[5]  ; clk          ; select_ALU[0] ; 0.500        ; 5.981      ; 17.389     ;
+; -12.624 ; reg:T2_reg|Op[11] ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 1.902      ; 13.309     ;
+; -12.604 ; reg:T2_reg|Op[3]  ; alu:ALU_1|Op[10] ; clk          ; select_ALU[0] ; 0.500        ; 5.938      ; 17.544     ;
+; -12.592 ; reg:T2_reg|Op[13] ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 1.901      ; 13.268     ;
+; -12.568 ; reg:T2_reg|Op[5]  ; alu:ALU_1|Op[15] ; clk          ; select_ALU[0] ; 0.500        ; 5.905      ; 17.810     ;
+; -12.566 ; reg:T2_reg|Op[4]  ; alu:ALU_1|Op[10] ; clk          ; select_ALU[0] ; 0.500        ; 5.938      ; 17.506     ;
+; -12.544 ; reg:T2_reg|Op[6]  ; alu:ALU_1|Op[11] ; clk          ; select_ALU[0] ; 0.500        ; 6.209      ; 17.453     ;
+; -12.535 ; reg:T2_reg|Op[2]  ; alu:ALU_1|Op[15] ; clk          ; select_ALU[0] ; 0.500        ; 5.905      ; 17.777     ;
+; -12.518 ; reg:IR|Op[5]      ; alu:ALU_1|Op[14] ; clk          ; select_ALU[0] ; 0.500        ; 5.926      ; 17.782     ;
+; -12.512 ; reg:IR|Op[4]      ; alu:ALU_1|Op[10] ; clk          ; select_ALU[0] ; 0.500        ; 5.938      ; 17.452     ;
++---------+-------------------+------------------+--------------+---------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'clk'                                                                                                                ;
++---------+-------------------+-------------------------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node         ; To Node                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+-------------------+-------------------------+--------------+-------------+--------------+------------+------------+
+; -14.363 ; reg:T2_reg|Op[1]  ; reg:T1_reg|Op[13]       ; clk          ; clk         ; 1.000        ; 0.000      ; 15.092     ;
+; -14.332 ; reg:IR|Op[7]      ; reg:T1_reg|Op[14]       ; clk          ; clk         ; 1.000        ; 0.000      ; 15.061     ;
+; -14.216 ; reg:T2_reg|Op[1]  ; reg:T1_reg|Op[6]        ; clk          ; clk         ; 1.000        ; 0.000      ; 14.945     ;
+; -14.120 ; reg:T1_reg|Op[1]  ; reg:T1_reg|Op[13]       ; clk          ; clk         ; 1.000        ; 0.000      ; 14.849     ;
+; -13.973 ; reg:T1_reg|Op[1]  ; reg:T1_reg|Op[6]        ; clk          ; clk         ; 1.000        ; 0.000      ; 14.702     ;
+; -13.965 ; reg:T1_reg|Op[4]  ; memory:Memory_1|mem~504 ; clk          ; clk         ; 1.000        ; 0.000      ; 14.694     ;
+; -13.965 ; reg:T1_reg|Op[4]  ; memory:Memory_1|mem~509 ; clk          ; clk         ; 1.000        ; 0.000      ; 14.694     ;
+; -13.965 ; reg:T1_reg|Op[4]  ; memory:Memory_1|mem~511 ; clk          ; clk         ; 1.000        ; 0.000      ; 14.694     ;
+; -13.965 ; reg:T1_reg|Op[4]  ; memory:Memory_1|mem~515 ; clk          ; clk         ; 1.000        ; 0.000      ; 14.694     ;
+; -13.965 ; reg:T1_reg|Op[4]  ; memory:Memory_1|mem~516 ; clk          ; clk         ; 1.000        ; 0.000      ; 14.694     ;
+; -13.965 ; reg:T1_reg|Op[4]  ; memory:Memory_1|mem~518 ; clk          ; clk         ; 1.000        ; 0.000      ; 14.694     ;
+; -13.937 ; reg:IR|Op[7]      ; reg:T1_reg|Op[13]       ; clk          ; clk         ; 1.000        ; 0.000      ; 14.666     ;
+; -13.922 ; reg:T1_reg|Op[4]  ; memory:Memory_1|mem~255 ; clk          ; clk         ; 1.000        ; 0.000      ; 14.651     ;
+; -13.922 ; reg:T1_reg|Op[4]  ; memory:Memory_1|mem~256 ; clk          ; clk         ; 1.000        ; 0.000      ; 14.651     ;
+; -13.922 ; reg:T1_reg|Op[4]  ; memory:Memory_1|mem~257 ; clk          ; clk         ; 1.000        ; 0.000      ; 14.651     ;
+; -13.922 ; reg:T1_reg|Op[4]  ; memory:Memory_1|mem~258 ; clk          ; clk         ; 1.000        ; 0.000      ; 14.651     ;
+; -13.922 ; reg:T1_reg|Op[4]  ; memory:Memory_1|mem~259 ; clk          ; clk         ; 1.000        ; 0.000      ; 14.651     ;
+; -13.892 ; reg:T2_reg|Op[1]  ; reg:T2_reg|Op[6]        ; clk          ; clk         ; 1.000        ; 0.000      ; 14.621     ;
+; -13.864 ; reg:IR|Op[7]      ; reg:T1_reg|Op[4]        ; clk          ; clk         ; 1.000        ; 0.000      ; 14.593     ;
+; -13.847 ; reg:IR|Op[7]      ; reg:T1_reg|Op[11]       ; clk          ; clk         ; 1.000        ; 0.000      ; 14.576     ;
+; -13.802 ; reg:T1_reg|Op[0]  ; reg:T1_reg|Op[6]        ; clk          ; clk         ; 1.000        ; 0.000      ; 14.531     ;
+; -13.760 ; reg:IR|Op[7]      ; reg:T1_reg|Op[1]        ; clk          ; clk         ; 1.000        ; 0.000      ; 14.489     ;
+; -13.738 ; reg:T1_reg|Op[3]  ; reg:T1_reg|Op[3]        ; clk          ; clk         ; 1.000        ; 0.000      ; 14.467     ;
+; -13.706 ; reg:T1_reg|Op[3]  ; reg:T2_reg|Op[0]        ; clk          ; clk         ; 1.000        ; 0.000      ; 14.435     ;
+; -13.649 ; reg:T1_reg|Op[1]  ; reg:T2_reg|Op[6]        ; clk          ; clk         ; 1.000        ; 0.000      ; 14.378     ;
+; -13.620 ; reg:T2_reg|Op[1]  ; reg:T2_reg|Op[8]        ; clk          ; clk         ; 1.000        ; 0.000      ; 14.349     ;
+; -13.611 ; reg:T2_reg|Op[1]  ; reg:T2_reg|Op[13]       ; clk          ; clk         ; 1.000        ; 0.000      ; 14.340     ;
+; -13.575 ; reg:T1_reg|Op[0]  ; memory:Memory_1|mem~455 ; clk          ; clk         ; 1.000        ; 0.000      ; 14.304     ;
+; -13.575 ; reg:T1_reg|Op[0]  ; memory:Memory_1|mem~456 ; clk          ; clk         ; 1.000        ; 0.000      ; 14.304     ;
+; -13.575 ; reg:T1_reg|Op[0]  ; memory:Memory_1|mem~457 ; clk          ; clk         ; 1.000        ; 0.000      ; 14.304     ;
+; -13.575 ; reg:T1_reg|Op[0]  ; memory:Memory_1|mem~458 ; clk          ; clk         ; 1.000        ; 0.000      ; 14.304     ;
+; -13.575 ; reg:T1_reg|Op[0]  ; memory:Memory_1|mem~461 ; clk          ; clk         ; 1.000        ; 0.000      ; 14.304     ;
+; -13.565 ; reg:T1_reg|Op[14] ; memory:Memory_1|mem~565 ; clk          ; clk         ; 1.000        ; 0.000      ; 14.294     ;
+; -13.564 ; reg:T1_reg|Op[14] ; memory:Memory_1|mem~581 ; clk          ; clk         ; 1.000        ; 0.000      ; 14.293     ;
+; -13.555 ; reg:IR|Op[7]      ; reg:T1_reg|Op[15]       ; clk          ; clk         ; 1.000        ; 0.000      ; 14.284     ;
+; -13.528 ; reg:T1_reg|Op[2]  ; reg:T2_reg|Op[0]        ; clk          ; clk         ; 1.000        ; 0.000      ; 14.257     ;
+; -13.518 ; reg:T1_reg|Op[2]  ; reg:T1_reg|Op[11]       ; clk          ; clk         ; 1.000        ; 0.000      ; 14.247     ;
+; -13.514 ; reg:IR|Op[6]      ; reg:T2_reg|Op[5]        ; clk          ; clk         ; 1.000        ; 0.000      ; 14.243     ;
+; -13.478 ; reg:T1_reg|Op[0]  ; reg:T2_reg|Op[6]        ; clk          ; clk         ; 1.000        ; 0.000      ; 14.207     ;
+; -13.453 ; reg:IR|Op[8]      ; reg:T2_reg|Op[1]        ; clk          ; clk         ; 1.000        ; 0.000      ; 14.182     ;
+; -13.453 ; reg:T2_reg|Op[2]  ; reg:T2_reg|Op[0]        ; clk          ; clk         ; 1.000        ; 0.000      ; 14.182     ;
+; -13.449 ; reg:T1_reg|Op[3]  ; memory:Memory_1|mem~504 ; clk          ; clk         ; 1.000        ; 0.000      ; 14.178     ;
+; -13.449 ; reg:T1_reg|Op[3]  ; memory:Memory_1|mem~509 ; clk          ; clk         ; 1.000        ; 0.000      ; 14.178     ;
+; -13.449 ; reg:T1_reg|Op[3]  ; memory:Memory_1|mem~511 ; clk          ; clk         ; 1.000        ; 0.000      ; 14.178     ;
+; -13.449 ; reg:T1_reg|Op[3]  ; memory:Memory_1|mem~515 ; clk          ; clk         ; 1.000        ; 0.000      ; 14.178     ;
+; -13.449 ; reg:T1_reg|Op[3]  ; memory:Memory_1|mem~516 ; clk          ; clk         ; 1.000        ; 0.000      ; 14.178     ;
+; -13.449 ; reg:T1_reg|Op[3]  ; memory:Memory_1|mem~518 ; clk          ; clk         ; 1.000        ; 0.000      ; 14.178     ;
+; -13.443 ; reg:T2_reg|Op[2]  ; reg:T1_reg|Op[11]       ; clk          ; clk         ; 1.000        ; 0.000      ; 14.172     ;
+; -13.405 ; reg:T1_reg|Op[3]  ; memory:Memory_1|mem~255 ; clk          ; clk         ; 1.000        ; 0.000      ; 14.134     ;
+; -13.405 ; reg:T1_reg|Op[3]  ; memory:Memory_1|mem~256 ; clk          ; clk         ; 1.000        ; 0.000      ; 14.134     ;
+; -13.405 ; reg:T1_reg|Op[3]  ; memory:Memory_1|mem~257 ; clk          ; clk         ; 1.000        ; 0.000      ; 14.134     ;
+; -13.405 ; reg:T1_reg|Op[3]  ; memory:Memory_1|mem~258 ; clk          ; clk         ; 1.000        ; 0.000      ; 14.134     ;
+; -13.405 ; reg:T1_reg|Op[3]  ; memory:Memory_1|mem~259 ; clk          ; clk         ; 1.000        ; 0.000      ; 14.134     ;
+; -13.377 ; reg:T1_reg|Op[1]  ; reg:T2_reg|Op[8]        ; clk          ; clk         ; 1.000        ; 0.000      ; 14.106     ;
+; -13.368 ; reg:T1_reg|Op[1]  ; reg:T2_reg|Op[13]       ; clk          ; clk         ; 1.000        ; 0.000      ; 14.097     ;
+; -13.363 ; reg:IR|Op[8]      ; reg:T2_reg|Op[7]        ; clk          ; clk         ; 1.000        ; 0.000      ; 14.092     ;
+; -13.357 ; reg:T1_reg|Op[3]  ; reg:T1_reg|Op[11]       ; clk          ; clk         ; 1.000        ; 0.000      ; 14.086     ;
+; -13.350 ; reg:T1_reg|Op[3]  ; reg:T2_reg|Op[3]        ; clk          ; clk         ; 1.000        ; 0.000      ; 14.079     ;
+; -13.349 ; reg:T1_reg|Op[3]  ; memory:Memory_1|mem~455 ; clk          ; clk         ; 1.000        ; 0.000      ; 14.078     ;
+; -13.349 ; reg:T1_reg|Op[3]  ; memory:Memory_1|mem~456 ; clk          ; clk         ; 1.000        ; 0.000      ; 14.078     ;
+; -13.349 ; reg:T1_reg|Op[3]  ; memory:Memory_1|mem~457 ; clk          ; clk         ; 1.000        ; 0.000      ; 14.078     ;
+; -13.349 ; reg:T1_reg|Op[3]  ; memory:Memory_1|mem~458 ; clk          ; clk         ; 1.000        ; 0.000      ; 14.078     ;
+; -13.349 ; reg:T1_reg|Op[3]  ; memory:Memory_1|mem~461 ; clk          ; clk         ; 1.000        ; 0.000      ; 14.078     ;
+; -13.340 ; reg:T1_reg|Op[3]  ; reg:T1_reg|Op[0]        ; clk          ; clk         ; 1.000        ; 0.000      ; 14.069     ;
+; -13.330 ; reg:IR|Op[7]      ; reg:T1_reg|Op[0]        ; clk          ; clk         ; 1.000        ; 0.000      ; 14.059     ;
+; -13.324 ; reg:T1_reg|Op[3]  ; reg:IR|Op[1]            ; clk          ; clk         ; 1.000        ; 0.000      ; 14.053     ;
+; -13.321 ; reg:IR|Op[7]      ; reg:T1_reg|Op[8]        ; clk          ; clk         ; 1.000        ; 0.000      ; 14.050     ;
+; -13.320 ; reg:T2_reg|Op[14] ; memory:Memory_1|mem~565 ; clk          ; clk         ; 1.000        ; 0.000      ; 14.049     ;
+; -13.319 ; reg:T2_reg|Op[14] ; memory:Memory_1|mem~581 ; clk          ; clk         ; 1.000        ; 0.000      ; 14.048     ;
+; -13.283 ; reg:T2_reg|Op[1]  ; reg:T1_reg|Op[8]        ; clk          ; clk         ; 1.000        ; 0.000      ; 14.012     ;
+; -13.259 ; reg:T1_reg|Op[0]  ; reg:T2_reg|Op[2]        ; clk          ; clk         ; 1.000        ; 0.000      ; 13.988     ;
+; -13.247 ; reg:T1_reg|Op[3]  ; reg:T2_reg|Op[14]       ; clk          ; clk         ; 1.000        ; 0.000      ; 13.976     ;
+; -13.203 ; reg:T1_reg|Op[0]  ; reg:T1_reg|Op[3]        ; clk          ; clk         ; 1.000        ; 0.000      ; 13.932     ;
+; -13.195 ; reg:T1_reg|Op[0]  ; reg:T1_reg|Op[11]       ; clk          ; clk         ; 1.000        ; 0.000      ; 13.924     ;
+; -13.185 ; reg:T2_reg|Op[0]  ; reg:T1_reg|Op[6]        ; clk          ; clk         ; 1.000        ; 0.000      ; 13.914     ;
+; -13.168 ; reg:T2_reg|Op[4]  ; memory:Memory_1|mem~504 ; clk          ; clk         ; 1.000        ; 0.000      ; 13.897     ;
+; -13.168 ; reg:T2_reg|Op[4]  ; memory:Memory_1|mem~509 ; clk          ; clk         ; 1.000        ; 0.000      ; 13.897     ;
+; -13.168 ; reg:T2_reg|Op[4]  ; memory:Memory_1|mem~511 ; clk          ; clk         ; 1.000        ; 0.000      ; 13.897     ;
+; -13.168 ; reg:T2_reg|Op[4]  ; memory:Memory_1|mem~515 ; clk          ; clk         ; 1.000        ; 0.000      ; 13.897     ;
+; -13.168 ; reg:T2_reg|Op[4]  ; memory:Memory_1|mem~516 ; clk          ; clk         ; 1.000        ; 0.000      ; 13.897     ;
+; -13.168 ; reg:T2_reg|Op[4]  ; memory:Memory_1|mem~518 ; clk          ; clk         ; 1.000        ; 0.000      ; 13.897     ;
+; -13.162 ; reg:T1_reg|Op[2]  ; reg:T1_reg|Op[0]        ; clk          ; clk         ; 1.000        ; 0.000      ; 13.891     ;
+; -13.155 ; reg:T1_reg|Op[3]  ; reg:T2_reg|Op[4]        ; clk          ; clk         ; 1.000        ; 0.000      ; 13.884     ;
+; -13.125 ; reg:T2_reg|Op[4]  ; memory:Memory_1|mem~255 ; clk          ; clk         ; 1.000        ; 0.000      ; 13.854     ;
+; -13.125 ; reg:T2_reg|Op[4]  ; memory:Memory_1|mem~256 ; clk          ; clk         ; 1.000        ; 0.000      ; 13.854     ;
+; -13.125 ; reg:T2_reg|Op[4]  ; memory:Memory_1|mem~257 ; clk          ; clk         ; 1.000        ; 0.000      ; 13.854     ;
+; -13.125 ; reg:T2_reg|Op[4]  ; memory:Memory_1|mem~258 ; clk          ; clk         ; 1.000        ; 0.000      ; 13.854     ;
+; -13.125 ; reg:T2_reg|Op[4]  ; memory:Memory_1|mem~259 ; clk          ; clk         ; 1.000        ; 0.000      ; 13.854     ;
+; -13.124 ; reg:T1_reg|Op[2]  ; memory:Memory_1|mem~455 ; clk          ; clk         ; 1.000        ; 0.000      ; 13.853     ;
+; -13.124 ; reg:T1_reg|Op[2]  ; memory:Memory_1|mem~456 ; clk          ; clk         ; 1.000        ; 0.000      ; 13.853     ;
+; -13.124 ; reg:T1_reg|Op[2]  ; memory:Memory_1|mem~457 ; clk          ; clk         ; 1.000        ; 0.000      ; 13.853     ;
+; -13.124 ; reg:T1_reg|Op[2]  ; memory:Memory_1|mem~458 ; clk          ; clk         ; 1.000        ; 0.000      ; 13.853     ;
+; -13.124 ; reg:T1_reg|Op[2]  ; memory:Memory_1|mem~461 ; clk          ; clk         ; 1.000        ; 0.000      ; 13.853     ;
+; -13.117 ; reg:T2_reg|Op[1]  ; reg:T1_reg|Op[11]       ; clk          ; clk         ; 1.000        ; 0.000      ; 13.846     ;
+; -13.111 ; reg:T2_reg|Op[1]  ; memory:Memory_1|mem~455 ; clk          ; clk         ; 1.000        ; 0.000      ; 13.840     ;
+; -13.111 ; reg:T2_reg|Op[1]  ; memory:Memory_1|mem~456 ; clk          ; clk         ; 1.000        ; 0.000      ; 13.840     ;
+; -13.111 ; reg:T2_reg|Op[1]  ; memory:Memory_1|mem~457 ; clk          ; clk         ; 1.000        ; 0.000      ; 13.840     ;
+; -13.111 ; reg:T2_reg|Op[1]  ; memory:Memory_1|mem~458 ; clk          ; clk         ; 1.000        ; 0.000      ; 13.840     ;
+; -13.111 ; reg:T2_reg|Op[1]  ; memory:Memory_1|mem~461 ; clk          ; clk         ; 1.000        ; 0.000      ; 13.840     ;
+; -13.092 ; reg:T1_reg|Op[0]  ; memory:Memory_1|mem~459 ; clk          ; clk         ; 1.000        ; 0.000      ; 13.821     ;
++---------+-------------------+-------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Setup: 'wr_inc'                                                                                                    ;
++--------+-------------------+-----------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node         ; To Node         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------+-----------------+--------------+-------------+--------------+------------+------------+
+; -8.570 ; reg:T1_reg|Op[7]  ; incr:inc|Op[9]  ; clk          ; wr_inc      ; 0.500        ; 0.083      ; 7.689      ;
+; -8.524 ; reg:T1_reg|Op[0]  ; incr:inc|Op[9]  ; clk          ; wr_inc      ; 0.500        ; 0.083      ; 7.643      ;
+; -8.500 ; reg:T1_reg|Op[2]  ; incr:inc|Op[9]  ; clk          ; wr_inc      ; 0.500        ; 0.083      ; 7.619      ;
+; -8.255 ; reg:T1_reg|Op[9]  ; incr:inc|Op[14] ; clk          ; wr_inc      ; 0.500        ; 0.109      ; 7.383      ;
+; -8.216 ; reg:T1_reg|Op[1]  ; incr:inc|Op[9]  ; clk          ; wr_inc      ; 0.500        ; 0.083      ; 7.335      ;
+; -8.169 ; reg:T1_reg|Op[5]  ; incr:inc|Op[9]  ; clk          ; wr_inc      ; 0.500        ; 0.083      ; 7.288      ;
+; -8.065 ; reg:T1_reg|Op[13] ; incr:inc|Op[14] ; clk          ; wr_inc      ; 0.500        ; 0.109      ; 7.193      ;
+; -7.971 ; reg:T1_reg|Op[7]  ; incr:inc|Op[14] ; clk          ; wr_inc      ; 0.500        ; 0.109      ; 7.099      ;
+; -7.954 ; reg:T1_reg|Op[9]  ; incr:inc|Op[15] ; clk          ; wr_inc      ; 0.500        ; 0.534      ; 6.972      ;
+; -7.925 ; reg:T1_reg|Op[0]  ; incr:inc|Op[14] ; clk          ; wr_inc      ; 0.500        ; 0.109      ; 7.053      ;
+; -7.901 ; reg:T1_reg|Op[2]  ; incr:inc|Op[14] ; clk          ; wr_inc      ; 0.500        ; 0.109      ; 7.029      ;
+; -7.864 ; reg:T1_reg|Op[13] ; incr:inc|Op[15] ; clk          ; wr_inc      ; 0.500        ; 0.534      ; 6.882      ;
+; -7.856 ; reg:T1_reg|Op[7]  ; incr:inc|Op[12] ; clk          ; wr_inc      ; 0.500        ; 0.113      ; 6.997      ;
+; -7.840 ; reg:T1_reg|Op[7]  ; incr:inc|Op[8]  ; clk          ; wr_inc      ; 0.500        ; 0.056      ; 7.058      ;
+; -7.819 ; reg:T1_reg|Op[7]  ; incr:inc|Op[11] ; clk          ; wr_inc      ; 0.500        ; 0.081      ; 7.020      ;
+; -7.810 ; reg:T1_reg|Op[0]  ; incr:inc|Op[12] ; clk          ; wr_inc      ; 0.500        ; 0.113      ; 6.951      ;
+; -7.794 ; reg:T1_reg|Op[0]  ; incr:inc|Op[8]  ; clk          ; wr_inc      ; 0.500        ; 0.056      ; 7.012      ;
+; -7.788 ; reg:T1_reg|Op[9]  ; incr:inc|Op[12] ; clk          ; wr_inc      ; 0.500        ; 0.113      ; 6.929      ;
+; -7.786 ; reg:T1_reg|Op[2]  ; incr:inc|Op[12] ; clk          ; wr_inc      ; 0.500        ; 0.113      ; 6.927      ;
+; -7.773 ; reg:T1_reg|Op[0]  ; incr:inc|Op[11] ; clk          ; wr_inc      ; 0.500        ; 0.081      ; 6.974      ;
+; -7.770 ; reg:T1_reg|Op[2]  ; incr:inc|Op[8]  ; clk          ; wr_inc      ; 0.500        ; 0.056      ; 6.988      ;
+; -7.749 ; reg:T1_reg|Op[9]  ; incr:inc|Op[13] ; clk          ; wr_inc      ; 0.500        ; 0.379      ; 7.438      ;
+; -7.749 ; reg:T1_reg|Op[2]  ; incr:inc|Op[11] ; clk          ; wr_inc      ; 0.500        ; 0.081      ; 6.950      ;
+; -7.670 ; reg:T1_reg|Op[7]  ; incr:inc|Op[15] ; clk          ; wr_inc      ; 0.500        ; 0.534      ; 6.688      ;
+; -7.668 ; reg:T1_reg|Op[7]  ; incr:inc|Op[10] ; clk          ; wr_inc      ; 0.500        ; 0.110      ; 6.933      ;
+; -7.651 ; reg:T1_reg|Op[9]  ; incr:inc|Op[11] ; clk          ; wr_inc      ; 0.500        ; 0.081      ; 6.852      ;
+; -7.634 ; reg:T1_reg|Op[9]  ; incr:inc|Op[9]  ; clk          ; wr_inc      ; 0.500        ; 0.083      ; 6.753      ;
+; -7.624 ; reg:T1_reg|Op[0]  ; incr:inc|Op[15] ; clk          ; wr_inc      ; 0.500        ; 0.534      ; 6.642      ;
+; -7.622 ; reg:T1_reg|Op[0]  ; incr:inc|Op[10] ; clk          ; wr_inc      ; 0.500        ; 0.110      ; 6.887      ;
+; -7.617 ; reg:T1_reg|Op[0]  ; incr:inc|Op[6]  ; clk          ; wr_inc      ; 0.500        ; 0.110      ; 6.874      ;
+; -7.617 ; reg:T1_reg|Op[1]  ; incr:inc|Op[14] ; clk          ; wr_inc      ; 0.500        ; 0.109      ; 6.745      ;
+; -7.600 ; reg:T1_reg|Op[2]  ; incr:inc|Op[15] ; clk          ; wr_inc      ; 0.500        ; 0.534      ; 6.618      ;
+; -7.598 ; reg:T1_reg|Op[2]  ; incr:inc|Op[10] ; clk          ; wr_inc      ; 0.500        ; 0.110      ; 6.863      ;
+; -7.593 ; reg:T1_reg|Op[2]  ; incr:inc|Op[6]  ; clk          ; wr_inc      ; 0.500        ; 0.110      ; 6.850      ;
+; -7.570 ; reg:T1_reg|Op[5]  ; incr:inc|Op[14] ; clk          ; wr_inc      ; 0.500        ; 0.109      ; 6.698      ;
+; -7.502 ; reg:T1_reg|Op[1]  ; incr:inc|Op[12] ; clk          ; wr_inc      ; 0.500        ; 0.113      ; 6.643      ;
+; -7.486 ; reg:T1_reg|Op[1]  ; incr:inc|Op[8]  ; clk          ; wr_inc      ; 0.500        ; 0.056      ; 6.704      ;
+; -7.465 ; reg:T1_reg|Op[1]  ; incr:inc|Op[11] ; clk          ; wr_inc      ; 0.500        ; 0.081      ; 6.666      ;
+; -7.465 ; reg:T1_reg|Op[7]  ; incr:inc|Op[13] ; clk          ; wr_inc      ; 0.500        ; 0.379      ; 7.154      ;
+; -7.455 ; reg:T1_reg|Op[5]  ; incr:inc|Op[12] ; clk          ; wr_inc      ; 0.500        ; 0.113      ; 6.596      ;
+; -7.439 ; reg:T1_reg|Op[5]  ; incr:inc|Op[8]  ; clk          ; wr_inc      ; 0.500        ; 0.056      ; 6.657      ;
+; -7.421 ; reg:T1_reg|Op[6]  ; incr:inc|Op[9]  ; clk          ; wr_inc      ; 0.500        ; 0.083      ; 6.540      ;
+; -7.419 ; reg:T1_reg|Op[0]  ; incr:inc|Op[13] ; clk          ; wr_inc      ; 0.500        ; 0.379      ; 7.108      ;
+; -7.418 ; reg:T1_reg|Op[5]  ; incr:inc|Op[11] ; clk          ; wr_inc      ; 0.500        ; 0.081      ; 6.619      ;
+; -7.413 ; reg:T1_reg|Op[3]  ; incr:inc|Op[9]  ; clk          ; wr_inc      ; 0.500        ; 0.083      ; 6.532      ;
+; -7.408 ; reg:T1_reg|Op[8]  ; incr:inc|Op[14] ; clk          ; wr_inc      ; 0.500        ; 0.109      ; 6.536      ;
+; -7.404 ; reg:T1_reg|Op[14] ; incr:inc|Op[15] ; clk          ; wr_inc      ; 0.500        ; 0.534      ; 6.422      ;
+; -7.400 ; reg:T1_reg|Op[9]  ; incr:inc|Op[10] ; clk          ; wr_inc      ; 0.500        ; 0.110      ; 6.665      ;
+; -7.395 ; reg:T1_reg|Op[2]  ; incr:inc|Op[13] ; clk          ; wr_inc      ; 0.500        ; 0.379      ; 7.084      ;
+; -7.382 ; reg:T1_reg|Op[11] ; incr:inc|Op[14] ; clk          ; wr_inc      ; 0.500        ; 0.109      ; 6.510      ;
+; -7.355 ; reg:T1_reg|Op[8]  ; incr:inc|Op[9]  ; clk          ; wr_inc      ; 0.500        ; 0.083      ; 6.474      ;
+; -7.316 ; reg:T1_reg|Op[1]  ; incr:inc|Op[15] ; clk          ; wr_inc      ; 0.500        ; 0.534      ; 6.334      ;
+; -7.314 ; reg:T1_reg|Op[1]  ; incr:inc|Op[10] ; clk          ; wr_inc      ; 0.500        ; 0.110      ; 6.579      ;
+; -7.309 ; reg:T1_reg|Op[1]  ; incr:inc|Op[6]  ; clk          ; wr_inc      ; 0.500        ; 0.110      ; 6.566      ;
+; -7.305 ; reg:T1_reg|Op[4]  ; incr:inc|Op[9]  ; clk          ; wr_inc      ; 0.500        ; 0.083      ; 6.424      ;
+; -7.291 ; reg:T1_reg|Op[0]  ; incr:inc|Op[7]  ; clk          ; wr_inc      ; 0.500        ; 0.078      ; 6.514      ;
+; -7.269 ; reg:T1_reg|Op[5]  ; incr:inc|Op[15] ; clk          ; wr_inc      ; 0.500        ; 0.534      ; 6.287      ;
+; -7.267 ; reg:T1_reg|Op[5]  ; incr:inc|Op[10] ; clk          ; wr_inc      ; 0.500        ; 0.110      ; 6.532      ;
+; -7.267 ; reg:T1_reg|Op[2]  ; incr:inc|Op[7]  ; clk          ; wr_inc      ; 0.500        ; 0.078      ; 6.490      ;
+; -7.204 ; reg:T1_reg|Op[0]  ; incr:inc|Op[4]  ; clk          ; wr_inc      ; 0.500        ; 0.114      ; 6.330      ;
+; -7.180 ; reg:T1_reg|Op[2]  ; incr:inc|Op[4]  ; clk          ; wr_inc      ; 0.500        ; 0.114      ; 6.306      ;
+; -7.178 ; reg:T1_reg|Op[12] ; incr:inc|Op[14] ; clk          ; wr_inc      ; 0.500        ; 0.109      ; 6.306      ;
+; -7.111 ; reg:T1_reg|Op[1]  ; incr:inc|Op[13] ; clk          ; wr_inc      ; 0.500        ; 0.379      ; 6.800      ;
+; -7.107 ; reg:T1_reg|Op[8]  ; incr:inc|Op[15] ; clk          ; wr_inc      ; 0.500        ; 0.534      ; 6.125      ;
+; -7.081 ; reg:T1_reg|Op[11] ; incr:inc|Op[15] ; clk          ; wr_inc      ; 0.500        ; 0.534      ; 6.099      ;
+; -7.064 ; reg:T1_reg|Op[5]  ; incr:inc|Op[13] ; clk          ; wr_inc      ; 0.500        ; 0.379      ; 6.753      ;
+; -7.037 ; reg:T1_reg|Op[14] ; incr:inc|Op[14] ; clk          ; wr_inc      ; 0.500        ; 0.109      ; 6.165      ;
+; -6.992 ; reg:T1_reg|Op[5]  ; incr:inc|Op[6]  ; clk          ; wr_inc      ; 0.500        ; 0.110      ; 6.249      ;
+; -6.983 ; reg:T1_reg|Op[1]  ; incr:inc|Op[7]  ; clk          ; wr_inc      ; 0.500        ; 0.078      ; 6.206      ;
+; -6.941 ; reg:T1_reg|Op[8]  ; incr:inc|Op[12] ; clk          ; wr_inc      ; 0.500        ; 0.113      ; 6.082      ;
+; -6.915 ; reg:T1_reg|Op[11] ; incr:inc|Op[12] ; clk          ; wr_inc      ; 0.500        ; 0.113      ; 6.056      ;
+; -6.902 ; reg:T1_reg|Op[8]  ; incr:inc|Op[13] ; clk          ; wr_inc      ; 0.500        ; 0.379      ; 6.591      ;
+; -6.896 ; reg:T1_reg|Op[1]  ; incr:inc|Op[4]  ; clk          ; wr_inc      ; 0.500        ; 0.114      ; 6.022      ;
+; -6.877 ; reg:T1_reg|Op[12] ; incr:inc|Op[15] ; clk          ; wr_inc      ; 0.500        ; 0.534      ; 5.895      ;
+; -6.876 ; reg:T1_reg|Op[11] ; incr:inc|Op[13] ; clk          ; wr_inc      ; 0.500        ; 0.379      ; 6.565      ;
+; -6.845 ; reg:T1_reg|Op[13] ; incr:inc|Op[13] ; clk          ; wr_inc      ; 0.500        ; 0.379      ; 6.534      ;
+; -6.822 ; reg:T1_reg|Op[6]  ; incr:inc|Op[14] ; clk          ; wr_inc      ; 0.500        ; 0.109      ; 5.950      ;
+; -6.814 ; reg:T1_reg|Op[3]  ; incr:inc|Op[14] ; clk          ; wr_inc      ; 0.500        ; 0.109      ; 5.942      ;
+; -6.804 ; reg:T1_reg|Op[8]  ; incr:inc|Op[11] ; clk          ; wr_inc      ; 0.500        ; 0.081      ; 6.005      ;
+; -6.766 ; reg:T1_reg|Op[5]  ; incr:inc|Op[7]  ; clk          ; wr_inc      ; 0.500        ; 0.078      ; 5.989      ;
+; -6.711 ; reg:T1_reg|Op[0]  ; incr:inc|Op[1]  ; clk          ; wr_inc      ; 0.500        ; 0.092      ; 5.936      ;
+; -6.707 ; reg:T1_reg|Op[6]  ; incr:inc|Op[12] ; clk          ; wr_inc      ; 0.500        ; 0.113      ; 5.848      ;
+; -6.706 ; reg:T1_reg|Op[4]  ; incr:inc|Op[14] ; clk          ; wr_inc      ; 0.500        ; 0.109      ; 5.834      ;
+; -6.699 ; reg:T1_reg|Op[3]  ; incr:inc|Op[12] ; clk          ; wr_inc      ; 0.500        ; 0.113      ; 5.840      ;
+; -6.691 ; reg:T1_reg|Op[6]  ; incr:inc|Op[8]  ; clk          ; wr_inc      ; 0.500        ; 0.056      ; 5.909      ;
+; -6.688 ; reg:T1_reg|Op[0]  ; incr:inc|Op[3]  ; clk          ; wr_inc      ; 0.500        ; 0.136      ; 6.092      ;
+; -6.683 ; reg:T1_reg|Op[3]  ; incr:inc|Op[8]  ; clk          ; wr_inc      ; 0.500        ; 0.056      ; 5.901      ;
+; -6.672 ; reg:T1_reg|Op[12] ; incr:inc|Op[13] ; clk          ; wr_inc      ; 0.500        ; 0.379      ; 6.361      ;
+; -6.670 ; reg:T1_reg|Op[6]  ; incr:inc|Op[11] ; clk          ; wr_inc      ; 0.500        ; 0.081      ; 5.871      ;
+; -6.664 ; reg:T1_reg|Op[2]  ; incr:inc|Op[3]  ; clk          ; wr_inc      ; 0.500        ; 0.136      ; 6.068      ;
+; -6.662 ; reg:T1_reg|Op[3]  ; incr:inc|Op[11] ; clk          ; wr_inc      ; 0.500        ; 0.081      ; 5.863      ;
+; -6.591 ; reg:T1_reg|Op[4]  ; incr:inc|Op[12] ; clk          ; wr_inc      ; 0.500        ; 0.113      ; 5.732      ;
+; -6.575 ; reg:T1_reg|Op[4]  ; incr:inc|Op[8]  ; clk          ; wr_inc      ; 0.500        ; 0.056      ; 5.793      ;
+; -6.554 ; reg:T1_reg|Op[4]  ; incr:inc|Op[11] ; clk          ; wr_inc      ; 0.500        ; 0.081      ; 5.755      ;
+; -6.553 ; reg:T1_reg|Op[8]  ; incr:inc|Op[10] ; clk          ; wr_inc      ; 0.500        ; 0.110      ; 5.818      ;
+; -6.537 ; reg:T1_reg|Op[7]  ; incr:inc|Op[7]  ; clk          ; wr_inc      ; 0.500        ; 0.078      ; 5.760      ;
+; -6.521 ; reg:T1_reg|Op[6]  ; incr:inc|Op[15] ; clk          ; wr_inc      ; 0.500        ; 0.534      ; 5.539      ;
+; -6.519 ; reg:T1_reg|Op[6]  ; incr:inc|Op[10] ; clk          ; wr_inc      ; 0.500        ; 0.110      ; 5.784      ;
+; -6.513 ; reg:T1_reg|Op[3]  ; incr:inc|Op[15] ; clk          ; wr_inc      ; 0.500        ; 0.534      ; 5.531      ;
+; -6.511 ; reg:T1_reg|Op[3]  ; incr:inc|Op[10] ; clk          ; wr_inc      ; 0.500        ; 0.110      ; 5.776      ;
++--------+-------------------+-----------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'select_ALU[0]'                                                                                                  ;
++--------+-------------------+------------------+---------------+---------------+--------------+------------+------------+
+; Slack  ; From Node         ; To Node          ; Launch Clock  ; Latch Clock   ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------+------------------+---------------+---------------+--------------+------------+------------+
+; -3.611 ; select_ALU[0]     ; alu:ALU_1|Op[7]  ; select_ALU[0] ; select_ALU[0] ; 0.000        ; 9.165      ; 5.554      ;
+; -3.265 ; select_ALU[0]     ; alu:ALU_1|Op[13] ; select_ALU[0] ; select_ALU[0] ; 0.000        ; 9.164      ; 5.899      ;
+; -3.111 ; select_ALU[0]     ; alu:ALU_1|Op[7]  ; select_ALU[0] ; select_ALU[0] ; -0.500       ; 9.165      ; 5.554      ;
+; -2.765 ; select_ALU[0]     ; alu:ALU_1|Op[13] ; select_ALU[0] ; select_ALU[0] ; -0.500       ; 9.164      ; 5.899      ;
+; -1.817 ; select_ALU[0]     ; alu:ALU_1|Op[5]  ; select_ALU[0] ; select_ALU[0] ; 0.000        ; 9.193      ; 7.376      ;
+; -1.317 ; select_ALU[0]     ; alu:ALU_1|Op[5]  ; select_ALU[0] ; select_ALU[0] ; -0.500       ; 9.193      ; 7.376      ;
+; -0.925 ; reg:IR|Op[7]      ; alu:ALU_1|Op[7]  ; clk           ; select_ALU[0] ; -0.500       ; 5.953      ; 4.528      ;
+; -0.797 ; reg:T2_reg|Op[7]  ; alu:ALU_1|Op[7]  ; clk           ; select_ALU[0] ; -0.500       ; 5.953      ; 4.656      ;
+; -0.762 ; select_ALU[0]     ; alu:ALU_1|Op[15] ; select_ALU[0] ; select_ALU[0] ; 0.000        ; 9.117      ; 8.355      ;
+; -0.757 ; select_ALU[0]     ; alu:ALU_1|Op[2]  ; select_ALU[0] ; select_ALU[0] ; 0.000        ; 9.198      ; 8.441      ;
+; -0.466 ; select_ALU[0]     ; alu:ALU_1|carry  ; select_ALU[0] ; select_ALU[0] ; 0.000        ; 5.114      ; 4.648      ;
+; -0.262 ; select_ALU[0]     ; alu:ALU_1|Op[15] ; select_ALU[0] ; select_ALU[0] ; -0.500       ; 9.117      ; 8.355      ;
+; -0.257 ; select_ALU[0]     ; alu:ALU_1|Op[2]  ; select_ALU[0] ; select_ALU[0] ; -0.500       ; 9.198      ; 8.441      ;
+; -0.130 ; select_ALU[0]     ; alu:ALU_1|Op[14] ; select_ALU[0] ; select_ALU[0] ; 0.000        ; 9.138      ; 9.008      ;
+; -0.060 ; select_ALU[0]     ; alu:ALU_1|zero   ; select_ALU[0] ; select_ALU[0] ; 0.000        ; 5.113      ; 5.053      ;
+; 0.034  ; select_ALU[0]     ; alu:ALU_1|carry  ; select_ALU[0] ; select_ALU[0] ; -0.500       ; 5.114      ; 4.648      ;
+; 0.210  ; reg:T2_reg|Op[6]  ; alu:ALU_1|Op[7]  ; clk           ; select_ALU[0] ; -0.500       ; 5.953      ; 5.663      ;
+; 0.370  ; select_ALU[0]     ; alu:ALU_1|Op[14] ; select_ALU[0] ; select_ALU[0] ; -0.500       ; 9.138      ; 9.008      ;
+; 0.440  ; select_ALU[0]     ; alu:ALU_1|zero   ; select_ALU[0] ; select_ALU[0] ; -0.500       ; 5.113      ; 5.053      ;
+; 0.445  ; reg:IR|Op[5]      ; alu:ALU_1|Op[7]  ; clk           ; select_ALU[0] ; -0.500       ; 5.953      ; 5.898      ;
+; 0.586  ; select_ALU[0]     ; alu:ALU_1|Op[11] ; select_ALU[0] ; select_ALU[0] ; 0.000        ; 9.421      ; 10.007     ;
+; 0.751  ; reg:T1_reg|Op[3]  ; alu:ALU_1|Op[3]  ; clk           ; select_ALU[0] ; -0.500       ; 5.978      ; 6.229      ;
+; 0.870  ; reg:T1_reg|Op[6]  ; alu:ALU_1|Op[6]  ; clk           ; select_ALU[0] ; -0.500       ; 5.985      ; 6.355      ;
+; 0.972  ; reg:T1_reg|Op[13] ; alu:ALU_1|Op[13] ; clk           ; select_ALU[0] ; -0.500       ; 5.952      ; 6.424      ;
+; 0.995  ; reg:IR|Op[2]      ; alu:ALU_1|Op[7]  ; clk           ; select_ALU[0] ; -0.500       ; 5.953      ; 6.448      ;
+; 1.086  ; select_ALU[0]     ; alu:ALU_1|Op[11] ; select_ALU[0] ; select_ALU[0] ; -0.500       ; 9.421      ; 10.007     ;
+; 1.311  ; select_ALU[0]     ; alu:ALU_1|Op[1]  ; select_ALU[0] ; select_ALU[0] ; 0.000        ; 9.136      ; 10.447     ;
+; 1.321  ; select_ALU[0]     ; alu:ALU_1|Op[3]  ; select_ALU[0] ; select_ALU[0] ; 0.000        ; 9.190      ; 10.511     ;
+; 1.352  ; reg:T1_reg|Op[1]  ; alu:ALU_1|Op[1]  ; clk           ; select_ALU[0] ; -0.500       ; 5.924      ; 6.776      ;
+; 1.427  ; select_ALU[0]     ; alu:ALU_1|Op[12] ; select_ALU[0] ; select_ALU[0] ; 0.000        ; 9.117      ; 10.544     ;
+; 1.430  ; reg:T1_reg|Op[15] ; alu:ALU_1|Op[15] ; clk           ; select_ALU[0] ; -0.500       ; 5.905      ; 6.835      ;
+; 1.456  ; select_ALU[0]     ; alu:ALU_1|Op[10] ; select_ALU[0] ; select_ALU[0] ; 0.000        ; 9.150      ; 10.606     ;
+; 1.460  ; reg:T1_reg|Op[5]  ; alu:ALU_1|Op[7]  ; clk           ; select_ALU[0] ; -0.500       ; 5.953      ; 6.913      ;
+; 1.545  ; reg:T1_reg|Op[8]  ; alu:ALU_1|Op[8]  ; clk           ; select_ALU[0] ; -0.500       ; 5.942      ; 6.987      ;
+; 1.566  ; reg:T2_reg|Op[6]  ; alu:ALU_1|Op[6]  ; clk           ; select_ALU[0] ; -0.500       ; 5.985      ; 7.051      ;
+; 1.576  ; reg:T2_reg|Op[12] ; alu:ALU_1|Op[13] ; clk           ; select_ALU[0] ; -0.500       ; 5.952      ; 7.028      ;
+; 1.640  ; reg:IR|Op[0]      ; alu:ALU_1|Op[7]  ; clk           ; select_ALU[0] ; -0.500       ; 5.953      ; 7.093      ;
+; 1.684  ; reg:T2_reg|Op[13] ; alu:ALU_1|Op[13] ; clk           ; select_ALU[0] ; -0.500       ; 5.952      ; 7.136      ;
+; 1.718  ; select_ALU[0]     ; alu:ALU_1|Op[6]  ; select_ALU[0] ; select_ALU[0] ; 0.000        ; 9.197      ; 10.915     ;
+; 1.762  ; reg:IR|Op[1]      ; alu:ALU_1|Op[7]  ; clk           ; select_ALU[0] ; -0.500       ; 5.953      ; 7.215      ;
+; 1.798  ; reg:T1_reg|Op[10] ; alu:ALU_1|Op[10] ; clk           ; select_ALU[0] ; -0.500       ; 5.938      ; 7.236      ;
+; 1.811  ; select_ALU[0]     ; alu:ALU_1|Op[1]  ; select_ALU[0] ; select_ALU[0] ; -0.500       ; 9.136      ; 10.447     ;
+; 1.813  ; reg:T2_reg|Op[5]  ; alu:ALU_1|Op[7]  ; clk           ; select_ALU[0] ; -0.500       ; 5.953      ; 7.266      ;
+; 1.821  ; select_ALU[0]     ; alu:ALU_1|Op[3]  ; select_ALU[0] ; select_ALU[0] ; -0.500       ; 9.190      ; 10.511     ;
+; 1.879  ; reg:T2_reg|Op[3]  ; alu:ALU_1|Op[3]  ; clk           ; select_ALU[0] ; -0.500       ; 5.978      ; 7.357      ;
+; 1.888  ; reg:IR|Op[3]      ; alu:ALU_1|Op[7]  ; clk           ; select_ALU[0] ; -0.500       ; 5.953      ; 7.341      ;
+; 1.918  ; reg:T2_reg|Op[9]  ; alu:ALU_1|Op[9]  ; clk           ; select_ALU[0] ; -0.500       ; 5.979      ; 7.397      ;
+; 1.927  ; select_ALU[0]     ; alu:ALU_1|Op[12] ; select_ALU[0] ; select_ALU[0] ; -0.500       ; 9.117      ; 10.544     ;
+; 1.956  ; select_ALU[0]     ; alu:ALU_1|Op[10] ; select_ALU[0] ; select_ALU[0] ; -0.500       ; 9.150      ; 10.606     ;
+; 1.965  ; reg:T2_reg|Op[8]  ; alu:ALU_1|Op[8]  ; clk           ; select_ALU[0] ; -0.500       ; 5.942      ; 7.407      ;
+; 1.991  ; reg:T2_reg|Op[1]  ; alu:ALU_1|Op[1]  ; clk           ; select_ALU[0] ; -0.500       ; 5.924      ; 7.415      ;
+; 2.035  ; reg:T1_reg|Op[3]  ; alu:ALU_1|Op[7]  ; clk           ; select_ALU[0] ; -0.500       ; 5.953      ; 7.488      ;
+; 2.055  ; reg:IR|Op[6]      ; alu:ALU_1|Op[7]  ; clk           ; select_ALU[0] ; -0.500       ; 5.953      ; 7.508      ;
+; 2.079  ; reg:T1_reg|Op[7]  ; alu:ALU_1|Op[7]  ; clk           ; select_ALU[0] ; -0.500       ; 5.953      ; 7.532      ;
+; 2.218  ; select_ALU[0]     ; alu:ALU_1|Op[6]  ; select_ALU[0] ; select_ALU[0] ; -0.500       ; 9.197      ; 10.915     ;
+; 2.228  ; reg:IR|Op[2]      ; alu:ALU_1|Op[2]  ; clk           ; select_ALU[0] ; -0.500       ; 5.986      ; 7.714      ;
+; 2.288  ; reg:T2_reg|Op[10] ; alu:ALU_1|Op[10] ; clk           ; select_ALU[0] ; -0.500       ; 5.938      ; 7.726      ;
+; 2.342  ; reg:T2_reg|Op[12] ; alu:ALU_1|Op[12] ; clk           ; select_ALU[0] ; -0.500       ; 5.905      ; 7.747      ;
+; 2.463  ; reg:T2_reg|Op[8]  ; alu:ALU_1|Op[9]  ; clk           ; select_ALU[0] ; -0.500       ; 5.979      ; 7.942      ;
+; 2.528  ; reg:T2_reg|Op[4]  ; alu:ALU_1|Op[7]  ; clk           ; select_ALU[0] ; -0.500       ; 5.953      ; 7.981      ;
+; 2.547  ; reg:T1_reg|Op[6]  ; alu:ALU_1|Op[7]  ; clk           ; select_ALU[0] ; -0.500       ; 5.953      ; 8.000      ;
+; 2.574  ; reg:T2_reg|Op[14] ; alu:ALU_1|Op[15] ; clk           ; select_ALU[0] ; -0.500       ; 5.905      ; 7.979      ;
+; 2.586  ; reg:T1_reg|Op[11] ; alu:ALU_1|Op[11] ; clk           ; select_ALU[0] ; -0.500       ; 6.209      ; 8.295      ;
+; 2.651  ; reg:T2_reg|Op[15] ; alu:ALU_1|Op[15] ; clk           ; select_ALU[0] ; -0.500       ; 5.905      ; 8.056      ;
+; 2.694  ; reg:T2_reg|Op[2]  ; alu:ALU_1|Op[2]  ; clk           ; select_ALU[0] ; -0.500       ; 5.986      ; 8.180      ;
+; 2.756  ; reg:T1_reg|Op[12] ; alu:ALU_1|Op[12] ; clk           ; select_ALU[0] ; -0.500       ; 5.905      ; 8.161      ;
+; 2.769  ; reg:T1_reg|Op[2]  ; alu:ALU_1|Op[2]  ; clk           ; select_ALU[0] ; -0.500       ; 5.986      ; 8.255      ;
+; 2.778  ; reg:T1_reg|Op[1]  ; alu:ALU_1|Op[7]  ; clk           ; select_ALU[0] ; -0.500       ; 5.953      ; 8.231      ;
+; 2.806  ; select_ALU[0]     ; alu:ALU_1|Op[0]  ; select_ALU[0] ; select_ALU[0] ; 0.000        ; 9.141      ; 11.947     ;
+; 2.812  ; reg:IR|Op[8]      ; alu:ALU_1|Op[9]  ; clk           ; select_ALU[0] ; -0.500       ; 5.979      ; 8.291      ;
+; 2.871  ; reg:IR|Op[8]      ; alu:ALU_1|Op[15] ; clk           ; select_ALU[0] ; -0.500       ; 5.905      ; 8.276      ;
+; 2.876  ; reg:IR|Op[3]      ; alu:ALU_1|Op[3]  ; clk           ; select_ALU[0] ; -0.500       ; 5.978      ; 8.354      ;
+; 2.878  ; reg:IR|Op[2]      ; alu:ALU_1|Op[3]  ; clk           ; select_ALU[0] ; -0.500       ; 5.978      ; 8.356      ;
+; 2.890  ; reg:T2_reg|Op[2]  ; alu:ALU_1|Op[7]  ; clk           ; select_ALU[0] ; -0.500       ; 5.953      ; 8.343      ;
+; 2.974  ; reg:IR|Op[0]      ; alu:ALU_1|Op[0]  ; clk           ; select_ALU[0] ; -0.500       ; 5.929      ; 8.403      ;
+; 2.998  ; reg:T1_reg|Op[9]  ; alu:ALU_1|Op[9]  ; clk           ; select_ALU[0] ; -0.500       ; 5.979      ; 8.477      ;
+; 3.088  ; reg:IR|Op[5]      ; alu:ALU_1|Op[9]  ; clk           ; select_ALU[0] ; -0.500       ; 5.979      ; 8.567      ;
+; 3.133  ; reg:IR|Op[1]      ; alu:ALU_1|Op[1]  ; clk           ; select_ALU[0] ; -0.500       ; 5.924      ; 8.557      ;
+; 3.147  ; reg:IR|Op[5]      ; alu:ALU_1|Op[15] ; clk           ; select_ALU[0] ; -0.500       ; 5.905      ; 8.552      ;
+; 3.163  ; reg:T2_reg|Op[3]  ; alu:ALU_1|Op[7]  ; clk           ; select_ALU[0] ; -0.500       ; 5.953      ; 8.616      ;
+; 3.180  ; reg:T2_reg|Op[1]  ; alu:ALU_1|Op[7]  ; clk           ; select_ALU[0] ; -0.500       ; 5.953      ; 8.633      ;
+; 3.243  ; reg:T2_reg|Op[0]  ; alu:ALU_1|Op[7]  ; clk           ; select_ALU[0] ; -0.500       ; 5.953      ; 8.696      ;
+; 3.306  ; select_ALU[0]     ; alu:ALU_1|Op[0]  ; select_ALU[0] ; select_ALU[0] ; -0.500       ; 9.141      ; 11.947     ;
+; 3.320  ; reg:T1_reg|Op[0]  ; alu:ALU_1|Op[7]  ; clk           ; select_ALU[0] ; -0.500       ; 5.953      ; 8.773      ;
+; 3.326  ; reg:T1_reg|Op[4]  ; alu:ALU_1|Op[7]  ; clk           ; select_ALU[0] ; -0.500       ; 5.953      ; 8.779      ;
+; 3.406  ; reg:IR|Op[0]      ; alu:ALU_1|Op[2]  ; clk           ; select_ALU[0] ; -0.500       ; 5.986      ; 8.892      ;
+; 3.424  ; reg:IR|Op[0]      ; alu:ALU_1|Op[3]  ; clk           ; select_ALU[0] ; -0.500       ; 5.978      ; 8.902      ;
+; 3.431  ; reg:T1_reg|Op[2]  ; alu:ALU_1|Op[7]  ; clk           ; select_ALU[0] ; -0.500       ; 5.953      ; 8.884      ;
+; 3.492  ; reg:T2_reg|Op[2]  ; alu:ALU_1|Op[3]  ; clk           ; select_ALU[0] ; -0.500       ; 5.978      ; 8.970      ;
+; 3.528  ; reg:IR|Op[1]      ; alu:ALU_1|Op[2]  ; clk           ; select_ALU[0] ; -0.500       ; 5.986      ; 9.014      ;
+; 3.536  ; reg:T2_reg|Op[13] ; alu:ALU_1|Op[15] ; clk           ; select_ALU[0] ; -0.500       ; 5.905      ; 8.941      ;
+; 3.543  ; reg:T1_reg|Op[0]  ; alu:ALU_1|Op[1]  ; clk           ; select_ALU[0] ; -0.500       ; 5.924      ; 8.967      ;
+; 3.546  ; reg:IR|Op[1]      ; alu:ALU_1|Op[3]  ; clk           ; select_ALU[0] ; -0.500       ; 5.978      ; 9.024      ;
+; 3.567  ; reg:T1_reg|Op[2]  ; alu:ALU_1|Op[3]  ; clk           ; select_ALU[0] ; -0.500       ; 5.978      ; 9.045      ;
+; 3.574  ; reg:T2_reg|Op[5]  ; alu:ALU_1|Op[6]  ; clk           ; select_ALU[0] ; -0.500       ; 5.985      ; 9.059      ;
+; 3.593  ; reg:IR|Op[8]      ; alu:ALU_1|Op[13] ; clk           ; select_ALU[0] ; -0.500       ; 5.952      ; 9.045      ;
+; 3.613  ; reg:IR|Op[4]      ; alu:ALU_1|Op[7]  ; clk           ; select_ALU[0] ; -0.500       ; 5.953      ; 9.066      ;
+; 3.733  ; reg:T2_reg|Op[14] ; alu:ALU_1|Op[14] ; clk           ; select_ALU[0] ; -0.500       ; 5.926      ; 9.159      ;
+; 3.753  ; reg:IR|Op[0]      ; alu:ALU_1|zero   ; clk           ; select_ALU[0] ; -0.500       ; 1.901      ; 5.154      ;
+; 3.816  ; reg:IR|Op[6]      ; alu:ALU_1|Op[6]  ; clk           ; select_ALU[0] ; -0.500       ; 5.985      ; 9.301      ;
++--------+-------------------+------------------+---------------+---------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'clk'                                                                                                                     ;
++-------+------------------------+-------------------------+---------------+-------------+--------------+------------+------------+
+; Slack ; From Node              ; To Node                 ; Launch Clock  ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------+-------------------------+---------------+-------------+--------------+------------+------------+
+; 1.141 ; incr:inc|Op[1]         ; register_bank:RF|r5[1]  ; wr_inc        ; clk         ; -0.500       ; -0.092     ; 0.728      ;
+; 1.149 ; incr:inc|Op[0]         ; register_bank:RF|r5[0]  ; wr_inc        ; clk         ; -0.500       ; -0.100     ; 0.728      ;
+; 1.159 ; incr:inc|Op[6]         ; register_bank:RF|r5[6]  ; wr_inc        ; clk         ; -0.500       ; -0.110     ; 0.728      ;
+; 1.183 ; incr:inc|Op[2]         ; register_bank:RF|r5[2]  ; wr_inc        ; clk         ; -0.500       ; -0.134     ; 0.728      ;
+; 1.184 ; incr:inc|Op[5]         ; register_bank:RF|r5[5]  ; wr_inc        ; clk         ; -0.500       ; -0.135     ; 0.728      ;
+; 1.281 ; incr:inc|Op[0]         ; reg:T3_reg|Op[0]        ; wr_inc        ; clk         ; -0.500       ; -0.100     ; 0.860      ;
+; 1.288 ; incr:inc|Op[1]         ; reg:T3_reg|Op[1]        ; wr_inc        ; clk         ; -0.500       ; -0.092     ; 0.875      ;
+; 1.296 ; incr:inc|Op[11]        ; reg:T3_reg|Op[11]       ; wr_inc        ; clk         ; -0.500       ; -0.081     ; 0.894      ;
+; 1.543 ; incr:inc|Op[9]         ; register_bank:RF|r5[9]  ; wr_inc        ; clk         ; -0.500       ; -0.083     ; 1.139      ;
+; 1.551 ; reg1:carry|Op          ; reg1:carry|Op           ; clk           ; clk         ; 0.000        ; 0.000      ; 1.730      ;
+; 1.573 ; incr:inc|Op[12]        ; register_bank:RF|r5[12] ; wr_inc        ; clk         ; -0.500       ; -0.113     ; 1.139      ;
+; 1.604 ; incr:inc|Op[7]         ; reg:T3_reg|Op[7]        ; wr_inc        ; clk         ; -0.500       ; -0.078     ; 1.205      ;
+; 1.646 ; incr:inc|Op[12]        ; reg:T3_reg|Op[12]       ; wr_inc        ; clk         ; -0.500       ; -0.113     ; 1.212      ;
+; 1.668 ; incr:inc|Op[5]         ; reg:T3_reg|Op[5]        ; wr_inc        ; clk         ; -0.500       ; -0.135     ; 1.212      ;
+; 1.711 ; incr:inc|Op[2]         ; register_bank:RF|r3[2]  ; wr_inc        ; clk         ; -0.500       ; -0.134     ; 1.256      ;
+; 1.720 ; reg1:zero|Op           ; reg1:zero|Op            ; clk           ; clk         ; 0.000        ; 0.000      ; 1.899      ;
+; 1.727 ; incr:inc|Op[4]         ; register_bank:RF|r5[4]  ; wr_inc        ; clk         ; -0.500       ; -0.114     ; 1.292      ;
+; 1.777 ; incr:inc|Op[3]         ; register_bank:RF|r5[3]  ; wr_inc        ; clk         ; -0.500       ; -0.136     ; 1.320      ;
+; 1.856 ; incr:inc|Op[8]         ; register_bank:RF|r5[8]  ; wr_inc        ; clk         ; -0.500       ; -0.056     ; 1.479      ;
+; 1.881 ; reg:T3_reg|Op[15]      ; register_bank:RF|r5[15] ; clk           ; clk         ; 0.000        ; 0.000      ; 2.060      ;
+; 1.883 ; incr:inc|Op[7]         ; register_bank:RF|r5[7]  ; wr_inc        ; clk         ; -0.500       ; -0.078     ; 1.484      ;
+; 1.891 ; reg:T3_reg|Op[7]       ; register_bank:RF|r5[7]  ; clk           ; clk         ; 0.000        ; 0.000      ; 2.070      ;
+; 1.899 ; reg:T3_reg|Op[0]       ; register_bank:RF|r5[0]  ; clk           ; clk         ; 0.000        ; 0.000      ; 2.078      ;
+; 1.901 ; incr:inc|Op[13]        ; reg:T3_reg|Op[13]       ; wr_inc        ; clk         ; -0.500       ; -0.379     ; 1.201      ;
+; 1.903 ; reg:T2_reg|Op[4]       ; memory:Memory_1|mem~603 ; clk           ; clk         ; 0.000        ; 0.000      ; 2.082      ;
+; 1.904 ; incr:inc|Op[10]        ; register_bank:RF|r5[10] ; wr_inc        ; clk         ; -0.500       ; -0.110     ; 1.473      ;
+; 1.906 ; reg:T3_reg|Op[14]      ; register_bank:RF|r5[14] ; clk           ; clk         ; 0.000        ; 0.000      ; 2.085      ;
+; 1.919 ; incr:inc|Op[14]        ; register_bank:RF|r5[14] ; wr_inc        ; clk         ; -0.500       ; -0.109     ; 1.489      ;
+; 1.994 ; incr:inc|Op[15]        ; register_bank:RF|r5[15] ; wr_inc        ; clk         ; -0.500       ; -0.534     ; 1.139      ;
+; 2.070 ; incr:inc|Op[0]         ; register_bank:RF|r0[0]  ; wr_inc        ; clk         ; -0.500       ; -0.100     ; 1.649      ;
+; 2.077 ; incr:inc|Op[0]         ; register_bank:RF|r4[0]  ; wr_inc        ; clk         ; -0.500       ; -0.100     ; 1.656      ;
+; 2.078 ; incr:inc|Op[6]         ; register_bank:RF|r0[6]  ; wr_inc        ; clk         ; -0.500       ; -0.110     ; 1.647      ;
+; 2.082 ; incr:inc|Op[6]         ; register_bank:RF|r4[6]  ; wr_inc        ; clk         ; -0.500       ; -0.110     ; 1.651      ;
+; 2.086 ; incr:inc|Op[9]         ; register_bank:RF|r6[9]  ; wr_inc        ; clk         ; -0.500       ; -0.083     ; 1.682      ;
+; 2.091 ; incr:inc|Op[15]        ; reg:T3_reg|Op[15]       ; wr_inc        ; clk         ; -0.500       ; -0.534     ; 1.236      ;
+; 2.106 ; incr:inc|Op[8]         ; reg:T3_reg|Op[8]        ; wr_inc        ; clk         ; -0.500       ; -0.056     ; 1.729      ;
+; 2.113 ; incr:inc|Op[1]         ; register_bank:RF|r4[1]  ; wr_inc        ; clk         ; -0.500       ; -0.092     ; 1.700      ;
+; 2.117 ; incr:inc|Op[1]         ; register_bank:RF|r0[1]  ; wr_inc        ; clk         ; -0.500       ; -0.092     ; 1.704      ;
+; 2.142 ; reg:T3_reg|Op[11]      ; register_bank:RF|r5[11] ; clk           ; clk         ; 0.000        ; 0.000      ; 2.321      ;
+; 2.155 ; reg:T3_reg|Op[1]       ; register_bank:RF|r5[1]  ; clk           ; clk         ; 0.000        ; 0.000      ; 2.334      ;
+; 2.186 ; incr:inc|Op[14]        ; reg:T3_reg|Op[14]       ; wr_inc        ; clk         ; -0.500       ; -0.109     ; 1.756      ;
+; 2.218 ; incr:inc|Op[9]         ; reg:T3_reg|Op[9]        ; wr_inc        ; clk         ; -0.500       ; -0.083     ; 1.814      ;
+; 2.220 ; reg:T3_reg|Op[12]      ; register_bank:RF|r5[12] ; clk           ; clk         ; 0.000        ; 0.000      ; 2.399      ;
+; 2.232 ; reg:T2_reg|Op[8]       ; memory:Memory_1|mem~607 ; clk           ; clk         ; 0.000        ; 0.000      ; 2.411      ;
+; 2.236 ; reg:T3_reg|Op[13]      ; register_bank:RF|r5[13] ; clk           ; clk         ; 0.000        ; 0.000      ; 2.415      ;
+; 2.237 ; reg:T3_reg|Op[9]       ; register_bank:RF|r5[9]  ; clk           ; clk         ; 0.000        ; 0.000      ; 2.416      ;
+; 2.257 ; incr:inc|Op[3]         ; reg:T3_reg|Op[3]        ; wr_inc        ; clk         ; -0.500       ; -0.136     ; 1.800      ;
+; 2.350 ; incr:inc|Op[4]         ; register_bank:RF|r3[4]  ; wr_inc        ; clk         ; -0.500       ; -0.114     ; 1.915      ;
+; 2.352 ; incr:inc|Op[11]        ; register_bank:RF|r5[11] ; wr_inc        ; clk         ; -0.500       ; -0.081     ; 1.950      ;
+; 2.382 ; incr:inc|Op[8]         ; register_bank:RF|r2[8]  ; wr_inc        ; clk         ; -0.500       ; -0.056     ; 2.005      ;
+; 2.392 ; reg:T2_reg|Op[13]      ; memory:Memory_1|mem~324 ; clk           ; clk         ; 0.000        ; 0.000      ; 2.571      ;
+; 2.418 ; incr:inc|Op[3]         ; register_bank:RF|r3[3]  ; wr_inc        ; clk         ; -0.500       ; -0.136     ; 1.961      ;
+; 2.426 ; reg:T2_reg|Op[11]      ; memory:Memory_1|mem~322 ; clk           ; clk         ; 0.000        ; 0.000      ; 2.605      ;
+; 2.442 ; incr:inc|Op[10]        ; register_bank:RF|r6[10] ; wr_inc        ; clk         ; -0.500       ; -0.110     ; 2.011      ;
+; 2.446 ; reg:T3_reg|Op[5]       ; register_bank:RF|r5[5]  ; clk           ; clk         ; 0.000        ; 0.000      ; 2.625      ;
+; 2.494 ; reg:T3_reg|Op[8]       ; register_bank:RF|r5[8]  ; clk           ; clk         ; 0.000        ; 0.000      ; 2.673      ;
+; 2.496 ; reg:T3_reg|Op[3]       ; register_bank:RF|r5[3]  ; clk           ; clk         ; 0.000        ; 0.000      ; 2.675      ;
+; 2.529 ; reg:T1_reg|Op[1]       ; memory:Memory_1|mem~312 ; clk           ; clk         ; 0.000        ; 0.000      ; 2.708      ;
+; 2.553 ; incr:inc|Op[2]         ; register_bank:RF|r4[2]  ; wr_inc        ; clk         ; -0.500       ; -0.134     ; 2.098      ;
+; 2.553 ; incr:inc|Op[2]         ; register_bank:RF|r0[2]  ; wr_inc        ; clk         ; -0.500       ; -0.134     ; 2.098      ;
+; 2.572 ; incr:inc|Op[6]         ; register_bank:RF|r3[6]  ; wr_inc        ; clk         ; -0.500       ; -0.110     ; 2.141      ;
+; 2.593 ; incr:inc|Op[2]         ; register_bank:RF|r2[2]  ; wr_inc        ; clk         ; -0.500       ; -0.134     ; 2.138      ;
+; 2.597 ; incr:inc|Op[2]         ; register_bank:RF|r6[2]  ; wr_inc        ; clk         ; -0.500       ; -0.134     ; 2.142      ;
+; 2.600 ; register_bank:RF|r6[7] ; reg:T1_reg|Op[7]        ; clk           ; clk         ; 0.000        ; 0.000      ; 2.779      ;
+; 2.628 ; incr:inc|Op[6]         ; register_bank:RF|r1[6]  ; wr_inc        ; clk         ; -0.500       ; -0.110     ; 2.197      ;
+; 2.634 ; incr:inc|Op[6]         ; register_bank:RF|r7[6]  ; wr_inc        ; clk         ; -0.500       ; -0.110     ; 2.203      ;
+; 2.642 ; incr:inc|Op[13]        ; register_bank:RF|r5[13] ; wr_inc        ; clk         ; -0.500       ; -0.379     ; 1.942      ;
+; 2.662 ; incr:inc|Op[2]         ; register_bank:RF|r1[2]  ; wr_inc        ; clk         ; -0.500       ; -0.134     ; 2.207      ;
+; 2.679 ; incr:inc|Op[2]         ; register_bank:RF|r7[2]  ; wr_inc        ; clk         ; -0.500       ; -0.134     ; 2.224      ;
+; 2.685 ; reg:T2_reg|Op[0]       ; memory:Memory_1|mem~599 ; clk           ; clk         ; 0.000        ; 0.000      ; 2.864      ;
+; 2.685 ; incr:inc|Op[5]         ; register_bank:RF|r3[5]  ; wr_inc        ; clk         ; -0.500       ; -0.135     ; 2.229      ;
+; 2.693 ; reg:T3_reg|Op[6]       ; register_bank:RF|r5[6]  ; clk           ; clk         ; 0.000        ; 0.000      ; 2.872      ;
+; 2.710 ; incr:inc|Op[5]         ; register_bank:RF|r0[5]  ; wr_inc        ; clk         ; -0.500       ; -0.135     ; 2.254      ;
+; 2.711 ; incr:inc|Op[5]         ; register_bank:RF|r4[5]  ; wr_inc        ; clk         ; -0.500       ; -0.135     ; 2.255      ;
+; 2.713 ; incr:inc|Op[5]         ; register_bank:RF|r2[5]  ; wr_inc        ; clk         ; -0.500       ; -0.135     ; 2.257      ;
+; 2.721 ; incr:inc|Op[5]         ; register_bank:RF|r6[5]  ; wr_inc        ; clk         ; -0.500       ; -0.135     ; 2.265      ;
+; 2.756 ; incr:inc|Op[0]         ; register_bank:RF|r3[0]  ; wr_inc        ; clk         ; -0.500       ; -0.100     ; 2.335      ;
+; 2.757 ; incr:inc|Op[1]         ; register_bank:RF|r2[1]  ; wr_inc        ; clk         ; -0.500       ; -0.092     ; 2.344      ;
+; 2.757 ; incr:inc|Op[0]         ; register_bank:RF|r7[0]  ; wr_inc        ; clk         ; -0.500       ; -0.100     ; 2.336      ;
+; 2.759 ; incr:inc|Op[1]         ; register_bank:RF|r6[1]  ; wr_inc        ; clk         ; -0.500       ; -0.092     ; 2.346      ;
+; 2.770 ; incr:inc|Op[1]         ; register_bank:RF|r7[1]  ; wr_inc        ; clk         ; -0.500       ; -0.092     ; 2.357      ;
+; 2.774 ; incr:inc|Op[0]         ; register_bank:RF|r2[0]  ; wr_inc        ; clk         ; -0.500       ; -0.100     ; 2.353      ;
+; 2.775 ; incr:inc|Op[0]         ; register_bank:RF|r6[0]  ; wr_inc        ; clk         ; -0.500       ; -0.100     ; 2.354      ;
+; 2.779 ; reg:T1_reg|Op[11]      ; memory:Memory_1|mem~322 ; clk           ; clk         ; 0.000        ; 0.000      ; 2.958      ;
+; 2.819 ; reg:T3_reg|Op[2]       ; register_bank:RF|r5[2]  ; clk           ; clk         ; 0.000        ; 0.000      ; 2.998      ;
+; 2.822 ; reg:T3_reg|Op[10]      ; register_bank:RF|r5[10] ; clk           ; clk         ; 0.000        ; 0.000      ; 3.001      ;
+; 2.827 ; incr:inc|Op[7]         ; register_bank:RF|r1[7]  ; wr_inc        ; clk         ; -0.500       ; -0.078     ; 2.428      ;
+; 2.830 ; incr:inc|Op[7]         ; register_bank:RF|r3[7]  ; wr_inc        ; clk         ; -0.500       ; -0.078     ; 2.431      ;
+; 2.859 ; reg:T3_reg|Op[9]       ; register_bank:RF|r6[9]  ; clk           ; clk         ; 0.000        ; 0.000      ; 3.038      ;
+; 2.874 ; register_bank:RF|r7[2] ; reg:T1_reg|Op[2]        ; clk           ; clk         ; 0.000        ; 0.000      ; 3.053      ;
+; 2.899 ; reg:T3_reg|Op[0]       ; register_bank:RF|r0[0]  ; clk           ; clk         ; 0.000        ; 0.000      ; 3.078      ;
+; 2.906 ; reg:T3_reg|Op[0]       ; register_bank:RF|r4[0]  ; clk           ; clk         ; 0.000        ; 0.000      ; 3.085      ;
+; 2.914 ; reg:T3_reg|Op[7]       ; register_bank:RF|r1[7]  ; clk           ; clk         ; 0.000        ; 0.000      ; 3.093      ;
+; 2.917 ; reg:T3_reg|Op[7]       ; register_bank:RF|r3[7]  ; clk           ; clk         ; 0.000        ; 0.000      ; 3.096      ;
+; 2.931 ; reg:T1_reg|Op[4]       ; memory:Memory_1|mem~603 ; clk           ; clk         ; 0.000        ; 0.000      ; 3.110      ;
+; 2.950 ; alu:ALU_1|zero         ; reg1:zero|Op            ; select_ALU[0] ; clk         ; -0.500       ; -1.901     ; 0.728      ;
+; 2.951 ; alu:ALU_1|carry        ; reg1:carry|Op           ; select_ALU[0] ; clk         ; -0.500       ; -1.902     ; 0.728      ;
+; 2.975 ; reg:T1_reg|Op[0]       ; memory:Memory_1|mem~599 ; clk           ; clk         ; 0.000        ; 0.000      ; 3.154      ;
+; 2.985 ; incr:inc|Op[12]        ; register_bank:RF|r7[12] ; wr_inc        ; clk         ; -0.500       ; -0.113     ; 2.551      ;
+; 2.987 ; incr:inc|Op[12]        ; register_bank:RF|r2[12] ; wr_inc        ; clk         ; -0.500       ; -0.113     ; 2.553      ;
++-------+------------------------+-------------------------+---------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Hold: 'wr_inc'                                                                                                    ;
++-------+-------------------+-----------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node         ; To Node         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------+-----------------+--------------+-------------+--------------+------------+------------+
+; 4.207 ; reg:T1_reg|Op[3]  ; incr:inc|Op[3]  ; clk          ; wr_inc      ; -0.500       ; 0.136      ; 3.843      ;
+; 4.439 ; reg:T1_reg|Op[15] ; incr:inc|Op[15] ; clk          ; wr_inc      ; -0.500       ; 0.534      ; 4.473      ;
+; 4.459 ; reg:T1_reg|Op[4]  ; incr:inc|Op[4]  ; clk          ; wr_inc      ; -0.500       ; 0.114      ; 4.073      ;
+; 4.554 ; reg:T1_reg|Op[4]  ; incr:inc|Op[5]  ; clk          ; wr_inc      ; -0.500       ; 0.135      ; 4.189      ;
+; 4.650 ; reg:T1_reg|Op[10] ; incr:inc|Op[10] ; clk          ; wr_inc      ; -0.500       ; 0.110      ; 4.260      ;
+; 4.652 ; reg:T1_reg|Op[3]  ; incr:inc|Op[5]  ; clk          ; wr_inc      ; -0.500       ; 0.135      ; 4.287      ;
+; 4.659 ; reg:T1_reg|Op[0]  ; incr:inc|Op[0]  ; clk          ; wr_inc      ; -0.500       ; 0.100      ; 4.259      ;
+; 4.863 ; reg:T1_reg|Op[5]  ; incr:inc|Op[5]  ; clk          ; wr_inc      ; -0.500       ; 0.135      ; 4.498      ;
+; 5.122 ; reg:T1_reg|Op[3]  ; incr:inc|Op[4]  ; clk          ; wr_inc      ; -0.500       ; 0.114      ; 4.736      ;
+; 5.127 ; reg:T1_reg|Op[10] ; incr:inc|Op[15] ; clk          ; wr_inc      ; -0.500       ; 0.534      ; 5.161      ;
+; 5.144 ; reg:T1_reg|Op[2]  ; incr:inc|Op[2]  ; clk          ; wr_inc      ; -0.500       ; 0.134      ; 4.778      ;
+; 5.323 ; reg:T1_reg|Op[6]  ; incr:inc|Op[6]  ; clk          ; wr_inc      ; -0.500       ; 0.110      ; 4.933      ;
+; 5.355 ; reg:T1_reg|Op[4]  ; incr:inc|Op[15] ; clk          ; wr_inc      ; -0.500       ; 0.534      ; 5.389      ;
+; 5.453 ; reg:T1_reg|Op[3]  ; incr:inc|Op[15] ; clk          ; wr_inc      ; -0.500       ; 0.534      ; 5.487      ;
+; 5.468 ; reg:T1_reg|Op[10] ; incr:inc|Op[11] ; clk          ; wr_inc      ; -0.500       ; 0.081      ; 5.049      ;
+; 5.471 ; reg:T1_reg|Op[1]  ; incr:inc|Op[2]  ; clk          ; wr_inc      ; -0.500       ; 0.134      ; 5.105      ;
+; 5.491 ; reg:T1_reg|Op[6]  ; incr:inc|Op[15] ; clk          ; wr_inc      ; -0.500       ; 0.534      ; 5.525      ;
+; 5.503 ; reg:T1_reg|Op[10] ; incr:inc|Op[12] ; clk          ; wr_inc      ; -0.500       ; 0.113      ; 5.116      ;
+; 5.514 ; reg:T1_reg|Op[4]  ; incr:inc|Op[7]  ; clk          ; wr_inc      ; -0.500       ; 0.078      ; 5.092      ;
+; 5.612 ; reg:T1_reg|Op[3]  ; incr:inc|Op[7]  ; clk          ; wr_inc      ; -0.500       ; 0.078      ; 5.190      ;
+; 5.619 ; reg:T1_reg|Op[8]  ; incr:inc|Op[8]  ; clk          ; wr_inc      ; -0.500       ; 0.056      ; 5.175      ;
+; 5.650 ; reg:T1_reg|Op[6]  ; incr:inc|Op[7]  ; clk          ; wr_inc      ; -0.500       ; 0.078      ; 5.228      ;
+; 5.656 ; reg:T1_reg|Op[12] ; incr:inc|Op[12] ; clk          ; wr_inc      ; -0.500       ; 0.113      ; 5.269      ;
+; 5.748 ; reg:T1_reg|Op[10] ; incr:inc|Op[13] ; clk          ; wr_inc      ; -0.500       ; 0.379      ; 5.627      ;
+; 5.752 ; reg:T1_reg|Op[4]  ; incr:inc|Op[6]  ; clk          ; wr_inc      ; -0.500       ; 0.110      ; 5.362      ;
+; 5.780 ; reg:T1_reg|Op[0]  ; incr:inc|Op[2]  ; clk          ; wr_inc      ; -0.500       ; 0.134      ; 5.414      ;
+; 5.784 ; reg:T1_reg|Op[11] ; incr:inc|Op[11] ; clk          ; wr_inc      ; -0.500       ; 0.081      ; 5.365      ;
+; 5.837 ; reg:T1_reg|Op[1]  ; incr:inc|Op[5]  ; clk          ; wr_inc      ; -0.500       ; 0.135      ; 5.472      ;
+; 5.850 ; reg:T1_reg|Op[3]  ; incr:inc|Op[6]  ; clk          ; wr_inc      ; -0.500       ; 0.110      ; 5.460      ;
+; 5.861 ; reg:T1_reg|Op[12] ; incr:inc|Op[15] ; clk          ; wr_inc      ; -0.500       ; 0.534      ; 5.895      ;
+; 5.963 ; reg:T1_reg|Op[10] ; incr:inc|Op[14] ; clk          ; wr_inc      ; -0.500       ; 0.109      ; 5.572      ;
+; 5.976 ; reg:T1_reg|Op[4]  ; incr:inc|Op[13] ; clk          ; wr_inc      ; -0.500       ; 0.379      ; 5.855      ;
+; 6.024 ; reg:T1_reg|Op[4]  ; incr:inc|Op[10] ; clk          ; wr_inc      ; -0.500       ; 0.110      ; 5.634      ;
+; 6.050 ; reg:T1_reg|Op[8]  ; incr:inc|Op[15] ; clk          ; wr_inc      ; -0.500       ; 0.534      ; 6.084      ;
+; 6.055 ; reg:T1_reg|Op[11] ; incr:inc|Op[15] ; clk          ; wr_inc      ; -0.500       ; 0.534      ; 6.089      ;
+; 6.074 ; reg:T1_reg|Op[3]  ; incr:inc|Op[13] ; clk          ; wr_inc      ; -0.500       ; 0.379      ; 5.953      ;
+; 6.082 ; reg:T1_reg|Op[1]  ; incr:inc|Op[1]  ; clk          ; wr_inc      ; -0.500       ; 0.092      ; 5.674      ;
+; 6.085 ; reg:T1_reg|Op[4]  ; incr:inc|Op[12] ; clk          ; wr_inc      ; -0.500       ; 0.113      ; 5.698      ;
+; 6.112 ; reg:T1_reg|Op[6]  ; incr:inc|Op[13] ; clk          ; wr_inc      ; -0.500       ; 0.379      ; 5.991      ;
+; 6.122 ; reg:T1_reg|Op[3]  ; incr:inc|Op[10] ; clk          ; wr_inc      ; -0.500       ; 0.110      ; 5.732      ;
+; 6.132 ; reg:T1_reg|Op[2]  ; incr:inc|Op[5]  ; clk          ; wr_inc      ; -0.500       ; 0.135      ; 5.767      ;
+; 6.137 ; reg:T1_reg|Op[1]  ; incr:inc|Op[3]  ; clk          ; wr_inc      ; -0.500       ; 0.136      ; 5.773      ;
+; 6.140 ; reg:T1_reg|Op[4]  ; incr:inc|Op[11] ; clk          ; wr_inc      ; -0.500       ; 0.081      ; 5.721      ;
+; 6.146 ; reg:T1_reg|Op[0]  ; incr:inc|Op[5]  ; clk          ; wr_inc      ; -0.500       ; 0.135      ; 5.781      ;
+; 6.160 ; reg:T1_reg|Op[6]  ; incr:inc|Op[10] ; clk          ; wr_inc      ; -0.500       ; 0.110      ; 5.770      ;
+; 6.182 ; reg:T1_reg|Op[7]  ; incr:inc|Op[7]  ; clk          ; wr_inc      ; -0.500       ; 0.078      ; 5.760      ;
+; 6.183 ; reg:T1_reg|Op[3]  ; incr:inc|Op[12] ; clk          ; wr_inc      ; -0.500       ; 0.113      ; 5.796      ;
+; 6.185 ; reg:T1_reg|Op[8]  ; incr:inc|Op[10] ; clk          ; wr_inc      ; -0.500       ; 0.110      ; 5.795      ;
+; 6.191 ; reg:T1_reg|Op[4]  ; incr:inc|Op[14] ; clk          ; wr_inc      ; -0.500       ; 0.109      ; 5.800      ;
+; 6.203 ; reg:T1_reg|Op[4]  ; incr:inc|Op[8]  ; clk          ; wr_inc      ; -0.500       ; 0.056      ; 5.759      ;
+; 6.221 ; reg:T1_reg|Op[6]  ; incr:inc|Op[12] ; clk          ; wr_inc      ; -0.500       ; 0.113      ; 5.834      ;
+; 6.229 ; reg:T1_reg|Op[5]  ; incr:inc|Op[15] ; clk          ; wr_inc      ; -0.500       ; 0.534      ; 6.263      ;
+; 6.238 ; reg:T1_reg|Op[3]  ; incr:inc|Op[11] ; clk          ; wr_inc      ; -0.500       ; 0.081      ; 5.819      ;
+; 6.276 ; reg:T1_reg|Op[6]  ; incr:inc|Op[11] ; clk          ; wr_inc      ; -0.500       ; 0.081      ; 5.857      ;
+; 6.289 ; reg:T1_reg|Op[1]  ; incr:inc|Op[15] ; clk          ; wr_inc      ; -0.500       ; 0.534      ; 6.323      ;
+; 6.289 ; reg:T1_reg|Op[3]  ; incr:inc|Op[14] ; clk          ; wr_inc      ; -0.500       ; 0.109      ; 5.898      ;
+; 6.301 ; reg:T1_reg|Op[3]  ; incr:inc|Op[8]  ; clk          ; wr_inc      ; -0.500       ; 0.056      ; 5.857      ;
+; 6.327 ; reg:T1_reg|Op[6]  ; incr:inc|Op[14] ; clk          ; wr_inc      ; -0.500       ; 0.109      ; 5.936      ;
+; 6.339 ; reg:T1_reg|Op[6]  ; incr:inc|Op[8]  ; clk          ; wr_inc      ; -0.500       ; 0.056      ; 5.895      ;
+; 6.344 ; reg:T1_reg|Op[0]  ; incr:inc|Op[1]  ; clk          ; wr_inc      ; -0.500       ; 0.092      ; 5.936      ;
+; 6.375 ; reg:T1_reg|Op[14] ; incr:inc|Op[15] ; clk          ; wr_inc      ; -0.500       ; 0.534      ; 6.409      ;
+; 6.388 ; reg:T1_reg|Op[5]  ; incr:inc|Op[7]  ; clk          ; wr_inc      ; -0.500       ; 0.078      ; 5.966      ;
+; 6.391 ; reg:T1_reg|Op[8]  ; incr:inc|Op[11] ; clk          ; wr_inc      ; -0.500       ; 0.081      ; 5.972      ;
+; 6.397 ; reg:T1_reg|Op[1]  ; incr:inc|Op[4]  ; clk          ; wr_inc      ; -0.500       ; 0.114      ; 6.011      ;
+; 6.426 ; reg:T1_reg|Op[8]  ; incr:inc|Op[12] ; clk          ; wr_inc      ; -0.500       ; 0.113      ; 6.039      ;
+; 6.431 ; reg:T1_reg|Op[11] ; incr:inc|Op[12] ; clk          ; wr_inc      ; -0.500       ; 0.113      ; 6.044      ;
+; 6.432 ; reg:T1_reg|Op[2]  ; incr:inc|Op[3]  ; clk          ; wr_inc      ; -0.500       ; 0.136      ; 6.068      ;
+; 6.446 ; reg:T1_reg|Op[0]  ; incr:inc|Op[3]  ; clk          ; wr_inc      ; -0.500       ; 0.136      ; 6.082      ;
+; 6.482 ; reg:T1_reg|Op[12] ; incr:inc|Op[13] ; clk          ; wr_inc      ; -0.500       ; 0.379      ; 6.361      ;
+; 6.556 ; reg:T1_reg|Op[14] ; incr:inc|Op[14] ; clk          ; wr_inc      ; -0.500       ; 0.109      ; 6.165      ;
+; 6.584 ; reg:T1_reg|Op[2]  ; incr:inc|Op[15] ; clk          ; wr_inc      ; -0.500       ; 0.534      ; 6.618      ;
+; 6.598 ; reg:T1_reg|Op[0]  ; incr:inc|Op[15] ; clk          ; wr_inc      ; -0.500       ; 0.534      ; 6.632      ;
+; 6.617 ; reg:T1_reg|Op[1]  ; incr:inc|Op[7]  ; clk          ; wr_inc      ; -0.500       ; 0.078      ; 6.195      ;
+; 6.626 ; reg:T1_reg|Op[5]  ; incr:inc|Op[6]  ; clk          ; wr_inc      ; -0.500       ; 0.110      ; 6.236      ;
+; 6.654 ; reg:T1_reg|Op[7]  ; incr:inc|Op[15] ; clk          ; wr_inc      ; -0.500       ; 0.534      ; 6.688      ;
+; 6.655 ; reg:T1_reg|Op[13] ; incr:inc|Op[13] ; clk          ; wr_inc      ; -0.500       ; 0.379      ; 6.534      ;
+; 6.671 ; reg:T1_reg|Op[8]  ; incr:inc|Op[13] ; clk          ; wr_inc      ; -0.500       ; 0.379      ; 6.550      ;
+; 6.676 ; reg:T1_reg|Op[11] ; incr:inc|Op[13] ; clk          ; wr_inc      ; -0.500       ; 0.379      ; 6.555      ;
+; 6.692 ; reg:T1_reg|Op[2]  ; incr:inc|Op[4]  ; clk          ; wr_inc      ; -0.500       ; 0.114      ; 6.306      ;
+; 6.697 ; reg:T1_reg|Op[12] ; incr:inc|Op[14] ; clk          ; wr_inc      ; -0.500       ; 0.109      ; 6.306      ;
+; 6.706 ; reg:T1_reg|Op[0]  ; incr:inc|Op[4]  ; clk          ; wr_inc      ; -0.500       ; 0.114      ; 6.320      ;
+; 6.807 ; reg:T1_reg|Op[4]  ; incr:inc|Op[9]  ; clk          ; wr_inc      ; -0.500       ; 0.083      ; 6.390      ;
+; 6.826 ; reg:T1_reg|Op[13] ; incr:inc|Op[15] ; clk          ; wr_inc      ; -0.500       ; 0.534      ; 6.860      ;
+; 6.850 ; reg:T1_reg|Op[5]  ; incr:inc|Op[13] ; clk          ; wr_inc      ; -0.500       ; 0.379      ; 6.729      ;
+; 6.878 ; reg:T1_reg|Op[8]  ; incr:inc|Op[9]  ; clk          ; wr_inc      ; -0.500       ; 0.083      ; 6.461      ;
+; 6.886 ; reg:T1_reg|Op[8]  ; incr:inc|Op[14] ; clk          ; wr_inc      ; -0.500       ; 0.109      ; 6.495      ;
+; 6.891 ; reg:T1_reg|Op[11] ; incr:inc|Op[14] ; clk          ; wr_inc      ; -0.500       ; 0.109      ; 6.500      ;
+; 6.898 ; reg:T1_reg|Op[5]  ; incr:inc|Op[10] ; clk          ; wr_inc      ; -0.500       ; 0.110      ; 6.508      ;
+; 6.905 ; reg:T1_reg|Op[3]  ; incr:inc|Op[9]  ; clk          ; wr_inc      ; -0.500       ; 0.083      ; 6.488      ;
+; 6.907 ; reg:T1_reg|Op[9]  ; incr:inc|Op[15] ; clk          ; wr_inc      ; -0.500       ; 0.534      ; 6.941      ;
+; 6.910 ; reg:T1_reg|Op[1]  ; incr:inc|Op[13] ; clk          ; wr_inc      ; -0.500       ; 0.379      ; 6.789      ;
+; 6.912 ; reg:T1_reg|Op[2]  ; incr:inc|Op[7]  ; clk          ; wr_inc      ; -0.500       ; 0.078      ; 6.490      ;
+; 6.926 ; reg:T1_reg|Op[0]  ; incr:inc|Op[7]  ; clk          ; wr_inc      ; -0.500       ; 0.078      ; 6.504      ;
+; 6.943 ; reg:T1_reg|Op[6]  ; incr:inc|Op[9]  ; clk          ; wr_inc      ; -0.500       ; 0.083      ; 6.526      ;
+; 6.945 ; reg:T1_reg|Op[1]  ; incr:inc|Op[6]  ; clk          ; wr_inc      ; -0.500       ; 0.110      ; 6.555      ;
+; 6.958 ; reg:T1_reg|Op[1]  ; incr:inc|Op[10] ; clk          ; wr_inc      ; -0.500       ; 0.110      ; 6.568      ;
+; 6.959 ; reg:T1_reg|Op[5]  ; incr:inc|Op[12] ; clk          ; wr_inc      ; -0.500       ; 0.113      ; 6.572      ;
+; 7.014 ; reg:T1_reg|Op[5]  ; incr:inc|Op[11] ; clk          ; wr_inc      ; -0.500       ; 0.081      ; 6.595      ;
+; 7.019 ; reg:T1_reg|Op[1]  ; incr:inc|Op[12] ; clk          ; wr_inc      ; -0.500       ; 0.113      ; 6.632      ;
+; 7.042 ; reg:T1_reg|Op[9]  ; incr:inc|Op[10] ; clk          ; wr_inc      ; -0.500       ; 0.110      ; 6.652      ;
++-------+-------------------+-----------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------+
+; Setup Transfers                                                           ;
++---------------+---------------+----------+----------+----------+----------+
+; From Clock    ; To Clock      ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++---------------+---------------+----------+----------+----------+----------+
+; clk           ; clk           ; 25666    ; 0        ; 0        ; 0        ;
+; select_ALU[0] ; clk           ; 0        ; 146      ; 0        ; 0        ;
+; wr_inc        ; clk           ; 0        ; 144      ; 0        ; 0        ;
+; clk           ; select_ALU[0] ; 0        ; 0        ; 8787     ; 0        ;
+; select_ALU[0] ; select_ALU[0] ; 0        ; 0        ; 20       ; 20       ;
+; clk           ; wr_inc        ; 0        ; 0        ; 231      ; 0        ;
++---------------+---------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++---------------------------------------------------------------------------+
+; Hold Transfers                                                            ;
++---------------+---------------+----------+----------+----------+----------+
+; From Clock    ; To Clock      ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++---------------+---------------+----------+----------+----------+----------+
+; clk           ; clk           ; 25666    ; 0        ; 0        ; 0        ;
+; select_ALU[0] ; clk           ; 0        ; 146      ; 0        ; 0        ;
+; wr_inc        ; clk           ; 0        ; 144      ; 0        ; 0        ;
+; clk           ; select_ALU[0] ; 0        ; 0        ; 8787     ; 0        ;
+; select_ALU[0] ; select_ALU[0] ; 0        ; 0        ; 20       ; 20       ;
+; clk           ; wr_inc        ; 0        ; 0        ; 231      ; 0        ;
++---------------+---------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 29    ; 29   ;
+; Unconstrained Input Port Paths  ; 4730  ; 4730 ;
+; Unconstrained Output Ports      ; 18    ; 18   ;
+; Unconstrained Output Port Paths ; 18    ; 18   ;
++---------------------------------+-------+------+
+
+
++----------------------------------------------------+
+; Clock Status Summary                               ;
++---------------+---------------+------+-------------+
+; Target        ; Clock         ; Type ; Status      ;
++---------------+---------------+------+-------------+
+; clk           ; clk           ; Base ; Constrained ;
+; select_ALU[0] ; select_ALU[0] ; Base ; Constrained ;
+; wr_inc        ; wr_inc        ; Base ; Constrained ;
++---------------+---------------+------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                                  ;
++---------------------+--------------------------------------------------------------------------------------+
+; Input Port          ; Comment                                                                              ;
++---------------------+--------------------------------------------------------------------------------------+
+; dec[0]              ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; dec[1]              ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; dec[2]              ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_ALU[1]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_ALU_A    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_ALU_B[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_ALU_B[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_Mem_A    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_Mem_D    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_RF_A1[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_RF_A1[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_RF_A2    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_RF_A3[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_RF_A3[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_RF_A3[2] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_RF_D3[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_RF_D3[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_RF_D3[2] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_T1       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_T2[0]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_T2[1]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; wr_IR               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; wr_Mem              ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; wr_RF               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; wr_T1               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; wr_T2               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; wr_T3               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; wr_cy               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; wr_z                ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++---------------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; IR_out[0]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[1]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[2]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[3]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[4]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[5]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[6]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[7]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[8]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[9]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[10]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[11]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[12]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[13]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[14]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[15]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cy_Op       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; z_Op        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                                  ;
++---------------------+--------------------------------------------------------------------------------------+
+; Input Port          ; Comment                                                                              ;
++---------------------+--------------------------------------------------------------------------------------+
+; dec[0]              ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; dec[1]              ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; dec[2]              ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_ALU[1]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_ALU_A    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_ALU_B[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_ALU_B[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_Mem_A    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_Mem_D    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_RF_A1[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_RF_A1[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_RF_A2    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_RF_A3[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_RF_A3[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_RF_A3[2] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_RF_D3[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_RF_D3[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_RF_D3[2] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_T1       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_T2[0]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_T2[1]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; wr_IR               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; wr_Mem              ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; wr_RF               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; wr_T1               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; wr_T2               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; wr_T3               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; wr_cy               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; wr_z                ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++---------------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; IR_out[0]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[1]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[2]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[3]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[4]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[5]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[6]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[7]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[8]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[9]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[10]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[11]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[12]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[13]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[14]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[15]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cy_Op       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; z_Op        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Sat Apr 16 21:34:24 2022
+Info: Command: quartus_sta datapath -c DUT
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Warning (335093): The Timing Analyzer is analyzing 34 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'DUT.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+    Info (332105): create_clock -period 1.000 -name select_ALU[0] select_ALU[0]
+    Info (332105): create_clock -period 1.000 -name wr_inc wr_inc
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -16.941
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):   -16.941            -186.440 select_ALU[0] 
+    Info (332119):   -14.363          -12789.113 clk 
+    Info (332119):    -8.570            -116.862 wr_inc 
+Info (332146): Worst-case hold slack is -3.611
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.611             -10.868 select_ALU[0] 
+    Info (332119):     1.141               0.000 clk 
+    Info (332119):     4.207               0.000 wr_inc 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -2.289
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.289              -2.289 clk 
+    Info (332119):    -2.289              -2.289 select_ALU[0] 
+    Info (332119):    -2.289              -2.289 wr_inc 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4693 megabytes
+    Info: Processing ended: Sat Apr 16 21:34:26 2022
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+
