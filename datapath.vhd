@@ -7,8 +7,8 @@ entity datapath is
     port(
 		wr_IR, wr_RF, wr_T1, wr_T2, wr_T3, wr_inc, wr_Mem, wr_cy, wr_z : in std_logic;
 		select_Mux_RF_A3, select_Mux_RF_D3, dec : in std_logic_vector(2 downto 0);
-		select_Mux_RF_A1, select_Mux_ALU_B, select_ALU : in std_logic_vector(1 downto 0);
-		select_Mux_Mem_A, select_Mux_T1, select_Mux_T2, select_Mux_ALU_A : in std_logic;
+		select_Mux_RF_A1, select_Mux_ALU_B, select_Mux_T2, select_ALU : in std_logic_vector(1 downto 0);
+		select_Mux_Mem_A, select_Mux_Mem_D, select_Mux_T1, select_Mux_ALU_A : in std_logic;
 		clk : in std_logic;
 		
 		cy_Op, z_Op : out std_logic;
@@ -185,7 +185,7 @@ architecture arch of datapath is
 		);
   end component;
   
-  signal Mem_Dout_Op, IR_Op, RF_D3, RF_D1_Op, RF_D2_Op, S7_Op, S1_Op, T1, T1_Op, T2, T2_Op, T3_Op, inc_Op, ALU_A, ALU_B, ALU_C, SE6_Op, SE9_Op, Mem_A : std_logic_vector(15 downto 0); 
+  signal Mem_D, Mem_Dout_Op, IR_Op, RF_D3, RF_D1_Op, RF_D2_Op, S7_Op, S1_Op, T1, T1_Op, T2, T2_Op, T3_Op, inc_Op, ALU_A, ALU_B, ALU_C, SE6_Op, SE9_Op, Mem_A : std_logic_vector(15 downto 0); 
   signal RF_A1, RF_A3 : std_logic_vector(2 downto 0);
   signal cy, z : std_logic;
 
@@ -195,7 +195,7 @@ begin
 IR: reg port map (wr=>wr_IR, clk=>clk, data=>Mem_Dout_Op, Op=>IR_Op);
 
 --Mux_RF-A1
-Mux_RF_A1: mux41_3 port map (A0=>"111", A1=>IR_Op(11 downto 9), A2=>dec, A3=>"000", S=>select_Mux_RF_A1, Op=>RF_A1);
+Mux_RF_A1: mux41_3 port map (A0=>"111", A1=>IR_Op(11 downto 9), A2=>IR_Op(8 downto 6), A3=>dec, S=>select_Mux_RF_A1, Op=>RF_A1);
 
 --Mux_RF-A3
 Mux_RF_A3: mux81_3 port map (A0=>"111", A1=>IR_Op(11 downto 9), A2=>IR_Op(8 downto 6), A3=> IR_Op(5 downto 3), A4=>dec, A5=>"000", A6=>"000", A7=>"000", S=>select_Mux_RF_A3, Op=>RF_A3);
@@ -204,7 +204,7 @@ Mux_RF_A3: mux81_3 port map (A0=>"111", A1=>IR_Op(11 downto 9), A2=>IR_Op(8 down
 S7: bit7shift port map (A=>IR_Op(8 downto 0), Op=>S7_Op);
 
 --Mux_RF-D3
-Mux_RF_D3: mux81 port map (A0=>T1_Op, A1=>T2_Op, A2=>T3_Op, A3=>Mem_Dout_Op, A4=>ALU_C, A5=>S7_Op, A6=>inc_Op, A7=>"0000000000000000", S=>select_Mux_RF_D3, Op=>RF_D3);
+Mux_RF_D3: mux81 port map (A0=>T1_Op, A1=>T2_Op, A2=>T3_Op, A3=>ALU_C, A4=>S7_Op, A5=>inc_Op, A6=>"0000000000000000", A7=>"0000000000000000", S=>select_Mux_RF_D3, Op=>RF_D3);
 
 --RF
 RF: register_bank port map (Add1=>RF_A1, Add2=>IR_Op(8 downto 6), Add3=>RF_A3, D3=>RF_D3, wr=>wr_RF, clk=>clk, D1=>RF_D1_Op, D2=>RF_D2_Op);
@@ -216,7 +216,7 @@ Mux_T1: mux21 port map (A0=>RF_D1_Op, A1=>Mem_Dout_Op, S=>select_Mux_T1, Op=>T1)
 T1_reg: reg port map (wr=>wr_T1, clk=>clk, data=>T1, Op=>T1_Op);
 
 --Mux_T2
-Mux_T2: mux21 port map (A0=>RF_D2_Op, A1=>ALU_C, S=>select_Mux_T2, Op=>T2);
+Mux_T2: mux41 port map (A0=>RF_D2_Op, A1=>Mem_Dout_Op, A2=>ALU_C, A3=>"0000000000000000", S=>select_Mux_T2, Op=>T2);
 
 --T2
 T2_reg: reg port map (wr=>wr_T2, clk=>clk, data=>T2, Op=>T2_Op);
@@ -254,8 +254,11 @@ zero: reg1 port map (wr=>wr_z, clk=>clk, data=>z, Op=>z_Op);
 --Mux_Mem_A
 Mux_Mem_A: mux21 port map (A0=>T1_Op, A1=>T2_Op, S=>select_Mux_Mem_A, Op=>Mem_A);
 
+--Mux_Mem_D
+Mux_Mem_D: mux21 port map (A0=>T1_Op, A1=>T2_Op, S=>select_Mux_Mem_D, Op=>Mem_D);
+
 --Memory
-Memory_1: memory port map (wr=>wr_Mem, A=>Mem_A, Din=>T1_Op, clk=>clk, Dout=>Mem_Dout_Op);
+Memory_1: memory port map (wr=>wr_Mem, A=>Mem_A, Din=>Mem_D, clk=>clk, Dout=>Mem_Dout_Op);
 
 IR_out<=IR_Op;
 
