@@ -66,7 +66,7 @@ begin
 			when S0=>
 				select_Mux_RF_A1<="00";
 				select_Mux_T1<='0';
-				wr_T1<='0';
+				wr_T1<='1';
 			
 			when S1=>
 				select_Mux_Mem_A<='0';
@@ -108,6 +108,29 @@ begin
 							if (z='1') then
 								select_ALU<="01";
 								wr_cy<='1';
+								wr_z<='1';
+							end if;
+							
+						when others=>
+							null;
+							
+					end case;
+			    elsif (IR(13 downto 12)="10") then
+					case IR(1 downto 0) is
+					
+						when "00"=>
+							select_ALU<="10";
+							wr_z<='1';
+							
+						when "10"=>
+							if (cy='1') then
+								select_ALU<="10";
+								wr_z<='1';
+							end if;
+						
+						when "01"=>
+							if (z='1') then
+								select_ALU<="10";
 								wr_z<='1';
 							end if;
 							
@@ -175,7 +198,7 @@ begin
 				
 			when S13=>
 				select_Mux_Mem_A<='1';
-				select_Mux_Mem_A<='0';
+				select_Mux_Mem_D<='0';
 				wr_Mem<='1';
 				
 			when S14=>
@@ -223,7 +246,7 @@ begin
 				select_Mux_RF_A3<="000";
 				select_ALU<="01";
 				wr_z<='1';
-				wr_T2<='1';
+				wr_cy<='1';
 				select_Mux_RF_D3<="011";
 				wr_RF<='1';
 				
@@ -238,7 +261,7 @@ begin
 				select_Mux_RF_A3<="000";
 				select_ALU<="01";
 				wr_z<='1';
-				wr_T2<='1';
+				wr_cy<='1';
 				select_Mux_RF_D3<="011";
 				wr_RF<='1';
 				
