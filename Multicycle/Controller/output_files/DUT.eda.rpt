@@ -1,5 +1,5 @@
 EDA Netlist Writer report for DUT
-Sun Apr 17 14:10:41 2022
+Sun Apr 17 14:08:27 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -37,9 +37,9 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Sun Apr 17 14:10:41 2022 ;
+; EDA Netlist Writer Status ; Successful - Sun Apr 17 14:08:27 2022 ;
 ; Revision Name             ; DUT                                   ;
-; Top-level Entity Name     ; controller                            ;
+; Top-level Entity Name     ; DUT                                   ;
 ; Family                    ; MAX V                                 ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
@@ -66,13 +66,13 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------------------------+------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                                                     ;
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                                                ;
-+--------------------------------------------------------------------------------------------------------------------------------+
-; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/simulation/modelsim/DUT.vho ;
-+--------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------+
+; Simulation Generated Files                                        ;
++-------------------------------------------------------------------+
+; Generated Files                                                   ;
++-------------------------------------------------------------------+
+; D:/IITB-RISC-22/Multicycle/Controller/simulation/modelsim/DUT.vho ;
++-------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -81,14 +81,14 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Apr 17 14:10:40 2022
+    Info: Processing started: Sun Apr 17 14:08:27 2022
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off control -c DUT
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file DUT.vho in folder "C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file DUT.vho in folder "D:/IITB-RISC-22/Multicycle/Controller/simulation/modelsim/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4618 megabytes
-    Info: Processing ended: Sun Apr 17 14:10:41 2022
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Sun Apr 17 14:08:27 2022
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 

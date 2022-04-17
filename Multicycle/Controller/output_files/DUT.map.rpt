@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DUT
-Sun Apr 17 14:10:31 2022
+Sun Apr 17 14:08:18 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,7 +13,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |controller|state
+  8. State Machine - |DUT|controller:add_instance|state
   9. User-Specified and Inferred Latches
  10. General Register Statistics
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
@@ -44,12 +44,12 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sun Apr 17 14:10:31 2022       ;
+; Analysis & Synthesis Status ; Successful - Sun Apr 17 14:08:18 2022       ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; DUT                                         ;
-; Top-level Entity Name       ; controller                                  ;
+; Top-level Entity Name       ; DUT                                         ;
 ; Family                      ; MAX V                                       ;
-; Total logic elements        ; 192                                         ;
+; Total logic elements        ; 193                                         ;
 ; Total pins                  ; 50                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
@@ -61,7 +61,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
-; Top-level entity name                                            ; controller         ; DUT                ;
+; Top-level entity name                                            ; DUT                ; DUT                ;
 ; Family name                                                      ; MAX V              ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -142,63 +142,65 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                             ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                      ; Library ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------+---------+
-; controller.vhd                   ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                         ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------+---------+
+; controller.vhd                   ; yes             ; User VHDL File  ; D:/IITB-RISC-22/Multicycle/Controller/controller.vhd ;         ;
+; DUT.vhd                          ; yes             ; User VHDL File  ; D:/IITB-RISC-22/Multicycle/Controller/DUT.vhd        ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary            ;
-+---------------------------------------------+----------+
-; Resource                                    ; Usage    ;
-+---------------------------------------------+----------+
-; Total logic elements                        ; 192      ;
-;     -- Combinational with no register       ; 167      ;
-;     -- Register only                        ; 7        ;
-;     -- Combinational with a register        ; 18       ;
-;                                             ;          ;
-; Logic element usage by number of LUT inputs ;          ;
-;     -- 4 input functions                    ; 54       ;
-;     -- 3 input functions                    ; 49       ;
-;     -- 2 input functions                    ; 80       ;
-;     -- 1 input functions                    ; 2        ;
-;     -- 0 input functions                    ; 0        ;
-;                                             ;          ;
-; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 161      ;
-;     -- arithmetic mode                      ; 31       ;
-;     -- qfbk mode                            ; 0        ;
-;     -- register cascade mode                ; 0        ;
-;     -- synchronous clear/load mode          ; 0        ;
-;     -- asynchronous clear/load mode         ; 0        ;
-;                                             ;          ;
-; Total registers                             ; 25       ;
-; Total logic cells in carry chains           ; 32       ;
-; I/O pins                                    ; 50       ;
-; Maximum fan-out node                        ; state.S3 ;
-; Maximum fan-out                             ; 44       ;
-; Total fan-out                               ; 587      ;
-; Average fan-out                             ; 2.43     ;
-+---------------------------------------------+----------+
++--------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                    ;
++---------------------------------------------+----------------------------------+
+; Resource                                    ; Usage                            ;
++---------------------------------------------+----------------------------------+
+; Total logic elements                        ; 193                              ;
+;     -- Combinational with no register       ; 168                              ;
+;     -- Register only                        ; 7                                ;
+;     -- Combinational with a register        ; 18                               ;
+;                                             ;                                  ;
+; Logic element usage by number of LUT inputs ;                                  ;
+;     -- 4 input functions                    ; 55                               ;
+;     -- 3 input functions                    ; 50                               ;
+;     -- 2 input functions                    ; 79                               ;
+;     -- 1 input functions                    ; 2                                ;
+;     -- 0 input functions                    ; 0                                ;
+;                                             ;                                  ;
+; Logic elements by mode                      ;                                  ;
+;     -- normal mode                          ; 162                              ;
+;     -- arithmetic mode                      ; 31                               ;
+;     -- qfbk mode                            ; 0                                ;
+;     -- register cascade mode                ; 0                                ;
+;     -- synchronous clear/load mode          ; 0                                ;
+;     -- asynchronous clear/load mode         ; 0                                ;
+;                                             ;                                  ;
+; Total registers                             ; 25                               ;
+; Total logic cells in carry chains           ; 32                               ;
+; I/O pins                                    ; 50                               ;
+; Maximum fan-out node                        ; controller:add_instance|state.S3 ;
+; Maximum fan-out                             ; 44                               ;
+; Total fan-out                               ; 592                              ;
+; Average fan-out                             ; 2.44                             ;
++---------------------------------------------+----------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
-; |controller                ; 192 (192)   ; 25           ; 0          ; 50   ; 0            ; 167 (167)    ; 7 (7)             ; 18 (18)          ; 32 (32)         ; 0 (0)      ; |controller         ; controller  ; work         ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                           ;
++------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------+-------------+--------------+
+; Compilation Hierarchy Node   ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name          ; Entity Name ; Library Name ;
++------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------+-------------+--------------+
+; |DUT                         ; 193 (0)     ; 25           ; 0          ; 50   ; 0            ; 168 (0)      ; 7 (0)             ; 18 (0)           ; 32 (0)          ; 0 (0)      ; |DUT                         ; DUT         ; work         ;
+;    |controller:add_instance| ; 193 (193)   ; 25           ; 0          ; 0    ; 0            ; 168 (168)    ; 7 (7)             ; 18 (18)          ; 32 (32)         ; 0 (0)      ; |DUT|controller:add_instance ; controller  ; work         ;
++------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |controller|state                                                                                                                                                                                                                                                                           ;
+; State Machine - |DUT|controller:add_instance|state                                                                                                                                                                                                                                                          ;
 +-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+
 ; Name      ; state.S24 ; state.S23 ; state.S22 ; state.S21 ; state.S20 ; state.S19 ; state.S18 ; state.S17 ; state.S16 ; state.S15 ; state.S14 ; state.S13 ; state.S12 ; state.S11 ; state.S10 ; state.S9 ; state.S8 ; state.S7 ; state.S6 ; state.S5 ; state.S4 ; state.S3 ; state.S2 ; state.S1 ; state.S0 ;
 +-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+
@@ -230,45 +232,45 @@ Encoding Type:  One-Hot
 +-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+
 
 
-+----------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                ;
-+-----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
-+-----------------------------------------------------+---------------------+------------------------+
-; i[0]                                                ; Selector0           ; yes                    ;
-; i[1]                                                ; Selector0           ; yes                    ;
-; i[2]                                                ; Selector0           ; yes                    ;
-; i[7]                                                ; Selector0           ; yes                    ;
-; i[6]                                                ; Selector0           ; yes                    ;
-; i[5]                                                ; Selector0           ; yes                    ;
-; i[4]                                                ; Selector0           ; yes                    ;
-; i[3]                                                ; Selector0           ; yes                    ;
-; i[9]                                                ; Selector0           ; yes                    ;
-; i[10]                                               ; Selector0           ; yes                    ;
-; i[11]                                               ; Selector0           ; yes                    ;
-; i[12]                                               ; Selector0           ; yes                    ;
-; i[13]                                               ; Selector0           ; yes                    ;
-; i[14]                                               ; Selector0           ; yes                    ;
-; i[15]                                               ; Selector0           ; yes                    ;
-; i[16]                                               ; Selector0           ; yes                    ;
-; i[17]                                               ; Selector0           ; yes                    ;
-; i[18]                                               ; Selector0           ; yes                    ;
-; i[19]                                               ; Selector0           ; yes                    ;
-; i[20]                                               ; Selector0           ; yes                    ;
-; i[21]                                               ; Selector0           ; yes                    ;
-; i[22]                                               ; Selector0           ; yes                    ;
-; i[23]                                               ; Selector0           ; yes                    ;
-; i[24]                                               ; Selector0           ; yes                    ;
-; i[25]                                               ; Selector0           ; yes                    ;
-; i[26]                                               ; Selector0           ; yes                    ;
-; i[27]                                               ; Selector0           ; yes                    ;
-; i[28]                                               ; Selector0           ; yes                    ;
-; i[29]                                               ; Selector0           ; yes                    ;
-; i[30]                                               ; Selector0           ; yes                    ;
-; i[31]                                               ; Selector0           ; yes                    ;
-; i[8]                                                ; Selector0           ; yes                    ;
-; Number of user-specified and inferred latches = 32  ;                     ;                        ;
-+-----------------------------------------------------+---------------------+------------------------+
++------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                              ;
++-----------------------------------------------------+-----------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal               ; Free of Timing Hazards ;
++-----------------------------------------------------+-----------------------------------+------------------------+
+; controller:add_instance|i[0]                        ; controller:add_instance|Selector0 ; yes                    ;
+; controller:add_instance|i[1]                        ; controller:add_instance|Selector0 ; yes                    ;
+; controller:add_instance|i[2]                        ; controller:add_instance|Selector0 ; yes                    ;
+; controller:add_instance|i[3]                        ; controller:add_instance|Selector0 ; yes                    ;
+; controller:add_instance|i[7]                        ; controller:add_instance|Selector0 ; yes                    ;
+; controller:add_instance|i[6]                        ; controller:add_instance|Selector0 ; yes                    ;
+; controller:add_instance|i[5]                        ; controller:add_instance|Selector0 ; yes                    ;
+; controller:add_instance|i[4]                        ; controller:add_instance|Selector0 ; yes                    ;
+; controller:add_instance|i[9]                        ; controller:add_instance|Selector0 ; yes                    ;
+; controller:add_instance|i[10]                       ; controller:add_instance|Selector0 ; yes                    ;
+; controller:add_instance|i[11]                       ; controller:add_instance|Selector0 ; yes                    ;
+; controller:add_instance|i[12]                       ; controller:add_instance|Selector0 ; yes                    ;
+; controller:add_instance|i[13]                       ; controller:add_instance|Selector0 ; yes                    ;
+; controller:add_instance|i[14]                       ; controller:add_instance|Selector0 ; yes                    ;
+; controller:add_instance|i[15]                       ; controller:add_instance|Selector0 ; yes                    ;
+; controller:add_instance|i[16]                       ; controller:add_instance|Selector0 ; yes                    ;
+; controller:add_instance|i[17]                       ; controller:add_instance|Selector0 ; yes                    ;
+; controller:add_instance|i[18]                       ; controller:add_instance|Selector0 ; yes                    ;
+; controller:add_instance|i[19]                       ; controller:add_instance|Selector0 ; yes                    ;
+; controller:add_instance|i[20]                       ; controller:add_instance|Selector0 ; yes                    ;
+; controller:add_instance|i[21]                       ; controller:add_instance|Selector0 ; yes                    ;
+; controller:add_instance|i[22]                       ; controller:add_instance|Selector0 ; yes                    ;
+; controller:add_instance|i[23]                       ; controller:add_instance|Selector0 ; yes                    ;
+; controller:add_instance|i[24]                       ; controller:add_instance|Selector0 ; yes                    ;
+; controller:add_instance|i[25]                       ; controller:add_instance|Selector0 ; yes                    ;
+; controller:add_instance|i[26]                       ; controller:add_instance|Selector0 ; yes                    ;
+; controller:add_instance|i[27]                       ; controller:add_instance|Selector0 ; yes                    ;
+; controller:add_instance|i[28]                       ; controller:add_instance|Selector0 ; yes                    ;
+; controller:add_instance|i[29]                       ; controller:add_instance|Selector0 ; yes                    ;
+; controller:add_instance|i[30]                       ; controller:add_instance|Selector0 ; yes                    ;
+; controller:add_instance|i[31]                       ; controller:add_instance|Selector0 ; yes                    ;
+; controller:add_instance|i[8]                        ; controller:add_instance|Selector0 ; yes                    ;
+; Number of user-specified and inferred latches = 32  ;                                   ;                        ;
++-----------------------------------------------------+-----------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -287,13 +289,13 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |controller|nstate.S6      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |DUT|controller:add_instance|nstate.S6 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
 
 
 +-------------------------------+
@@ -302,126 +304,133 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Apr 17 14:10:19 2022
+    Info: Processing started: Sun Apr 17 14:08:08 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off control -c DUT
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file controller.vhd
-    Info (12022): Found design unit 1: controller-arch File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 19
-    Info (12023): Found entity 1: controller File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 6
-Info (12127): Elaborating entity "controller" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at controller.vhd(101): signal "cy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 101
-Warning (10492): VHDL Process Statement warning at controller.vhd(108): signal "z" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 108
-Warning (10492): VHDL Process Statement warning at controller.vhd(126): signal "cy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 126
-Warning (10492): VHDL Process Statement warning at controller.vhd(132): signal "z" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 132
-Warning (10492): VHDL Process Statement warning at controller.vhd(397): signal "z" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 397
-Warning (10631): VHDL Process Statement warning at controller.vhd(279): inferring latch(es) for signal or variable "i", which holds its previous value in one or more paths through the process File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[0]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[1]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[2]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[3]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[4]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[5]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[6]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[7]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[8]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[9]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[10]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[11]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[12]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[13]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[14]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[15]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[16]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[17]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[18]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[19]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[20]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[21]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[22]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[23]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[24]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[25]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[26]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[27]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[28]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[29]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[30]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[31]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Warning (13012): Latch i[0] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[1] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[2] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[7] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[6] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[5] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[4] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[3] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[9] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[10] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[11] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[12] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[13] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[14] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[15] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[16] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[17] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[18] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[19] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[20] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[21] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[22] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[23] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[24] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[25] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[26] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[27] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[28] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[29] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[30] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[31] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[8] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+    Info (12022): Found design unit 1: controller-arch File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 19
+    Info (12023): Found entity 1: controller File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file dut.vhd
+    Info (12022): Found design unit 1: DUT-DutWrap File: D:/IITB-RISC-22/Multicycle/Controller/DUT.vhd Line: 8
+    Info (12023): Found entity 1: DUT File: D:/IITB-RISC-22/Multicycle/Controller/DUT.vhd Line: 3
+Info (12021): Found 2 design units, including 1 entities, in source file testbench.vhd
+    Info (12022): Found design unit 1: Testbench-Behave File: D:/IITB-RISC-22/Multicycle/Controller/testbench.vhd Line: 9
+    Info (12023): Found entity 1: Testbench File: D:/IITB-RISC-22/Multicycle/Controller/testbench.vhd Line: 7
+Info (12127): Elaborating entity "DUT" for the top level hierarchy
+Info (12128): Elaborating entity "controller" for hierarchy "controller:add_instance" File: D:/IITB-RISC-22/Multicycle/Controller/DUT.vhd Line: 24
+Warning (10492): VHDL Process Statement warning at controller.vhd(101): signal "cy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 101
+Warning (10492): VHDL Process Statement warning at controller.vhd(108): signal "z" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 108
+Warning (10492): VHDL Process Statement warning at controller.vhd(126): signal "cy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 126
+Warning (10492): VHDL Process Statement warning at controller.vhd(132): signal "z" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 132
+Warning (10492): VHDL Process Statement warning at controller.vhd(397): signal "z" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 397
+Warning (10631): VHDL Process Statement warning at controller.vhd(279): inferring latch(es) for signal or variable "i", which holds its previous value in one or more paths through the process File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[0]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[1]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[2]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[3]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[4]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[5]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[6]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[7]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[8]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[9]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[10]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[11]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[12]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[13]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[14]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[15]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[16]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[17]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[18]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[19]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[20]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[21]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[22]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[23]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[24]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[25]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[26]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[27]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[28]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[29]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[30]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[31]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Warning (13012): Latch controller:add_instance|i[0] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[1] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[2] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[3] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[7] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[6] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[5] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[4] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[9] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[10] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[11] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[12] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[13] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[14] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[15] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[16] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[17] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[18] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[19] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[20] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[21] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[22] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[23] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[24] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[25] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[26] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[27] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[28] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[29] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[30] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[31] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[8] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "select_Mux_ALU_A" is stuck at GND File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 15
-Info (21057): Implemented 242 device resources after synthesis - the final resource count might be different
+    Warning (13410): Pin "output_vector[17]" is stuck at GND File: D:/IITB-RISC-22/Multicycle/Controller/DUT.vhd Line: 5
+Info (21057): Implemented 243 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 19 input pins
     Info (21059): Implemented 31 output pins
-    Info (21061): Implemented 192 logic cells
+    Info (21061): Implemented 193 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 73 warnings
     Info: Peak virtual memory: 4760 megabytes
-    Info: Processing ended: Sun Apr 17 14:10:31 2022
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:30
+    Info: Processing ended: Sun Apr 17 14:08:18 2022
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:24
 
 

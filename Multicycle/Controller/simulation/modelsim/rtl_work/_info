@@ -1,0 +1,136 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/IITB-RISC-22/Multicycle/Controller/simulation/modelsim
+Econtroller
+Z1 w1650184686
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R0
+Z5 8D:/IITB-RISC-22/Multicycle/Controller/controller.vhd
+Z6 FD:/IITB-RISC-22/Multicycle/Controller/controller.vhd
+l0
+L6 1
+VNca8?Vb>><QdYfXUb`>5G1
+!s100 07iPG1k2^gNQ7ccV:X2kB2
+Z7 OV;C;2020.1;71
+31
+Z8 !s110 1650184718
+!i10b 1
+Z9 !s108 1650184718.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|D:/IITB-RISC-22/Multicycle/Controller/controller.vhd|
+Z11 !s107 D:/IITB-RISC-22/Multicycle/Controller/controller.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Aarch
+R2
+R3
+R4
+DEx4 work 10 controller 0 22 Nca8?Vb>><QdYfXUb`>5G1
+!i122 0
+l26
+L19 412
+VSURNODcZ9=S7?k1T3=O9i1
+!s100 jWK?oSh9E6=ceKb0daDR93
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Edut
+Z14 w1650181564
+R3
+R4
+!i122 1
+R0
+Z15 8D:/IITB-RISC-22/Multicycle/Controller/DUT.vhd
+Z16 FD:/IITB-RISC-22/Multicycle/Controller/DUT.vhd
+l0
+L3 1
+VP4I1O1ohnbz5dO251D`zL2
+!s100 Ildfcil=9VSg[[R]fT4a71
+R7
+31
+Z17 !s110 1650184719
+!i10b 1
+Z18 !s108 1650184719.000000
+Z19 !s90 -reportprogress|300|-93|-work|work|D:/IITB-RISC-22/Multicycle/Controller/DUT.vhd|
+Z20 !s107 D:/IITB-RISC-22/Multicycle/Controller/DUT.vhd|
+!i113 1
+R12
+R13
+Adutwrap
+R3
+R4
+DEx4 work 3 dut 0 22 P4I1O1ohnbz5dO251D`zL2
+!i122 1
+l21
+L8 46
+Vlc_JIcN?[Iz:a<]g0FE:j1
+!s100 ;P^=l:=6b5HeNU_6GANg?3
+R7
+31
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13
+Etestbench
+Z21 w1650180594
+R4
+R3
+!i122 2
+R0
+Z22 8D:/IITB-RISC-22/Multicycle/Controller/testbench.vhd
+Z23 FD:/IITB-RISC-22/Multicycle/Controller/testbench.vhd
+l0
+L7 1
+V]iKK_Z9L:G9B:i8c]3eFH0
+!s100 bWf8kl8zb90X@P1m>V^K20
+R7
+31
+R17
+!i10b 1
+R18
+Z24 !s90 -reportprogress|300|-93|-work|work|D:/IITB-RISC-22/Multicycle/Controller/testbench.vhd|
+!s107 D:/IITB-RISC-22/Multicycle/Controller/testbench.vhd|
+!i113 1
+R12
+R13
+Abehave
+R4
+R3
+DEx4 work 9 testbench 0 22 ]iKK_Z9L:G9B:i8c]3eFH0
+!i122 2
+l69
+L9 132
+VK[oUgiA[fTzSXdb>Aan=_2
+!s100 SBfg2N8Zo2kDb^bVg22:k0
+R7
+31
+R17
+!i10b 1
+R18
+R24
+Z25 !s107 D:/IITB-RISC-22/Multicycle/Controller/testbench.vhd|
+!i113 1
+R12
+R13

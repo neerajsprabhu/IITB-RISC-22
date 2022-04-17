@@ -1,4 +1,57 @@
-|controller
+|DUT
+input_vector[0] => controller:add_instance.clk
+input_vector[1] => controller:add_instance.z
+input_vector[2] => controller:add_instance.cy
+input_vector[3] => controller:add_instance.IR[0]
+input_vector[4] => controller:add_instance.IR[1]
+input_vector[5] => controller:add_instance.IR[2]
+input_vector[6] => controller:add_instance.IR[3]
+input_vector[7] => controller:add_instance.IR[4]
+input_vector[8] => controller:add_instance.IR[5]
+input_vector[9] => controller:add_instance.IR[6]
+input_vector[10] => controller:add_instance.IR[7]
+input_vector[11] => controller:add_instance.IR[8]
+input_vector[12] => controller:add_instance.IR[9]
+input_vector[13] => controller:add_instance.IR[10]
+input_vector[14] => controller:add_instance.IR[11]
+input_vector[15] => controller:add_instance.IR[12]
+input_vector[16] => controller:add_instance.IR[13]
+input_vector[17] => controller:add_instance.IR[14]
+input_vector[18] => controller:add_instance.IR[15]
+output_vector[0] << controller:add_instance.dec[0]
+output_vector[1] << controller:add_instance.dec[1]
+output_vector[2] << controller:add_instance.dec[2]
+output_vector[3] << controller:add_instance.select_ALU[0]
+output_vector[4] << controller:add_instance.select_ALU[1]
+output_vector[5] << controller:add_instance.wr_z
+output_vector[6] << controller:add_instance.wr_cy
+output_vector[7] << controller:add_instance.wr_inc
+output_vector[8] << controller:add_instance.wr_IR
+output_vector[9] << controller:add_instance.wr_T3
+output_vector[10] << controller:add_instance.wr_T2
+output_vector[11] << controller:add_instance.wr_T1
+output_vector[12] << controller:add_instance.wr_RF
+output_vector[13] << controller:add_instance.wr_Mem
+output_vector[14] << controller:add_instance.select_Mux_Mem_D
+output_vector[15] << controller:add_instance.select_Mux_ALU_B[0]
+output_vector[16] << controller:add_instance.select_Mux_ALU_B[1]
+output_vector[17] << controller:add_instance.select_Mux_ALU_A
+output_vector[18] << controller:add_instance.select_Mux_T2[0]
+output_vector[19] << controller:add_instance.select_Mux_T2[1]
+output_vector[20] << controller:add_instance.select_Mux_T1
+output_vector[21] << controller:add_instance.select_Mux_RF_D3[0]
+output_vector[22] << controller:add_instance.select_Mux_RF_D3[1]
+output_vector[23] << controller:add_instance.select_Mux_RF_D3[2]
+output_vector[24] << controller:add_instance.select_Mux_RF_A3[0]
+output_vector[25] << controller:add_instance.select_Mux_RF_A3[1]
+output_vector[26] << controller:add_instance.select_Mux_RF_A3[2]
+output_vector[27] << controller:add_instance.select_Mux_RF_A2
+output_vector[28] << controller:add_instance.select_Mux_RF_A1[0]
+output_vector[29] << controller:add_instance.select_Mux_RF_A1[1]
+output_vector[30] << controller:add_instance.select_Mux_Mem_A
+
+
+|DUT|controller:add_instance
 IR[0] => Mux0.IN3
 IR[0] => Mux1.IN15
 IR[0] => Equal7.IN1

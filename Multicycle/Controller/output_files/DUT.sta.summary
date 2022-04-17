@@ -2,27 +2,27 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Setup 'clk'
-Slack : -14.865
-TNS   : -119.705
+Type  : Setup 'input_vector[0]'
+Slack : -15.297
+TNS   : -129.616
 
-Type  : Setup 'IR[13]'
-Slack : -12.302
-TNS   : -356.516
+Type  : Setup 'input_vector[16]'
+Slack : -12.342
+TNS   : -358.895
 
-Type  : Hold 'IR[13]'
-Slack : -0.357
-TNS   : -0.584
+Type  : Hold 'input_vector[16]'
+Slack : -0.989
+TNS   : -10.678
 
-Type  : Hold 'clk'
-Slack : 2.055
+Type  : Hold 'input_vector[0]'
+Slack : 2.022
 TNS   : 0.000
 
-Type  : Minimum Pulse Width 'IR[13]'
+Type  : Minimum Pulse Width 'input_vector[0]'
 Slack : -2.289
 TNS   : -2.289
 
-Type  : Minimum Pulse Width 'clk'
+Type  : Minimum Pulse Width 'input_vector[16]'
 Slack : -2.289
 TNS   : -2.289
 
