@@ -1,5 +1,5 @@
 Analysis & Synthesis report for uP
-Sat Apr 16 23:27:24 2022
+Sun Apr 17 14:10:52 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -49,7 +49,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sat Apr 16 23:27:24 2022       ;
+; Analysis & Synthesis Status ; Successful - Sun Apr 17 14:10:52 2022       ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; uP                                          ;
 ; Top-level Entity Name       ; uP                                          ;
@@ -147,31 +147,31 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                  ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                           ; Library ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
-; controller.vhd                   ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Project_309/uP/controller.vhd ;         ;
-; SE9.vhd                          ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Project_309/uP/SE9.vhd        ;         ;
-; SE6.vhd                          ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Project_309/uP/SE6.vhd        ;         ;
-; reg_bank.vhd                     ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Project_309/uP/reg_bank.vhd   ;         ;
-; reg_16.vhd                       ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Project_309/uP/reg_16.vhd     ;         ;
-; reg_1.vhd                        ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Project_309/uP/reg_1.vhd      ;         ;
-; mux81_3.vhd                      ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Project_309/uP/mux81_3.vhd    ;         ;
-; mux81.vhd                        ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Project_309/uP/mux81.vhd      ;         ;
-; mux41_3.vhd                      ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Project_309/uP/mux41_3.vhd    ;         ;
-; mux41.vhd                        ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd      ;         ;
-; mux21.vhd                        ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Project_309/uP/mux21.vhd      ;         ;
-; mux21 _3.vhd                     ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Project_309/uP/mux21 _3.vhd   ;         ;
-; memory.vhd                       ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Project_309/uP/memory.vhd     ;         ;
-; inc.vhd                          ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Project_309/uP/inc.vhd        ;         ;
-; datapath.vhd                     ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Project_309/uP/datapath.vhd   ;         ;
-; bit7shift.vhd                    ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Project_309/uP/bit7shift.vhd  ;         ;
-; bit1shift.vhd                    ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Project_309/uP/bit1shift.vhd  ;         ;
-; alu.vhd                          ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Project_309/uP/alu.vhd        ;         ;
-; uP.vhd                           ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Project_309/uP/uP.vhd         ;         ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                     ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                              ; Library ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------+---------+
+; controller.vhd                   ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd ;         ;
+; SE9.vhd                          ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE9.vhd        ;         ;
+; SE6.vhd                          ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE6.vhd        ;         ;
+; reg_bank.vhd                     ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/reg_bank.vhd   ;         ;
+; reg_16.vhd                       ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/reg_16.vhd     ;         ;
+; reg_1.vhd                        ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/reg_1.vhd      ;         ;
+; mux81_3.vhd                      ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux81_3.vhd    ;         ;
+; mux81.vhd                        ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux81.vhd      ;         ;
+; mux41_3.vhd                      ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41_3.vhd    ;         ;
+; mux41.vhd                        ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd      ;         ;
+; mux21.vhd                        ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux21.vhd      ;         ;
+; mux21 _3.vhd                     ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux21 _3.vhd   ;         ;
+; memory.vhd                       ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/memory.vhd     ;         ;
+; inc.vhd                          ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/inc.vhd        ;         ;
+; datapath.vhd                     ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/datapath.vhd   ;         ;
+; bit7shift.vhd                    ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/bit7shift.vhd  ;         ;
+; bit1shift.vhd                    ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/bit1shift.vhd  ;         ;
+; alu.vhd                          ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/alu.vhd        ;         ;
+; uP.vhd                           ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/uP.vhd         ;         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -627,286 +627,286 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat Apr 16 23:27:17 2022
+    Info: Processing started: Sun Apr 17 14:10:41 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off uP -c uP
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file controller.vhd
-    Info (12022): Found design unit 1: controller-arch File: D:/IITB/Semester_4/EE309/Project_309/uP/controller.vhd Line: 19
-    Info (12023): Found entity 1: controller File: D:/IITB/Semester_4/EE309/Project_309/uP/controller.vhd Line: 6
+    Info (12022): Found design unit 1: controller-arch File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd Line: 19
+    Info (12023): Found entity 1: controller File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file se9.vhd
-    Info (12022): Found design unit 1: bitextender9-behavior File: D:/IITB/Semester_4/EE309/Project_309/uP/SE9.vhd Line: 11
-    Info (12023): Found entity 1: bitextender9 File: D:/IITB/Semester_4/EE309/Project_309/uP/SE9.vhd Line: 4
+    Info (12022): Found design unit 1: bitextender9-behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE9.vhd Line: 11
+    Info (12023): Found entity 1: bitextender9 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE9.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file se6.vhd
-    Info (12022): Found design unit 1: bitextender6-behavior File: D:/IITB/Semester_4/EE309/Project_309/uP/SE6.vhd Line: 11
-    Info (12023): Found entity 1: bitextender6 File: D:/IITB/Semester_4/EE309/Project_309/uP/SE6.vhd Line: 4
+    Info (12022): Found design unit 1: bitextender6-behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE6.vhd Line: 11
+    Info (12023): Found entity 1: bitextender6 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE6.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file reg_bank.vhd
-    Info (12022): Found design unit 1: register_bank-rb1 File: D:/IITB/Semester_4/EE309/Project_309/uP/reg_bank.vhd Line: 19
-    Info (12023): Found entity 1: register_bank File: D:/IITB/Semester_4/EE309/Project_309/uP/reg_bank.vhd Line: 6
+    Info (12022): Found design unit 1: register_bank-rb1 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/reg_bank.vhd Line: 19
+    Info (12023): Found entity 1: register_bank File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/reg_bank.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file reg_16.vhd
-    Info (12022): Found design unit 1: reg-reg1 File: D:/IITB/Semester_4/EE309/Project_309/uP/reg_16.vhd Line: 13
-    Info (12023): Found entity 1: reg File: D:/IITB/Semester_4/EE309/Project_309/uP/reg_16.vhd Line: 4
+    Info (12022): Found design unit 1: reg-reg1 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/reg_16.vhd Line: 13
+    Info (12023): Found entity 1: reg File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/reg_16.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file reg_1.vhd
-    Info (12022): Found design unit 1: reg1-reg_1 File: D:/IITB/Semester_4/EE309/Project_309/uP/reg_1.vhd Line: 13
-    Info (12023): Found entity 1: reg1 File: D:/IITB/Semester_4/EE309/Project_309/uP/reg_1.vhd Line: 4
+    Info (12022): Found design unit 1: reg1-reg_1 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/reg_1.vhd Line: 13
+    Info (12023): Found entity 1: reg1 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/reg_1.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file mux81_3.vhd
-    Info (12022): Found design unit 1: mux81_3-behavior File: D:/IITB/Semester_4/EE309/Project_309/uP/mux81_3.vhd Line: 19
-    Info (12023): Found entity 1: mux81_3 File: D:/IITB/Semester_4/EE309/Project_309/uP/mux81_3.vhd Line: 4
+    Info (12022): Found design unit 1: mux81_3-behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux81_3.vhd Line: 19
+    Info (12023): Found entity 1: mux81_3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux81_3.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file mux81.vhd
-    Info (12022): Found design unit 1: mux81-behavior File: D:/IITB/Semester_4/EE309/Project_309/uP/mux81.vhd Line: 19
-    Info (12023): Found entity 1: mux81 File: D:/IITB/Semester_4/EE309/Project_309/uP/mux81.vhd Line: 4
+    Info (12022): Found design unit 1: mux81-behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux81.vhd Line: 19
+    Info (12023): Found entity 1: mux81 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux81.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file mux41_3.vhd
-    Info (12022): Found design unit 1: mux41_3-behavior File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41_3.vhd Line: 15
-    Info (12023): Found entity 1: mux41_3 File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41_3.vhd Line: 4
-Warning (12090): Entity "mux41" obtained from "mux41.vhd" instead of from Quartus Prime megafunction library File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 4
+    Info (12022): Found design unit 1: mux41_3-behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41_3.vhd Line: 15
+    Info (12023): Found entity 1: mux41_3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41_3.vhd Line: 4
+Warning (12090): Entity "mux41" obtained from "mux41.vhd" instead of from Quartus Prime megafunction library File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file mux41.vhd
-    Info (12022): Found design unit 1: mux41-behavior File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 15
-    Info (12023): Found entity 1: mux41 File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 4
+    Info (12022): Found design unit 1: mux41-behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 15
+    Info (12023): Found entity 1: mux41 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file mux21.vhd
-    Info (12022): Found design unit 1: mux21-behavior File: D:/IITB/Semester_4/EE309/Project_309/uP/mux21.vhd Line: 13
-    Info (12023): Found entity 1: mux21 File: D:/IITB/Semester_4/EE309/Project_309/uP/mux21.vhd Line: 4
+    Info (12022): Found design unit 1: mux21-behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux21.vhd Line: 13
+    Info (12023): Found entity 1: mux21 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux21.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file mux21 _3.vhd
-    Info (12022): Found design unit 1: mux21_3-behavior File: D:/IITB/Semester_4/EE309/Project_309/uP/mux21 _3.vhd Line: 13
-    Info (12023): Found entity 1: mux21_3 File: D:/IITB/Semester_4/EE309/Project_309/uP/mux21 _3.vhd Line: 4
+    Info (12022): Found design unit 1: mux21_3-behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux21 _3.vhd Line: 13
+    Info (12023): Found entity 1: mux21_3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux21 _3.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file memory.vhd
-    Info (12022): Found design unit 1: memory-mem1 File: D:/IITB/Semester_4/EE309/Project_309/uP/memory.vhd Line: 15
-    Info (12023): Found entity 1: memory File: D:/IITB/Semester_4/EE309/Project_309/uP/memory.vhd Line: 5
+    Info (12022): Found design unit 1: memory-mem1 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/memory.vhd Line: 15
+    Info (12023): Found entity 1: memory File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/memory.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file inc.vhd
-    Info (12022): Found design unit 1: incr-behavior File: D:/IITB/Semester_4/EE309/Project_309/uP/inc.vhd Line: 12
-    Info (12023): Found entity 1: incr File: D:/IITB/Semester_4/EE309/Project_309/uP/inc.vhd Line: 5
+    Info (12022): Found design unit 1: incr-behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/inc.vhd Line: 12
+    Info (12023): Found entity 1: incr File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/inc.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file datapath.vhd
-    Info (12022): Found design unit 1: datapath-arch File: D:/IITB/Semester_4/EE309/Project_309/uP/datapath.vhd Line: 19
-    Info (12023): Found entity 1: datapath File: D:/IITB/Semester_4/EE309/Project_309/uP/datapath.vhd Line: 6
+    Info (12022): Found design unit 1: datapath-arch File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/datapath.vhd Line: 19
+    Info (12023): Found entity 1: datapath File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/datapath.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file bit7shift.vhd
-    Info (12022): Found design unit 1: bit7shift-a1 File: D:/IITB/Semester_4/EE309/Project_309/uP/bit7shift.vhd Line: 12
-    Info (12023): Found entity 1: bit7shift File: D:/IITB/Semester_4/EE309/Project_309/uP/bit7shift.vhd Line: 4
+    Info (12022): Found design unit 1: bit7shift-a1 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/bit7shift.vhd Line: 12
+    Info (12023): Found entity 1: bit7shift File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/bit7shift.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file bit1shift.vhd
-    Info (12022): Found design unit 1: bit1shift-a1 File: D:/IITB/Semester_4/EE309/Project_309/uP/bit1shift.vhd Line: 11
-    Info (12023): Found entity 1: bit1shift File: D:/IITB/Semester_4/EE309/Project_309/uP/bit1shift.vhd Line: 4
+    Info (12022): Found design unit 1: bit1shift-a1 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/bit1shift.vhd Line: 11
+    Info (12023): Found entity 1: bit1shift File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/bit1shift.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
-    Info (12022): Found design unit 1: alu-a1 File: D:/IITB/Semester_4/EE309/Project_309/uP/alu.vhd Line: 16
-    Info (12023): Found entity 1: alu File: D:/IITB/Semester_4/EE309/Project_309/uP/alu.vhd Line: 4
+    Info (12022): Found design unit 1: alu-a1 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/alu.vhd Line: 16
+    Info (12023): Found entity 1: alu File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/alu.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file up.vhd
-    Info (12022): Found design unit 1: uP-uParch File: D:/IITB/Semester_4/EE309/Project_309/uP/uP.vhd Line: 12
-    Info (12023): Found entity 1: uP File: D:/IITB/Semester_4/EE309/Project_309/uP/uP.vhd Line: 6
+    Info (12022): Found design unit 1: uP-uParch File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/uP.vhd Line: 12
+    Info (12023): Found entity 1: uP File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/uP.vhd Line: 6
 Info (12127): Elaborating entity "uP" for the top level hierarchy
-Info (12128): Elaborating entity "controller" for hierarchy "controller:Ctrl" File: D:/IITB/Semester_4/EE309/Project_309/uP/uP.vhd Line: 50
-Warning (10492): VHDL Process Statement warning at controller.vhd(101): signal "cy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/Semester_4/EE309/Project_309/uP/controller.vhd Line: 101
-Warning (10492): VHDL Process Statement warning at controller.vhd(108): signal "z" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/Semester_4/EE309/Project_309/uP/controller.vhd Line: 108
-Warning (10492): VHDL Process Statement warning at controller.vhd(126): signal "cy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/Semester_4/EE309/Project_309/uP/controller.vhd Line: 126
-Warning (10492): VHDL Process Statement warning at controller.vhd(132): signal "z" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/Semester_4/EE309/Project_309/uP/controller.vhd Line: 132
-Warning (10492): VHDL Process Statement warning at controller.vhd(397): signal "z" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/Semester_4/EE309/Project_309/uP/controller.vhd Line: 397
-Warning (10631): VHDL Process Statement warning at controller.vhd(279): inferring latch(es) for signal or variable "i", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/Project_309/uP/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[0]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/uP/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[1]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/uP/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[2]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/uP/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[3]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/uP/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[4]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/uP/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[5]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/uP/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[6]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/uP/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[7]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/uP/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[8]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/uP/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[9]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/uP/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[10]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/uP/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[11]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/uP/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[12]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/uP/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[13]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/uP/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[14]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/uP/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[15]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/uP/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[16]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/uP/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[17]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/uP/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[18]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/uP/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[19]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/uP/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[20]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/uP/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[21]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/uP/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[22]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/uP/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[23]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/uP/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[24]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/uP/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[25]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/uP/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[26]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/uP/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[27]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/uP/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[28]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/uP/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[29]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/uP/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[30]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/uP/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[31]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/uP/controller.vhd Line: 279
-Info (12128): Elaborating entity "datapath" for hierarchy "datapath:DP" File: D:/IITB/Semester_4/EE309/Project_309/uP/uP.vhd Line: 79
-Info (12128): Elaborating entity "reg" for hierarchy "datapath:DP|reg:IR" File: D:/IITB/Semester_4/EE309/Project_309/uP/datapath.vhd Line: 203
-Info (12128): Elaborating entity "mux41_3" for hierarchy "datapath:DP|mux41_3:Mux_RF_A1" File: D:/IITB/Semester_4/EE309/Project_309/uP/datapath.vhd Line: 206
-Warning (10631): VHDL Process Statement warning at mux41_3.vhd(18): inferring latch(es) for signal or variable "Op", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41_3.vhd Line: 18
-Info (10041): Inferred latch for "Op[0]" at mux41_3.vhd(18) File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41_3.vhd Line: 18
-Info (10041): Inferred latch for "Op[1]" at mux41_3.vhd(18) File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41_3.vhd Line: 18
-Info (10041): Inferred latch for "Op[2]" at mux41_3.vhd(18) File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41_3.vhd Line: 18
-Info (12128): Elaborating entity "mux21_3" for hierarchy "datapath:DP|mux21_3:Mux_RF_A2" File: D:/IITB/Semester_4/EE309/Project_309/uP/datapath.vhd Line: 209
-Warning (10631): VHDL Process Statement warning at mux21 _3.vhd(16): inferring latch(es) for signal or variable "Op", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/Project_309/uP/mux21 _3.vhd Line: 16
-Info (10041): Inferred latch for "Op[0]" at mux21 _3.vhd(16) File: D:/IITB/Semester_4/EE309/Project_309/uP/mux21 _3.vhd Line: 16
-Info (10041): Inferred latch for "Op[1]" at mux21 _3.vhd(16) File: D:/IITB/Semester_4/EE309/Project_309/uP/mux21 _3.vhd Line: 16
-Info (10041): Inferred latch for "Op[2]" at mux21 _3.vhd(16) File: D:/IITB/Semester_4/EE309/Project_309/uP/mux21 _3.vhd Line: 16
-Info (12128): Elaborating entity "mux81_3" for hierarchy "datapath:DP|mux81_3:Mux_RF_A3" File: D:/IITB/Semester_4/EE309/Project_309/uP/datapath.vhd Line: 212
-Info (12128): Elaborating entity "bit7shift" for hierarchy "datapath:DP|bit7shift:S7" File: D:/IITB/Semester_4/EE309/Project_309/uP/datapath.vhd Line: 215
-Info (12128): Elaborating entity "mux81" for hierarchy "datapath:DP|mux81:Mux_RF_D3" File: D:/IITB/Semester_4/EE309/Project_309/uP/datapath.vhd Line: 218
-Info (12128): Elaborating entity "register_bank" for hierarchy "datapath:DP|register_bank:RF" File: D:/IITB/Semester_4/EE309/Project_309/uP/datapath.vhd Line: 221
-Warning (10492): VHDL Process Statement warning at reg_bank.vhd(40): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/Semester_4/EE309/Project_309/uP/reg_bank.vhd Line: 40
-Info (12128): Elaborating entity "mux21" for hierarchy "datapath:DP|mux21:Mux_T1" File: D:/IITB/Semester_4/EE309/Project_309/uP/datapath.vhd Line: 224
-Warning (10631): VHDL Process Statement warning at mux21.vhd(16): inferring latch(es) for signal or variable "Op", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/Project_309/uP/mux21.vhd Line: 16
-Info (10041): Inferred latch for "Op[0]" at mux21.vhd(16) File: D:/IITB/Semester_4/EE309/Project_309/uP/mux21.vhd Line: 16
-Info (10041): Inferred latch for "Op[1]" at mux21.vhd(16) File: D:/IITB/Semester_4/EE309/Project_309/uP/mux21.vhd Line: 16
-Info (10041): Inferred latch for "Op[2]" at mux21.vhd(16) File: D:/IITB/Semester_4/EE309/Project_309/uP/mux21.vhd Line: 16
-Info (10041): Inferred latch for "Op[3]" at mux21.vhd(16) File: D:/IITB/Semester_4/EE309/Project_309/uP/mux21.vhd Line: 16
-Info (10041): Inferred latch for "Op[4]" at mux21.vhd(16) File: D:/IITB/Semester_4/EE309/Project_309/uP/mux21.vhd Line: 16
-Info (10041): Inferred latch for "Op[5]" at mux21.vhd(16) File: D:/IITB/Semester_4/EE309/Project_309/uP/mux21.vhd Line: 16
-Info (10041): Inferred latch for "Op[6]" at mux21.vhd(16) File: D:/IITB/Semester_4/EE309/Project_309/uP/mux21.vhd Line: 16
-Info (10041): Inferred latch for "Op[7]" at mux21.vhd(16) File: D:/IITB/Semester_4/EE309/Project_309/uP/mux21.vhd Line: 16
-Info (10041): Inferred latch for "Op[8]" at mux21.vhd(16) File: D:/IITB/Semester_4/EE309/Project_309/uP/mux21.vhd Line: 16
-Info (10041): Inferred latch for "Op[9]" at mux21.vhd(16) File: D:/IITB/Semester_4/EE309/Project_309/uP/mux21.vhd Line: 16
-Info (10041): Inferred latch for "Op[10]" at mux21.vhd(16) File: D:/IITB/Semester_4/EE309/Project_309/uP/mux21.vhd Line: 16
-Info (10041): Inferred latch for "Op[11]" at mux21.vhd(16) File: D:/IITB/Semester_4/EE309/Project_309/uP/mux21.vhd Line: 16
-Info (10041): Inferred latch for "Op[12]" at mux21.vhd(16) File: D:/IITB/Semester_4/EE309/Project_309/uP/mux21.vhd Line: 16
-Info (10041): Inferred latch for "Op[13]" at mux21.vhd(16) File: D:/IITB/Semester_4/EE309/Project_309/uP/mux21.vhd Line: 16
-Info (10041): Inferred latch for "Op[14]" at mux21.vhd(16) File: D:/IITB/Semester_4/EE309/Project_309/uP/mux21.vhd Line: 16
-Info (10041): Inferred latch for "Op[15]" at mux21.vhd(16) File: D:/IITB/Semester_4/EE309/Project_309/uP/mux21.vhd Line: 16
-Info (12128): Elaborating entity "mux41" for hierarchy "datapath:DP|mux41:Mux_T2" File: D:/IITB/Semester_4/EE309/Project_309/uP/datapath.vhd Line: 230
-Warning (10631): VHDL Process Statement warning at mux41.vhd(18): inferring latch(es) for signal or variable "Op", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Info (10041): Inferred latch for "Op[0]" at mux41.vhd(18) File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Info (10041): Inferred latch for "Op[1]" at mux41.vhd(18) File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Info (10041): Inferred latch for "Op[2]" at mux41.vhd(18) File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Info (10041): Inferred latch for "Op[3]" at mux41.vhd(18) File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Info (10041): Inferred latch for "Op[4]" at mux41.vhd(18) File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Info (10041): Inferred latch for "Op[5]" at mux41.vhd(18) File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Info (10041): Inferred latch for "Op[6]" at mux41.vhd(18) File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Info (10041): Inferred latch for "Op[7]" at mux41.vhd(18) File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Info (10041): Inferred latch for "Op[8]" at mux41.vhd(18) File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Info (10041): Inferred latch for "Op[9]" at mux41.vhd(18) File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Info (10041): Inferred latch for "Op[10]" at mux41.vhd(18) File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Info (10041): Inferred latch for "Op[11]" at mux41.vhd(18) File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Info (10041): Inferred latch for "Op[12]" at mux41.vhd(18) File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Info (10041): Inferred latch for "Op[13]" at mux41.vhd(18) File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Info (10041): Inferred latch for "Op[14]" at mux41.vhd(18) File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Info (10041): Inferred latch for "Op[15]" at mux41.vhd(18) File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Info (12128): Elaborating entity "incr" for hierarchy "datapath:DP|incr:inc" File: D:/IITB/Semester_4/EE309/Project_309/uP/datapath.vhd Line: 236
-Warning (10492): VHDL Process Statement warning at inc.vhd(19): signal "wr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/Semester_4/EE309/Project_309/uP/inc.vhd Line: 19
-Warning (10631): VHDL Process Statement warning at inc.vhd(15): inferring latch(es) for signal or variable "Op", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/Project_309/uP/inc.vhd Line: 15
-Info (10041): Inferred latch for "Op[0]" at inc.vhd(15) File: D:/IITB/Semester_4/EE309/Project_309/uP/inc.vhd Line: 15
-Info (10041): Inferred latch for "Op[1]" at inc.vhd(15) File: D:/IITB/Semester_4/EE309/Project_309/uP/inc.vhd Line: 15
-Info (10041): Inferred latch for "Op[2]" at inc.vhd(15) File: D:/IITB/Semester_4/EE309/Project_309/uP/inc.vhd Line: 15
-Info (10041): Inferred latch for "Op[3]" at inc.vhd(15) File: D:/IITB/Semester_4/EE309/Project_309/uP/inc.vhd Line: 15
-Info (10041): Inferred latch for "Op[4]" at inc.vhd(15) File: D:/IITB/Semester_4/EE309/Project_309/uP/inc.vhd Line: 15
-Info (10041): Inferred latch for "Op[5]" at inc.vhd(15) File: D:/IITB/Semester_4/EE309/Project_309/uP/inc.vhd Line: 15
-Info (10041): Inferred latch for "Op[6]" at inc.vhd(15) File: D:/IITB/Semester_4/EE309/Project_309/uP/inc.vhd Line: 15
-Info (10041): Inferred latch for "Op[7]" at inc.vhd(15) File: D:/IITB/Semester_4/EE309/Project_309/uP/inc.vhd Line: 15
-Info (10041): Inferred latch for "Op[8]" at inc.vhd(15) File: D:/IITB/Semester_4/EE309/Project_309/uP/inc.vhd Line: 15
-Info (10041): Inferred latch for "Op[9]" at inc.vhd(15) File: D:/IITB/Semester_4/EE309/Project_309/uP/inc.vhd Line: 15
-Info (10041): Inferred latch for "Op[10]" at inc.vhd(15) File: D:/IITB/Semester_4/EE309/Project_309/uP/inc.vhd Line: 15
-Info (10041): Inferred latch for "Op[11]" at inc.vhd(15) File: D:/IITB/Semester_4/EE309/Project_309/uP/inc.vhd Line: 15
-Info (10041): Inferred latch for "Op[12]" at inc.vhd(15) File: D:/IITB/Semester_4/EE309/Project_309/uP/inc.vhd Line: 15
-Info (10041): Inferred latch for "Op[13]" at inc.vhd(15) File: D:/IITB/Semester_4/EE309/Project_309/uP/inc.vhd Line: 15
-Info (10041): Inferred latch for "Op[14]" at inc.vhd(15) File: D:/IITB/Semester_4/EE309/Project_309/uP/inc.vhd Line: 15
-Info (10041): Inferred latch for "Op[15]" at inc.vhd(15) File: D:/IITB/Semester_4/EE309/Project_309/uP/inc.vhd Line: 15
-Info (12128): Elaborating entity "bit1shift" for hierarchy "datapath:DP|bit1shift:S1" File: D:/IITB/Semester_4/EE309/Project_309/uP/datapath.vhd Line: 245
-Info (12128): Elaborating entity "bitextender6" for hierarchy "datapath:DP|bitextender6:SE6" File: D:/IITB/Semester_4/EE309/Project_309/uP/datapath.vhd Line: 251
-Warning (10631): VHDL Process Statement warning at SE6.vhd(14): inferring latch(es) for signal or variable "Op", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/Project_309/uP/SE6.vhd Line: 14
-Info (10041): Inferred latch for "Op[0]" at SE6.vhd(14) File: D:/IITB/Semester_4/EE309/Project_309/uP/SE6.vhd Line: 14
-Info (10041): Inferred latch for "Op[1]" at SE6.vhd(14) File: D:/IITB/Semester_4/EE309/Project_309/uP/SE6.vhd Line: 14
-Info (10041): Inferred latch for "Op[2]" at SE6.vhd(14) File: D:/IITB/Semester_4/EE309/Project_309/uP/SE6.vhd Line: 14
-Info (10041): Inferred latch for "Op[3]" at SE6.vhd(14) File: D:/IITB/Semester_4/EE309/Project_309/uP/SE6.vhd Line: 14
-Info (10041): Inferred latch for "Op[4]" at SE6.vhd(14) File: D:/IITB/Semester_4/EE309/Project_309/uP/SE6.vhd Line: 14
-Info (10041): Inferred latch for "Op[5]" at SE6.vhd(14) File: D:/IITB/Semester_4/EE309/Project_309/uP/SE6.vhd Line: 14
-Info (10041): Inferred latch for "Op[6]" at SE6.vhd(14) File: D:/IITB/Semester_4/EE309/Project_309/uP/SE6.vhd Line: 14
-Info (10041): Inferred latch for "Op[7]" at SE6.vhd(14) File: D:/IITB/Semester_4/EE309/Project_309/uP/SE6.vhd Line: 14
-Info (10041): Inferred latch for "Op[8]" at SE6.vhd(14) File: D:/IITB/Semester_4/EE309/Project_309/uP/SE6.vhd Line: 14
-Info (10041): Inferred latch for "Op[9]" at SE6.vhd(14) File: D:/IITB/Semester_4/EE309/Project_309/uP/SE6.vhd Line: 14
-Info (10041): Inferred latch for "Op[10]" at SE6.vhd(14) File: D:/IITB/Semester_4/EE309/Project_309/uP/SE6.vhd Line: 14
-Info (10041): Inferred latch for "Op[11]" at SE6.vhd(14) File: D:/IITB/Semester_4/EE309/Project_309/uP/SE6.vhd Line: 14
-Info (10041): Inferred latch for "Op[12]" at SE6.vhd(14) File: D:/IITB/Semester_4/EE309/Project_309/uP/SE6.vhd Line: 14
-Info (10041): Inferred latch for "Op[13]" at SE6.vhd(14) File: D:/IITB/Semester_4/EE309/Project_309/uP/SE6.vhd Line: 14
-Info (10041): Inferred latch for "Op[14]" at SE6.vhd(14) File: D:/IITB/Semester_4/EE309/Project_309/uP/SE6.vhd Line: 14
-Info (10041): Inferred latch for "Op[15]" at SE6.vhd(14) File: D:/IITB/Semester_4/EE309/Project_309/uP/SE6.vhd Line: 14
-Info (12128): Elaborating entity "bitextender9" for hierarchy "datapath:DP|bitextender9:SE9" File: D:/IITB/Semester_4/EE309/Project_309/uP/datapath.vhd Line: 254
-Warning (10631): VHDL Process Statement warning at SE9.vhd(14): inferring latch(es) for signal or variable "Op", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/Project_309/uP/SE9.vhd Line: 14
-Info (10041): Inferred latch for "Op[0]" at SE9.vhd(14) File: D:/IITB/Semester_4/EE309/Project_309/uP/SE9.vhd Line: 14
-Info (10041): Inferred latch for "Op[1]" at SE9.vhd(14) File: D:/IITB/Semester_4/EE309/Project_309/uP/SE9.vhd Line: 14
-Info (10041): Inferred latch for "Op[2]" at SE9.vhd(14) File: D:/IITB/Semester_4/EE309/Project_309/uP/SE9.vhd Line: 14
-Info (10041): Inferred latch for "Op[3]" at SE9.vhd(14) File: D:/IITB/Semester_4/EE309/Project_309/uP/SE9.vhd Line: 14
-Info (10041): Inferred latch for "Op[4]" at SE9.vhd(14) File: D:/IITB/Semester_4/EE309/Project_309/uP/SE9.vhd Line: 14
-Info (10041): Inferred latch for "Op[5]" at SE9.vhd(14) File: D:/IITB/Semester_4/EE309/Project_309/uP/SE9.vhd Line: 14
-Info (10041): Inferred latch for "Op[6]" at SE9.vhd(14) File: D:/IITB/Semester_4/EE309/Project_309/uP/SE9.vhd Line: 14
-Info (10041): Inferred latch for "Op[7]" at SE9.vhd(14) File: D:/IITB/Semester_4/EE309/Project_309/uP/SE9.vhd Line: 14
-Info (10041): Inferred latch for "Op[8]" at SE9.vhd(14) File: D:/IITB/Semester_4/EE309/Project_309/uP/SE9.vhd Line: 14
-Info (10041): Inferred latch for "Op[9]" at SE9.vhd(14) File: D:/IITB/Semester_4/EE309/Project_309/uP/SE9.vhd Line: 14
-Info (10041): Inferred latch for "Op[10]" at SE9.vhd(14) File: D:/IITB/Semester_4/EE309/Project_309/uP/SE9.vhd Line: 14
-Info (10041): Inferred latch for "Op[11]" at SE9.vhd(14) File: D:/IITB/Semester_4/EE309/Project_309/uP/SE9.vhd Line: 14
-Info (10041): Inferred latch for "Op[12]" at SE9.vhd(14) File: D:/IITB/Semester_4/EE309/Project_309/uP/SE9.vhd Line: 14
-Info (10041): Inferred latch for "Op[13]" at SE9.vhd(14) File: D:/IITB/Semester_4/EE309/Project_309/uP/SE9.vhd Line: 14
-Info (10041): Inferred latch for "Op[14]" at SE9.vhd(14) File: D:/IITB/Semester_4/EE309/Project_309/uP/SE9.vhd Line: 14
-Info (10041): Inferred latch for "Op[15]" at SE9.vhd(14) File: D:/IITB/Semester_4/EE309/Project_309/uP/SE9.vhd Line: 14
-Info (12128): Elaborating entity "alu" for hierarchy "datapath:DP|alu:ALU_1" File: D:/IITB/Semester_4/EE309/Project_309/uP/datapath.vhd Line: 257
-Warning (10631): VHDL Process Statement warning at alu.vhd(33): inferring latch(es) for signal or variable "Op", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/Project_309/uP/alu.vhd Line: 33
-Warning (10631): VHDL Process Statement warning at alu.vhd(33): inferring latch(es) for signal or variable "carry", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/Project_309/uP/alu.vhd Line: 33
-Warning (10631): VHDL Process Statement warning at alu.vhd(33): inferring latch(es) for signal or variable "zero", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/Project_309/uP/alu.vhd Line: 33
-Info (10041): Inferred latch for "zero" at alu.vhd(33) File: D:/IITB/Semester_4/EE309/Project_309/uP/alu.vhd Line: 33
-Info (10041): Inferred latch for "carry" at alu.vhd(33) File: D:/IITB/Semester_4/EE309/Project_309/uP/alu.vhd Line: 33
-Info (10041): Inferred latch for "Op[0]" at alu.vhd(33) File: D:/IITB/Semester_4/EE309/Project_309/uP/alu.vhd Line: 33
-Info (10041): Inferred latch for "Op[1]" at alu.vhd(33) File: D:/IITB/Semester_4/EE309/Project_309/uP/alu.vhd Line: 33
-Info (10041): Inferred latch for "Op[2]" at alu.vhd(33) File: D:/IITB/Semester_4/EE309/Project_309/uP/alu.vhd Line: 33
-Info (10041): Inferred latch for "Op[3]" at alu.vhd(33) File: D:/IITB/Semester_4/EE309/Project_309/uP/alu.vhd Line: 33
-Info (10041): Inferred latch for "Op[4]" at alu.vhd(33) File: D:/IITB/Semester_4/EE309/Project_309/uP/alu.vhd Line: 33
-Info (10041): Inferred latch for "Op[5]" at alu.vhd(33) File: D:/IITB/Semester_4/EE309/Project_309/uP/alu.vhd Line: 33
-Info (10041): Inferred latch for "Op[6]" at alu.vhd(33) File: D:/IITB/Semester_4/EE309/Project_309/uP/alu.vhd Line: 33
-Info (10041): Inferred latch for "Op[7]" at alu.vhd(33) File: D:/IITB/Semester_4/EE309/Project_309/uP/alu.vhd Line: 33
-Info (10041): Inferred latch for "Op[8]" at alu.vhd(33) File: D:/IITB/Semester_4/EE309/Project_309/uP/alu.vhd Line: 33
-Info (10041): Inferred latch for "Op[9]" at alu.vhd(33) File: D:/IITB/Semester_4/EE309/Project_309/uP/alu.vhd Line: 33
-Info (10041): Inferred latch for "Op[10]" at alu.vhd(33) File: D:/IITB/Semester_4/EE309/Project_309/uP/alu.vhd Line: 33
-Info (10041): Inferred latch for "Op[11]" at alu.vhd(33) File: D:/IITB/Semester_4/EE309/Project_309/uP/alu.vhd Line: 33
-Info (10041): Inferred latch for "Op[12]" at alu.vhd(33) File: D:/IITB/Semester_4/EE309/Project_309/uP/alu.vhd Line: 33
-Info (10041): Inferred latch for "Op[13]" at alu.vhd(33) File: D:/IITB/Semester_4/EE309/Project_309/uP/alu.vhd Line: 33
-Info (10041): Inferred latch for "Op[14]" at alu.vhd(33) File: D:/IITB/Semester_4/EE309/Project_309/uP/alu.vhd Line: 33
-Info (10041): Inferred latch for "Op[15]" at alu.vhd(33) File: D:/IITB/Semester_4/EE309/Project_309/uP/alu.vhd Line: 33
-Info (12128): Elaborating entity "reg1" for hierarchy "datapath:DP|reg1:carry" File: D:/IITB/Semester_4/EE309/Project_309/uP/datapath.vhd Line: 260
-Info (12128): Elaborating entity "memory" for hierarchy "datapath:DP|memory:Memory_1" File: D:/IITB/Semester_4/EE309/Project_309/uP/datapath.vhd Line: 272
-Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_ALU_B|Op[0]" is permanently enabled File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_ALU_B|Op[1]" is permanently enabled File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_ALU_B|Op[2]" is permanently enabled File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_ALU_B|Op[3]" is permanently enabled File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_ALU_B|Op[4]" is permanently enabled File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_ALU_B|Op[5]" is permanently enabled File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_ALU_B|Op[6]" is permanently enabled File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_ALU_B|Op[7]" is permanently enabled File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_ALU_B|Op[8]" is permanently enabled File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_ALU_B|Op[9]" is permanently enabled File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_ALU_B|Op[10]" is permanently enabled File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_ALU_B|Op[11]" is permanently enabled File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_ALU_B|Op[12]" is permanently enabled File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_ALU_B|Op[13]" is permanently enabled File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_ALU_B|Op[14]" is permanently enabled File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_ALU_B|Op[15]" is permanently enabled File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_T2|Op[0]" is permanently enabled File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_T2|Op[1]" is permanently enabled File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_T2|Op[2]" is permanently enabled File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_T2|Op[3]" is permanently enabled File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_T2|Op[4]" is permanently enabled File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_T2|Op[5]" is permanently enabled File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_T2|Op[6]" is permanently enabled File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_T2|Op[7]" is permanently enabled File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_T2|Op[8]" is permanently enabled File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_T2|Op[9]" is permanently enabled File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_T2|Op[10]" is permanently enabled File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_T2|Op[11]" is permanently enabled File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_T2|Op[12]" is permanently enabled File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_T2|Op[13]" is permanently enabled File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_T2|Op[14]" is permanently enabled File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_T2|Op[15]" is permanently enabled File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "datapath:DP|mux41_3:Mux_RF_A1|Op[0]" is permanently enabled File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41_3.vhd Line: 18
-Warning (14026): LATCH primitive "datapath:DP|mux41_3:Mux_RF_A1|Op[1]" is permanently enabled File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41_3.vhd Line: 18
-Warning (14026): LATCH primitive "datapath:DP|mux41_3:Mux_RF_A1|Op[2]" is permanently enabled File: D:/IITB/Semester_4/EE309/Project_309/uP/mux41_3.vhd Line: 18
+Info (12128): Elaborating entity "controller" for hierarchy "controller:Ctrl" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/uP.vhd Line: 50
+Warning (10492): VHDL Process Statement warning at controller.vhd(101): signal "cy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd Line: 101
+Warning (10492): VHDL Process Statement warning at controller.vhd(108): signal "z" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd Line: 108
+Warning (10492): VHDL Process Statement warning at controller.vhd(126): signal "cy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd Line: 126
+Warning (10492): VHDL Process Statement warning at controller.vhd(132): signal "z" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd Line: 132
+Warning (10492): VHDL Process Statement warning at controller.vhd(397): signal "z" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd Line: 397
+Warning (10631): VHDL Process Statement warning at controller.vhd(279): inferring latch(es) for signal or variable "i", which holds its previous value in one or more paths through the process File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[0]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[1]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[2]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[3]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[4]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[5]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[6]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[7]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[8]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[9]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[10]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[11]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[12]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[13]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[14]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[15]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[16]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[17]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[18]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[19]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[20]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[21]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[22]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[23]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[24]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[25]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[26]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[27]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[28]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[29]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[30]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[31]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd Line: 279
+Info (12128): Elaborating entity "datapath" for hierarchy "datapath:DP" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/uP.vhd Line: 79
+Info (12128): Elaborating entity "reg" for hierarchy "datapath:DP|reg:IR" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/datapath.vhd Line: 203
+Info (12128): Elaborating entity "mux41_3" for hierarchy "datapath:DP|mux41_3:Mux_RF_A1" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/datapath.vhd Line: 206
+Warning (10631): VHDL Process Statement warning at mux41_3.vhd(18): inferring latch(es) for signal or variable "Op", which holds its previous value in one or more paths through the process File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41_3.vhd Line: 18
+Info (10041): Inferred latch for "Op[0]" at mux41_3.vhd(18) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41_3.vhd Line: 18
+Info (10041): Inferred latch for "Op[1]" at mux41_3.vhd(18) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41_3.vhd Line: 18
+Info (10041): Inferred latch for "Op[2]" at mux41_3.vhd(18) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41_3.vhd Line: 18
+Info (12128): Elaborating entity "mux21_3" for hierarchy "datapath:DP|mux21_3:Mux_RF_A2" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/datapath.vhd Line: 209
+Warning (10631): VHDL Process Statement warning at mux21 _3.vhd(16): inferring latch(es) for signal or variable "Op", which holds its previous value in one or more paths through the process File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux21 _3.vhd Line: 16
+Info (10041): Inferred latch for "Op[0]" at mux21 _3.vhd(16) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux21 _3.vhd Line: 16
+Info (10041): Inferred latch for "Op[1]" at mux21 _3.vhd(16) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux21 _3.vhd Line: 16
+Info (10041): Inferred latch for "Op[2]" at mux21 _3.vhd(16) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux21 _3.vhd Line: 16
+Info (12128): Elaborating entity "mux81_3" for hierarchy "datapath:DP|mux81_3:Mux_RF_A3" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/datapath.vhd Line: 212
+Info (12128): Elaborating entity "bit7shift" for hierarchy "datapath:DP|bit7shift:S7" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/datapath.vhd Line: 215
+Info (12128): Elaborating entity "mux81" for hierarchy "datapath:DP|mux81:Mux_RF_D3" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/datapath.vhd Line: 218
+Info (12128): Elaborating entity "register_bank" for hierarchy "datapath:DP|register_bank:RF" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/datapath.vhd Line: 221
+Warning (10492): VHDL Process Statement warning at reg_bank.vhd(40): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/reg_bank.vhd Line: 40
+Info (12128): Elaborating entity "mux21" for hierarchy "datapath:DP|mux21:Mux_T1" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/datapath.vhd Line: 224
+Warning (10631): VHDL Process Statement warning at mux21.vhd(16): inferring latch(es) for signal or variable "Op", which holds its previous value in one or more paths through the process File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux21.vhd Line: 16
+Info (10041): Inferred latch for "Op[0]" at mux21.vhd(16) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux21.vhd Line: 16
+Info (10041): Inferred latch for "Op[1]" at mux21.vhd(16) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux21.vhd Line: 16
+Info (10041): Inferred latch for "Op[2]" at mux21.vhd(16) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux21.vhd Line: 16
+Info (10041): Inferred latch for "Op[3]" at mux21.vhd(16) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux21.vhd Line: 16
+Info (10041): Inferred latch for "Op[4]" at mux21.vhd(16) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux21.vhd Line: 16
+Info (10041): Inferred latch for "Op[5]" at mux21.vhd(16) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux21.vhd Line: 16
+Info (10041): Inferred latch for "Op[6]" at mux21.vhd(16) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux21.vhd Line: 16
+Info (10041): Inferred latch for "Op[7]" at mux21.vhd(16) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux21.vhd Line: 16
+Info (10041): Inferred latch for "Op[8]" at mux21.vhd(16) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux21.vhd Line: 16
+Info (10041): Inferred latch for "Op[9]" at mux21.vhd(16) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux21.vhd Line: 16
+Info (10041): Inferred latch for "Op[10]" at mux21.vhd(16) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux21.vhd Line: 16
+Info (10041): Inferred latch for "Op[11]" at mux21.vhd(16) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux21.vhd Line: 16
+Info (10041): Inferred latch for "Op[12]" at mux21.vhd(16) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux21.vhd Line: 16
+Info (10041): Inferred latch for "Op[13]" at mux21.vhd(16) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux21.vhd Line: 16
+Info (10041): Inferred latch for "Op[14]" at mux21.vhd(16) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux21.vhd Line: 16
+Info (10041): Inferred latch for "Op[15]" at mux21.vhd(16) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux21.vhd Line: 16
+Info (12128): Elaborating entity "mux41" for hierarchy "datapath:DP|mux41:Mux_T2" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/datapath.vhd Line: 230
+Warning (10631): VHDL Process Statement warning at mux41.vhd(18): inferring latch(es) for signal or variable "Op", which holds its previous value in one or more paths through the process File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Info (10041): Inferred latch for "Op[0]" at mux41.vhd(18) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Info (10041): Inferred latch for "Op[1]" at mux41.vhd(18) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Info (10041): Inferred latch for "Op[2]" at mux41.vhd(18) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Info (10041): Inferred latch for "Op[3]" at mux41.vhd(18) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Info (10041): Inferred latch for "Op[4]" at mux41.vhd(18) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Info (10041): Inferred latch for "Op[5]" at mux41.vhd(18) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Info (10041): Inferred latch for "Op[6]" at mux41.vhd(18) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Info (10041): Inferred latch for "Op[7]" at mux41.vhd(18) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Info (10041): Inferred latch for "Op[8]" at mux41.vhd(18) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Info (10041): Inferred latch for "Op[9]" at mux41.vhd(18) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Info (10041): Inferred latch for "Op[10]" at mux41.vhd(18) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Info (10041): Inferred latch for "Op[11]" at mux41.vhd(18) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Info (10041): Inferred latch for "Op[12]" at mux41.vhd(18) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Info (10041): Inferred latch for "Op[13]" at mux41.vhd(18) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Info (10041): Inferred latch for "Op[14]" at mux41.vhd(18) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Info (10041): Inferred latch for "Op[15]" at mux41.vhd(18) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Info (12128): Elaborating entity "incr" for hierarchy "datapath:DP|incr:inc" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/datapath.vhd Line: 236
+Warning (10492): VHDL Process Statement warning at inc.vhd(19): signal "wr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/inc.vhd Line: 19
+Warning (10631): VHDL Process Statement warning at inc.vhd(15): inferring latch(es) for signal or variable "Op", which holds its previous value in one or more paths through the process File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/inc.vhd Line: 15
+Info (10041): Inferred latch for "Op[0]" at inc.vhd(15) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/inc.vhd Line: 15
+Info (10041): Inferred latch for "Op[1]" at inc.vhd(15) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/inc.vhd Line: 15
+Info (10041): Inferred latch for "Op[2]" at inc.vhd(15) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/inc.vhd Line: 15
+Info (10041): Inferred latch for "Op[3]" at inc.vhd(15) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/inc.vhd Line: 15
+Info (10041): Inferred latch for "Op[4]" at inc.vhd(15) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/inc.vhd Line: 15
+Info (10041): Inferred latch for "Op[5]" at inc.vhd(15) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/inc.vhd Line: 15
+Info (10041): Inferred latch for "Op[6]" at inc.vhd(15) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/inc.vhd Line: 15
+Info (10041): Inferred latch for "Op[7]" at inc.vhd(15) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/inc.vhd Line: 15
+Info (10041): Inferred latch for "Op[8]" at inc.vhd(15) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/inc.vhd Line: 15
+Info (10041): Inferred latch for "Op[9]" at inc.vhd(15) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/inc.vhd Line: 15
+Info (10041): Inferred latch for "Op[10]" at inc.vhd(15) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/inc.vhd Line: 15
+Info (10041): Inferred latch for "Op[11]" at inc.vhd(15) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/inc.vhd Line: 15
+Info (10041): Inferred latch for "Op[12]" at inc.vhd(15) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/inc.vhd Line: 15
+Info (10041): Inferred latch for "Op[13]" at inc.vhd(15) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/inc.vhd Line: 15
+Info (10041): Inferred latch for "Op[14]" at inc.vhd(15) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/inc.vhd Line: 15
+Info (10041): Inferred latch for "Op[15]" at inc.vhd(15) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/inc.vhd Line: 15
+Info (12128): Elaborating entity "bit1shift" for hierarchy "datapath:DP|bit1shift:S1" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/datapath.vhd Line: 245
+Info (12128): Elaborating entity "bitextender6" for hierarchy "datapath:DP|bitextender6:SE6" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/datapath.vhd Line: 251
+Warning (10631): VHDL Process Statement warning at SE6.vhd(14): inferring latch(es) for signal or variable "Op", which holds its previous value in one or more paths through the process File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE6.vhd Line: 14
+Info (10041): Inferred latch for "Op[0]" at SE6.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE6.vhd Line: 14
+Info (10041): Inferred latch for "Op[1]" at SE6.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE6.vhd Line: 14
+Info (10041): Inferred latch for "Op[2]" at SE6.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE6.vhd Line: 14
+Info (10041): Inferred latch for "Op[3]" at SE6.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE6.vhd Line: 14
+Info (10041): Inferred latch for "Op[4]" at SE6.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE6.vhd Line: 14
+Info (10041): Inferred latch for "Op[5]" at SE6.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE6.vhd Line: 14
+Info (10041): Inferred latch for "Op[6]" at SE6.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE6.vhd Line: 14
+Info (10041): Inferred latch for "Op[7]" at SE6.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE6.vhd Line: 14
+Info (10041): Inferred latch for "Op[8]" at SE6.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE6.vhd Line: 14
+Info (10041): Inferred latch for "Op[9]" at SE6.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE6.vhd Line: 14
+Info (10041): Inferred latch for "Op[10]" at SE6.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE6.vhd Line: 14
+Info (10041): Inferred latch for "Op[11]" at SE6.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE6.vhd Line: 14
+Info (10041): Inferred latch for "Op[12]" at SE6.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE6.vhd Line: 14
+Info (10041): Inferred latch for "Op[13]" at SE6.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE6.vhd Line: 14
+Info (10041): Inferred latch for "Op[14]" at SE6.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE6.vhd Line: 14
+Info (10041): Inferred latch for "Op[15]" at SE6.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE6.vhd Line: 14
+Info (12128): Elaborating entity "bitextender9" for hierarchy "datapath:DP|bitextender9:SE9" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/datapath.vhd Line: 254
+Warning (10631): VHDL Process Statement warning at SE9.vhd(14): inferring latch(es) for signal or variable "Op", which holds its previous value in one or more paths through the process File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE9.vhd Line: 14
+Info (10041): Inferred latch for "Op[0]" at SE9.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE9.vhd Line: 14
+Info (10041): Inferred latch for "Op[1]" at SE9.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE9.vhd Line: 14
+Info (10041): Inferred latch for "Op[2]" at SE9.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE9.vhd Line: 14
+Info (10041): Inferred latch for "Op[3]" at SE9.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE9.vhd Line: 14
+Info (10041): Inferred latch for "Op[4]" at SE9.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE9.vhd Line: 14
+Info (10041): Inferred latch for "Op[5]" at SE9.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE9.vhd Line: 14
+Info (10041): Inferred latch for "Op[6]" at SE9.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE9.vhd Line: 14
+Info (10041): Inferred latch for "Op[7]" at SE9.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE9.vhd Line: 14
+Info (10041): Inferred latch for "Op[8]" at SE9.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE9.vhd Line: 14
+Info (10041): Inferred latch for "Op[9]" at SE9.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE9.vhd Line: 14
+Info (10041): Inferred latch for "Op[10]" at SE9.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE9.vhd Line: 14
+Info (10041): Inferred latch for "Op[11]" at SE9.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE9.vhd Line: 14
+Info (10041): Inferred latch for "Op[12]" at SE9.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE9.vhd Line: 14
+Info (10041): Inferred latch for "Op[13]" at SE9.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE9.vhd Line: 14
+Info (10041): Inferred latch for "Op[14]" at SE9.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE9.vhd Line: 14
+Info (10041): Inferred latch for "Op[15]" at SE9.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE9.vhd Line: 14
+Info (12128): Elaborating entity "alu" for hierarchy "datapath:DP|alu:ALU_1" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/datapath.vhd Line: 257
+Warning (10631): VHDL Process Statement warning at alu.vhd(33): inferring latch(es) for signal or variable "Op", which holds its previous value in one or more paths through the process File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/alu.vhd Line: 33
+Warning (10631): VHDL Process Statement warning at alu.vhd(33): inferring latch(es) for signal or variable "carry", which holds its previous value in one or more paths through the process File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/alu.vhd Line: 33
+Warning (10631): VHDL Process Statement warning at alu.vhd(33): inferring latch(es) for signal or variable "zero", which holds its previous value in one or more paths through the process File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/alu.vhd Line: 33
+Info (10041): Inferred latch for "zero" at alu.vhd(33) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/alu.vhd Line: 33
+Info (10041): Inferred latch for "carry" at alu.vhd(33) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/alu.vhd Line: 33
+Info (10041): Inferred latch for "Op[0]" at alu.vhd(33) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/alu.vhd Line: 33
+Info (10041): Inferred latch for "Op[1]" at alu.vhd(33) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/alu.vhd Line: 33
+Info (10041): Inferred latch for "Op[2]" at alu.vhd(33) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/alu.vhd Line: 33
+Info (10041): Inferred latch for "Op[3]" at alu.vhd(33) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/alu.vhd Line: 33
+Info (10041): Inferred latch for "Op[4]" at alu.vhd(33) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/alu.vhd Line: 33
+Info (10041): Inferred latch for "Op[5]" at alu.vhd(33) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/alu.vhd Line: 33
+Info (10041): Inferred latch for "Op[6]" at alu.vhd(33) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/alu.vhd Line: 33
+Info (10041): Inferred latch for "Op[7]" at alu.vhd(33) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/alu.vhd Line: 33
+Info (10041): Inferred latch for "Op[8]" at alu.vhd(33) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/alu.vhd Line: 33
+Info (10041): Inferred latch for "Op[9]" at alu.vhd(33) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/alu.vhd Line: 33
+Info (10041): Inferred latch for "Op[10]" at alu.vhd(33) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/alu.vhd Line: 33
+Info (10041): Inferred latch for "Op[11]" at alu.vhd(33) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/alu.vhd Line: 33
+Info (10041): Inferred latch for "Op[12]" at alu.vhd(33) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/alu.vhd Line: 33
+Info (10041): Inferred latch for "Op[13]" at alu.vhd(33) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/alu.vhd Line: 33
+Info (10041): Inferred latch for "Op[14]" at alu.vhd(33) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/alu.vhd Line: 33
+Info (10041): Inferred latch for "Op[15]" at alu.vhd(33) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/alu.vhd Line: 33
+Info (12128): Elaborating entity "reg1" for hierarchy "datapath:DP|reg1:carry" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/datapath.vhd Line: 260
+Info (12128): Elaborating entity "memory" for hierarchy "datapath:DP|memory:Memory_1" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/datapath.vhd Line: 272
+Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_ALU_B|Op[0]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_ALU_B|Op[1]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_ALU_B|Op[2]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_ALU_B|Op[3]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_ALU_B|Op[4]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_ALU_B|Op[5]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_ALU_B|Op[6]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_ALU_B|Op[7]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_ALU_B|Op[8]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_ALU_B|Op[9]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_ALU_B|Op[10]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_ALU_B|Op[11]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_ALU_B|Op[12]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_ALU_B|Op[13]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_ALU_B|Op[14]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_ALU_B|Op[15]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_T2|Op[0]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_T2|Op[1]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_T2|Op[2]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_T2|Op[3]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_T2|Op[4]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_T2|Op[5]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_T2|Op[6]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_T2|Op[7]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_T2|Op[8]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_T2|Op[9]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_T2|Op[10]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_T2|Op[11]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_T2|Op[12]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_T2|Op[13]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_T2|Op[14]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "datapath:DP|mux41:Mux_T2|Op[15]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "datapath:DP|mux41_3:Mux_RF_A1|Op[0]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41_3.vhd Line: 18
+Warning (14026): LATCH primitive "datapath:DP|mux41_3:Mux_RF_A1|Op[1]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41_3.vhd Line: 18
+Warning (14026): LATCH primitive "datapath:DP|mux41_3:Mux_RF_A1|Op[2]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41_3.vhd Line: 18
 Info (17049): 219 registers lost all their fanouts during netlist optimizations.
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clk" File: D:/IITB/Semester_4/EE309/Project_309/uP/uP.vhd Line: 8
+    Warning (15610): No output dependent on input pin "clk" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/uP.vhd Line: 8
 Info (21057): Implemented 1 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 0 output pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 57 warnings
-    Info: Peak virtual memory: 4764 megabytes
-    Info: Processing ended: Sat Apr 16 23:27:24 2022
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:14
+    Info: Peak virtual memory: 4766 megabytes
+    Info: Processing ended: Sun Apr 17 14:10:52 2022
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:26
 
 

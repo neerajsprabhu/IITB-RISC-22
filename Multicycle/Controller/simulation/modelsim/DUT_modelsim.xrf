@@ -1,10 +1,10 @@
 vendor_name = ModelSim
-source_file = 1, D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd
+source_file = 1, C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd
 source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
 source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/timing_b.vhd
 source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/timing_p.vhd
-source_file = 1, D:/IITB/Semester_4/EE309/Project_309/Controller/db/DUT.cbx.xml
+source_file = 1, C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/db/DUT.cbx.xml
 design_name = controller
 instance = comp, \clk~I\, clk, controller, 1
 instance = comp, \IR[15]~I\, IR[15], controller, 1

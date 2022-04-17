@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
--- DATE "04/16/2022 23:29:38"
+-- DATE "04/17/2022 14:10:41"
 
 -- 
 -- Device: Altera 5M240ZM100C4 Package MBGA100
@@ -320,10 +320,10 @@ SIGNAL \Selector1~1_combout\ : std_logic;
 SIGNAL \select_Mux_Mem_A~1_combout\ : std_logic;
 SIGNAL \IR~combout\ : std_logic_vector(15 DOWNTO 0);
 SIGNAL i : std_logic_vector(31 DOWNTO 0);
-SIGNAL \ALT_INV_wr_inc~2_combout\ : std_logic;
 SIGNAL \ALT_INV_WideOr8~0_combout\ : std_logic;
 SIGNAL \ALT_INV_select_Mux_RF_A1~2_combout\ : std_logic;
 SIGNAL \ALT_INV_WideOr3~1_combout\ : std_logic;
+SIGNAL \ALT_INV_wr_inc~2_combout\ : std_logic;
 
 BEGIN
 
@@ -355,10 +355,10 @@ select_Mux_ALU_A <= ww_select_Mux_ALU_A;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
-\ALT_INV_wr_inc~2_combout\ <= NOT \wr_inc~2_combout\;
 \ALT_INV_WideOr8~0_combout\ <= NOT \WideOr8~0_combout\;
 \ALT_INV_select_Mux_RF_A1~2_combout\ <= NOT \select_Mux_RF_A1~2_combout\;
 \ALT_INV_WideOr3~1_combout\ <= NOT \WideOr3~1_combout\;
+\ALT_INV_wr_inc~2_combout\ <= NOT \wr_inc~2_combout\;
 
 -- Location: PIN_E1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 \clk~I\ : maxv_io

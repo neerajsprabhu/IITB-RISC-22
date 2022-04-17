@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DUT
-Sat Apr 16 23:29:33 2022
+Sun Apr 17 14:10:31 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -44,7 +44,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sat Apr 16 23:29:33 2022       ;
+; Analysis & Synthesis Status ; Successful - Sun Apr 17 14:10:31 2022       ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; DUT                                         ;
 ; Top-level Entity Name       ; controller                                  ;
@@ -142,13 +142,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                          ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                   ; Library ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
-; controller.vhd                   ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd ;         ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                             ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                      ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------+---------+
+; controller.vhd                   ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------+
@@ -302,126 +302,126 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat Apr 16 23:29:27 2022
+    Info: Processing started: Sun Apr 17 14:10:19 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off control -c DUT
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file controller.vhd
-    Info (12022): Found design unit 1: controller-arch File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 19
-    Info (12023): Found entity 1: controller File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 6
+    Info (12022): Found design unit 1: controller-arch File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 19
+    Info (12023): Found entity 1: controller File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 6
 Info (12127): Elaborating entity "controller" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at controller.vhd(101): signal "cy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 101
-Warning (10492): VHDL Process Statement warning at controller.vhd(108): signal "z" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 108
-Warning (10492): VHDL Process Statement warning at controller.vhd(126): signal "cy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 126
-Warning (10492): VHDL Process Statement warning at controller.vhd(132): signal "z" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 132
-Warning (10492): VHDL Process Statement warning at controller.vhd(397): signal "z" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 397
-Warning (10631): VHDL Process Statement warning at controller.vhd(279): inferring latch(es) for signal or variable "i", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[0]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[1]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[2]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[3]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[4]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[5]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[6]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[7]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[8]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[9]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[10]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[11]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[12]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[13]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[14]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[15]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[16]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[17]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[18]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[19]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[20]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[21]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[22]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[23]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[24]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[25]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[26]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[27]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[28]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[29]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[30]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[31]" at controller.vhd(279) File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-Warning (13012): Latch i[0] has unsafe behavior File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[1] has unsafe behavior File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[2] has unsafe behavior File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[7] has unsafe behavior File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[6] has unsafe behavior File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[5] has unsafe behavior File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[4] has unsafe behavior File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[3] has unsafe behavior File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[9] has unsafe behavior File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[10] has unsafe behavior File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[11] has unsafe behavior File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[12] has unsafe behavior File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[13] has unsafe behavior File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[14] has unsafe behavior File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[15] has unsafe behavior File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[16] has unsafe behavior File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[17] has unsafe behavior File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[18] has unsafe behavior File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[19] has unsafe behavior File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[20] has unsafe behavior File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[21] has unsafe behavior File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[22] has unsafe behavior File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[23] has unsafe behavior File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[24] has unsafe behavior File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[25] has unsafe behavior File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[26] has unsafe behavior File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[27] has unsafe behavior File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[28] has unsafe behavior File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[29] has unsafe behavior File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[30] has unsafe behavior File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[31] has unsafe behavior File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 23
-Warning (13012): Latch i[8] has unsafe behavior File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 23
+Warning (10492): VHDL Process Statement warning at controller.vhd(101): signal "cy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 101
+Warning (10492): VHDL Process Statement warning at controller.vhd(108): signal "z" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 108
+Warning (10492): VHDL Process Statement warning at controller.vhd(126): signal "cy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 126
+Warning (10492): VHDL Process Statement warning at controller.vhd(132): signal "z" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 132
+Warning (10492): VHDL Process Statement warning at controller.vhd(397): signal "z" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 397
+Warning (10631): VHDL Process Statement warning at controller.vhd(279): inferring latch(es) for signal or variable "i", which holds its previous value in one or more paths through the process File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[0]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[1]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[2]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[3]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[4]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[5]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[6]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[7]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[8]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[9]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[10]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[11]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[12]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[13]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[14]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[15]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[16]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[17]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[18]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[19]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[20]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[21]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[22]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[23]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[24]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[25]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[26]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[27]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[28]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[29]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[30]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Info (10041): Inferred latch for "i[31]" at controller.vhd(279) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+Warning (13012): Latch i[0] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch i[1] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch i[2] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch i[7] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch i[6] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch i[5] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch i[4] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch i[3] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch i[9] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch i[10] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch i[11] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch i[12] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch i[13] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch i[14] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch i[15] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch i[16] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch i[17] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch i[18] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch i[19] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch i[20] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch i[21] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch i[22] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch i[23] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch i[24] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch i[25] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch i[26] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch i[27] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch i[28] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch i[29] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch i[30] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch i[31] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch i[8] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.S3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "select_Mux_ALU_A" is stuck at GND File: D:/IITB/Semester_4/EE309/Project_309/Controller/controller.vhd Line: 15
+    Warning (13410): Pin "select_Mux_ALU_A" is stuck at GND File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 15
 Info (21057): Implemented 242 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 19 input pins
     Info (21059): Implemented 31 output pins
     Info (21061): Implemented 192 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 73 warnings
-    Info: Peak virtual memory: 4758 megabytes
-    Info: Processing ended: Sat Apr 16 23:29:33 2022
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:14
+    Info: Peak virtual memory: 4760 megabytes
+    Info: Processing ended: Sun Apr 17 14:10:31 2022
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:30
 
 
