@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
--- DATE "04/17/2022 14:10:59"
+-- DATE "04/27/2022 09:52:27"
 
 -- 
 -- Device: Altera 5M40ZM64C4 Package MBGA64
@@ -32,16 +32,16 @@ LIBRARY MAXV;
 USE IEEE.STD_LOGIC_1164.ALL;
 USE MAXV.MAXV_COMPONENTS.ALL;
 
-ENTITY 	uP IS
+ENTITY 	DUT IS
     PORT (
-	clk : IN std_logic
+	input_vector : IN std_logic_vector(0 DOWNTO 0)
 	);
-END uP;
+END DUT;
 
 -- Design Ports Information
 
 
-ARCHITECTURE structure OF uP IS
+ARCHITECTURE structure OF DUT IS
 SIGNAL gnd : std_logic := '0';
 SIGNAL vcc : std_logic := '1';
 SIGNAL unknown : std_logic := 'X';
@@ -51,24 +51,24 @@ SIGNAL devpor : std_logic := '1';
 SIGNAL ww_devoe : std_logic;
 SIGNAL ww_devclrn : std_logic;
 SIGNAL ww_devpor : std_logic;
-SIGNAL ww_clk : std_logic;
+SIGNAL ww_input_vector : std_logic_vector(0 DOWNTO 0);
 
 BEGIN
 
-ww_clk <= clk;
+ww_input_vector <= input_vector;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
 
 -- Location: PIN_G8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-\clk~I\ : maxv_io
+\input_vector[0]~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
 	operation_mode => "input")
 -- pragma translate_on
 PORT MAP (
 	oe => GND,
-	padio => ww_clk);
+	padio => ww_input_vector(0));
 END structure;
 
 
