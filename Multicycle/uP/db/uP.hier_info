@@ -1,9 +1,13 @@
-|uP
+|DUT
+input_vector[0] => uP:add_instance.clk
+
+
+|DUT|uP:add_instance
 clk => controller:Ctrl.clk
 clk => datapath:DP.clk
 
 
-|uP|controller:Ctrl
+|DUT|uP:add_instance|controller:Ctrl
 IR[0] => Mux0.IN3
 IR[0] => Mux1.IN15
 IR[0] => Equal7.IN1
@@ -112,7 +116,7 @@ select_Mux_T1 <= select_Mux_T1.DB_MAX_OUTPUT_PORT_TYPE
 select_Mux_ALU_A <= <GND>
 
 
-|uP|datapath:DP
+|DUT|uP:add_instance|datapath:DP
 wr_IR => reg:IR.wr
 wr_RF => register_bank:RF.wr
 wr_T1 => reg:T1_reg.wr
@@ -178,7 +182,7 @@ IR_out[14] <= reg:IR.Op[14]
 IR_out[15] <= reg:IR.Op[15]
 
 
-|uP|datapath:DP|reg:IR
+|DUT|uP:add_instance|datapath:DP|reg:IR
 wr => Op[0]~reg0.ENA
 wr => Op[1]~reg0.ENA
 wr => Op[2]~reg0.ENA
@@ -245,7 +249,7 @@ Op[14] <= Op[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Op[15] <= Op[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|uP|datapath:DP|mux41_3:Mux_RF_A1
+|DUT|uP:add_instance|datapath:DP|mux41_3:Mux_RF_A1
 A0[0] => Op[0].DATAB
 A0[1] => Op[1].DATAB
 A0[2] => Op[2].DATAB
@@ -271,7 +275,7 @@ Op[1] <= Op[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
 Op[2] <= Op[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|uP|datapath:DP|mux21_3:Mux_RF_A2
+|DUT|uP:add_instance|datapath:DP|mux21_3:Mux_RF_A2
 A0[0] => Op[0].DATAB
 A0[1] => Op[1].DATAB
 A0[2] => Op[2].DATAB
@@ -286,7 +290,7 @@ Op[1] <= Op[1].DB_MAX_OUTPUT_PORT_TYPE
 Op[2] <= Op[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|uP|datapath:DP|mux81_3:Mux_RF_A3
+|DUT|uP:add_instance|datapath:DP|mux81_3:Mux_RF_A3
 A0[0] => Op.DATAB
 A0[1] => Op.DATAB
 A0[2] => Op.DATAB
@@ -337,7 +341,7 @@ Op[1] <= Op.DB_MAX_OUTPUT_PORT_TYPE
 Op[2] <= Op.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|uP|datapath:DP|bit7shift:S7
+|DUT|uP:add_instance|datapath:DP|bit7shift:S7
 A[0] => Op[7].DATAIN
 A[1] => Op[8].DATAIN
 A[2] => Op[9].DATAIN
@@ -365,7 +369,7 @@ Op[14] <= A[7].DB_MAX_OUTPUT_PORT_TYPE
 Op[15] <= A[8].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|uP|datapath:DP|mux81:Mux_RF_D3
+|DUT|uP:add_instance|datapath:DP|mux81:Mux_RF_D3
 A0[0] => Op.DATAB
 A0[1] => Op.DATAB
 A0[2] => Op.DATAB
@@ -533,7 +537,7 @@ Op[14] <= Op.DB_MAX_OUTPUT_PORT_TYPE
 Op[15] <= Op.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|uP|datapath:DP|register_bank:RF
+|DUT|uP:add_instance|datapath:DP|register_bank:RF
 Add1[0] => mux81:m1.S[0]
 Add1[1] => mux81:m1.S[1]
 Add1[2] => mux81:m1.S[2]
@@ -979,7 +983,7 @@ D2[14] <= mux81:m2.Op[14]
 D2[15] <= mux81:m2.Op[15]
 
 
-|uP|datapath:DP|register_bank:RF|mux81:m1
+|DUT|uP:add_instance|datapath:DP|register_bank:RF|mux81:m1
 A0[0] => Op.DATAB
 A0[1] => Op.DATAB
 A0[2] => Op.DATAB
@@ -1147,7 +1151,7 @@ Op[14] <= Op.DB_MAX_OUTPUT_PORT_TYPE
 Op[15] <= Op.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|uP|datapath:DP|register_bank:RF|mux81:m2
+|DUT|uP:add_instance|datapath:DP|register_bank:RF|mux81:m2
 A0[0] => Op.DATAB
 A0[1] => Op.DATAB
 A0[2] => Op.DATAB
@@ -1315,7 +1319,7 @@ Op[14] <= Op.DB_MAX_OUTPUT_PORT_TYPE
 Op[15] <= Op.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|uP|datapath:DP|mux21:Mux_T1
+|DUT|uP:add_instance|datapath:DP|mux21:Mux_T1
 A0[0] => Op[0].DATAB
 A0[1] => Op[1].DATAB
 A0[2] => Op[2].DATAB
@@ -1382,7 +1386,7 @@ Op[14] <= Op[14].DB_MAX_OUTPUT_PORT_TYPE
 Op[15] <= Op[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|uP|datapath:DP|reg:T1_reg
+|DUT|uP:add_instance|datapath:DP|reg:T1_reg
 wr => Op[0]~reg0.ENA
 wr => Op[1]~reg0.ENA
 wr => Op[2]~reg0.ENA
@@ -1449,7 +1453,7 @@ Op[14] <= Op[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Op[15] <= Op[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|uP|datapath:DP|mux41:Mux_T2
+|DUT|uP:add_instance|datapath:DP|mux41:Mux_T2
 A0[0] => Op[0].DATAB
 A0[1] => Op[1].DATAB
 A0[2] => Op[2].DATAB
@@ -1540,7 +1544,7 @@ Op[14] <= Op[14]$latch.DB_MAX_OUTPUT_PORT_TYPE
 Op[15] <= Op[15]$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|uP|datapath:DP|reg:T2_reg
+|DUT|uP:add_instance|datapath:DP|reg:T2_reg
 wr => Op[0]~reg0.ENA
 wr => Op[1]~reg0.ENA
 wr => Op[2]~reg0.ENA
@@ -1607,7 +1611,7 @@ Op[14] <= Op[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Op[15] <= Op[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|uP|datapath:DP|incr:inc
+|DUT|uP:add_instance|datapath:DP|incr:inc
 A[0] => Add0.IN32
 A[1] => Add0.IN31
 A[2] => Add0.IN30
@@ -1658,7 +1662,7 @@ Op[14] <= Op[14]$latch.DB_MAX_OUTPUT_PORT_TYPE
 Op[15] <= Op[15]$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|uP|datapath:DP|reg:T3_reg
+|DUT|uP:add_instance|datapath:DP|reg:T3_reg
 wr => Op[0]~reg0.ENA
 wr => Op[1]~reg0.ENA
 wr => Op[2]~reg0.ENA
@@ -1725,7 +1729,7 @@ Op[14] <= Op[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Op[15] <= Op[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|uP|datapath:DP|mux21:Mux_ALU_A
+|DUT|uP:add_instance|datapath:DP|mux21:Mux_ALU_A
 A0[0] => Op[0].DATAB
 A0[1] => Op[1].DATAB
 A0[2] => Op[2].DATAB
@@ -1792,7 +1796,7 @@ Op[14] <= Op[14].DB_MAX_OUTPUT_PORT_TYPE
 Op[15] <= Op[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|uP|datapath:DP|bit1shift:S1
+|DUT|uP:add_instance|datapath:DP|bit1shift:S1
 A[0] => Op[1].DATAIN
 A[1] => Op[2].DATAIN
 A[2] => Op[3].DATAIN
@@ -1827,7 +1831,7 @@ Op[14] <= A[13].DB_MAX_OUTPUT_PORT_TYPE
 Op[15] <= A[14].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|uP|datapath:DP|mux41:Mux_ALU_B
+|DUT|uP:add_instance|datapath:DP|mux41:Mux_ALU_B
 A0[0] => Op[0].DATAB
 A0[1] => Op[1].DATAB
 A0[2] => Op[2].DATAB
@@ -1918,7 +1922,7 @@ Op[14] <= Op[14]$latch.DB_MAX_OUTPUT_PORT_TYPE
 Op[15] <= Op[15]$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|uP|datapath:DP|bitextender6:SE6
+|DUT|uP:add_instance|datapath:DP|bitextender6:SE6
 A[0] => Op[0].DATAIN
 A[1] => Op[1].DATAIN
 A[2] => Op[2].DATAIN
@@ -1953,7 +1957,7 @@ Op[14] <= A[5].DB_MAX_OUTPUT_PORT_TYPE
 Op[15] <= A[5].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|uP|datapath:DP|bitextender9:SE9
+|DUT|uP:add_instance|datapath:DP|bitextender9:SE9
 A[0] => Op[0].DATAIN
 A[1] => Op[1].DATAIN
 A[2] => Op[2].DATAIN
@@ -1988,7 +1992,7 @@ Op[14] <= A[8].DB_MAX_OUTPUT_PORT_TYPE
 Op[15] <= A[8].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|uP|datapath:DP|alu:ALU_1
+|DUT|uP:add_instance|datapath:DP|alu:ALU_1
 A[0] => sum.IN0
 A[0] => c.IN0
 A[0] => temp.IN0
@@ -2141,21 +2145,21 @@ carry <= carry$latch.DB_MAX_OUTPUT_PORT_TYPE
 zero <= zero$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|uP|datapath:DP|reg1:carry
+|DUT|uP:add_instance|datapath:DP|reg1:carry
 wr => Op~reg0.ENA
 clk => Op~reg0.CLK
 data => Op~reg0.DATAIN
 Op <= Op~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|uP|datapath:DP|reg1:zero
+|DUT|uP:add_instance|datapath:DP|reg1:zero
 wr => Op~reg0.ENA
 clk => Op~reg0.CLK
 data => Op~reg0.DATAIN
 Op <= Op~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|uP|datapath:DP|mux21:Mux_Mem_A
+|DUT|uP:add_instance|datapath:DP|mux21:Mux_Mem_A
 A0[0] => Op[0].DATAB
 A0[1] => Op[1].DATAB
 A0[2] => Op[2].DATAB
@@ -2222,7 +2226,7 @@ Op[14] <= Op[14].DB_MAX_OUTPUT_PORT_TYPE
 Op[15] <= Op[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|uP|datapath:DP|mux21:Mux_Mem_D
+|DUT|uP:add_instance|datapath:DP|mux21:Mux_Mem_D
 A0[0] => Op[0].DATAB
 A0[1] => Op[1].DATAB
 A0[2] => Op[2].DATAB
@@ -2289,70 +2293,90 @@ Op[14] <= Op[14].DB_MAX_OUTPUT_PORT_TYPE
 Op[15] <= Op[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|uP|datapath:DP|memory:Memory_1
-wr => mem~22.DATAIN
+|DUT|uP:add_instance|datapath:DP|memory:Memory_1
+wr => mem~32.DATAIN
 wr => mem.WE
-A[0] => mem~5.DATAIN
+A[0] => mem~15.DATAIN
 A[0] => mem.WADDR
 A[0] => mem.RADDR
-A[1] => mem~4.DATAIN
+A[1] => mem~14.DATAIN
 A[1] => mem.WADDR1
 A[1] => mem.RADDR1
-A[2] => mem~3.DATAIN
+A[2] => mem~13.DATAIN
 A[2] => mem.WADDR2
 A[2] => mem.RADDR2
-A[3] => mem~2.DATAIN
+A[3] => mem~12.DATAIN
 A[3] => mem.WADDR3
 A[3] => mem.RADDR3
-A[4] => mem~1.DATAIN
+A[4] => mem~11.DATAIN
 A[4] => mem.WADDR4
 A[4] => mem.RADDR4
-A[5] => mem~0.DATAIN
+A[5] => mem~10.DATAIN
 A[5] => mem.WADDR5
 A[5] => mem.RADDR5
-A[6] => ~NO_FANOUT~
-A[7] => ~NO_FANOUT~
-A[8] => ~NO_FANOUT~
-A[9] => ~NO_FANOUT~
-A[10] => ~NO_FANOUT~
-A[11] => ~NO_FANOUT~
-A[12] => ~NO_FANOUT~
-A[13] => ~NO_FANOUT~
-A[14] => ~NO_FANOUT~
-A[15] => ~NO_FANOUT~
-Din[0] => mem~21.DATAIN
+A[6] => mem~9.DATAIN
+A[6] => mem.WADDR6
+A[6] => mem.RADDR6
+A[7] => mem~8.DATAIN
+A[7] => mem.WADDR7
+A[7] => mem.RADDR7
+A[8] => mem~7.DATAIN
+A[8] => mem.WADDR8
+A[8] => mem.RADDR8
+A[9] => mem~6.DATAIN
+A[9] => mem.WADDR9
+A[9] => mem.RADDR9
+A[10] => mem~5.DATAIN
+A[10] => mem.WADDR10
+A[10] => mem.RADDR10
+A[11] => mem~4.DATAIN
+A[11] => mem.WADDR11
+A[11] => mem.RADDR11
+A[12] => mem~3.DATAIN
+A[12] => mem.WADDR12
+A[12] => mem.RADDR12
+A[13] => mem~2.DATAIN
+A[13] => mem.WADDR13
+A[13] => mem.RADDR13
+A[14] => mem~1.DATAIN
+A[14] => mem.WADDR14
+A[14] => mem.RADDR14
+A[15] => mem~0.DATAIN
+A[15] => mem.WADDR15
+A[15] => mem.RADDR15
+Din[0] => mem~31.DATAIN
 Din[0] => mem.DATAIN
-Din[1] => mem~20.DATAIN
+Din[1] => mem~30.DATAIN
 Din[1] => mem.DATAIN1
-Din[2] => mem~19.DATAIN
+Din[2] => mem~29.DATAIN
 Din[2] => mem.DATAIN2
-Din[3] => mem~18.DATAIN
+Din[3] => mem~28.DATAIN
 Din[3] => mem.DATAIN3
-Din[4] => mem~17.DATAIN
+Din[4] => mem~27.DATAIN
 Din[4] => mem.DATAIN4
-Din[5] => mem~16.DATAIN
+Din[5] => mem~26.DATAIN
 Din[5] => mem.DATAIN5
-Din[6] => mem~15.DATAIN
+Din[6] => mem~25.DATAIN
 Din[6] => mem.DATAIN6
-Din[7] => mem~14.DATAIN
+Din[7] => mem~24.DATAIN
 Din[7] => mem.DATAIN7
-Din[8] => mem~13.DATAIN
+Din[8] => mem~23.DATAIN
 Din[8] => mem.DATAIN8
-Din[9] => mem~12.DATAIN
+Din[9] => mem~22.DATAIN
 Din[9] => mem.DATAIN9
-Din[10] => mem~11.DATAIN
+Din[10] => mem~21.DATAIN
 Din[10] => mem.DATAIN10
-Din[11] => mem~10.DATAIN
+Din[11] => mem~20.DATAIN
 Din[11] => mem.DATAIN11
-Din[12] => mem~9.DATAIN
+Din[12] => mem~19.DATAIN
 Din[12] => mem.DATAIN12
-Din[13] => mem~8.DATAIN
+Din[13] => mem~18.DATAIN
 Din[13] => mem.DATAIN13
-Din[14] => mem~7.DATAIN
+Din[14] => mem~17.DATAIN
 Din[14] => mem.DATAIN14
-Din[15] => mem~6.DATAIN
+Din[15] => mem~16.DATAIN
 Din[15] => mem.DATAIN15
-clk => mem~22.CLK
+clk => mem~32.CLK
 clk => mem~0.CLK
 clk => mem~1.CLK
 clk => mem~2.CLK
@@ -2375,6 +2399,16 @@ clk => mem~18.CLK
 clk => mem~19.CLK
 clk => mem~20.CLK
 clk => mem~21.CLK
+clk => mem~22.CLK
+clk => mem~23.CLK
+clk => mem~24.CLK
+clk => mem~25.CLK
+clk => mem~26.CLK
+clk => mem~27.CLK
+clk => mem~28.CLK
+clk => mem~29.CLK
+clk => mem~30.CLK
+clk => mem~31.CLK
 clk => mem.CLK0
 Dout[0] <= mem.DATAOUT
 Dout[1] <= mem.DATAOUT1
