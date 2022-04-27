@@ -1,0 +1,70 @@
+|DUT
+input_vector[0] => bit1shift:add_instance.A[0]
+input_vector[1] => bit1shift:add_instance.A[1]
+input_vector[2] => bit1shift:add_instance.A[2]
+input_vector[3] => bit1shift:add_instance.A[3]
+input_vector[4] => bit1shift:add_instance.A[4]
+input_vector[5] => bit1shift:add_instance.A[5]
+input_vector[6] => bit1shift:add_instance.A[6]
+input_vector[7] => bit1shift:add_instance.A[7]
+input_vector[8] => bit1shift:add_instance.A[8]
+input_vector[9] => bit1shift:add_instance.A[9]
+input_vector[10] => bit1shift:add_instance.A[10]
+input_vector[11] => bit1shift:add_instance.A[11]
+input_vector[12] => bit1shift:add_instance.A[12]
+input_vector[13] => bit1shift:add_instance.A[13]
+input_vector[14] => bit1shift:add_instance.A[14]
+input_vector[15] => bit1shift:add_instance.A[15]
+output_vector[0] << bit1shift:add_instance.Op[0]
+output_vector[1] << bit1shift:add_instance.Op[1]
+output_vector[2] << bit1shift:add_instance.Op[2]
+output_vector[3] << bit1shift:add_instance.Op[3]
+output_vector[4] << bit1shift:add_instance.Op[4]
+output_vector[5] << bit1shift:add_instance.Op[5]
+output_vector[6] << bit1shift:add_instance.Op[6]
+output_vector[7] << bit1shift:add_instance.Op[7]
+output_vector[8] << bit1shift:add_instance.Op[8]
+output_vector[9] << bit1shift:add_instance.Op[9]
+output_vector[10] << bit1shift:add_instance.Op[10]
+output_vector[11] << bit1shift:add_instance.Op[11]
+output_vector[12] << bit1shift:add_instance.Op[12]
+output_vector[13] << bit1shift:add_instance.Op[13]
+output_vector[14] << bit1shift:add_instance.Op[14]
+output_vector[15] << bit1shift:add_instance.Op[15]
+
+
+|DUT|bit1shift:add_instance
+A[0] => Op[1].DATAIN
+A[1] => Op[2].DATAIN
+A[2] => Op[3].DATAIN
+A[3] => Op[4].DATAIN
+A[4] => Op[5].DATAIN
+A[5] => Op[6].DATAIN
+A[6] => Op[7].DATAIN
+A[7] => Op[8].DATAIN
+A[8] => Op[9].DATAIN
+A[9] => Op[10].DATAIN
+A[10] => Op[11].DATAIN
+A[11] => Op[12].DATAIN
+A[12] => Op[13].DATAIN
+A[13] => Op[14].DATAIN
+A[14] => Op[15].DATAIN
+A[15] => ~NO_FANOUT~
+Op[0] <= <GND>
+Op[1] <= A[0].DB_MAX_OUTPUT_PORT_TYPE
+Op[2] <= A[1].DB_MAX_OUTPUT_PORT_TYPE
+Op[3] <= A[2].DB_MAX_OUTPUT_PORT_TYPE
+Op[4] <= A[3].DB_MAX_OUTPUT_PORT_TYPE
+Op[5] <= A[4].DB_MAX_OUTPUT_PORT_TYPE
+Op[6] <= A[5].DB_MAX_OUTPUT_PORT_TYPE
+Op[7] <= A[6].DB_MAX_OUTPUT_PORT_TYPE
+Op[8] <= A[7].DB_MAX_OUTPUT_PORT_TYPE
+Op[9] <= A[8].DB_MAX_OUTPUT_PORT_TYPE
+Op[10] <= A[9].DB_MAX_OUTPUT_PORT_TYPE
+Op[11] <= A[10].DB_MAX_OUTPUT_PORT_TYPE
+Op[12] <= A[11].DB_MAX_OUTPUT_PORT_TYPE
+Op[13] <= A[12].DB_MAX_OUTPUT_PORT_TYPE
+Op[14] <= A[13].DB_MAX_OUTPUT_PORT_TYPE
+Op[15] <= A[14].DB_MAX_OUTPUT_PORT_TYPE
+
+
