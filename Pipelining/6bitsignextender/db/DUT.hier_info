@@ -1,0 +1,60 @@
+|DUT
+input_vector[0] => bitextender:add_instance.A[0]
+input_vector[1] => bitextender:add_instance.A[1]
+input_vector[2] => bitextender:add_instance.A[2]
+input_vector[3] => bitextender:add_instance.A[3]
+input_vector[4] => bitextender:add_instance.A[4]
+input_vector[5] => bitextender:add_instance.A[5]
+output_vector[0] << bitextender:add_instance.Op[0]
+output_vector[1] << bitextender:add_instance.Op[1]
+output_vector[2] << bitextender:add_instance.Op[2]
+output_vector[3] << bitextender:add_instance.Op[3]
+output_vector[4] << bitextender:add_instance.Op[4]
+output_vector[5] << bitextender:add_instance.Op[5]
+output_vector[6] << bitextender:add_instance.Op[6]
+output_vector[7] << bitextender:add_instance.Op[7]
+output_vector[8] << bitextender:add_instance.Op[8]
+output_vector[9] << bitextender:add_instance.Op[9]
+output_vector[10] << bitextender:add_instance.Op[10]
+output_vector[11] << bitextender:add_instance.Op[11]
+output_vector[12] << bitextender:add_instance.Op[12]
+output_vector[13] << bitextender:add_instance.Op[13]
+output_vector[14] << bitextender:add_instance.Op[14]
+output_vector[15] << bitextender:add_instance.Op[15]
+
+
+|DUT|bitextender:add_instance
+A[0] => Op[0].DATAIN
+A[1] => Op[1].DATAIN
+A[2] => Op[2].DATAIN
+A[3] => Op[3].DATAIN
+A[4] => Op[4].DATAIN
+A[5] => Op[5].DATAIN
+A[5] => Op[15].DATAIN
+A[5] => Op[11].DATAIN
+A[5] => Op[10].DATAIN
+A[5] => Op[9].DATAIN
+A[5] => Op[8].DATAIN
+A[5] => Op[7].DATAIN
+A[5] => Op[6].DATAIN
+A[5] => Op[12].DATAIN
+A[5] => Op[13].DATAIN
+A[5] => Op[14].DATAIN
+Op[0] <= A[0].DB_MAX_OUTPUT_PORT_TYPE
+Op[1] <= A[1].DB_MAX_OUTPUT_PORT_TYPE
+Op[2] <= A[2].DB_MAX_OUTPUT_PORT_TYPE
+Op[3] <= A[3].DB_MAX_OUTPUT_PORT_TYPE
+Op[4] <= A[4].DB_MAX_OUTPUT_PORT_TYPE
+Op[5] <= A[5].DB_MAX_OUTPUT_PORT_TYPE
+Op[6] <= A[5].DB_MAX_OUTPUT_PORT_TYPE
+Op[7] <= A[5].DB_MAX_OUTPUT_PORT_TYPE
+Op[8] <= A[5].DB_MAX_OUTPUT_PORT_TYPE
+Op[9] <= A[5].DB_MAX_OUTPUT_PORT_TYPE
+Op[10] <= A[5].DB_MAX_OUTPUT_PORT_TYPE
+Op[11] <= A[5].DB_MAX_OUTPUT_PORT_TYPE
+Op[12] <= A[5].DB_MAX_OUTPUT_PORT_TYPE
+Op[13] <= A[5].DB_MAX_OUTPUT_PORT_TYPE
+Op[14] <= A[5].DB_MAX_OUTPUT_PORT_TYPE
+Op[15] <= A[5].DB_MAX_OUTPUT_PORT_TYPE
+
+
