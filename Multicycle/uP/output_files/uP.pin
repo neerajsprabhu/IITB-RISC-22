@@ -118,7 +118,7 @@ GND                          : G4        : gnd    :                   :         
 GND                          : G5        : gnd    :                   :         :           :                
 GND                          : G6        : gnd    :                   :         :           :                
 GND*                         : G7        :        :                   :         : 1         :                
-clk                          : G8        : input  : 3.3-V LVTTL       :         : 1         : N              
+input_vector[0]              : G8        : input  : 3.3-V LVTTL       :         : 1         : N              
 TDI                          : H1        : input  :                   :         : 1         :                
 TCK                          : H2        : input  :                   :         : 1         :                
 GND*                         : H3        :        :                   :         : 1         :                

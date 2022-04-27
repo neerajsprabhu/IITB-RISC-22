@@ -1,7 +1,7 @@
-Fitter Status : Successful - Sun Apr 17 14:10:54 2022
+Fitter Status : Successful - Wed Apr 27 09:52:24 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : uP
-Top-level Entity Name : uP
+Top-level Entity Name : DUT
 Family : MAX V
 Device : 5M40ZM64C4
 Timing Models : Final

@@ -1,7 +1,7 @@
-Analysis & Synthesis Status : Successful - Sun Apr 17 14:10:52 2022
+Analysis & Synthesis Status : Successful - Wed Apr 27 09:52:22 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : uP
-Top-level Entity Name : uP
+Top-level Entity Name : DUT
 Family : MAX V
 Total logic elements : 0
 Total pins : 1
