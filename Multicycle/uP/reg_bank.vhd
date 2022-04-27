@@ -37,7 +37,7 @@ m1: mux81 port map (A0=>r0, A1=>r1, A2=>r2, A3=>r3, A4=>r4, A5=>r5, A6=>r6, A7=>
 m2: mux81 port map (A0=>r0, A1=>r1, A2=>r2, A3=>r3, A4=>r4, A5=>r5, A6=>r6, A7=>r7, S=>Add2, Op=>D2);
 process(Add1, Add2, Add3, D3, wr, clk)
 begin
-  if falling_edge(clk) then
+  if rising_edge(clk) then
     if wr='1' then
       if Add3="000" then
 		  r0 <= D3;

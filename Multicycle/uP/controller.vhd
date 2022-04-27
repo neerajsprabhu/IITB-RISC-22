@@ -313,7 +313,7 @@ begin
 				end if;
 				
 			when S3=>
-				if ((opcode="0001") and (condition="00" or condition="01" or condition="10")) then
+				if (((opcode="0001") or (opcode="0010")) and (condition="00" or condition="01" or condition="10")) then
 					nstate<=S4;
 				elsif ((opcode="0001") and (condition="11")) then
 					nstate<=S5;

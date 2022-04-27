@@ -14,7 +14,7 @@ architecture reg_1 of reg1 is
 begin
 process(wr, clk, data)
 begin
-if falling_edge(clk) then
+if rising_edge(clk) then
   if wr='1' then
     Op <= data;
   else
