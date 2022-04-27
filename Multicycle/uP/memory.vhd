@@ -14,7 +14,7 @@ end memory;
 
 architecture mem1 of memory is
 type mem_index is array(65535 downto 0) of std_logic_vector(15 downto 0);
-signal mem: mem_index := (0=>"0100000111111111", 1=>"0100001111111111", 2=>"0001000001010000", 3=>"0010000001011010", others => "0000000000000000");
+signal mem: mem_index := (0=>"0100000111111111", 1=>"0100001111111111", 2=>"1010000001000000", others => "0000000000000000");
 signal addr: std_logic_vector(15 downto 0);
 
 begin

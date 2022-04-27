@@ -19,7 +19,7 @@ end controller;
 architecture arch of controller is
 
 	--defining all the required states
-	type fsm_state is (init, S0, S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, S16, S17, S18, S19, S20, S21, S22, S23, S24);
+	type fsm_state is (init, S0, S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, S16, S17, S18, S19, S_19, S20, S21, S22, S23, S24);
 	signal state, nstate : fsm_state:=init;
 	shared variable i: integer;
 	
@@ -276,7 +276,7 @@ begin
 		end case;
 	end process; --stateoutput
 	
-	fsm : process(state, IR)
+	fsm : process(state, IR, z)
 	
 	variable opcode: std_logic_vector(3 downto 0);
 	variable condition: std_logic_vector(1 downto 0);
@@ -395,8 +395,10 @@ begin
 				
 			when S18=>
 				nstate<=S16;
-				
-			when S19=>
+			
+		   when S19=>
+				nstate<=S_19;
+			when S_19=>
 				if z='1' then
 					nstate<=S20;
 				else
