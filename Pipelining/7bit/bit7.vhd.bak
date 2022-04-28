@@ -1,0 +1,20 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity bit7shift is
+    port (
+        A: in std_logic_vector(3 downto 0);
+        op: out std_logic_vector(7 downto 0)
+    ) ;
+end bit1shift;
+
+architecture a1 of bit7shift is
+
+begin
+shifter : process( A(3 downto 0))
+
+op <= "0"&A&"000";
+
+
+end process ; 
+end a1 ;
