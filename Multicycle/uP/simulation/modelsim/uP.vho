@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
--- DATE "04/28/2022 04:15:26"
+-- DATE "04/29/2022 21:04:46"
 
 -- 
 -- Device: Altera 5M40ZM64C4 Package MBGA64

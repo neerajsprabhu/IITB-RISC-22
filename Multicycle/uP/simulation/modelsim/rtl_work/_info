@@ -23,9 +23,9 @@ Vc5T3T;MBDi_`jh3bmmRP@2
 !s100 7<8nlDI;:j9nJ;nW3UAV=1
 Z6 OV;C;2020.1;71
 31
-Z7 !s110 1651099542
+Z7 !s110 1651246507
 !i10b 1
-Z8 !s108 1651099542.000000
+Z8 !s108 1651246507.000000
 Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/alu.vhd|
 Z10 !s107 C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/alu.vhd|
 !i113 1
@@ -146,9 +146,9 @@ VV0K:cAZK6N91AXolNW5U13
 !s100 7GHBOWB?BziTnGP4jc3XL0
 R6
 31
-Z23 !s110 1651099539
+Z23 !s110 1651246505
 !i10b 1
-Z24 !s108 1651099539.000000
+Z24 !s108 1651246504.000000
 Z25 !s90 -reportprogress|300|-93|-work|work|C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE6.vhd|
 Z26 !s107 C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE6.vhd|
 !i113 1
@@ -187,11 +187,11 @@ VSXSC_5UT1o5KP<c`N1f<N2
 !s100 czf<iM;Y_i9o6f@n1L`dL1
 R6
 31
-R23
+Z30 !s110 1651246504
 !i10b 1
 R24
-Z30 !s90 -reportprogress|300|-93|-work|work|C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE9.vhd|
-Z31 !s107 C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE9.vhd|
+Z31 !s90 -reportprogress|300|-93|-work|work|C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE9.vhd|
+Z32 !s107 C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/SE9.vhd|
 !i113 1
 R11
 R12
@@ -206,82 +206,82 @@ V2SL<b]WGkl]`3kQPYdIeo0
 !s100 FV__j=GdAeWK6bHkI^4<83
 R6
 31
-R23
+R30
 !i10b 1
 R24
-R30
 R31
+R32
 !i113 1
 R11
 R12
 Econtroller
-Z32 w1651097039
-Z33 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z33 w1651246464
+Z34 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 R2
 R3
 !i122 1
 R0
-Z34 8C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd
-Z35 FC:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd
+Z35 8C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd
+Z36 FC:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd
 l0
 L6 1
 VNca8?Vb>><QdYfXUb`>5G1
 !s100 07iPG1k2^gNQ7ccV:X2kB2
 R6
 31
-R23
+R30
 !i10b 1
 R24
-Z36 !s90 -reportprogress|300|-93|-work|work|C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd|
-Z37 !s107 C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd|
+Z37 !s90 -reportprogress|300|-93|-work|work|C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd|
+Z38 !s107 C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/controller.vhd|
 !i113 1
 R11
 R12
 Aarch
-R33
+R34
 R2
 R3
 DEx4 work 10 controller 0 22 Nca8?Vb>><QdYfXUb`>5G1
 !i122 1
 l26
-L19 417
-VOf[<4IY??K=93KCnked<l2
-!s100 J0U=>5ABo_bMjaR_b?ZhS0
+L19 440
+VCh3WLHLj]411hWXIdG85]3
+!s100 C6DA0JLN3HTzTEcA1Sd@83
 R6
 31
-R23
+R30
 !i10b 1
 R24
-R36
 R37
+R38
 !i113 1
 R11
 R12
 Edatapath
 R1
-R33
+R34
 R2
 R3
 !i122 14
 R0
-Z38 8C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/datapath.vhd
-Z39 FC:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/datapath.vhd
+Z39 8C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/datapath.vhd
+Z40 FC:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/datapath.vhd
 l0
 L6 1
 VYf=Q3eTH@ISnmD=i8Y5o:0
 !s100 QiN^omD;_9CYYZ^Bmd65Q0
 R6
 31
-R7
+Z41 !s110 1651246506
 !i10b 1
-R8
-Z40 !s90 -reportprogress|300|-93|-work|work|C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/datapath.vhd|
-Z41 !s107 C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/datapath.vhd|
+Z42 !s108 1651246506.000000
+Z43 !s90 -reportprogress|300|-93|-work|work|C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/datapath.vhd|
+Z44 !s107 C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/datapath.vhd|
 !i113 1
 R11
 R12
 Aarch
-R33
+R34
 R2
 R3
 DEx4 work 8 datapath 0 22 Yf=Q3eTH@ISnmD=i8Y5o:0
@@ -292,33 +292,33 @@ VaT^7_41P9HCgN_f_76K[z2
 !s100 NUOjVlJKc2dSW<]2e9<hP2
 R6
 31
-R7
-!i10b 1
-R8
-R40
 R41
+!i10b 1
+R42
+R43
+R44
 !i113 1
 R11
 R12
 Edut
-Z42 w1651090994
+Z45 w1651090994
 R2
 R3
 !i122 19
 R0
-Z43 8C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/DUT.vhd
-Z44 FC:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/DUT.vhd
+Z46 8C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/DUT.vhd
+Z47 FC:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/DUT.vhd
 l0
 L3 1
 Vj94`RSYjWZFC^9GaSZMQf3
 !s100 =]5z1]bmLN7Dc:1YJPLb<0
 R6
 31
-Z45 !s110 1651099543
+R7
 !i10b 1
-Z46 !s108 1651099543.000000
-Z47 !s90 -reportprogress|300|-93|-work|work|C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/DUT.vhd|
-Z48 !s107 C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/DUT.vhd|
+R8
+Z48 !s90 -reportprogress|300|-93|-work|work|C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/DUT.vhd|
+Z49 !s107 C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/DUT.vhd|
 !i113 1
 R11
 R12
@@ -333,39 +333,39 @@ ViP6WO8S5jf@n;W[c?;>403
 !s100 V62VSIkK>n^[HfEj]>m?[0
 R6
 31
-R45
+R7
 !i10b 1
-R46
-R47
+R8
 R48
+R49
 !i113 1
 R11
 R12
 Eincr
-R42
-R33
+R45
+R34
 R2
 R3
 !i122 0
 R0
-Z49 8C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/inc.vhd
-Z50 FC:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/inc.vhd
+Z50 8C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/inc.vhd
+Z51 FC:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/inc.vhd
 l0
 L5 1
 V=Vhh_gzVn?^nVe>BnNnCR1
 !s100 ozQLL];5<6e^U5`nMRWR81
 R6
 31
-R23
+R30
 !i10b 1
 R24
-Z51 !s90 -reportprogress|300|-93|-work|work|C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/inc.vhd|
-Z52 !s107 C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/inc.vhd|
+Z52 !s90 -reportprogress|300|-93|-work|work|C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/inc.vhd|
+Z53 !s107 C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/inc.vhd|
 !i113 1
 R11
 R12
 Abehavior
-R33
+R34
 R2
 R3
 DEx4 work 4 incr 0 22 =Vhh_gzVn?^nVe>BnNnCR1
@@ -376,52 +376,52 @@ VRhKkXd33ORG2SbM=IHC_m1
 !s100 f4MLlfI:kdL0LCa[>RJOa3
 R6
 31
-R23
+R30
 !i10b 1
 R24
-R51
 R52
+R53
 !i113 1
 R11
 R12
 Ememory
-Z53 w1651099478
-R33
+Z54 w1651244189
+R34
 R2
 R3
 !i122 13
 R0
-Z54 8C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/memory.vhd
-Z55 FC:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/memory.vhd
+Z55 8C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/memory.vhd
+Z56 FC:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/memory.vhd
 l0
 L5 1
 V2I_ie=biKgC@6O?IeO1eB0
 !s100 hL]4Qzc2Imi1d]<iH6>ld2
 R6
 31
-R7
+R41
 !i10b 1
-Z56 !s108 1651099541.000000
+R42
 Z57 !s90 -reportprogress|300|-93|-work|work|C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/memory.vhd|
 Z58 !s107 C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/memory.vhd|
 !i113 1
 R11
 R12
 Amem1
-R33
+R34
 R2
 R3
 DEx4 work 6 memory 0 22 2I_ie=biKgC@6O?IeO1eB0
 !i122 13
 l20
 L15 24
-VBXa7VK?CdQVBkQlX22fFO2
-!s100 ^7>j60N6SYj0H2Qj0UbM91
+VF[NE=L8DNY^]g^F`N07kE3
+!s100 MEHISY::<mZNFMoJUWF`I2
 R6
 31
-R7
+R41
 !i10b 1
-R56
+R42
 R57
 R58
 !i113 1
@@ -441,11 +441,11 @@ VfW=`@;n[9eaiz@^lZHN382
 !s100 Jm07Rc1Kl@6Y593<DASm51
 R6
 31
-Z61 !s110 1651099541
+R41
 !i10b 1
-R56
-Z62 !s90 -reportprogress|300|-93|-work|work|C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux21.vhd|
-Z63 !s107 C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux21.vhd|
+R42
+Z61 !s90 -reportprogress|300|-93|-work|work|C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux21.vhd|
+Z62 !s107 C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux21.vhd|
 !i113 1
 R11
 R12
@@ -455,16 +455,16 @@ R3
 DEx4 work 5 mux21 0 22 fW=`@;n[9eaiz@^lZHN382
 !i122 11
 l15
-Z64 L13 13
+Z63 L13 13
 V@T?P^;oY0cbkJY`P@G5660
 !s100 G2QJoMdoOFdmMAenCg>hQ1
 R6
 31
-R61
+R41
 !i10b 1
-R56
+R42
+R61
 R62
-R63
 !i113 1
 R11
 R12
@@ -474,19 +474,19 @@ R2
 R3
 !i122 12
 R0
-Z65 8C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux21 _3.vhd
-Z66 FC:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux21 _3.vhd
+Z64 8C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux21 _3.vhd
+Z65 FC:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux21 _3.vhd
 l0
 L4 1
 VaH5Ic1_o:]>c^i1z5eb0H2
 !s100 O_89ZfiIk41iR1VXL[N<Q2
 R6
 31
-R61
+R41
 !i10b 1
-R56
-Z67 !s90 -reportprogress|300|-93|-work|work|C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux21 _3.vhd|
-Z68 !s107 C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux21 _3.vhd|
+R42
+Z66 !s90 -reportprogress|300|-93|-work|work|C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux21 _3.vhd|
+Z67 !s107 C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux21 _3.vhd|
 !i113 1
 R11
 R12
@@ -496,16 +496,16 @@ R3
 DEx4 work 7 mux21_3 0 22 aH5Ic1_o:]>c^i1z5eb0H2
 !i122 12
 l15
-R64
+R63
 VRnd5EenMGf;R:LAdi1m?81
 !s100 fS?JGlTZHZ628NFAFK@zP3
 R6
 31
-R61
+R41
 !i10b 1
-R56
+R42
+R66
 R67
-R68
 !i113 1
 R11
 R12
@@ -515,19 +515,19 @@ R2
 R3
 !i122 10
 R0
-Z69 8C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd
-Z70 FC:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd
+Z68 8C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd
+Z69 FC:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd
 l0
 L4 1
 VDd?0`f9G;]EO2RCIJ4=lg0
 !s100 cUZ4h=kLP`bYA`Z=1@V]V1
 R6
 31
-R61
+R41
 !i10b 1
-R56
-Z71 !s90 -reportprogress|300|-93|-work|work|C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd|
-Z72 !s107 C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd|
+R42
+Z70 !s90 -reportprogress|300|-93|-work|work|C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd|
+Z71 !s107 C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41.vhd|
 !i113 1
 R11
 R12
@@ -537,16 +537,16 @@ R3
 DEx4 work 5 mux41 0 22 Dd?0`f9G;]EO2RCIJ4=lg0
 !i122 10
 l17
-Z73 L15 16
+Z72 L15 16
 Vb<F=8S:^Ca13>HhXB7:Q`1
 !s100 o[@QI9@U^NXh2B_H1zC0=2
 R6
 31
-R61
+R41
 !i10b 1
-R56
+R42
+R70
 R71
-R72
 !i113 1
 R11
 R12
@@ -556,17 +556,17 @@ R2
 R3
 !i122 9
 R0
-Z74 8C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41_3.vhd
-Z75 FC:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41_3.vhd
+Z73 8C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41_3.vhd
+Z74 FC:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41_3.vhd
 l0
 L4 1
 VUHM1oO1k6hMUmKZdCV3_22
 !s100 SRJ[Fo;ZFPkGB;1LZ]S[D0
 R6
 31
-R61
+R41
 !i10b 1
-R56
+Z75 !s108 1651246505.000000
 Z76 !s90 -reportprogress|300|-93|-work|work|C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41_3.vhd|
 Z77 !s107 C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux41_3.vhd|
 !i113 1
@@ -578,14 +578,14 @@ R3
 DEx4 work 7 mux41_3 0 22 UHM1oO1k6hMUmKZdCV3_22
 !i122 9
 l17
-R73
+R72
 VC8Un@b7ZiB@z]6Wf`MeIS2
 !s100 mBafBD;DNUUFk0n4ZP0O33
 R6
 31
-R61
+R41
 !i10b 1
-R56
+R75
 R76
 R77
 !i113 1
@@ -605,11 +605,11 @@ VEF=6YaJUQEdES^QoBGa1a2
 !s100 6d6IUaK]MNMmficSi_EoI0
 R6
 31
-R61
+R23
 !i10b 1
-Z80 !s108 1651099540.000000
-Z81 !s90 -reportprogress|300|-93|-work|work|C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux81.vhd|
-Z82 !s107 C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux81.vhd|
+R75
+Z80 !s90 -reportprogress|300|-93|-work|work|C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux81.vhd|
+Z81 !s107 C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux81.vhd|
 !i113 1
 R11
 R12
@@ -619,16 +619,16 @@ R3
 DEx4 work 5 mux81 0 22 EF=6YaJUQEdES^QoBGa1a2
 !i122 8
 l21
-Z83 L19 25
+Z82 L19 25
 V_TCEX@j1P0;0O1>bR`NY92
 !s100 A0GWLOBz;H@JiEQWZ=?YL3
 R6
 31
-R61
+R23
 !i10b 1
+R75
 R80
 R81
-R82
 !i113 1
 R11
 R12
@@ -638,19 +638,19 @@ R2
 R3
 !i122 7
 R0
-Z84 8C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux81_3.vhd
-Z85 FC:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux81_3.vhd
+Z83 8C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux81_3.vhd
+Z84 FC:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux81_3.vhd
 l0
 L4 1
 V3eF2aUjUPG:]9jU5YY_`83
 !s100 U[LW5i_o[7ioHa9MhI1lO3
 R6
 31
-Z86 !s110 1651099540
+R23
 !i10b 1
-R80
-Z87 !s90 -reportprogress|300|-93|-work|work|C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux81_3.vhd|
-Z88 !s107 C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux81_3.vhd|
+R75
+Z85 !s90 -reportprogress|300|-93|-work|work|C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux81_3.vhd|
+Z86 !s107 C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/mux81_3.vhd|
 !i113 1
 R11
 R12
@@ -660,16 +660,16 @@ R3
 DEx4 work 7 mux81_3 0 22 3eF2aUjUPG:]9jU5YY_`83
 !i122 7
 l21
-R83
+R82
 V^EzEJOKTga=WmX`1OZ0_51
 !s100 0S[fD2:HiPEO@>eC5GR5j2
 R6
 31
-R86
+R23
 !i10b 1
-R80
-R87
-R88
+R75
+R85
+R86
 !i113 1
 R11
 R12
@@ -679,19 +679,19 @@ R2
 R3
 !i122 5
 R0
-Z89 8C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/reg_16.vhd
-Z90 FC:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/reg_16.vhd
+Z87 8C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/reg_16.vhd
+Z88 FC:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/reg_16.vhd
 l0
 L4 1
 VU2Q?HzX7^0m^=cZmIdP541
 !s100 1RMIMaf794j^WEUFkhPaV0
 R6
 31
-R86
+R23
 !i10b 1
-R80
-Z91 !s90 -reportprogress|300|-93|-work|work|C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/reg_16.vhd|
-Z92 !s107 C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/reg_16.vhd|
+R75
+Z89 !s90 -reportprogress|300|-93|-work|work|C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/reg_16.vhd|
+Z90 !s107 C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/reg_16.vhd|
 !i113 1
 R11
 R12
@@ -701,16 +701,16 @@ R3
 DEx4 work 3 reg 0 22 U2Q?HzX7^0m^=cZmIdP541
 !i122 5
 l14
-Z93 L13 15
+Z91 L13 15
 VIY@k<B=>KigPEY[AB>Ue52
 !s100 LLzf6i^8HSEc`ho:;GjfG0
 R6
 31
-R86
+R23
 !i10b 1
-R80
-R91
-R92
+R75
+R89
+R90
 !i113 1
 R11
 R12
@@ -720,19 +720,19 @@ R2
 R3
 !i122 6
 R0
-Z94 8C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/reg_1.vhd
-Z95 FC:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/reg_1.vhd
+Z92 8C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/reg_1.vhd
+Z93 FC:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/reg_1.vhd
 l0
 L4 1
 Vd[K_EJUaQFZlk?QT6l`om2
 !s100 04Y6VoCifGO0I6N4]2id02
 R6
 31
-R86
+R23
 !i10b 1
-R80
-Z96 !s90 -reportprogress|300|-93|-work|work|C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/reg_1.vhd|
-Z97 !s107 C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/reg_1.vhd|
+R75
+Z94 !s90 -reportprogress|300|-93|-work|work|C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/reg_1.vhd|
+Z95 !s107 C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/reg_1.vhd|
 !i113 1
 R11
 R12
@@ -742,44 +742,44 @@ R3
 DEx4 work 4 reg1 0 22 d[K_EJUaQFZlk?QT6l`om2
 !i122 6
 l14
-R93
+R91
 VWlU?0g=T@e1MR`N=N5O7[2
 !s100 dCQVK=RUeD<2VKlPI:DVS0
 R6
 31
-R86
+R23
 !i10b 1
-R80
-R96
-R97
+R75
+R94
+R95
 !i113 1
 R11
 R12
 Eregister_bank
-R42
-R33
+R45
+R34
 R2
 R3
 !i122 4
 R0
-Z98 8C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/reg_bank.vhd
-Z99 FC:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/reg_bank.vhd
+Z96 8C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/reg_bank.vhd
+Z97 FC:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/reg_bank.vhd
 l0
 L6 1
 Vk10^D[hEB4I=HDKa22f@T2
 !s100 bmbjmE?iQZ_SdXQ]AJTJj2
 R6
 31
-R86
+R23
 !i10b 1
-R24
-Z100 !s90 -reportprogress|300|-93|-work|work|C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/reg_bank.vhd|
-Z101 !s107 C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/reg_bank.vhd|
+R75
+Z98 !s90 -reportprogress|300|-93|-work|work|C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/reg_bank.vhd|
+Z99 !s107 C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/reg_bank.vhd|
 !i113 1
 R11
 R12
 Arb1
-R33
+R34
 R2
 R3
 DEx4 work 13 register_bank 0 22 k10^D[hEB4I=HDKa22f@T2
@@ -790,32 +790,32 @@ Vf2;>E>OCH47^Kha;Y=^lU1
 !s100 796?e>lFE8_[DYTSm5Oi80
 R6
 31
-R86
+R23
 !i10b 1
-R24
-R100
-R101
+R75
+R98
+R99
 !i113 1
 R11
 R12
 Etestbench
-R42
+R45
 R3
 R2
 !i122 20
 R0
-Z102 8C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/Testbench.vhdl
-Z103 FC:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/Testbench.vhdl
+Z100 8C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/Testbench.vhdl
+Z101 FC:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/Testbench.vhdl
 l0
 L7 1
 V]iKK_Z9L:G9B:i8c]3eFH0
 !s100 bWf8kl8zb90X@P1m>V^K20
 R6
 31
-R45
+R7
 !i10b 1
-R46
-Z104 !s90 -reportprogress|300|-93|-work|work|C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/Testbench.vhdl|
+R8
+Z102 !s90 -reportprogress|300|-93|-work|work|C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/Testbench.vhdl|
 !s107 C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/Testbench.vhdl|
 !i113 1
 R11
@@ -831,39 +831,39 @@ Va[Q?zg_FH3^Q`[SV]aAfk2
 !s100 ag^<AT222l<;`I5Khzk8?2
 R6
 31
-R45
+R7
 !i10b 1
-R46
-R104
-Z105 !s107 C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/Testbench.vhdl|
+R8
+R102
+Z103 !s107 C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/Testbench.vhdl|
 !i113 1
 R11
 R12
 Eup
 R1
-R33
+R34
 R2
 R3
 !i122 18
 R0
-Z106 8C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/uP.vhd
-Z107 FC:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/uP.vhd
+Z104 8C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/uP.vhd
+Z105 FC:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/uP.vhd
 l0
 L6 1
 V?DiTcS=gMmV@f>D3]f`Do2
 !s100 z58Oi>CR2li>5HQ9O_]]Z3
 R6
 31
-R45
+R7
 !i10b 1
 R8
-Z108 !s90 -reportprogress|300|-93|-work|work|C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/uP.vhd|
-Z109 !s107 C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/uP.vhd|
+Z106 !s90 -reportprogress|300|-93|-work|work|C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/uP.vhd|
+Z107 !s107 C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Multicycle/uP/uP.vhd|
 !i113 1
 R11
 R12
 Auparch
-R33
+R34
 R2
 R3
 DEx4 work 2 up 0 22 ?DiTcS=gMmV@f>D3]f`Do2
@@ -874,11 +874,11 @@ V?:U8lDRCVhFkmTW>X6JcA3
 !s100 Y2<LIIddZTI<=TX`clhbe3
 R6
 31
-R45
+R7
 !i10b 1
 R8
-R108
-R109
+R106
+R107
 !i113 1
 R11
 R12

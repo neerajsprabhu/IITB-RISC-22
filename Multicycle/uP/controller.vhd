@@ -19,7 +19,7 @@ end controller;
 architecture arch of controller is
 
 	--defining all the required states
-	type fsm_state is (init, S0, S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, S16, S17, S18, S19, S_19, S20, S21, S22, S23, S24);
+	type fsm_state is (init, S0, S1, S_1, S2, S3, S_3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, S16, S17, S18, S19, S_19, S20, S21, S22, S23, S24, S25, S26);
 	signal state, nstate : fsm_state:=init;
 	shared variable i: integer;
 	
@@ -32,7 +32,7 @@ begin
 		end if;
 	end process; --statechange
 	
-	stateoutput : process(IR, state)
+	stateoutput : process(IR, state, cy, z)
 	
 	begin
 		
@@ -269,6 +269,15 @@ begin
 				select_Mux_RF_A3<="000";
 				select_Mux_RF_D3<="001";
 				wr_RF<='1';
+			
+			when S25=>
+				wr_inc<='1';
+				wr_T3<='1';
+			
+			when S26=>
+				select_Mux_RF_D3<="101";
+				select_Mux_RF_A3<="000";
+				wr_RF<='1';
 				
 			when others=>
 				null;
@@ -295,7 +304,14 @@ begin
 				nstate<=S1;
 				
 			when S1=>
-				nstate<=S2;
+				nstate<=S_1;
+				
+			when S_1=>
+				if opcode="1000" then
+					nstate<=S25;
+				else
+					nstate<=S2;
+				end if;
 				
 			when S2=>
 				--LWI: opcode=0100
@@ -323,16 +339,14 @@ begin
 					if IR(i)='1' then
 						nstate<=S14;
 					else
-				      nstate<=S3;
+				      nstate<=S_3;
 					end if;
-					i:=i+1;
 				elsif opcode="1101" then
 					if IR(i)='1' then
 				      nstate<=S17;
 					else
-				      nstate<=S3;
+				      nstate<=S_3;
 					end if;
-					i:=i+1;
 				elsif opcode="1000" then
 					nstate<=S19;
 				elsif opcode="1010" then
@@ -340,7 +354,14 @@ begin
 				else
 					nstate<=S0;
 				end if;
-				
+			
+			when S_3=>
+				if i=8 then
+					nstate<=S0;
+				else
+					i:=i+1;
+					nstate<=S3;
+				end if;
 			when S4=>
 				nstate<=S0;
 				
@@ -384,11 +405,7 @@ begin
 				nstate<=S16;
 				
 			when S16=>
-				if i=8 then
-					nstate<=S0;
-				else
-					nstate<=S3;
-				end if;
+				nstate<=S_3;
 				
 			when S17=>
 				nstate<=S18;
@@ -402,7 +419,7 @@ begin
 				if z='1' then
 					nstate<=S20;
 				else
-					nstate<=S0;
+					nstate<=S26;
 				end if;
 				
 			when S20=>
@@ -424,6 +441,12 @@ begin
 				nstate<=S0;
 				
 			when S24=>
+				nstate<=S0;
+				
+			when S25=>
+				nstate<=S3;
+				
+			when S26=>
 				nstate<=S0;
 				
 			when others=>
