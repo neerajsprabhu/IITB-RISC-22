@@ -30,12 +30,12 @@ architecture rb1 of register_bank is
         Op: out std_logic_vector(15 downto 0)
         );
   end component;
-  signal r0, r1, r2, r3, r4, r5, r6, r7: std_logic_vector(15 downto 0);
+  signal r0, r1, r2, r3, r4, r5, r6, r7: std_logic_vector(15 downto 0):= "0000000000000000";
 
 begin
 m1: mux81 port map (A0=>r0, A1=>r1, A2=>r2, A3=>r3, A4=>r4, A5=>r5, A6=>r6, A7=>r7, S=>Add1, Op=>D1);
 m2: mux81 port map (A0=>r0, A1=>r1, A2=>r2, A3=>r3, A4=>r4, A5=>r5, A6=>r6, A7=>r7, S=>Add2, Op=>D2);
-process(Add1, Add2, Add3, D3, wr)
+process(Add1, Add2, Add3, D3, wr, clk)
 begin
   if rising_edge(clk) then
     if wr='1' then

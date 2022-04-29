@@ -12,7 +12,7 @@ end incr;
 architecture behavior of incr is
 
 begin
-	alu : process( A )
+	alu : process( A,wr )
 	variable temp : std_logic_vector(15 downto 0);
 	begin
 		temp := std_logic_vector(unsigned(A)+1);
