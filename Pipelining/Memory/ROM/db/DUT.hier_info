@@ -1,0 +1,70 @@
+|DUT
+input_vector[0] => rom:add_instance.A[0]
+input_vector[1] => rom:add_instance.A[1]
+input_vector[2] => rom:add_instance.A[2]
+input_vector[3] => rom:add_instance.A[3]
+input_vector[4] => rom:add_instance.A[4]
+input_vector[5] => rom:add_instance.A[5]
+input_vector[6] => rom:add_instance.A[6]
+input_vector[7] => rom:add_instance.A[7]
+input_vector[8] => rom:add_instance.A[8]
+input_vector[9] => rom:add_instance.A[9]
+input_vector[10] => rom:add_instance.A[10]
+input_vector[11] => rom:add_instance.A[11]
+input_vector[12] => rom:add_instance.A[12]
+input_vector[13] => rom:add_instance.A[13]
+input_vector[14] => rom:add_instance.A[14]
+input_vector[15] => rom:add_instance.A[15]
+output_vector[0] << rom:add_instance.Dout[0]
+output_vector[1] << rom:add_instance.Dout[1]
+output_vector[2] << rom:add_instance.Dout[2]
+output_vector[3] << rom:add_instance.Dout[3]
+output_vector[4] << rom:add_instance.Dout[4]
+output_vector[5] << rom:add_instance.Dout[5]
+output_vector[6] << rom:add_instance.Dout[6]
+output_vector[7] << rom:add_instance.Dout[7]
+output_vector[8] << rom:add_instance.Dout[8]
+output_vector[9] << rom:add_instance.Dout[9]
+output_vector[10] << rom:add_instance.Dout[10]
+output_vector[11] << rom:add_instance.Dout[11]
+output_vector[12] << rom:add_instance.Dout[12]
+output_vector[13] << rom:add_instance.Dout[13]
+output_vector[14] << rom:add_instance.Dout[14]
+output_vector[15] << rom:add_instance.Dout[15]
+
+
+|DUT|rom:add_instance
+A[0] => mem.RADDR
+A[1] => mem.RADDR1
+A[2] => mem.RADDR2
+A[3] => mem.RADDR3
+A[4] => mem.RADDR4
+A[5] => mem.RADDR5
+A[6] => mem.RADDR6
+A[7] => mem.RADDR7
+A[8] => mem.RADDR8
+A[9] => mem.RADDR9
+A[10] => mem.RADDR10
+A[11] => mem.RADDR11
+A[12] => mem.RADDR12
+A[13] => mem.RADDR13
+A[14] => mem.RADDR14
+A[15] => mem.RADDR15
+Dout[0] <= mem.DATAOUT
+Dout[1] <= mem.DATAOUT1
+Dout[2] <= mem.DATAOUT2
+Dout[3] <= mem.DATAOUT3
+Dout[4] <= mem.DATAOUT4
+Dout[5] <= mem.DATAOUT5
+Dout[6] <= mem.DATAOUT6
+Dout[7] <= mem.DATAOUT7
+Dout[8] <= mem.DATAOUT8
+Dout[9] <= mem.DATAOUT9
+Dout[10] <= mem.DATAOUT10
+Dout[11] <= mem.DATAOUT11
+Dout[12] <= mem.DATAOUT12
+Dout[13] <= mem.DATAOUT13
+Dout[14] <= mem.DATAOUT14
+Dout[15] <= mem.DATAOUT15
+
+
