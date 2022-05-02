@@ -1,0 +1,1283 @@
+Timing Analyzer report for DUT
+Mon May 02 05:44:14 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Fmax Summary
+  6. Setup Summary
+  7. Hold Summary
+  8. Recovery Summary
+  9. Removal Summary
+ 10. Minimum Pulse Width Summary
+ 11. Setup: 'select_ALU[0]'
+ 12. Setup: 'clk'
+ 13. Setup: 'select_ALU2[0]'
+ 14. Setup: 'wr_inc'
+ 15. Hold: 'select_ALU[0]'
+ 16. Hold: 'select_ALU2[0]'
+ 17. Hold: 'clk'
+ 18. Hold: 'wr_inc'
+ 19. Setup Transfers
+ 20. Hold Transfers
+ 21. Report TCCS
+ 22. Report RSKM
+ 23. Unconstrained Paths Summary
+ 24. Clock Status Summary
+ 25. Unconstrained Input Ports
+ 26. Unconstrained Output Ports
+ 27. Unconstrained Input Ports
+ 28. Unconstrained Output Ports
+ 29. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; DUT                                                 ;
+; Device Family         ; MAX V                                               ;
+; Device Name           ; 5M2210ZF256C4                                       ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Slow Model                                          ;
+; Rise/Fall Delays      ; Unavailable                                         ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                         ;
++----------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------+
+; Clock Name     ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets            ;
++----------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------+
+; clk            ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }            ;
+; select_ALU2[0] ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { select_ALU2[0] } ;
+; select_ALU[0]  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { select_ALU[0] }  ;
+; wr_inc         ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { wr_inc }         ;
++----------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------+
+
+
++------------------------------------------------------+
+; Fmax Summary                                         ;
++------------+-----------------+----------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name     ; Note ;
++------------+-----------------+----------------+------+
+; 86.09 MHz  ; 86.09 MHz       ; clk            ;      ;
+; 113.48 MHz ; 113.48 MHz      ; select_ALU[0]  ;      ;
+; 186.08 MHz ; 186.08 MHz      ; select_ALU2[0] ;      ;
++------------+-----------------+----------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------------+
+; Setup Summary                            ;
++----------------+---------+---------------+
+; Clock          ; Slack   ; End Point TNS ;
++----------------+---------+---------------+
+; select_ALU[0]  ; -18.739 ; -216.607      ;
+; clk            ; -10.616 ; -10656.396    ;
+; select_ALU2[0] ; -9.622  ; -132.374      ;
+; wr_inc         ; -7.498  ; -103.687      ;
++----------------+---------+---------------+
+
+
++----------------------------------------+
+; Hold Summary                           ;
++----------------+-------+---------------+
+; Clock          ; Slack ; End Point TNS ;
++----------------+-------+---------------+
+; select_ALU[0]  ; 0.304 ; 0.000         ;
+; select_ALU2[0] ; 0.506 ; 0.000         ;
+; clk            ; 1.118 ; 0.000         ;
+; wr_inc         ; 2.926 ; 0.000         ;
++----------------+-------+---------------+
+
+
+--------------------
+; Recovery Summary ;
+--------------------
+No paths to report.
+
+
+-------------------
+; Removal Summary ;
+-------------------
+No paths to report.
+
+
++-----------------------------------------+
+; Minimum Pulse Width Summary             ;
++----------------+--------+---------------+
+; Clock          ; Slack  ; End Point TNS ;
++----------------+--------+---------------+
+; clk            ; -2.289 ; -2.289        ;
+; select_ALU2[0] ; -2.289 ; -2.289        ;
+; select_ALU[0]  ; -2.289 ; -2.289        ;
+; wr_inc         ; -2.289 ; -2.289        ;
++----------------+--------+---------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'select_ALU[0]'                                                                                                               ;
++---------+---------------------------------+------------------+--------------+---------------+--------------+------------+------------+
+; Slack   ; From Node                       ; To Node          ; Launch Clock ; Latch Clock   ; Relationship ; Clock Skew ; Data Delay ;
++---------+---------------------------------+------------------+--------------+---------------+--------------+------------+------------+
+; -18.739 ; RREX:RR_EX|reg:RF_D1|Op[0]      ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 2.060      ; 19.566     ;
+; -18.593 ; RREX:RR_EX|reg:RF_D2|Op[1]      ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 2.060      ; 19.420     ;
+; -18.565 ; RREX:RR_EX|reg:RF_D2|Op[0]      ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 2.060      ; 19.392     ;
+; -18.263 ; RREX:RR_EX|reg:RF_D1|Op[1]      ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 2.060      ; 19.090     ;
+; -18.125 ; RREX:RR_EX|reg6:five_zero|Op[0] ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 2.060      ; 18.952     ;
+; -17.831 ; RREX:RR_EX|reg:RF_D2|Op[3]      ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 2.060      ; 18.658     ;
+; -17.794 ; RREX:RR_EX|reg:RF_D2|Op[4]      ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 2.060      ; 18.621     ;
+; -17.775 ; RREX:RR_EX|reg:RF_D1|Op[0]      ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 2.751      ; 19.256     ;
+; -17.645 ; RREX:RR_EX|reg:RF_D2|Op[2]      ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 2.060      ; 18.472     ;
+; -17.629 ; RREX:RR_EX|reg:RF_D2|Op[1]      ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 2.751      ; 19.110     ;
+; -17.628 ; RREX:RR_EX|reg6:five_zero|Op[1] ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 2.060      ; 18.455     ;
+; -17.601 ; RREX:RR_EX|reg:RF_D2|Op[0]      ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 2.751      ; 19.082     ;
+; -17.299 ; RREX:RR_EX|reg:RF_D1|Op[1]      ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 2.751      ; 18.780     ;
+; -17.161 ; RREX:RR_EX|reg6:five_zero|Op[0] ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 2.751      ; 18.642     ;
+; -17.002 ; RREX:RR_EX|reg:RF_D1|Op[0]      ; alu:ALU_1|Op[15] ; clk          ; select_ALU[0] ; 0.500        ; 4.279      ; 20.619     ;
+; -16.867 ; RREX:RR_EX|reg:RF_D2|Op[3]      ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 2.751      ; 18.348     ;
+; -16.858 ; RREX:RR_EX|reg:RF_D1|Op[3]      ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 2.060      ; 17.685     ;
+; -16.856 ; RREX:RR_EX|reg:RF_D2|Op[1]      ; alu:ALU_1|Op[15] ; clk          ; select_ALU[0] ; 0.500        ; 4.279      ; 20.473     ;
+; -16.830 ; RREX:RR_EX|reg:RF_D2|Op[4]      ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 2.751      ; 18.311     ;
+; -16.828 ; RREX:RR_EX|reg:RF_D2|Op[0]      ; alu:ALU_1|Op[15] ; clk          ; select_ALU[0] ; 0.500        ; 4.279      ; 20.445     ;
+; -16.796 ; RREX:RR_EX|reg:RF_D1|Op[2]      ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 2.060      ; 17.623     ;
+; -16.681 ; RREX:RR_EX|reg:RF_D2|Op[2]      ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 2.751      ; 18.162     ;
+; -16.664 ; RREX:RR_EX|reg6:five_zero|Op[1] ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 2.751      ; 18.145     ;
+; -16.526 ; RREX:RR_EX|reg:RF_D1|Op[1]      ; alu:ALU_1|Op[15] ; clk          ; select_ALU[0] ; 0.500        ; 4.279      ; 20.143     ;
+; -16.388 ; RREX:RR_EX|reg6:five_zero|Op[0] ; alu:ALU_1|Op[15] ; clk          ; select_ALU[0] ; 0.500        ; 4.279      ; 20.005     ;
+; -16.222 ; RREX:RR_EX|reg:RF_D1|Op[0]      ; alu:ALU_1|Op[13] ; clk          ; select_ALU[0] ; 0.500        ; 4.253      ; 19.813     ;
+; -16.216 ; RREX:RR_EX|reg:RF_D1|Op[4]      ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 2.060      ; 17.043     ;
+; -16.094 ; RREX:RR_EX|reg:RF_D2|Op[3]      ; alu:ALU_1|Op[15] ; clk          ; select_ALU[0] ; 0.500        ; 4.279      ; 19.711     ;
+; -16.076 ; RREX:RR_EX|reg:RF_D2|Op[1]      ; alu:ALU_1|Op[13] ; clk          ; select_ALU[0] ; 0.500        ; 4.253      ; 19.667     ;
+; -16.057 ; RREX:RR_EX|reg:RF_D2|Op[4]      ; alu:ALU_1|Op[15] ; clk          ; select_ALU[0] ; 0.500        ; 4.279      ; 19.674     ;
+; -16.048 ; RREX:RR_EX|reg:RF_D2|Op[0]      ; alu:ALU_1|Op[13] ; clk          ; select_ALU[0] ; 0.500        ; 4.253      ; 19.639     ;
+; -15.908 ; RREX:RR_EX|reg:RF_D2|Op[2]      ; alu:ALU_1|Op[15] ; clk          ; select_ALU[0] ; 0.500        ; 4.279      ; 19.525     ;
+; -15.894 ; RREX:RR_EX|reg:RF_D1|Op[3]      ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 2.751      ; 17.375     ;
+; -15.891 ; RREX:RR_EX|reg6:five_zero|Op[1] ; alu:ALU_1|Op[15] ; clk          ; select_ALU[0] ; 0.500        ; 4.279      ; 19.508     ;
+; -15.837 ; RREX:RR_EX|reg:RF_D2|Op[6]      ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 2.060      ; 16.664     ;
+; -15.832 ; RREX:RR_EX|reg:RF_D1|Op[2]      ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 2.751      ; 17.313     ;
+; -15.746 ; RREX:RR_EX|reg:RF_D1|Op[1]      ; alu:ALU_1|Op[13] ; clk          ; select_ALU[0] ; 0.500        ; 4.253      ; 19.337     ;
+; -15.608 ; RREX:RR_EX|reg6:five_zero|Op[0] ; alu:ALU_1|Op[13] ; clk          ; select_ALU[0] ; 0.500        ; 4.253      ; 19.199     ;
+; -15.314 ; RREX:RR_EX|reg:RF_D2|Op[3]      ; alu:ALU_1|Op[13] ; clk          ; select_ALU[0] ; 0.500        ; 4.253      ; 18.905     ;
+; -15.277 ; RREX:RR_EX|reg:RF_D2|Op[4]      ; alu:ALU_1|Op[13] ; clk          ; select_ALU[0] ; 0.500        ; 4.253      ; 18.868     ;
+; -15.252 ; RREX:RR_EX|reg:RF_D1|Op[4]      ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 2.751      ; 16.733     ;
+; -15.128 ; RREX:RR_EX|reg:RF_D2|Op[2]      ; alu:ALU_1|Op[13] ; clk          ; select_ALU[0] ; 0.500        ; 4.253      ; 18.719     ;
+; -15.121 ; RREX:RR_EX|reg:RF_D1|Op[3]      ; alu:ALU_1|Op[15] ; clk          ; select_ALU[0] ; 0.500        ; 4.279      ; 18.738     ;
+; -15.111 ; RREX:RR_EX|reg6:five_zero|Op[1] ; alu:ALU_1|Op[13] ; clk          ; select_ALU[0] ; 0.500        ; 4.253      ; 18.702     ;
+; -15.059 ; RREX:RR_EX|reg:RF_D1|Op[2]      ; alu:ALU_1|Op[15] ; clk          ; select_ALU[0] ; 0.500        ; 4.279      ; 18.676     ;
+; -14.999 ; RREX:RR_EX|reg:RF_D1|Op[5]      ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 2.060      ; 15.826     ;
+; -14.929 ; RREX:RR_EX|reg6:five_zero|Op[4] ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 2.060      ; 15.756     ;
+; -14.873 ; RREX:RR_EX|reg:RF_D2|Op[6]      ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 2.751      ; 16.354     ;
+; -14.479 ; RREX:RR_EX|reg:RF_D1|Op[4]      ; alu:ALU_1|Op[15] ; clk          ; select_ALU[0] ; 0.500        ; 4.279      ; 18.096     ;
+; -14.444 ; RREX:RR_EX|reg:RF_D2|Op[5]      ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 2.060      ; 15.271     ;
+; -14.402 ; RREX:RR_EX|reg:RF_D1|Op[0]      ; alu:ALU_1|Op[14] ; clk          ; select_ALU[0] ; 0.500        ; 4.296      ; 18.029     ;
+; -14.341 ; RREX:RR_EX|reg:RF_D1|Op[3]      ; alu:ALU_1|Op[13] ; clk          ; select_ALU[0] ; 0.500        ; 4.253      ; 17.932     ;
+; -14.312 ; RREX:RR_EX|reg:RF_D1|Op[0]      ; alu:ALU_1|Op[11] ; clk          ; select_ALU[0] ; 0.500        ; 4.310      ; 17.960     ;
+; -14.279 ; RREX:RR_EX|reg:RF_D1|Op[2]      ; alu:ALU_1|Op[13] ; clk          ; select_ALU[0] ; 0.500        ; 4.253      ; 17.870     ;
+; -14.256 ; RREX:RR_EX|reg:RF_D2|Op[1]      ; alu:ALU_1|Op[14] ; clk          ; select_ALU[0] ; 0.500        ; 4.296      ; 17.883     ;
+; -14.253 ; RREX:RR_EX|reg:RF_D1|Op[6]      ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 2.060      ; 15.080     ;
+; -14.228 ; RREX:RR_EX|reg:RF_D2|Op[0]      ; alu:ALU_1|Op[14] ; clk          ; select_ALU[0] ; 0.500        ; 4.296      ; 17.855     ;
+; -14.166 ; RREX:RR_EX|reg:RF_D2|Op[1]      ; alu:ALU_1|Op[11] ; clk          ; select_ALU[0] ; 0.500        ; 4.310      ; 17.814     ;
+; -14.138 ; RREX:RR_EX|reg:RF_D2|Op[0]      ; alu:ALU_1|Op[11] ; clk          ; select_ALU[0] ; 0.500        ; 4.310      ; 17.786     ;
+; -14.100 ; RREX:RR_EX|reg:RF_D2|Op[6]      ; alu:ALU_1|Op[15] ; clk          ; select_ALU[0] ; 0.500        ; 4.279      ; 17.717     ;
+; -14.035 ; RREX:RR_EX|reg:RF_D1|Op[5]      ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 2.751      ; 15.516     ;
+; -14.010 ; RREX:RR_EX|reg:RF_D2|Op[7]      ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 2.060      ; 14.837     ;
+; -13.968 ; RREX:RR_EX|reg:RF_D1|Op[7]      ; alu:ALU_1|zero   ; clk          ; select_ALU[0] ; 0.500        ; 2.060      ; 14.795     ;
+; -13.965 ; RREX:RR_EX|reg:RF_D1|Op[0]      ; alu:ALU_1|Op[9]  ; clk          ; select_ALU[0] ; 0.500        ; 4.316      ; 17.627     ;
+; -13.965 ; RREX:RR_EX|reg6:five_zero|Op[4] ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 2.751      ; 15.446     ;
+; -13.926 ; RREX:RR_EX|reg:RF_D1|Op[1]      ; alu:ALU_1|Op[14] ; clk          ; select_ALU[0] ; 0.500        ; 4.296      ; 17.553     ;
+; -13.921 ; RREX:RR_EX|reg:RF_D1|Op[0]      ; alu:ALU_1|Op[12] ; clk          ; select_ALU[0] ; 0.500        ; 4.264      ; 17.531     ;
+; -13.836 ; RREX:RR_EX|reg:RF_D1|Op[1]      ; alu:ALU_1|Op[11] ; clk          ; select_ALU[0] ; 0.500        ; 4.310      ; 17.484     ;
+; -13.819 ; RREX:RR_EX|reg:RF_D2|Op[1]      ; alu:ALU_1|Op[9]  ; clk          ; select_ALU[0] ; 0.500        ; 4.316      ; 17.481     ;
+; -13.791 ; RREX:RR_EX|reg:RF_D2|Op[0]      ; alu:ALU_1|Op[9]  ; clk          ; select_ALU[0] ; 0.500        ; 4.316      ; 17.453     ;
+; -13.788 ; RREX:RR_EX|reg6:five_zero|Op[0] ; alu:ALU_1|Op[14] ; clk          ; select_ALU[0] ; 0.500        ; 4.296      ; 17.415     ;
+; -13.775 ; RREX:RR_EX|reg:RF_D2|Op[1]      ; alu:ALU_1|Op[12] ; clk          ; select_ALU[0] ; 0.500        ; 4.264      ; 17.385     ;
+; -13.747 ; RREX:RR_EX|reg:RF_D2|Op[0]      ; alu:ALU_1|Op[12] ; clk          ; select_ALU[0] ; 0.500        ; 4.264      ; 17.357     ;
+; -13.699 ; RREX:RR_EX|reg:RF_D1|Op[4]      ; alu:ALU_1|Op[13] ; clk          ; select_ALU[0] ; 0.500        ; 4.253      ; 17.290     ;
+; -13.698 ; RREX:RR_EX|reg6:five_zero|Op[0] ; alu:ALU_1|Op[11] ; clk          ; select_ALU[0] ; 0.500        ; 4.310      ; 17.346     ;
+; -13.494 ; RREX:RR_EX|reg:RF_D2|Op[3]      ; alu:ALU_1|Op[14] ; clk          ; select_ALU[0] ; 0.500        ; 4.296      ; 17.121     ;
+; -13.489 ; RREX:RR_EX|reg:RF_D1|Op[1]      ; alu:ALU_1|Op[9]  ; clk          ; select_ALU[0] ; 0.500        ; 4.316      ; 17.151     ;
+; -13.480 ; RREX:RR_EX|reg:RF_D2|Op[5]      ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 2.751      ; 14.961     ;
+; -13.457 ; RREX:RR_EX|reg:RF_D2|Op[4]      ; alu:ALU_1|Op[14] ; clk          ; select_ALU[0] ; 0.500        ; 4.296      ; 17.084     ;
+; -13.445 ; RREX:RR_EX|reg:RF_D1|Op[1]      ; alu:ALU_1|Op[12] ; clk          ; select_ALU[0] ; 0.500        ; 4.264      ; 17.055     ;
+; -13.404 ; RREX:RR_EX|reg:RF_D2|Op[3]      ; alu:ALU_1|Op[11] ; clk          ; select_ALU[0] ; 0.500        ; 4.310      ; 17.052     ;
+; -13.367 ; RREX:RR_EX|reg:RF_D2|Op[4]      ; alu:ALU_1|Op[11] ; clk          ; select_ALU[0] ; 0.500        ; 4.310      ; 17.015     ;
+; -13.351 ; RREX:RR_EX|reg6:five_zero|Op[0] ; alu:ALU_1|Op[9]  ; clk          ; select_ALU[0] ; 0.500        ; 4.316      ; 17.013     ;
+; -13.320 ; RREX:RR_EX|reg:RF_D2|Op[6]      ; alu:ALU_1|Op[13] ; clk          ; select_ALU[0] ; 0.500        ; 4.253      ; 16.911     ;
+; -13.308 ; RREX:RR_EX|reg:RF_D2|Op[2]      ; alu:ALU_1|Op[14] ; clk          ; select_ALU[0] ; 0.500        ; 4.296      ; 16.935     ;
+; -13.307 ; RREX:RR_EX|reg6:five_zero|Op[0] ; alu:ALU_1|Op[12] ; clk          ; select_ALU[0] ; 0.500        ; 4.264      ; 16.917     ;
+; -13.291 ; RREX:RR_EX|reg6:five_zero|Op[1] ; alu:ALU_1|Op[14] ; clk          ; select_ALU[0] ; 0.500        ; 4.296      ; 16.918     ;
+; -13.289 ; RREX:RR_EX|reg:RF_D1|Op[6]      ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 2.751      ; 14.770     ;
+; -13.262 ; RREX:RR_EX|reg:RF_D1|Op[5]      ; alu:ALU_1|Op[15] ; clk          ; select_ALU[0] ; 0.500        ; 4.279      ; 16.879     ;
+; -13.218 ; RREX:RR_EX|reg:RF_D2|Op[2]      ; alu:ALU_1|Op[11] ; clk          ; select_ALU[0] ; 0.500        ; 4.310      ; 16.866     ;
+; -13.201 ; RREX:RR_EX|reg6:five_zero|Op[1] ; alu:ALU_1|Op[11] ; clk          ; select_ALU[0] ; 0.500        ; 4.310      ; 16.849     ;
+; -13.192 ; RREX:RR_EX|reg6:five_zero|Op[4] ; alu:ALU_1|Op[15] ; clk          ; select_ALU[0] ; 0.500        ; 4.279      ; 16.809     ;
+; -13.060 ; RREX:RR_EX|reg:RF_D1|Op[0]      ; alu:ALU_1|Op[10] ; clk          ; select_ALU[0] ; 0.500        ; 4.309      ; 16.700     ;
+; -13.057 ; RREX:RR_EX|reg:RF_D2|Op[3]      ; alu:ALU_1|Op[9]  ; clk          ; select_ALU[0] ; 0.500        ; 4.316      ; 16.719     ;
+; -13.046 ; RREX:RR_EX|reg:RF_D2|Op[7]      ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 2.751      ; 14.527     ;
+; -13.020 ; RREX:RR_EX|reg:RF_D2|Op[4]      ; alu:ALU_1|Op[9]  ; clk          ; select_ALU[0] ; 0.500        ; 4.316      ; 16.682     ;
+; -13.013 ; RREX:RR_EX|reg:RF_D2|Op[3]      ; alu:ALU_1|Op[12] ; clk          ; select_ALU[0] ; 0.500        ; 4.264      ; 16.623     ;
+; -13.004 ; RREX:RR_EX|reg:RF_D1|Op[7]      ; alu:ALU_1|carry  ; clk          ; select_ALU[0] ; 0.500        ; 2.751      ; 14.485     ;
+; -12.976 ; RREX:RR_EX|reg:RF_D2|Op[4]      ; alu:ALU_1|Op[12] ; clk          ; select_ALU[0] ; 0.500        ; 4.264      ; 16.586     ;
+; -12.914 ; RREX:RR_EX|reg:RF_D2|Op[1]      ; alu:ALU_1|Op[10] ; clk          ; select_ALU[0] ; 0.500        ; 4.309      ; 16.554     ;
++---------+---------------------------------+------------------+--------------+---------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'clk'                                                                                                                                  ;
++---------+------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node                    ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; -10.616 ; EXMEM:EX_MEM|reg:RF_D1|Op[2] ; ram:DMem|mem~425               ; clk          ; clk         ; 1.000        ; 0.000      ; 11.345     ;
+; -10.611 ; EXMEM:EX_MEM|reg:RF_D1|Op[2] ; ram:DMem|mem~361               ; clk          ; clk         ; 1.000        ; 0.000      ; 11.340     ;
+; -10.499 ; EXMEM:EX_MEM|reg:ALU_C|Op[2] ; MEMWB:MEM_WB|reg:DMem_D|Op[10] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.228     ;
+; -10.368 ; EXMEM:EX_MEM|reg:RF_D1|Op[5] ; ram:DMem|mem~252               ; clk          ; clk         ; 1.000        ; 0.000      ; 11.097     ;
+; -10.365 ; EXMEM:EX_MEM|reg:RF_D1|Op[5] ; ram:DMem|mem~236               ; clk          ; clk         ; 1.000        ; 0.000      ; 11.094     ;
+; -10.327 ; EXMEM:EX_MEM|reg:ALU_C|Op[3] ; MEMWB:MEM_WB|reg:DMem_D|Op[14] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.056     ;
+; -10.294 ; ram:DMem|mem~596             ; MEMWB:MEM_WB|reg:DMem_D|Op[13] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.023     ;
+; -10.164 ; EXMEM:EX_MEM|reg:ALU_C|Op[3] ; MEMWB:MEM_WB|reg:DMem_D|Op[10] ; clk          ; clk         ; 1.000        ; 0.000      ; 10.893     ;
+; -10.143 ; EXMEM:EX_MEM|reg:ALU_C|Op[1] ; MEMWB:MEM_WB|reg:DMem_D|Op[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 10.872     ;
+; -10.133 ; EXMEM:EX_MEM|reg:ALU_C|Op[3] ; MEMWB:MEM_WB|reg:DMem_D|Op[15] ; clk          ; clk         ; 1.000        ; 0.000      ; 10.862     ;
+; -10.133 ; EXMEM:EX_MEM|reg:ALU_C|Op[0] ; MEMWB:MEM_WB|reg:DMem_D|Op[0]  ; clk          ; clk         ; 1.000        ; 0.000      ; 10.862     ;
+; -10.082 ; EXMEM:EX_MEM|reg:RF_D1|Op[2] ; MEMWB:MEM_WB|reg:DMem_D|Op[10] ; clk          ; clk         ; 1.000        ; 0.000      ; 10.811     ;
+; -10.074 ; EXMEM:EX_MEM|reg:ALU_C|Op[2] ; MEMWB:MEM_WB|reg:DMem_D|Op[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 10.803     ;
+; -10.007 ; EXMEM:EX_MEM|reg:ALU_C|Op[1] ; MEMWB:MEM_WB|reg:DMem_D|Op[0]  ; clk          ; clk         ; 1.000        ; 0.000      ; 10.736     ;
+; -10.006 ; EXMEM:EX_MEM|reg:ALU_C|Op[1] ; MEMWB:MEM_WB|reg:DMem_D|Op[10] ; clk          ; clk         ; 1.000        ; 0.000      ; 10.735     ;
+; -9.984  ; EXMEM:EX_MEM|reg:ALU_C|Op[2] ; MEMWB:MEM_WB|reg:DMem_D|Op[14] ; clk          ; clk         ; 1.000        ; 0.000      ; 10.713     ;
+; -9.963  ; EXMEM:EX_MEM|reg:ALU_C|Op[3] ; MEMWB:MEM_WB|reg:DMem_D|Op[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 10.692     ;
+; -9.946  ; EXMEM:EX_MEM|reg:ALU_C|Op[3] ; MEMWB:MEM_WB|reg:DMem_D|Op[9]  ; clk          ; clk         ; 1.000        ; 0.000      ; 10.675     ;
+; -9.928  ; EXMEM:EX_MEM|reg:RF_D1|Op[8] ; ram:DMem|mem~623               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.657     ;
+; -9.926  ; EXMEM:EX_MEM|reg:ALU_C|Op[0] ; MEMWB:MEM_WB|reg:DMem_D|Op[15] ; clk          ; clk         ; 1.000        ; 0.000      ; 10.655     ;
+; -9.922  ; EXMEM:EX_MEM|reg:RF_D1|Op[8] ; ram:DMem|mem~639               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.651     ;
+; -9.913  ; EXMEM:EX_MEM|reg:RF_D1|Op[3] ; MEMWB:MEM_WB|reg:DMem_D|Op[14] ; clk          ; clk         ; 1.000        ; 0.000      ; 10.642     ;
+; -9.875  ; EXMEM:EX_MEM|reg:RF_D1|Op[5] ; ram:DMem|mem~700               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.604     ;
+; -9.875  ; EXMEM:EX_MEM|reg:RF_D1|Op[5] ; ram:DMem|mem~684               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.604     ;
+; -9.860  ; EXMEM:EX_MEM|reg:RF_D1|Op[3] ; ram:DMem|mem~538               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.589     ;
+; -9.849  ; EXMEM:EX_MEM|reg:ALU_C|Op[1] ; MEMWB:MEM_WB|reg:DMem_D|Op[15] ; clk          ; clk         ; 1.000        ; 0.000      ; 10.578     ;
+; -9.834  ; ram:DMem|mem~305             ; MEMWB:MEM_WB|reg:DMem_D|Op[10] ; clk          ; clk         ; 1.000        ; 0.000      ; 10.563     ;
+; -9.813  ; EXMEM:EX_MEM|reg:ALU_C|Op[1] ; MEMWB:MEM_WB|reg:DMem_D|Op[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 10.542     ;
+; -9.796  ; EXMEM:EX_MEM|reg:ALU_C|Op[1] ; MEMWB:MEM_WB|reg:DMem_D|Op[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 10.525     ;
+; -9.793  ; EXMEM:EX_MEM|reg:ALU_C|Op[3] ; MEMWB:MEM_WB|reg:DMem_D|Op[13] ; clk          ; clk         ; 1.000        ; 0.000      ; 10.522     ;
+; -9.786  ; EXMEM:EX_MEM|reg:RF_D1|Op[2] ; ram:DMem|mem~569               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.515     ;
+; -9.779  ; EXMEM:EX_MEM|reg:RF_D1|Op[2] ; ram:DMem|mem~553               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.508     ;
+; -9.753  ; EXMEM:EX_MEM|reg:ALU_C|Op[2] ; MEMWB:MEM_WB|reg:DMem_D|Op[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 10.482     ;
+; -9.750  ; EXMEM:EX_MEM|reg:RF_D1|Op[3] ; MEMWB:MEM_WB|reg:DMem_D|Op[10] ; clk          ; clk         ; 1.000        ; 0.000      ; 10.479     ;
+; -9.745  ; EXMEM:EX_MEM|reg:RF_D1|Op[5] ; ram:DMem|mem~60                ; clk          ; clk         ; 1.000        ; 0.000      ; 10.474     ;
+; -9.723  ; EXMEM:EX_MEM|reg:ALU_C|Op[3] ; MEMWB:MEM_WB|reg:DMem_D|Op[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 10.452     ;
+; -9.719  ; EXMEM:EX_MEM|reg:RF_D1|Op[3] ; MEMWB:MEM_WB|reg:DMem_D|Op[15] ; clk          ; clk         ; 1.000        ; 0.000      ; 10.448     ;
+; -9.718  ; register_bank:RF|r1[13]      ; RREX:RR_EX|reg:RF_D1|Op[13]    ; clk          ; clk         ; 1.000        ; 0.000      ; 10.447     ;
+; -9.718  ; EXMEM:EX_MEM|reg:ALU_C|Op[1] ; MEMWB:MEM_WB|reg:DMem_D|Op[13] ; clk          ; clk         ; 1.000        ; 0.000      ; 10.447     ;
+; -9.718  ; EXMEM:EX_MEM|reg:RF_D1|Op[1] ; MEMWB:MEM_WB|reg:DMem_D|Op[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 10.447     ;
+; -9.712  ; EXMEM:EX_MEM|reg:RF_D1|Op[0] ; MEMWB:MEM_WB|reg:DMem_D|Op[0]  ; clk          ; clk         ; 1.000        ; 0.000      ; 10.441     ;
+; -9.711  ; EXMEM:EX_MEM|reg:RF_D1|Op[3] ; ram:DMem|mem~74                ; clk          ; clk         ; 1.000        ; 0.000      ; 10.440     ;
+; -9.705  ; EXMEM:EX_MEM|reg:ALU_C|Op[2] ; MEMWB:MEM_WB|reg:DMem_D|Op[12] ; clk          ; clk         ; 1.000        ; 0.000      ; 10.434     ;
+; -9.699  ; EXMEM:EX_MEM|reg:ALU_C|Op[3] ; ram:DMem|mem~363               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.428     ;
+; -9.690  ; EXMEM:EX_MEM|reg:RF_D1|Op[5] ; ram:DMem|mem~172               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.419     ;
+; -9.689  ; EXMEM:EX_MEM|reg:RF_D1|Op[5] ; ram:DMem|mem~188               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.418     ;
+; -9.688  ; EXMEM:EX_MEM|reg:RF_D1|Op[1] ; ram:DMem|mem~328               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.417     ;
+; -9.687  ; EXMEM:EX_MEM|reg:RF_D1|Op[1] ; ram:DMem|mem~536               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.416     ;
+; -9.686  ; EXMEM:EX_MEM|reg:ALU_C|Op[2] ; MEMWB:MEM_WB|reg:DMem_D|Op[15] ; clk          ; clk         ; 1.000        ; 0.000      ; 10.415     ;
+; -9.672  ; ram:DMem|mem~1039            ; MEMWB:MEM_WB|reg:DMem_D|Op[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 10.401     ;
+; -9.667  ; ram:DMem|mem~489             ; MEMWB:MEM_WB|reg:DMem_D|Op[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 10.396     ;
+; -9.657  ; EXMEM:EX_MEM|reg:RF_D1|Op[2] ; MEMWB:MEM_WB|reg:DMem_D|Op[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 10.386     ;
+; -9.641  ; ram:DMem|mem~794             ; MEMWB:MEM_WB|reg:DMem_D|Op[3]  ; clk          ; clk         ; 1.000        ; 0.000      ; 10.370     ;
+; -9.636  ; EXMEM:EX_MEM|reg:ALU_C|Op[5] ; ram:DMem|mem~26                ; clk          ; clk         ; 1.000        ; 0.000      ; 10.365     ;
+; -9.636  ; EXMEM:EX_MEM|reg:ALU_C|Op[5] ; ram:DMem|mem~30                ; clk          ; clk         ; 1.000        ; 0.000      ; 10.365     ;
+; -9.636  ; EXMEM:EX_MEM|reg:ALU_C|Op[5] ; ram:DMem|mem~32                ; clk          ; clk         ; 1.000        ; 0.000      ; 10.365     ;
+; -9.631  ; EXMEM:EX_MEM|reg:ALU_C|Op[2] ; ram:DMem|mem~363               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.360     ;
+; -9.629  ; EXMEM:EX_MEM|reg:ALU_C|Op[5] ; ram:DMem|mem~710               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.358     ;
+; -9.629  ; EXMEM:EX_MEM|reg:ALU_C|Op[5] ; ram:DMem|mem~696               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.358     ;
+; -9.629  ; EXMEM:EX_MEM|reg:ALU_C|Op[5] ; ram:DMem|mem~698               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.358     ;
+; -9.629  ; EXMEM:EX_MEM|reg:ALU_C|Op[5] ; ram:DMem|mem~700               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.358     ;
+; -9.629  ; EXMEM:EX_MEM|reg:ALU_C|Op[5] ; ram:DMem|mem~701               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.358     ;
+; -9.627  ; EXMEM:EX_MEM|reg:ALU_C|Op[1] ; ram:DMem|mem~710               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.356     ;
+; -9.627  ; EXMEM:EX_MEM|reg:ALU_C|Op[1] ; ram:DMem|mem~696               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.356     ;
+; -9.627  ; EXMEM:EX_MEM|reg:ALU_C|Op[1] ; ram:DMem|mem~698               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.356     ;
+; -9.627  ; EXMEM:EX_MEM|reg:ALU_C|Op[1] ; ram:DMem|mem~700               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.356     ;
+; -9.627  ; EXMEM:EX_MEM|reg:ALU_C|Op[1] ; ram:DMem|mem~701               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.356     ;
+; -9.626  ; EXMEM:EX_MEM|reg:ALU_C|Op[5] ; ram:DMem|mem~549               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.355     ;
+; -9.626  ; EXMEM:EX_MEM|reg:ALU_C|Op[5] ; ram:DMem|mem~550               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.355     ;
+; -9.626  ; EXMEM:EX_MEM|reg:ALU_C|Op[5] ; ram:DMem|mem~535               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.355     ;
+; -9.626  ; EXMEM:EX_MEM|reg:ALU_C|Op[5] ; ram:DMem|mem~542               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.355     ;
+; -9.626  ; EXMEM:EX_MEM|reg:ALU_C|Op[5] ; ram:DMem|mem~543               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.355     ;
+; -9.626  ; EXMEM:EX_MEM|reg:ALU_C|Op[5] ; ram:DMem|mem~545               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.355     ;
+; -9.606  ; EXMEM:EX_MEM|reg:RF_D1|Op[5] ; ram:DMem|mem~124               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.335     ;
+; -9.605  ; EXMEM:EX_MEM|reg:RF_D1|Op[5] ; ram:DMem|mem~108               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.334     ;
+; -9.593  ; EXMEM:EX_MEM|reg:ALU_C|Op[3] ; MEMWB:MEM_WB|reg:DMem_D|Op[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 10.322     ;
+; -9.591  ; EXMEM:EX_MEM|reg:ALU_C|Op[2] ; MEMWB:MEM_WB|reg:DMem_D|Op[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 10.320     ;
+; -9.583  ; EXMEM:EX_MEM|reg:RF_D1|Op[2] ; ram:DMem|mem~473               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.312     ;
+; -9.582  ; EXMEM:EX_MEM|reg:RF_D1|Op[2] ; ram:DMem|mem~345               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.311     ;
+; -9.582  ; EXMEM:EX_MEM|reg:RF_D1|Op[1] ; MEMWB:MEM_WB|reg:DMem_D|Op[0]  ; clk          ; clk         ; 1.000        ; 0.000      ; 10.311     ;
+; -9.581  ; EXMEM:EX_MEM|reg:RF_D1|Op[1] ; MEMWB:MEM_WB|reg:DMem_D|Op[10] ; clk          ; clk         ; 1.000        ; 0.000      ; 10.310     ;
+; -9.580  ; EXMEM:EX_MEM|reg:ALU_C|Op[3] ; MEMWB:MEM_WB|reg:DMem_D|Op[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 10.309     ;
+; -9.577  ; EXMEM:EX_MEM|reg:ALU_C|Op[0] ; MEMWB:MEM_WB|reg:DMem_D|Op[10] ; clk          ; clk         ; 1.000        ; 0.000      ; 10.306     ;
+; -9.567  ; EXMEM:EX_MEM|reg:RF_D1|Op[2] ; MEMWB:MEM_WB|reg:DMem_D|Op[14] ; clk          ; clk         ; 1.000        ; 0.000      ; 10.296     ;
+; -9.562  ; EXMEM:EX_MEM|reg:ALU_C|Op[5] ; ram:DMem|mem~185               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.291     ;
+; -9.562  ; EXMEM:EX_MEM|reg:ALU_C|Op[5] ; ram:DMem|mem~186               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.291     ;
+; -9.562  ; EXMEM:EX_MEM|reg:ALU_C|Op[5] ; ram:DMem|mem~188               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.291     ;
+; -9.562  ; EXMEM:EX_MEM|reg:ALU_C|Op[5] ; ram:DMem|mem~189               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.291     ;
+; -9.562  ; EXMEM:EX_MEM|reg:ALU_C|Op[5] ; ram:DMem|mem~190               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.291     ;
+; -9.560  ; EXMEM:EX_MEM|reg:ALU_C|Op[3] ; MEMWB:MEM_WB|reg:DMem_D|Op[11] ; clk          ; clk         ; 1.000        ; 0.000      ; 10.289     ;
+; -9.554  ; EXMEM:EX_MEM|reg:ALU_C|Op[1] ; ram:DMem|mem~610               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.283     ;
+; -9.554  ; EXMEM:EX_MEM|reg:ALU_C|Op[1] ; ram:DMem|mem~605               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.283     ;
+; -9.549  ; EXMEM:EX_MEM|reg:RF_D1|Op[3] ; MEMWB:MEM_WB|reg:DMem_D|Op[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 10.278     ;
+; -9.545  ; EXMEM:EX_MEM|reg:ALU_C|Op[1] ; MEMWB:MEM_WB|reg:DMem_D|Op[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 10.274     ;
+; -9.544  ; EXMEM:EX_MEM|reg:ALU_C|Op[1] ; ram:DMem|mem~933               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.273     ;
+; -9.544  ; EXMEM:EX_MEM|reg:ALU_C|Op[1] ; ram:DMem|mem~934               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.273     ;
+; -9.544  ; EXMEM:EX_MEM|reg:ALU_C|Op[1] ; ram:DMem|mem~919               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.273     ;
+; -9.544  ; EXMEM:EX_MEM|reg:ALU_C|Op[1] ; ram:DMem|mem~920               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.273     ;
+; -9.544  ; EXMEM:EX_MEM|reg:ALU_C|Op[1] ; ram:DMem|mem~923               ; clk          ; clk         ; 1.000        ; 0.000      ; 10.273     ;
+; -9.544  ; EXMEM:EX_MEM|reg:ALU_C|Op[3] ; MEMWB:MEM_WB|reg:DMem_D|Op[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 10.273     ;
++---------+------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'select_ALU2[0]'                                                                                                                 ;
++--------+------------------------------------+------------------+--------------+----------------+--------------+------------+------------+
+; Slack  ; From Node                          ; To Node          ; Launch Clock ; Latch Clock    ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------+------------------+--------------+----------------+--------------+------------+------------+
+; -9.622 ; EXMEM:EX_MEM|reg:RF_D1|Op[0]       ; alu:ALU_2|Op[9]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.854      ; 12.621     ;
+; -9.370 ; EXMEM:EX_MEM|reg:RF_D1|Op[0]       ; alu:ALU_2|Op[8]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.416      ; 11.750     ;
+; -9.333 ; EXMEM:EX_MEM|reg:RF_D1|Op[0]       ; alu:ALU_2|Op[11] ; clk          ; select_ALU2[0] ; 0.500        ; 3.772      ; 12.257     ;
+; -9.322 ; EXMEM:EX_MEM|reg:RF_D1|Op[1]       ; alu:ALU_2|Op[9]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.854      ; 12.321     ;
+; -9.289 ; EXMEM:EX_MEM|reg:RF_D1|Op[0]       ; alu:ALU_2|Op[13] ; clk          ; select_ALU2[0] ; 0.500        ; 3.775      ; 12.216     ;
+; -9.256 ; EXMEM:EX_MEM|reg:RF_D1|Op[0]       ; alu:ALU_2|Op[12] ; clk          ; select_ALU2[0] ; 0.500        ; 3.771      ; 12.179     ;
+; -9.168 ; EXMEM:EX_MEM|reg:RF_D1|Op[2]       ; alu:ALU_2|Op[9]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.854      ; 12.167     ;
+; -9.123 ; EXMEM:EX_MEM|reg:RF_D1|Op[0]       ; alu:ALU_2|Op[15] ; clk          ; select_ALU2[0] ; 0.500        ; 3.747      ; 12.014     ;
+; -9.070 ; EXMEM:EX_MEM|reg:RF_D1|Op[1]       ; alu:ALU_2|Op[8]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.416      ; 11.450     ;
+; -9.066 ; EXMEM:EX_MEM|reg:RF_D1|Op[0]       ; alu:ALU_2|Op[14] ; clk          ; select_ALU2[0] ; 0.500        ; 3.744      ; 11.956     ;
+; -9.033 ; EXMEM:EX_MEM|reg:RF_D1|Op[1]       ; alu:ALU_2|Op[11] ; clk          ; select_ALU2[0] ; 0.500        ; 3.772      ; 11.957     ;
+; -8.989 ; EXMEM:EX_MEM|reg:RF_D1|Op[1]       ; alu:ALU_2|Op[13] ; clk          ; select_ALU2[0] ; 0.500        ; 3.775      ; 11.916     ;
+; -8.970 ; EXMEM:EX_MEM|reg:RF_D1|Op[0]       ; alu:ALU_2|Op[10] ; clk          ; select_ALU2[0] ; 0.500        ; 3.423      ; 11.694     ;
+; -8.956 ; EXMEM:EX_MEM|reg:RF_D1|Op[1]       ; alu:ALU_2|Op[12] ; clk          ; select_ALU2[0] ; 0.500        ; 3.771      ; 11.879     ;
+; -8.922 ; EXMEM:EX_MEM|reg:RF_D1|Op[0]       ; alu:ALU_2|Op[3]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.834      ; 11.908     ;
+; -8.916 ; EXMEM:EX_MEM|reg:RF_D1|Op[2]       ; alu:ALU_2|Op[8]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.416      ; 11.296     ;
+; -8.899 ; EXMEM:EX_MEM|reg:inc|Op[1]         ; alu:ALU_2|Op[9]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.854      ; 11.898     ;
+; -8.879 ; EXMEM:EX_MEM|reg:RF_D1|Op[2]       ; alu:ALU_2|Op[11] ; clk          ; select_ALU2[0] ; 0.500        ; 3.772      ; 11.803     ;
+; -8.835 ; EXMEM:EX_MEM|reg:RF_D1|Op[2]       ; alu:ALU_2|Op[13] ; clk          ; select_ALU2[0] ; 0.500        ; 3.775      ; 11.762     ;
+; -8.823 ; EXMEM:EX_MEM|reg:RF_D1|Op[1]       ; alu:ALU_2|Op[15] ; clk          ; select_ALU2[0] ; 0.500        ; 3.747      ; 11.714     ;
+; -8.802 ; EXMEM:EX_MEM|reg:RF_D1|Op[2]       ; alu:ALU_2|Op[12] ; clk          ; select_ALU2[0] ; 0.500        ; 3.771      ; 11.725     ;
+; -8.790 ; EXMEM:EX_MEM|reg:RF_D1|Op[3]       ; alu:ALU_2|Op[9]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.854      ; 11.789     ;
+; -8.766 ; EXMEM:EX_MEM|reg:RF_D1|Op[1]       ; alu:ALU_2|Op[14] ; clk          ; select_ALU2[0] ; 0.500        ; 3.744      ; 11.656     ;
+; -8.670 ; EXMEM:EX_MEM|reg:RF_D1|Op[1]       ; alu:ALU_2|Op[10] ; clk          ; select_ALU2[0] ; 0.500        ; 3.423      ; 11.394     ;
+; -8.669 ; EXMEM:EX_MEM|reg:RF_D1|Op[2]       ; alu:ALU_2|Op[15] ; clk          ; select_ALU2[0] ; 0.500        ; 3.747      ; 11.560     ;
+; -8.647 ; EXMEM:EX_MEM|reg:inc|Op[1]         ; alu:ALU_2|Op[8]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.416      ; 11.027     ;
+; -8.622 ; EXMEM:EX_MEM|reg:RF_D1|Op[1]       ; alu:ALU_2|Op[3]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.834      ; 11.608     ;
+; -8.612 ; EXMEM:EX_MEM|reg:RF_D1|Op[2]       ; alu:ALU_2|Op[14] ; clk          ; select_ALU2[0] ; 0.500        ; 3.744      ; 11.502     ;
+; -8.610 ; EXMEM:EX_MEM|reg:inc|Op[1]         ; alu:ALU_2|Op[11] ; clk          ; select_ALU2[0] ; 0.500        ; 3.772      ; 11.534     ;
+; -8.572 ; EXMEM:EX_MEM|reg:RF_D1|Op[0]       ; alu:ALU_2|Op[7]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.861      ; 11.578     ;
+; -8.566 ; EXMEM:EX_MEM|reg:inc|Op[1]         ; alu:ALU_2|Op[13] ; clk          ; select_ALU2[0] ; 0.500        ; 3.775      ; 11.493     ;
+; -8.538 ; EXMEM:EX_MEM|reg:RF_D1|Op[3]       ; alu:ALU_2|Op[8]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.416      ; 10.918     ;
+; -8.533 ; EXMEM:EX_MEM|reg:inc|Op[1]         ; alu:ALU_2|Op[12] ; clk          ; select_ALU2[0] ; 0.500        ; 3.771      ; 11.456     ;
+; -8.516 ; EXMEM:EX_MEM|reg:RF_D1|Op[2]       ; alu:ALU_2|Op[10] ; clk          ; select_ALU2[0] ; 0.500        ; 3.423      ; 11.240     ;
+; -8.501 ; EXMEM:EX_MEM|reg:RF_D1|Op[3]       ; alu:ALU_2|Op[11] ; clk          ; select_ALU2[0] ; 0.500        ; 3.772      ; 11.425     ;
+; -8.468 ; EXMEM:EX_MEM|reg:RF_D1|Op[2]       ; alu:ALU_2|Op[3]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.834      ; 11.454     ;
+; -8.457 ; EXMEM:EX_MEM|reg:RF_D1|Op[3]       ; alu:ALU_2|Op[13] ; clk          ; select_ALU2[0] ; 0.500        ; 3.775      ; 11.384     ;
+; -8.424 ; EXMEM:EX_MEM|reg:RF_D1|Op[3]       ; alu:ALU_2|Op[12] ; clk          ; select_ALU2[0] ; 0.500        ; 3.771      ; 11.347     ;
+; -8.400 ; EXMEM:EX_MEM|reg:inc|Op[1]         ; alu:ALU_2|Op[15] ; clk          ; select_ALU2[0] ; 0.500        ; 3.747      ; 11.291     ;
+; -8.386 ; EXMEM:EX_MEM|reg:RF_D1|Op[4]       ; alu:ALU_2|Op[9]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.854      ; 11.385     ;
+; -8.364 ; EXMEM:EX_MEM|reg9:eight_zero|Op[0] ; alu:ALU_2|Op[9]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.854      ; 11.363     ;
+; -8.355 ; EXMEM:EX_MEM|reg9:eight_zero|Op[4] ; alu:ALU_2|Op[9]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.854      ; 11.354     ;
+; -8.343 ; EXMEM:EX_MEM|reg:inc|Op[1]         ; alu:ALU_2|Op[14] ; clk          ; select_ALU2[0] ; 0.500        ; 3.744      ; 11.233     ;
+; -8.291 ; EXMEM:EX_MEM|reg:RF_D1|Op[3]       ; alu:ALU_2|Op[15] ; clk          ; select_ALU2[0] ; 0.500        ; 3.747      ; 11.182     ;
+; -8.272 ; EXMEM:EX_MEM|reg:RF_D1|Op[1]       ; alu:ALU_2|Op[7]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.861      ; 11.278     ;
+; -8.247 ; EXMEM:EX_MEM|reg:inc|Op[1]         ; alu:ALU_2|Op[10] ; clk          ; select_ALU2[0] ; 0.500        ; 3.423      ; 10.971     ;
+; -8.234 ; EXMEM:EX_MEM|reg:RF_D1|Op[3]       ; alu:ALU_2|Op[14] ; clk          ; select_ALU2[0] ; 0.500        ; 3.744      ; 11.124     ;
+; -8.199 ; EXMEM:EX_MEM|reg:inc|Op[1]         ; alu:ALU_2|Op[3]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.834      ; 11.185     ;
+; -8.138 ; EXMEM:EX_MEM|reg:RF_D1|Op[3]       ; alu:ALU_2|Op[10] ; clk          ; select_ALU2[0] ; 0.500        ; 3.423      ; 10.862     ;
+; -8.134 ; EXMEM:EX_MEM|reg:RF_D1|Op[4]       ; alu:ALU_2|Op[8]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.416      ; 10.514     ;
+; -8.118 ; EXMEM:EX_MEM|reg:RF_D1|Op[2]       ; alu:ALU_2|Op[7]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.861      ; 11.124     ;
+; -8.112 ; EXMEM:EX_MEM|reg9:eight_zero|Op[0] ; alu:ALU_2|Op[8]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.416      ; 10.492     ;
+; -8.103 ; EXMEM:EX_MEM|reg9:eight_zero|Op[4] ; alu:ALU_2|Op[8]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.416      ; 10.483     ;
+; -8.097 ; EXMEM:EX_MEM|reg:RF_D1|Op[4]       ; alu:ALU_2|Op[11] ; clk          ; select_ALU2[0] ; 0.500        ; 3.772      ; 11.021     ;
+; -8.075 ; EXMEM:EX_MEM|reg9:eight_zero|Op[0] ; alu:ALU_2|Op[11] ; clk          ; select_ALU2[0] ; 0.500        ; 3.772      ; 10.999     ;
+; -8.066 ; EXMEM:EX_MEM|reg9:eight_zero|Op[4] ; alu:ALU_2|Op[11] ; clk          ; select_ALU2[0] ; 0.500        ; 3.772      ; 10.990     ;
+; -8.053 ; EXMEM:EX_MEM|reg:RF_D1|Op[4]       ; alu:ALU_2|Op[13] ; clk          ; select_ALU2[0] ; 0.500        ; 3.775      ; 10.980     ;
+; -8.031 ; EXMEM:EX_MEM|reg9:eight_zero|Op[0] ; alu:ALU_2|Op[13] ; clk          ; select_ALU2[0] ; 0.500        ; 3.775      ; 10.958     ;
+; -8.022 ; EXMEM:EX_MEM|reg9:eight_zero|Op[4] ; alu:ALU_2|Op[13] ; clk          ; select_ALU2[0] ; 0.500        ; 3.775      ; 10.949     ;
+; -8.020 ; EXMEM:EX_MEM|reg:RF_D1|Op[4]       ; alu:ALU_2|Op[12] ; clk          ; select_ALU2[0] ; 0.500        ; 3.771      ; 10.943     ;
+; -7.998 ; EXMEM:EX_MEM|reg9:eight_zero|Op[0] ; alu:ALU_2|Op[12] ; clk          ; select_ALU2[0] ; 0.500        ; 3.771      ; 10.921     ;
+; -7.989 ; EXMEM:EX_MEM|reg9:eight_zero|Op[4] ; alu:ALU_2|Op[12] ; clk          ; select_ALU2[0] ; 0.500        ; 3.771      ; 10.912     ;
+; -7.887 ; EXMEM:EX_MEM|reg:RF_D1|Op[4]       ; alu:ALU_2|Op[15] ; clk          ; select_ALU2[0] ; 0.500        ; 3.747      ; 10.778     ;
+; -7.865 ; EXMEM:EX_MEM|reg9:eight_zero|Op[0] ; alu:ALU_2|Op[15] ; clk          ; select_ALU2[0] ; 0.500        ; 3.747      ; 10.756     ;
+; -7.856 ; EXMEM:EX_MEM|reg9:eight_zero|Op[4] ; alu:ALU_2|Op[15] ; clk          ; select_ALU2[0] ; 0.500        ; 3.747      ; 10.747     ;
+; -7.849 ; EXMEM:EX_MEM|reg:inc|Op[1]         ; alu:ALU_2|Op[7]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.861      ; 10.855     ;
+; -7.830 ; EXMEM:EX_MEM|reg:RF_D1|Op[4]       ; alu:ALU_2|Op[14] ; clk          ; select_ALU2[0] ; 0.500        ; 3.744      ; 10.720     ;
+; -7.808 ; EXMEM:EX_MEM|reg9:eight_zero|Op[0] ; alu:ALU_2|Op[14] ; clk          ; select_ALU2[0] ; 0.500        ; 3.744      ; 10.698     ;
+; -7.799 ; EXMEM:EX_MEM|reg9:eight_zero|Op[4] ; alu:ALU_2|Op[14] ; clk          ; select_ALU2[0] ; 0.500        ; 3.744      ; 10.689     ;
+; -7.770 ; EXMEM:EX_MEM|reg:RF_D1|Op[0]       ; alu:ALU_2|Op[6]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.397      ; 10.468     ;
+; -7.750 ; EXMEM:EX_MEM|reg9:eight_zero|Op[1] ; alu:ALU_2|Op[9]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.854      ; 10.749     ;
+; -7.740 ; EXMEM:EX_MEM|reg:RF_D1|Op[3]       ; alu:ALU_2|Op[7]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.861      ; 10.746     ;
+; -7.734 ; EXMEM:EX_MEM|reg:RF_D1|Op[4]       ; alu:ALU_2|Op[10] ; clk          ; select_ALU2[0] ; 0.500        ; 3.423      ; 10.458     ;
+; -7.712 ; EXMEM:EX_MEM|reg9:eight_zero|Op[0] ; alu:ALU_2|Op[10] ; clk          ; select_ALU2[0] ; 0.500        ; 3.423      ; 10.436     ;
+; -7.703 ; EXMEM:EX_MEM|reg9:eight_zero|Op[4] ; alu:ALU_2|Op[10] ; clk          ; select_ALU2[0] ; 0.500        ; 3.423      ; 10.427     ;
+; -7.664 ; EXMEM:EX_MEM|reg9:eight_zero|Op[0] ; alu:ALU_2|Op[3]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.834      ; 10.650     ;
+; -7.498 ; EXMEM:EX_MEM|reg9:eight_zero|Op[1] ; alu:ALU_2|Op[8]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.416      ; 9.878      ;
+; -7.470 ; EXMEM:EX_MEM|reg:RF_D1|Op[1]       ; alu:ALU_2|Op[6]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.397      ; 10.168     ;
+; -7.461 ; EXMEM:EX_MEM|reg9:eight_zero|Op[1] ; alu:ALU_2|Op[11] ; clk          ; select_ALU2[0] ; 0.500        ; 3.772      ; 10.385     ;
+; -7.417 ; EXMEM:EX_MEM|reg9:eight_zero|Op[1] ; alu:ALU_2|Op[13] ; clk          ; select_ALU2[0] ; 0.500        ; 3.775      ; 10.344     ;
+; -7.384 ; EXMEM:EX_MEM|reg9:eight_zero|Op[1] ; alu:ALU_2|Op[12] ; clk          ; select_ALU2[0] ; 0.500        ; 3.771      ; 10.307     ;
+; -7.364 ; EXMEM:EX_MEM|reg:RF_D1|Op[0]       ; alu:ALU_2|Op[5]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.746      ; 10.270     ;
+; -7.336 ; EXMEM:EX_MEM|reg:RF_D1|Op[4]       ; alu:ALU_2|Op[7]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.861      ; 10.342     ;
+; -7.316 ; EXMEM:EX_MEM|reg:RF_D1|Op[2]       ; alu:ALU_2|Op[6]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.397      ; 10.014     ;
+; -7.314 ; EXMEM:EX_MEM|reg9:eight_zero|Op[0] ; alu:ALU_2|Op[7]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.861      ; 10.320     ;
+; -7.305 ; EXMEM:EX_MEM|reg9:eight_zero|Op[4] ; alu:ALU_2|Op[7]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.861      ; 10.311     ;
+; -7.251 ; EXMEM:EX_MEM|reg9:eight_zero|Op[1] ; alu:ALU_2|Op[15] ; clk          ; select_ALU2[0] ; 0.500        ; 3.747      ; 10.142     ;
+; -7.194 ; EXMEM:EX_MEM|reg9:eight_zero|Op[1] ; alu:ALU_2|Op[14] ; clk          ; select_ALU2[0] ; 0.500        ; 3.744      ; 10.084     ;
+; -7.161 ; EXMEM:EX_MEM|reg:inc|Op[0]         ; alu:ALU_2|Op[9]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.854      ; 10.160     ;
+; -7.098 ; EXMEM:EX_MEM|reg9:eight_zero|Op[1] ; alu:ALU_2|Op[10] ; clk          ; select_ALU2[0] ; 0.500        ; 3.423      ; 9.822      ;
+; -7.064 ; EXMEM:EX_MEM|reg:RF_D1|Op[1]       ; alu:ALU_2|Op[5]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.746      ; 9.970      ;
+; -7.050 ; EXMEM:EX_MEM|reg9:eight_zero|Op[1] ; alu:ALU_2|Op[3]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.834      ; 10.036     ;
+; -7.047 ; EXMEM:EX_MEM|reg:inc|Op[1]         ; alu:ALU_2|Op[6]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.397      ; 9.745      ;
+; -6.938 ; EXMEM:EX_MEM|reg:RF_D1|Op[3]       ; alu:ALU_2|Op[6]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.397      ; 9.636      ;
+; -6.932 ; EXMEM:EX_MEM|reg:RF_D1|Op[0]       ; alu:ALU_2|Op[4]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.833      ; 9.917      ;
+; -6.910 ; EXMEM:EX_MEM|reg:RF_D1|Op[2]       ; alu:ALU_2|Op[5]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.746      ; 9.816      ;
+; -6.909 ; EXMEM:EX_MEM|reg:inc|Op[0]         ; alu:ALU_2|Op[8]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.416      ; 9.289      ;
+; -6.877 ; EXMEM:EX_MEM|reg:inc|Op[3]         ; alu:ALU_2|Op[9]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.854      ; 9.876      ;
+; -6.872 ; EXMEM:EX_MEM|reg:inc|Op[0]         ; alu:ALU_2|Op[11] ; clk          ; select_ALU2[0] ; 0.500        ; 3.772      ; 9.796      ;
+; -6.866 ; EXMEM:EX_MEM|reg:RF_D1|Op[0]       ; alu:ALU_2|Op[1]  ; clk          ; select_ALU2[0] ; 0.500        ; 3.391      ; 9.557      ;
++--------+------------------------------------+------------------+--------------+----------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Setup: 'wr_inc'                                                                                                ;
++--------+---------------+-----------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node     ; To Node         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------+-----------------+--------------+-------------+--------------+------------+------------+
+; -7.498 ; reg:PC|Op[3]  ; incr:inc|Op[14] ; clk          ; wr_inc      ; 0.500        ; 0.072      ; 6.247      ;
+; -7.371 ; reg:PC|Op[2]  ; incr:inc|Op[14] ; clk          ; wr_inc      ; 0.500        ; 0.072      ; 6.120      ;
+; -7.288 ; reg:PC|Op[9]  ; incr:inc|Op[14] ; clk          ; wr_inc      ; 0.500        ; 0.072      ; 6.037      ;
+; -7.168 ; reg:PC|Op[3]  ; incr:inc|Op[10] ; clk          ; wr_inc      ; 0.500        ; 0.163      ; 6.105      ;
+; -7.150 ; reg:PC|Op[3]  ; incr:inc|Op[12] ; clk          ; wr_inc      ; 0.500        ; 0.169      ; 5.989      ;
+; -7.147 ; reg:PC|Op[3]  ; incr:inc|Op[11] ; clk          ; wr_inc      ; 0.500        ; 0.115      ; 6.092      ;
+; -7.136 ; reg:PC|Op[3]  ; incr:inc|Op[13] ; clk          ; wr_inc      ; 0.500        ; 0.112      ; 6.050      ;
+; -7.121 ; reg:PC|Op[6]  ; incr:inc|Op[14] ; clk          ; wr_inc      ; 0.500        ; 0.072      ; 5.870      ;
+; -7.076 ; reg:PC|Op[10] ; incr:inc|Op[14] ; clk          ; wr_inc      ; 0.500        ; 0.072      ; 5.825      ;
+; -7.061 ; reg:PC|Op[1]  ; incr:inc|Op[14] ; clk          ; wr_inc      ; 0.500        ; 0.072      ; 5.810      ;
+; -7.041 ; reg:PC|Op[2]  ; incr:inc|Op[10] ; clk          ; wr_inc      ; 0.500        ; 0.163      ; 5.978      ;
+; -7.024 ; reg:PC|Op[11] ; incr:inc|Op[14] ; clk          ; wr_inc      ; 0.500        ; 0.072      ; 5.773      ;
+; -7.023 ; reg:PC|Op[2]  ; incr:inc|Op[12] ; clk          ; wr_inc      ; 0.500        ; 0.169      ; 5.862      ;
+; -7.020 ; reg:PC|Op[2]  ; incr:inc|Op[11] ; clk          ; wr_inc      ; 0.500        ; 0.115      ; 5.965      ;
+; -7.009 ; reg:PC|Op[2]  ; incr:inc|Op[13] ; clk          ; wr_inc      ; 0.500        ; 0.112      ; 5.923      ;
+; -7.000 ; reg:PC|Op[3]  ; incr:inc|Op[9]  ; clk          ; wr_inc      ; 0.500        ; 0.070      ; 6.215      ;
+; -6.971 ; reg:PC|Op[1]  ; incr:inc|Op[2]  ; clk          ; wr_inc      ; 0.500        ; 0.057      ; 5.840      ;
+; -6.926 ; reg:PC|Op[9]  ; incr:inc|Op[13] ; clk          ; wr_inc      ; 0.500        ; 0.112      ; 5.840      ;
+; -6.873 ; reg:PC|Op[2]  ; incr:inc|Op[9]  ; clk          ; wr_inc      ; 0.500        ; 0.070      ; 6.088      ;
+; -6.861 ; reg:PC|Op[12] ; incr:inc|Op[14] ; clk          ; wr_inc      ; 0.500        ; 0.072      ; 5.610      ;
+; -6.844 ; reg:PC|Op[8]  ; incr:inc|Op[14] ; clk          ; wr_inc      ; 0.500        ; 0.072      ; 5.593      ;
+; -6.828 ; reg:PC|Op[2]  ; incr:inc|Op[6]  ; clk          ; wr_inc      ; 0.500        ; 0.134      ; 6.108      ;
+; -6.791 ; reg:PC|Op[6]  ; incr:inc|Op[10] ; clk          ; wr_inc      ; 0.500        ; 0.163      ; 5.728      ;
+; -6.777 ; reg:PC|Op[13] ; incr:inc|Op[14] ; clk          ; wr_inc      ; 0.500        ; 0.072      ; 5.526      ;
+; -6.773 ; reg:PC|Op[6]  ; incr:inc|Op[12] ; clk          ; wr_inc      ; 0.500        ; 0.169      ; 5.612      ;
+; -6.770 ; reg:PC|Op[6]  ; incr:inc|Op[11] ; clk          ; wr_inc      ; 0.500        ; 0.115      ; 5.715      ;
+; -6.759 ; reg:PC|Op[6]  ; incr:inc|Op[13] ; clk          ; wr_inc      ; 0.500        ; 0.112      ; 5.673      ;
+; -6.756 ; reg:PC|Op[3]  ; incr:inc|Op[8]  ; clk          ; wr_inc      ; 0.500        ; 0.163      ; 6.081      ;
+; -6.746 ; reg:PC|Op[5]  ; incr:inc|Op[14] ; clk          ; wr_inc      ; 0.500        ; 0.072      ; 5.495      ;
+; -6.731 ; reg:PC|Op[1]  ; incr:inc|Op[10] ; clk          ; wr_inc      ; 0.500        ; 0.163      ; 5.668      ;
+; -6.718 ; reg:PC|Op[7]  ; incr:inc|Op[14] ; clk          ; wr_inc      ; 0.500        ; 0.072      ; 5.467      ;
+; -6.714 ; reg:PC|Op[10] ; incr:inc|Op[13] ; clk          ; wr_inc      ; 0.500        ; 0.112      ; 5.628      ;
+; -6.713 ; reg:PC|Op[1]  ; incr:inc|Op[12] ; clk          ; wr_inc      ; 0.500        ; 0.169      ; 5.552      ;
+; -6.710 ; reg:PC|Op[1]  ; incr:inc|Op[11] ; clk          ; wr_inc      ; 0.500        ; 0.115      ; 5.655      ;
+; -6.699 ; reg:PC|Op[1]  ; incr:inc|Op[13] ; clk          ; wr_inc      ; 0.500        ; 0.112      ; 5.613      ;
+; -6.685 ; reg:PC|Op[3]  ; incr:inc|Op[6]  ; clk          ; wr_inc      ; 0.500        ; 0.134      ; 5.965      ;
+; -6.662 ; reg:PC|Op[11] ; incr:inc|Op[13] ; clk          ; wr_inc      ; 0.500        ; 0.112      ; 5.576      ;
+; -6.657 ; reg:PC|Op[2]  ; incr:inc|Op[2]  ; clk          ; wr_inc      ; 0.500        ; 0.057      ; 5.526      ;
+; -6.629 ; reg:PC|Op[2]  ; incr:inc|Op[8]  ; clk          ; wr_inc      ; 0.500        ; 0.163      ; 5.954      ;
+; -6.623 ; reg:PC|Op[6]  ; incr:inc|Op[9]  ; clk          ; wr_inc      ; 0.500        ; 0.070      ; 5.838      ;
+; -6.588 ; reg:PC|Op[9]  ; incr:inc|Op[12] ; clk          ; wr_inc      ; 0.500        ; 0.169      ; 5.427      ;
+; -6.565 ; reg:PC|Op[2]  ; incr:inc|Op[3]  ; clk          ; wr_inc      ; 0.500        ; 0.170      ; 5.395      ;
+; -6.563 ; reg:PC|Op[1]  ; incr:inc|Op[9]  ; clk          ; wr_inc      ; 0.500        ; 0.070      ; 5.778      ;
+; -6.525 ; reg:PC|Op[4]  ; incr:inc|Op[14] ; clk          ; wr_inc      ; 0.500        ; 0.072      ; 5.274      ;
+; -6.518 ; reg:PC|Op[1]  ; incr:inc|Op[6]  ; clk          ; wr_inc      ; 0.500        ; 0.134      ; 5.798      ;
+; -6.499 ; reg:PC|Op[12] ; incr:inc|Op[13] ; clk          ; wr_inc      ; 0.500        ; 0.112      ; 5.413      ;
+; -6.493 ; reg:PC|Op[0]  ; incr:inc|Op[14] ; clk          ; wr_inc      ; 0.500        ; 0.072      ; 5.242      ;
+; -6.485 ; reg:PC|Op[9]  ; incr:inc|Op[11] ; clk          ; wr_inc      ; 0.500        ; 0.115      ; 5.430      ;
+; -6.482 ; reg:PC|Op[8]  ; incr:inc|Op[13] ; clk          ; wr_inc      ; 0.500        ; 0.112      ; 5.396      ;
+; -6.416 ; reg:PC|Op[5]  ; incr:inc|Op[10] ; clk          ; wr_inc      ; 0.500        ; 0.163      ; 5.353      ;
+; -6.406 ; reg:PC|Op[9]  ; incr:inc|Op[10] ; clk          ; wr_inc      ; 0.500        ; 0.163      ; 5.343      ;
+; -6.403 ; reg:PC|Op[0]  ; incr:inc|Op[2]  ; clk          ; wr_inc      ; 0.500        ; 0.057      ; 5.272      ;
+; -6.398 ; reg:PC|Op[5]  ; incr:inc|Op[12] ; clk          ; wr_inc      ; 0.500        ; 0.169      ; 5.237      ;
+; -6.395 ; reg:PC|Op[5]  ; incr:inc|Op[11] ; clk          ; wr_inc      ; 0.500        ; 0.115      ; 5.340      ;
+; -6.388 ; reg:PC|Op[7]  ; incr:inc|Op[10] ; clk          ; wr_inc      ; 0.500        ; 0.163      ; 5.325      ;
+; -6.384 ; reg:PC|Op[5]  ; incr:inc|Op[13] ; clk          ; wr_inc      ; 0.500        ; 0.112      ; 5.298      ;
+; -6.379 ; reg:PC|Op[6]  ; incr:inc|Op[8]  ; clk          ; wr_inc      ; 0.500        ; 0.163      ; 5.704      ;
+; -6.376 ; reg:PC|Op[10] ; incr:inc|Op[12] ; clk          ; wr_inc      ; 0.500        ; 0.169      ; 5.215      ;
+; -6.370 ; reg:PC|Op[7]  ; incr:inc|Op[12] ; clk          ; wr_inc      ; 0.500        ; 0.169      ; 5.209      ;
+; -6.367 ; reg:PC|Op[7]  ; incr:inc|Op[11] ; clk          ; wr_inc      ; 0.500        ; 0.115      ; 5.312      ;
+; -6.356 ; reg:PC|Op[7]  ; incr:inc|Op[13] ; clk          ; wr_inc      ; 0.500        ; 0.112      ; 5.270      ;
+; -6.324 ; reg:PC|Op[11] ; incr:inc|Op[12] ; clk          ; wr_inc      ; 0.500        ; 0.169      ; 5.163      ;
+; -6.319 ; reg:PC|Op[1]  ; incr:inc|Op[8]  ; clk          ; wr_inc      ; 0.500        ; 0.163      ; 5.644      ;
+; -6.273 ; reg:PC|Op[10] ; incr:inc|Op[11] ; clk          ; wr_inc      ; 0.500        ; 0.115      ; 5.218      ;
+; -6.255 ; reg:PC|Op[1]  ; incr:inc|Op[3]  ; clk          ; wr_inc      ; 0.500        ; 0.170      ; 5.085      ;
+; -6.248 ; reg:PC|Op[5]  ; incr:inc|Op[9]  ; clk          ; wr_inc      ; 0.500        ; 0.070      ; 5.463      ;
+; -6.220 ; reg:PC|Op[7]  ; incr:inc|Op[9]  ; clk          ; wr_inc      ; 0.500        ; 0.070      ; 5.435      ;
+; -6.198 ; reg:PC|Op[2]  ; incr:inc|Op[4]  ; clk          ; wr_inc      ; 0.500        ; 0.135      ; 5.641      ;
+; -6.195 ; reg:PC|Op[4]  ; incr:inc|Op[10] ; clk          ; wr_inc      ; 0.500        ; 0.163      ; 5.132      ;
+; -6.177 ; reg:PC|Op[4]  ; incr:inc|Op[12] ; clk          ; wr_inc      ; 0.500        ; 0.169      ; 5.016      ;
+; -6.174 ; reg:PC|Op[4]  ; incr:inc|Op[11] ; clk          ; wr_inc      ; 0.500        ; 0.115      ; 5.119      ;
+; -6.163 ; reg:PC|Op[4]  ; incr:inc|Op[13] ; clk          ; wr_inc      ; 0.500        ; 0.112      ; 5.077      ;
+; -6.163 ; reg:PC|Op[0]  ; incr:inc|Op[10] ; clk          ; wr_inc      ; 0.500        ; 0.163      ; 5.100      ;
+; -6.145 ; reg:PC|Op[0]  ; incr:inc|Op[12] ; clk          ; wr_inc      ; 0.500        ; 0.169      ; 4.984      ;
+; -6.144 ; reg:PC|Op[8]  ; incr:inc|Op[12] ; clk          ; wr_inc      ; 0.500        ; 0.169      ; 4.983      ;
+; -6.142 ; reg:PC|Op[0]  ; incr:inc|Op[11] ; clk          ; wr_inc      ; 0.500        ; 0.115      ; 5.087      ;
+; -6.131 ; reg:PC|Op[0]  ; incr:inc|Op[13] ; clk          ; wr_inc      ; 0.500        ; 0.112      ; 5.045      ;
+; -6.041 ; reg:PC|Op[8]  ; incr:inc|Op[11] ; clk          ; wr_inc      ; 0.500        ; 0.115      ; 4.986      ;
+; -6.029 ; reg:PC|Op[14] ; incr:inc|Op[14] ; clk          ; wr_inc      ; 0.500        ; 0.072      ; 4.778      ;
+; -6.027 ; reg:PC|Op[4]  ; incr:inc|Op[9]  ; clk          ; wr_inc      ; 0.500        ; 0.070      ; 5.242      ;
+; -6.004 ; reg:PC|Op[5]  ; incr:inc|Op[8]  ; clk          ; wr_inc      ; 0.500        ; 0.163      ; 5.329      ;
+; -5.995 ; reg:PC|Op[0]  ; incr:inc|Op[9]  ; clk          ; wr_inc      ; 0.500        ; 0.070      ; 5.210      ;
+; -5.976 ; reg:PC|Op[7]  ; incr:inc|Op[8]  ; clk          ; wr_inc      ; 0.500        ; 0.163      ; 5.301      ;
+; -5.968 ; reg:PC|Op[2]  ; incr:inc|Op[5]  ; clk          ; wr_inc      ; 0.500        ; 0.093      ; 5.208      ;
+; -5.962 ; reg:PC|Op[8]  ; incr:inc|Op[10] ; clk          ; wr_inc      ; 0.500        ; 0.163      ; 4.899      ;
+; -5.950 ; reg:PC|Op[0]  ; incr:inc|Op[6]  ; clk          ; wr_inc      ; 0.500        ; 0.134      ; 5.230      ;
+; -5.936 ; reg:PC|Op[3]  ; incr:inc|Op[15] ; clk          ; wr_inc      ; 0.500        ; 0.070      ; 5.168      ;
+; -5.933 ; reg:PC|Op[5]  ; incr:inc|Op[6]  ; clk          ; wr_inc      ; 0.500        ; 0.134      ; 5.213      ;
+; -5.888 ; reg:PC|Op[1]  ; incr:inc|Op[4]  ; clk          ; wr_inc      ; 0.500        ; 0.135      ; 5.331      ;
+; -5.855 ; reg:PC|Op[3]  ; incr:inc|Op[4]  ; clk          ; wr_inc      ; 0.500        ; 0.135      ; 5.298      ;
+; -5.809 ; reg:PC|Op[2]  ; incr:inc|Op[15] ; clk          ; wr_inc      ; 0.500        ; 0.070      ; 5.041      ;
+; -5.783 ; reg:PC|Op[4]  ; incr:inc|Op[8]  ; clk          ; wr_inc      ; 0.500        ; 0.163      ; 5.108      ;
+; -5.751 ; reg:PC|Op[0]  ; incr:inc|Op[8]  ; clk          ; wr_inc      ; 0.500        ; 0.163      ; 5.076      ;
+; -5.740 ; reg:PC|Op[6]  ; incr:inc|Op[6]  ; clk          ; wr_inc      ; 0.500        ; 0.134      ; 5.020      ;
+; -5.726 ; reg:PC|Op[9]  ; incr:inc|Op[15] ; clk          ; wr_inc      ; 0.500        ; 0.070      ; 4.958      ;
+; -5.725 ; reg:PC|Op[3]  ; incr:inc|Op[5]  ; clk          ; wr_inc      ; 0.500        ; 0.093      ; 4.965      ;
+; -5.712 ; reg:PC|Op[4]  ; incr:inc|Op[6]  ; clk          ; wr_inc      ; 0.500        ; 0.134      ; 4.992      ;
+; -5.701 ; reg:PC|Op[13] ; incr:inc|Op[13] ; clk          ; wr_inc      ; 0.500        ; 0.112      ; 4.615      ;
+; -5.694 ; reg:PC|Op[8]  ; incr:inc|Op[9]  ; clk          ; wr_inc      ; 0.500        ; 0.070      ; 4.909      ;
+; -5.687 ; reg:PC|Op[0]  ; incr:inc|Op[3]  ; clk          ; wr_inc      ; 0.500        ; 0.170      ; 4.517      ;
++--------+---------------+-----------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'select_ALU[0]'                                                                                                               ;
++-------+---------------------------------+------------------+---------------+---------------+--------------+------------+------------+
+; Slack ; From Node                       ; To Node          ; Launch Clock  ; Latch Clock   ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------+------------------+---------------+---------------+--------------+------------+------------+
+; 0.304 ; select_ALU[0]                   ; alu:ALU_1|Op[15] ; select_ALU[0] ; select_ALU[0] ; 0.000        ; 7.491      ; 7.795      ;
+; 0.490 ; select_ALU[0]                   ; alu:ALU_1|Op[7]  ; select_ALU[0] ; select_ALU[0] ; 0.000        ; 7.476      ; 7.966      ;
+; 0.747 ; select_ALU[0]                   ; alu:ALU_1|Op[5]  ; select_ALU[0] ; select_ALU[0] ; 0.000        ; 7.527      ; 8.274      ;
+; 0.804 ; select_ALU[0]                   ; alu:ALU_1|Op[15] ; select_ALU[0] ; select_ALU[0] ; -0.500       ; 7.491      ; 7.795      ;
+; 0.849 ; select_ALU[0]                   ; alu:ALU_1|Op[14] ; select_ALU[0] ; select_ALU[0] ; 0.000        ; 7.508      ; 8.357      ;
+; 0.911 ; select_ALU[0]                   ; alu:ALU_1|Op[0]  ; select_ALU[0] ; select_ALU[0] ; 0.000        ; 7.784      ; 8.695      ;
+; 0.927 ; select_ALU[0]                   ; alu:ALU_1|Op[3]  ; select_ALU[0] ; select_ALU[0] ; 0.000        ; 7.786      ; 8.713      ;
+; 0.938 ; select_ALU[0]                   ; alu:ALU_1|Op[9]  ; select_ALU[0] ; select_ALU[0] ; 0.000        ; 7.528      ; 8.466      ;
+; 0.947 ; select_ALU[0]                   ; alu:ALU_1|Op[2]  ; select_ALU[0] ; select_ALU[0] ; 0.000        ; 7.785      ; 8.732      ;
+; 0.970 ; select_ALU[0]                   ; alu:ALU_1|zero   ; select_ALU[0] ; select_ALU[0] ; 0.000        ; 5.272      ; 6.242      ;
+; 0.988 ; RREX:RR_EX|reg:RF_D1|Op[6]      ; alu:ALU_1|Op[6]  ; clk           ; select_ALU[0] ; -0.500       ; 4.253      ; 4.741      ;
+; 0.990 ; select_ALU[0]                   ; alu:ALU_1|Op[7]  ; select_ALU[0] ; select_ALU[0] ; -0.500       ; 7.476      ; 7.966      ;
+; 1.247 ; select_ALU[0]                   ; alu:ALU_1|Op[5]  ; select_ALU[0] ; select_ALU[0] ; -0.500       ; 7.527      ; 8.274      ;
+; 1.263 ; select_ALU[0]                   ; alu:ALU_1|carry  ; select_ALU[0] ; select_ALU[0] ; 0.000        ; 5.963      ; 7.226      ;
+; 1.270 ; select_ALU[0]                   ; alu:ALU_1|Op[12] ; select_ALU[0] ; select_ALU[0] ; 0.000        ; 7.476      ; 8.746      ;
+; 1.278 ; select_ALU[0]                   ; alu:ALU_1|Op[4]  ; select_ALU[0] ; select_ALU[0] ; 0.000        ; 7.520      ; 8.798      ;
+; 1.284 ; select_ALU[0]                   ; alu:ALU_1|Op[13] ; select_ALU[0] ; select_ALU[0] ; 0.000        ; 7.465      ; 8.749      ;
+; 1.349 ; select_ALU[0]                   ; alu:ALU_1|Op[14] ; select_ALU[0] ; select_ALU[0] ; -0.500       ; 7.508      ; 8.357      ;
+; 1.362 ; select_ALU[0]                   ; alu:ALU_1|Op[6]  ; select_ALU[0] ; select_ALU[0] ; 0.000        ; 7.465      ; 8.827      ;
+; 1.371 ; RREX:RR_EX|reg:RF_D2|Op[13]     ; alu:ALU_1|Op[13] ; clk           ; select_ALU[0] ; -0.500       ; 4.253      ; 5.124      ;
+; 1.373 ; RREX:RR_EX|reg:RF_D2|Op[11]     ; alu:ALU_1|Op[11] ; clk           ; select_ALU[0] ; -0.500       ; 4.310      ; 5.183      ;
+; 1.380 ; select_ALU[0]                   ; alu:ALU_1|Op[11] ; select_ALU[0] ; select_ALU[0] ; 0.000        ; 7.522      ; 8.902      ;
+; 1.383 ; select_ALU[0]                   ; alu:ALU_1|Op[8]  ; select_ALU[0] ; select_ALU[0] ; 0.000        ; 7.527      ; 8.910      ;
+; 1.411 ; select_ALU[0]                   ; alu:ALU_1|Op[0]  ; select_ALU[0] ; select_ALU[0] ; -0.500       ; 7.784      ; 8.695      ;
+; 1.416 ; select_ALU[0]                   ; alu:ALU_1|Op[10] ; select_ALU[0] ; select_ALU[0] ; 0.000        ; 7.521      ; 8.937      ;
+; 1.427 ; select_ALU[0]                   ; alu:ALU_1|Op[3]  ; select_ALU[0] ; select_ALU[0] ; -0.500       ; 7.786      ; 8.713      ;
+; 1.438 ; select_ALU[0]                   ; alu:ALU_1|Op[9]  ; select_ALU[0] ; select_ALU[0] ; -0.500       ; 7.528      ; 8.466      ;
+; 1.447 ; select_ALU[0]                   ; alu:ALU_1|Op[2]  ; select_ALU[0] ; select_ALU[0] ; -0.500       ; 7.785      ; 8.732      ;
+; 1.470 ; select_ALU[0]                   ; alu:ALU_1|zero   ; select_ALU[0] ; select_ALU[0] ; -0.500       ; 5.272      ; 6.242      ;
+; 1.506 ; RREX:RR_EX|reg:RF_D2|Op[10]     ; alu:ALU_1|Op[10] ; clk           ; select_ALU[0] ; -0.500       ; 4.309      ; 5.315      ;
+; 1.567 ; RREX:RR_EX|reg:RF_D1|Op[3]      ; alu:ALU_1|Op[3]  ; clk           ; select_ALU[0] ; -0.500       ; 4.574      ; 5.641      ;
+; 1.628 ; RREX:RR_EX|reg:RF_D1|Op[10]     ; alu:ALU_1|Op[10] ; clk           ; select_ALU[0] ; -0.500       ; 4.309      ; 5.437      ;
+; 1.691 ; RREX:RR_EX|reg:RF_D2|Op[7]      ; alu:ALU_1|Op[8]  ; clk           ; select_ALU[0] ; -0.500       ; 4.315      ; 5.506      ;
+; 1.696 ; RREX:RR_EX|reg:RF_D2|Op[15]     ; alu:ALU_1|carry  ; clk           ; select_ALU[0] ; -0.500       ; 2.751      ; 3.947      ;
+; 1.712 ; RREX:RR_EX|reg:RF_D2|Op[2]      ; alu:ALU_1|Op[3]  ; clk           ; select_ALU[0] ; -0.500       ; 4.574      ; 5.786      ;
+; 1.754 ; RREX:RR_EX|reg6:five_zero|Op[1] ; alu:ALU_1|Op[2]  ; clk           ; select_ALU[0] ; -0.500       ; 4.573      ; 5.827      ;
+; 1.763 ; select_ALU[0]                   ; alu:ALU_1|carry  ; select_ALU[0] ; select_ALU[0] ; -0.500       ; 5.963      ; 7.226      ;
+; 1.770 ; select_ALU[0]                   ; alu:ALU_1|Op[12] ; select_ALU[0] ; select_ALU[0] ; -0.500       ; 7.476      ; 8.746      ;
+; 1.778 ; RREX:RR_EX|reg:RF_D2|Op[8]      ; alu:ALU_1|Op[8]  ; clk           ; select_ALU[0] ; -0.500       ; 4.315      ; 5.593      ;
+; 1.778 ; select_ALU[0]                   ; alu:ALU_1|Op[4]  ; select_ALU[0] ; select_ALU[0] ; -0.500       ; 7.520      ; 8.798      ;
+; 1.784 ; select_ALU[0]                   ; alu:ALU_1|Op[13] ; select_ALU[0] ; select_ALU[0] ; -0.500       ; 7.465      ; 8.749      ;
+; 1.790 ; RREX:RR_EX|reg:RF_D1|Op[8]      ; alu:ALU_1|Op[8]  ; clk           ; select_ALU[0] ; -0.500       ; 4.315      ; 5.605      ;
+; 1.829 ; select_ALU[0]                   ; alu:ALU_1|Op[1]  ; select_ALU[0] ; select_ALU[0] ; 0.000        ; 7.514      ; 9.343      ;
+; 1.862 ; select_ALU[0]                   ; alu:ALU_1|Op[6]  ; select_ALU[0] ; select_ALU[0] ; -0.500       ; 7.465      ; 8.827      ;
+; 1.863 ; RREX:RR_EX|reg6:five_zero|Op[0] ; alu:ALU_1|Op[13] ; clk           ; select_ALU[0] ; -0.500       ; 4.253      ; 5.616      ;
+; 1.880 ; select_ALU[0]                   ; alu:ALU_1|Op[11] ; select_ALU[0] ; select_ALU[0] ; -0.500       ; 7.522      ; 8.902      ;
+; 1.881 ; RREX:RR_EX|reg6:five_zero|Op[1] ; alu:ALU_1|Op[3]  ; clk           ; select_ALU[0] ; -0.500       ; 4.574      ; 5.955      ;
+; 1.883 ; select_ALU[0]                   ; alu:ALU_1|Op[8]  ; select_ALU[0] ; select_ALU[0] ; -0.500       ; 7.527      ; 8.910      ;
+; 1.916 ; select_ALU[0]                   ; alu:ALU_1|Op[10] ; select_ALU[0] ; select_ALU[0] ; -0.500       ; 7.521      ; 8.937      ;
+; 1.951 ; RREX:RR_EX|reg:RF_D1|Op[15]     ; alu:ALU_1|carry  ; clk           ; select_ALU[0] ; -0.500       ; 2.751      ; 4.202      ;
+; 1.999 ; RREX:RR_EX|reg:RF_D2|Op[12]     ; alu:ALU_1|Op[12] ; clk           ; select_ALU[0] ; -0.500       ; 4.264      ; 5.763      ;
+; 2.000 ; RREX:RR_EX|reg:RF_D1|Op[11]     ; alu:ALU_1|Op[11] ; clk           ; select_ALU[0] ; -0.500       ; 4.310      ; 5.810      ;
+; 2.028 ; RREX:RR_EX|reg:RF_D2|Op[15]     ; alu:ALU_1|Op[15] ; clk           ; select_ALU[0] ; -0.500       ; 4.279      ; 5.807      ;
+; 2.031 ; RREX:RR_EX|reg6:five_zero|Op[0] ; alu:ALU_1|carry  ; clk           ; select_ALU[0] ; -0.500       ; 2.751      ; 4.282      ;
+; 2.072 ; RREX:RR_EX|reg:RF_D1|Op[12]     ; alu:ALU_1|Op[12] ; clk           ; select_ALU[0] ; -0.500       ; 4.264      ; 5.836      ;
+; 2.090 ; RREX:RR_EX|reg:RF_D2|Op[1]      ; alu:ALU_1|Op[2]  ; clk           ; select_ALU[0] ; -0.500       ; 4.573      ; 6.163      ;
+; 2.119 ; RREX:RR_EX|reg:RF_D2|Op[12]     ; alu:ALU_1|Op[13] ; clk           ; select_ALU[0] ; -0.500       ; 4.253      ; 5.872      ;
+; 2.197 ; RREX:RR_EX|reg:RF_D2|Op[0]      ; alu:ALU_1|Op[2]  ; clk           ; select_ALU[0] ; -0.500       ; 4.573      ; 6.270      ;
+; 2.225 ; RREX:RR_EX|reg:RF_D2|Op[3]      ; alu:ALU_1|Op[3]  ; clk           ; select_ALU[0] ; -0.500       ; 4.574      ; 6.299      ;
+; 2.251 ; RREX:RR_EX|reg6:five_zero|Op[0] ; alu:ALU_1|Op[2]  ; clk           ; select_ALU[0] ; -0.500       ; 4.573      ; 6.324      ;
+; 2.318 ; RREX:RR_EX|reg:RF_D2|Op[14]     ; alu:ALU_1|Op[15] ; clk           ; select_ALU[0] ; -0.500       ; 4.279      ; 6.097      ;
+; 2.329 ; select_ALU[0]                   ; alu:ALU_1|Op[1]  ; select_ALU[0] ; select_ALU[0] ; -0.500       ; 7.514      ; 9.343      ;
+; 2.337 ; RREX:RR_EX|reg:RF_D2|Op[10]     ; alu:ALU_1|Op[11] ; clk           ; select_ALU[0] ; -0.500       ; 4.310      ; 6.147      ;
+; 2.389 ; RREX:RR_EX|reg:RF_D1|Op[1]      ; alu:ALU_1|Op[2]  ; clk           ; select_ALU[0] ; -0.500       ; 4.573      ; 6.462      ;
+; 2.439 ; RREX:RR_EX|reg:RF_D2|Op[6]      ; alu:ALU_1|Op[6]  ; clk           ; select_ALU[0] ; -0.500       ; 4.253      ; 6.192      ;
+; 2.470 ; RREX:RR_EX|reg6:five_zero|Op[0] ; alu:ALU_1|Op[14] ; clk           ; select_ALU[0] ; -0.500       ; 4.296      ; 6.266      ;
+; 2.485 ; RREX:RR_EX|reg:RF_D1|Op[7]      ; alu:ALU_1|Op[7]  ; clk           ; select_ALU[0] ; -0.500       ; 4.264      ; 6.249      ;
+; 2.527 ; RREX:RR_EX|reg:RF_D2|Op[7]      ; alu:ALU_1|Op[7]  ; clk           ; select_ALU[0] ; -0.500       ; 4.264      ; 6.291      ;
+; 2.702 ; RREX:RR_EX|reg:RF_D2|Op[2]      ; alu:ALU_1|Op[2]  ; clk           ; select_ALU[0] ; -0.500       ; 4.573      ; 6.775      ;
+; 2.777 ; RREX:RR_EX|reg:RF_D2|Op[14]     ; alu:ALU_1|Op[14] ; clk           ; select_ALU[0] ; -0.500       ; 4.296      ; 6.573      ;
+; 2.780 ; RREX:RR_EX|reg:RF_D2|Op[13]     ; alu:ALU_1|Op[14] ; clk           ; select_ALU[0] ; -0.500       ; 4.296      ; 6.576      ;
+; 2.865 ; RREX:RR_EX|reg:RF_D1|Op[0]      ; alu:ALU_1|Op[2]  ; clk           ; select_ALU[0] ; -0.500       ; 4.573      ; 6.938      ;
+; 2.905 ; RREX:RR_EX|reg:RF_D2|Op[5]      ; alu:ALU_1|Op[5]  ; clk           ; select_ALU[0] ; -0.500       ; 4.315      ; 6.720      ;
+; 2.930 ; RREX:RR_EX|reg6:five_zero|Op[0] ; alu:ALU_1|Op[8]  ; clk           ; select_ALU[0] ; -0.500       ; 4.315      ; 6.745      ;
+; 2.952 ; RREX:RR_EX|reg:RF_D1|Op[15]     ; alu:ALU_1|Op[15] ; clk           ; select_ALU[0] ; -0.500       ; 4.279      ; 6.731      ;
+; 2.962 ; RREX:RR_EX|reg:RF_D2|Op[0]      ; alu:ALU_1|Op[0]  ; clk           ; select_ALU[0] ; -0.500       ; 4.572      ; 7.034      ;
+; 3.052 ; RREX:RR_EX|reg:RF_D1|Op[14]     ; alu:ALU_1|Op[14] ; clk           ; select_ALU[0] ; -0.500       ; 4.296      ; 6.848      ;
+; 3.235 ; RREX:RR_EX|reg:RF_D1|Op[0]      ; alu:ALU_1|Op[0]  ; clk           ; select_ALU[0] ; -0.500       ; 4.572      ; 7.307      ;
+; 3.241 ; RREX:RR_EX|reg6:five_zero|Op[0] ; alu:ALU_1|Op[11] ; clk           ; select_ALU[0] ; -0.500       ; 4.310      ; 7.051      ;
+; 3.269 ; RREX:RR_EX|reg:RF_D2|Op[14]     ; alu:ALU_1|carry  ; clk           ; select_ALU[0] ; -0.500       ; 2.751      ; 5.520      ;
+; 3.293 ; RREX:RR_EX|reg:RF_D1|Op[4]      ; alu:ALU_1|Op[4]  ; clk           ; select_ALU[0] ; -0.500       ; 4.308      ; 7.101      ;
+; 3.316 ; RREX:RR_EX|reg:RF_D1|Op[9]      ; alu:ALU_1|Op[9]  ; clk           ; select_ALU[0] ; -0.500       ; 4.316      ; 7.132      ;
+; 3.343 ; RREX:RR_EX|reg:RF_D1|Op[2]      ; alu:ALU_1|Op[2]  ; clk           ; select_ALU[0] ; -0.500       ; 4.573      ; 7.416      ;
+; 3.413 ; RREX:RR_EX|reg6:five_zero|Op[1] ; alu:ALU_1|Op[1]  ; clk           ; select_ALU[0] ; -0.500       ; 4.302      ; 7.215      ;
+; 3.528 ; RREX:RR_EX|reg:RF_D2|Op[12]     ; alu:ALU_1|Op[14] ; clk           ; select_ALU[0] ; -0.500       ; 4.296      ; 7.324      ;
+; 3.586 ; RREX:RR_EX|reg:RF_D2|Op[4]      ; alu:ALU_1|Op[4]  ; clk           ; select_ALU[0] ; -0.500       ; 4.308      ; 7.394      ;
+; 3.590 ; RREX:RR_EX|reg6:five_zero|Op[0] ; alu:ALU_1|Op[0]  ; clk           ; select_ALU[0] ; -0.500       ; 4.572      ; 7.662      ;
+; 3.632 ; RREX:RR_EX|reg:RF_D2|Op[9]      ; alu:ALU_1|Op[9]  ; clk           ; select_ALU[0] ; -0.500       ; 4.316      ; 7.448      ;
+; 3.684 ; RREX:RR_EX|reg6:five_zero|Op[4] ; alu:ALU_1|Op[5]  ; clk           ; select_ALU[0] ; -0.500       ; 4.315      ; 7.499      ;
+; 3.749 ; RREX:RR_EX|reg:RF_D2|Op[1]      ; alu:ALU_1|Op[1]  ; clk           ; select_ALU[0] ; -0.500       ; 4.302      ; 7.551      ;
+; 3.773 ; RREX:RR_EX|reg6:five_zero|Op[0] ; alu:ALU_1|Op[15] ; clk           ; select_ALU[0] ; -0.500       ; 4.279      ; 7.552      ;
+; 3.856 ; RREX:RR_EX|reg:RF_D2|Op[0]      ; alu:ALU_1|Op[1]  ; clk           ; select_ALU[0] ; -0.500       ; 4.302      ; 7.658      ;
+; 4.040 ; RREX:RR_EX|reg:RF_D2|Op[5]      ; alu:ALU_1|Op[7]  ; clk           ; select_ALU[0] ; -0.500       ; 4.264      ; 7.804      ;
+; 4.092 ; RREX:RR_EX|reg:RF_D2|Op[9]      ; alu:ALU_1|Op[10] ; clk           ; select_ALU[0] ; -0.500       ; 4.309      ; 7.901      ;
+; 4.145 ; RREX:RR_EX|reg:RF_D2|Op[5]      ; alu:ALU_1|Op[6]  ; clk           ; select_ALU[0] ; -0.500       ; 4.253      ; 7.898      ;
+; 4.145 ; RREX:RR_EX|reg:RF_D1|Op[1]      ; alu:ALU_1|Op[1]  ; clk           ; select_ALU[0] ; -0.500       ; 4.302      ; 7.947      ;
+; 4.169 ; RREX:RR_EX|reg:RF_D1|Op[12]     ; alu:ALU_1|Op[14] ; clk           ; select_ALU[0] ; -0.500       ; 4.296      ; 7.965      ;
+; 4.239 ; RREX:RR_EX|reg:RF_D1|Op[13]     ; alu:ALU_1|Op[13] ; clk           ; select_ALU[0] ; -0.500       ; 4.253      ; 7.992      ;
+; 4.258 ; RREX:RR_EX|reg:RF_D2|Op[11]     ; alu:ALU_1|Op[14] ; clk           ; select_ALU[0] ; -0.500       ; 4.296      ; 8.054      ;
+; 4.385 ; RREX:RR_EX|reg:RF_D1|Op[5]      ; alu:ALU_1|Op[5]  ; clk           ; select_ALU[0] ; -0.500       ; 4.315      ; 8.200      ;
++-------+---------------------------------+------------------+---------------+---------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'select_ALU2[0]'                                                                                                                   ;
++-------+------------------------------------+------------------+----------------+----------------+--------------+------------+------------+
+; Slack ; From Node                          ; To Node          ; Launch Clock   ; Latch Clock    ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------+------------------+----------------+----------------+--------------+------------+------------+
+; 0.506 ; select_ALU2[0]                     ; alu:ALU_2|Op[0]  ; select_ALU2[0] ; select_ALU2[0] ; 0.000        ; 6.926      ; 7.432      ;
+; 0.727 ; select_ALU2[0]                     ; alu:ALU_2|Op[4]  ; select_ALU2[0] ; select_ALU2[0] ; 0.000        ; 7.045      ; 7.772      ;
+; 0.748 ; select_ALU2[0]                     ; alu:ALU_2|Op[2]  ; select_ALU2[0] ; select_ALU2[0] ; 0.000        ; 7.040      ; 7.788      ;
+; 0.832 ; EXMEM:EX_MEM|reg:inc|Op[7]         ; alu:ALU_2|Op[7]  ; clk            ; select_ALU2[0] ; -0.500       ; 3.861      ; 4.193      ;
+; 0.841 ; select_ALU2[0]                     ; alu:ALU_2|Op[9]  ; select_ALU2[0] ; select_ALU2[0] ; 0.000        ; 7.066      ; 7.907      ;
+; 0.870 ; select_ALU2[0]                     ; alu:ALU_2|Op[3]  ; select_ALU2[0] ; select_ALU2[0] ; 0.000        ; 7.046      ; 7.916      ;
+; 0.895 ; select_ALU2[0]                     ; alu:ALU_2|Op[7]  ; select_ALU2[0] ; select_ALU2[0] ; 0.000        ; 7.073      ; 7.968      ;
+; 0.936 ; select_ALU2[0]                     ; alu:ALU_2|Op[11] ; select_ALU2[0] ; select_ALU2[0] ; 0.000        ; 6.984      ; 7.920      ;
+; 0.954 ; select_ALU2[0]                     ; alu:ALU_2|Op[12] ; select_ALU2[0] ; select_ALU2[0] ; 0.000        ; 6.983      ; 7.937      ;
+; 0.994 ; select_ALU2[0]                     ; alu:ALU_2|Op[13] ; select_ALU2[0] ; select_ALU2[0] ; 0.000        ; 6.987      ; 7.981      ;
+; 1.006 ; select_ALU2[0]                     ; alu:ALU_2|Op[0]  ; select_ALU2[0] ; select_ALU2[0] ; -0.500       ; 6.926      ; 7.432      ;
+; 1.043 ; select_ALU2[0]                     ; alu:ALU_2|Op[15] ; select_ALU2[0] ; select_ALU2[0] ; 0.000        ; 6.959      ; 8.002      ;
+; 1.054 ; select_ALU2[0]                     ; alu:ALU_2|Op[5]  ; select_ALU2[0] ; select_ALU2[0] ; 0.000        ; 6.958      ; 8.012      ;
+; 1.054 ; select_ALU2[0]                     ; alu:ALU_2|Op[14] ; select_ALU2[0] ; select_ALU2[0] ; 0.000        ; 6.956      ; 8.010      ;
+; 1.151 ; select_ALU2[0]                     ; alu:ALU_2|Op[8]  ; select_ALU2[0] ; select_ALU2[0] ; 0.000        ; 6.628      ; 7.779      ;
+; 1.161 ; EXMEM:EX_MEM|reg:inc|Op[14]        ; alu:ALU_2|Op[14] ; clk            ; select_ALU2[0] ; -0.500       ; 3.744      ; 4.405      ;
+; 1.180 ; select_ALU2[0]                     ; alu:ALU_2|Op[10] ; select_ALU2[0] ; select_ALU2[0] ; 0.000        ; 6.635      ; 7.815      ;
+; 1.189 ; select_ALU2[0]                     ; alu:ALU_2|Op[6]  ; select_ALU2[0] ; select_ALU2[0] ; 0.000        ; 6.609      ; 7.798      ;
+; 1.222 ; EXMEM:EX_MEM|reg:inc|Op[6]         ; alu:ALU_2|Op[6]  ; clk            ; select_ALU2[0] ; -0.500       ; 3.397      ; 4.119      ;
+; 1.227 ; select_ALU2[0]                     ; alu:ALU_2|Op[4]  ; select_ALU2[0] ; select_ALU2[0] ; -0.500       ; 7.045      ; 7.772      ;
+; 1.248 ; select_ALU2[0]                     ; alu:ALU_2|Op[2]  ; select_ALU2[0] ; select_ALU2[0] ; -0.500       ; 7.040      ; 7.788      ;
+; 1.257 ; EXMEM:EX_MEM|reg9:eight_zero|Op[1] ; alu:ALU_2|Op[3]  ; clk            ; select_ALU2[0] ; -0.500       ; 3.834      ; 4.591      ;
+; 1.323 ; select_ALU2[0]                     ; alu:ALU_2|Op[1]  ; select_ALU2[0] ; select_ALU2[0] ; 0.000        ; 6.603      ; 7.926      ;
+; 1.341 ; select_ALU2[0]                     ; alu:ALU_2|Op[9]  ; select_ALU2[0] ; select_ALU2[0] ; -0.500       ; 7.066      ; 7.907      ;
+; 1.370 ; select_ALU2[0]                     ; alu:ALU_2|Op[3]  ; select_ALU2[0] ; select_ALU2[0] ; -0.500       ; 7.046      ; 7.916      ;
+; 1.395 ; select_ALU2[0]                     ; alu:ALU_2|Op[7]  ; select_ALU2[0] ; select_ALU2[0] ; -0.500       ; 7.073      ; 7.968      ;
+; 1.436 ; select_ALU2[0]                     ; alu:ALU_2|Op[11] ; select_ALU2[0] ; select_ALU2[0] ; -0.500       ; 6.984      ; 7.920      ;
+; 1.454 ; select_ALU2[0]                     ; alu:ALU_2|Op[12] ; select_ALU2[0] ; select_ALU2[0] ; -0.500       ; 6.983      ; 7.937      ;
+; 1.473 ; EXMEM:EX_MEM|reg:inc|Op[14]        ; alu:ALU_2|Op[15] ; clk            ; select_ALU2[0] ; -0.500       ; 3.747      ; 4.720      ;
+; 1.494 ; select_ALU2[0]                     ; alu:ALU_2|Op[13] ; select_ALU2[0] ; select_ALU2[0] ; -0.500       ; 6.987      ; 7.981      ;
+; 1.543 ; select_ALU2[0]                     ; alu:ALU_2|Op[15] ; select_ALU2[0] ; select_ALU2[0] ; -0.500       ; 6.959      ; 8.002      ;
+; 1.554 ; select_ALU2[0]                     ; alu:ALU_2|Op[5]  ; select_ALU2[0] ; select_ALU2[0] ; -0.500       ; 6.958      ; 8.012      ;
+; 1.554 ; select_ALU2[0]                     ; alu:ALU_2|Op[14] ; select_ALU2[0] ; select_ALU2[0] ; -0.500       ; 6.956      ; 8.010      ;
+; 1.579 ; EXMEM:EX_MEM|reg:RF_D1|Op[7]       ; alu:ALU_2|Op[7]  ; clk            ; select_ALU2[0] ; -0.500       ; 3.861      ; 4.940      ;
+; 1.651 ; select_ALU2[0]                     ; alu:ALU_2|Op[8]  ; select_ALU2[0] ; select_ALU2[0] ; -0.500       ; 6.628      ; 7.779      ;
+; 1.680 ; select_ALU2[0]                     ; alu:ALU_2|Op[10] ; select_ALU2[0] ; select_ALU2[0] ; -0.500       ; 6.635      ; 7.815      ;
+; 1.684 ; EXMEM:EX_MEM|reg9:eight_zero|Op[1] ; alu:ALU_2|Op[1]  ; clk            ; select_ALU2[0] ; -0.500       ; 3.391      ; 4.575      ;
+; 1.689 ; select_ALU2[0]                     ; alu:ALU_2|Op[6]  ; select_ALU2[0] ; select_ALU2[0] ; -0.500       ; 6.609      ; 7.798      ;
+; 1.778 ; EXMEM:EX_MEM|reg:inc|Op[9]         ; alu:ALU_2|Op[9]  ; clk            ; select_ALU2[0] ; -0.500       ; 3.854      ; 5.132      ;
+; 1.823 ; select_ALU2[0]                     ; alu:ALU_2|Op[1]  ; select_ALU2[0] ; select_ALU2[0] ; -0.500       ; 6.603      ; 7.926      ;
+; 1.850 ; EXMEM:EX_MEM|reg9:eight_zero|Op[4] ; alu:ALU_2|Op[4]  ; clk            ; select_ALU2[0] ; -0.500       ; 3.833      ; 5.183      ;
+; 1.883 ; EXMEM:EX_MEM|reg:inc|Op[7]         ; alu:ALU_2|Op[9]  ; clk            ; select_ALU2[0] ; -0.500       ; 3.854      ; 5.237      ;
+; 1.906 ; EXMEM:EX_MEM|reg9:eight_zero|Op[0] ; alu:ALU_2|Op[5]  ; clk            ; select_ALU2[0] ; -0.500       ; 3.746      ; 5.152      ;
+; 1.926 ; EXMEM:EX_MEM|reg:inc|Op[8]         ; alu:ALU_2|Op[8]  ; clk            ; select_ALU2[0] ; -0.500       ; 3.416      ; 4.842      ;
+; 2.008 ; EXMEM:EX_MEM|reg:inc|Op[13]        ; alu:ALU_2|Op[13] ; clk            ; select_ALU2[0] ; -0.500       ; 3.775      ; 5.283      ;
+; 2.023 ; EXMEM:EX_MEM|reg:inc|Op[4]         ; alu:ALU_2|Op[4]  ; clk            ; select_ALU2[0] ; -0.500       ; 3.833      ; 5.356      ;
+; 2.058 ; EXMEM:EX_MEM|reg:inc|Op[4]         ; alu:ALU_2|Op[5]  ; clk            ; select_ALU2[0] ; -0.500       ; 3.746      ; 5.304      ;
+; 2.107 ; EXMEM:EX_MEM|reg9:eight_zero|Op[0] ; alu:ALU_2|Op[9]  ; clk            ; select_ALU2[0] ; -0.500       ; 3.854      ; 5.461      ;
+; 2.129 ; EXMEM:EX_MEM|reg:RF_D1|Op[14]      ; alu:ALU_2|Op[14] ; clk            ; select_ALU2[0] ; -0.500       ; 3.744      ; 5.373      ;
+; 2.160 ; EXMEM:EX_MEM|reg9:eight_zero|Op[0] ; alu:ALU_2|Op[11] ; clk            ; select_ALU2[0] ; -0.500       ; 3.772      ; 5.432      ;
+; 2.179 ; EXMEM:EX_MEM|reg9:eight_zero|Op[0] ; alu:ALU_2|Op[12] ; clk            ; select_ALU2[0] ; -0.500       ; 3.771      ; 5.450      ;
+; 2.189 ; EXMEM:EX_MEM|reg:inc|Op[5]         ; alu:ALU_2|Op[5]  ; clk            ; select_ALU2[0] ; -0.500       ; 3.746      ; 5.435      ;
+; 2.213 ; EXMEM:EX_MEM|reg9:eight_zero|Op[0] ; alu:ALU_2|Op[13] ; clk            ; select_ALU2[0] ; -0.500       ; 3.775      ; 5.488      ;
+; 2.221 ; EXMEM:EX_MEM|reg9:eight_zero|Op[0] ; alu:ALU_2|Op[15] ; clk            ; select_ALU2[0] ; -0.500       ; 3.747      ; 5.468      ;
+; 2.223 ; EXMEM:EX_MEM|reg9:eight_zero|Op[0] ; alu:ALU_2|Op[14] ; clk            ; select_ALU2[0] ; -0.500       ; 3.744      ; 5.467      ;
+; 2.247 ; EXMEM:EX_MEM|reg:inc|Op[12]        ; alu:ALU_2|Op[12] ; clk            ; select_ALU2[0] ; -0.500       ; 3.771      ; 5.518      ;
+; 2.270 ; EXMEM:EX_MEM|reg:inc|Op[12]        ; alu:ALU_2|Op[13] ; clk            ; select_ALU2[0] ; -0.500       ; 3.775      ; 5.545      ;
+; 2.300 ; EXMEM:EX_MEM|reg:inc|Op[3]         ; alu:ALU_2|Op[3]  ; clk            ; select_ALU2[0] ; -0.500       ; 3.834      ; 5.634      ;
+; 2.378 ; EXMEM:EX_MEM|reg9:eight_zero|Op[0] ; alu:ALU_2|Op[1]  ; clk            ; select_ALU2[0] ; -0.500       ; 3.391      ; 5.269      ;
+; 2.438 ; EXMEM:EX_MEM|reg:RF_D1|Op[6]       ; alu:ALU_2|Op[6]  ; clk            ; select_ALU2[0] ; -0.500       ; 3.397      ; 5.335      ;
+; 2.441 ; EXMEM:EX_MEM|reg:RF_D1|Op[14]      ; alu:ALU_2|Op[15] ; clk            ; select_ALU2[0] ; -0.500       ; 3.747      ; 5.688      ;
+; 2.455 ; EXMEM:EX_MEM|reg:inc|Op[12]        ; alu:ALU_2|Op[14] ; clk            ; select_ALU2[0] ; -0.500       ; 3.744      ; 5.699      ;
+; 2.510 ; EXMEM:EX_MEM|reg:inc|Op[12]        ; alu:ALU_2|Op[15] ; clk            ; select_ALU2[0] ; -0.500       ; 3.747      ; 5.757      ;
+; 2.510 ; EXMEM:EX_MEM|reg:RF_D1|Op[9]       ; alu:ALU_2|Op[9]  ; clk            ; select_ALU2[0] ; -0.500       ; 3.854      ; 5.864      ;
+; 2.531 ; EXMEM:EX_MEM|reg9:eight_zero|Op[0] ; alu:ALU_2|Op[7]  ; clk            ; select_ALU2[0] ; -0.500       ; 3.861      ; 5.892      ;
+; 2.576 ; EXMEM:EX_MEM|reg:inc|Op[2]         ; alu:ALU_2|Op[2]  ; clk            ; select_ALU2[0] ; -0.500       ; 3.828      ; 5.904      ;
+; 2.595 ; EXMEM:EX_MEM|reg:inc|Op[5]         ; alu:ALU_2|Op[6]  ; clk            ; select_ALU2[0] ; -0.500       ; 3.397      ; 5.492      ;
+; 2.614 ; EXMEM:EX_MEM|reg:inc|Op[11]        ; alu:ALU_2|Op[11] ; clk            ; select_ALU2[0] ; -0.500       ; 3.772      ; 5.886      ;
+; 2.620 ; EXMEM:EX_MEM|reg9:eight_zero|Op[4] ; alu:ALU_2|Op[5]  ; clk            ; select_ALU2[0] ; -0.500       ; 3.746      ; 5.866      ;
+; 2.630 ; EXMEM:EX_MEM|reg:RF_D1|Op[7]       ; alu:ALU_2|Op[9]  ; clk            ; select_ALU2[0] ; -0.500       ; 3.854      ; 5.984      ;
+; 2.791 ; EXMEM:EX_MEM|reg:inc|Op[11]        ; alu:ALU_2|Op[14] ; clk            ; select_ALU2[0] ; -0.500       ; 3.744      ; 6.035      ;
+; 2.846 ; EXMEM:EX_MEM|reg:inc|Op[11]        ; alu:ALU_2|Op[15] ; clk            ; select_ALU2[0] ; -0.500       ; 3.747      ; 6.093      ;
+; 2.856 ; EXMEM:EX_MEM|reg9:eight_zero|Op[0] ; alu:ALU_2|Op[10] ; clk            ; select_ALU2[0] ; -0.500       ; 3.423      ; 5.779      ;
+; 2.882 ; EXMEM:EX_MEM|reg9:eight_zero|Op[0] ; alu:ALU_2|Op[8]  ; clk            ; select_ALU2[0] ; -0.500       ; 3.416      ; 5.798      ;
+; 2.938 ; EXMEM:EX_MEM|reg:inc|Op[10]        ; alu:ALU_2|Op[10] ; clk            ; select_ALU2[0] ; -0.500       ; 3.423      ; 5.861      ;
+; 2.987 ; EXMEM:EX_MEM|reg:inc|Op[11]        ; alu:ALU_2|Op[12] ; clk            ; select_ALU2[0] ; -0.500       ; 3.771      ; 6.258      ;
+; 3.020 ; EXMEM:EX_MEM|reg:inc|Op[11]        ; alu:ALU_2|Op[13] ; clk            ; select_ALU2[0] ; -0.500       ; 3.775      ; 6.295      ;
+; 3.064 ; EXMEM:EX_MEM|reg:inc|Op[0]         ; alu:ALU_2|Op[0]  ; clk            ; select_ALU2[0] ; -0.500       ; 3.714      ; 6.278      ;
+; 3.099 ; EXMEM:EX_MEM|reg9:eight_zero|Op[0] ; alu:ALU_2|Op[0]  ; clk            ; select_ALU2[0] ; -0.500       ; 3.714      ; 6.313      ;
+; 3.237 ; EXMEM:EX_MEM|reg:inc|Op[0]         ; alu:ALU_2|Op[2]  ; clk            ; select_ALU2[0] ; -0.500       ; 3.828      ; 6.565      ;
+; 3.241 ; EXMEM:EX_MEM|reg:inc|Op[5]         ; alu:ALU_2|Op[7]  ; clk            ; select_ALU2[0] ; -0.500       ; 3.861      ; 6.602      ;
+; 3.322 ; EXMEM:EX_MEM|reg:RF_D1|Op[13]      ; alu:ALU_2|Op[13] ; clk            ; select_ALU2[0] ; -0.500       ; 3.775      ; 6.597      ;
+; 3.327 ; EXMEM:EX_MEM|reg9:eight_zero|Op[0] ; alu:ALU_2|Op[2]  ; clk            ; select_ALU2[0] ; -0.500       ; 3.828      ; 6.655      ;
+; 3.403 ; EXMEM:EX_MEM|reg:inc|Op[10]        ; alu:ALU_2|Op[11] ; clk            ; select_ALU2[0] ; -0.500       ; 3.772      ; 6.675      ;
+; 3.407 ; EXMEM:EX_MEM|reg:inc|Op[10]        ; alu:ALU_2|Op[14] ; clk            ; select_ALU2[0] ; -0.500       ; 3.744      ; 6.651      ;
+; 3.424 ; EXMEM:EX_MEM|reg:RF_D1|Op[8]       ; alu:ALU_2|Op[8]  ; clk            ; select_ALU2[0] ; -0.500       ; 3.416      ; 6.340      ;
+; 3.445 ; EXMEM:EX_MEM|reg:inc|Op[15]        ; alu:ALU_2|Op[15] ; clk            ; select_ALU2[0] ; -0.500       ; 3.747      ; 6.692      ;
+; 3.462 ; EXMEM:EX_MEM|reg:inc|Op[10]        ; alu:ALU_2|Op[15] ; clk            ; select_ALU2[0] ; -0.500       ; 3.747      ; 6.709      ;
+; 3.484 ; EXMEM:EX_MEM|reg:inc|Op[13]        ; alu:ALU_2|Op[14] ; clk            ; select_ALU2[0] ; -0.500       ; 3.744      ; 6.728      ;
+; 3.539 ; EXMEM:EX_MEM|reg:inc|Op[13]        ; alu:ALU_2|Op[15] ; clk            ; select_ALU2[0] ; -0.500       ; 3.747      ; 6.786      ;
+; 3.539 ; EXMEM:EX_MEM|reg:inc|Op[7]         ; alu:ALU_2|Op[14] ; clk            ; select_ALU2[0] ; -0.500       ; 3.744      ; 6.783      ;
+; 3.555 ; EXMEM:EX_MEM|reg9:eight_zero|Op[1] ; alu:ALU_2|Op[4]  ; clk            ; select_ALU2[0] ; -0.500       ; 3.833      ; 6.888      ;
+; 3.594 ; EXMEM:EX_MEM|reg:inc|Op[7]         ; alu:ALU_2|Op[15] ; clk            ; select_ALU2[0] ; -0.500       ; 3.747      ; 6.841      ;
+; 3.598 ; EXMEM:EX_MEM|reg:inc|Op[7]         ; alu:ALU_2|Op[10] ; clk            ; select_ALU2[0] ; -0.500       ; 3.423      ; 6.521      ;
+; 3.603 ; EXMEM:EX_MEM|reg:inc|Op[10]        ; alu:ALU_2|Op[12] ; clk            ; select_ALU2[0] ; -0.500       ; 3.771      ; 6.874      ;
+; 3.636 ; EXMEM:EX_MEM|reg:inc|Op[10]        ; alu:ALU_2|Op[13] ; clk            ; select_ALU2[0] ; -0.500       ; 3.775      ; 6.911      ;
+; 3.661 ; EXMEM:EX_MEM|reg:inc|Op[7]         ; alu:ALU_2|Op[8]  ; clk            ; select_ALU2[0] ; -0.500       ; 3.416      ; 6.577      ;
+; 3.735 ; EXMEM:EX_MEM|reg:inc|Op[7]         ; alu:ALU_2|Op[12] ; clk            ; select_ALU2[0] ; -0.500       ; 3.771      ; 7.006      ;
+; 3.736 ; EXMEM:EX_MEM|reg:inc|Op[5]         ; alu:ALU_2|Op[14] ; clk            ; select_ALU2[0] ; -0.500       ; 3.744      ; 6.980      ;
+; 3.736 ; EXMEM:EX_MEM|reg:inc|Op[2]         ; alu:ALU_2|Op[4]  ; clk            ; select_ALU2[0] ; -0.500       ; 3.833      ; 7.069      ;
++-------+------------------------------------+------------------+----------------+----------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'clk'                                                                                                                                            ;
++-------+------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                          ; To Node                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; 1.118 ; IDRR:ID_RR|reg:inc|Op[14]          ; EXMEM:EX_MEM|reg:inc|Op[14]         ; clk          ; clk         ; 0.000        ; 0.000      ; 1.297      ;
+; 1.119 ; EXMEM:EX_MEM|reg3:dec|Op[1]        ; MEMWB:MEM_WB|reg3:dec|Op[1]         ; clk          ; clk         ; 0.000        ; 0.000      ; 1.298      ;
+; 1.121 ; EXMEM:EX_MEM|reg:PC|Op[7]          ; MEMWB:MEM_WB|reg:PC|Op[7]           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.300      ;
+; 1.121 ; IDRR:ID_RR|reg:PC|Op[12]           ; EXMEM:EX_MEM|reg:PC|Op[12]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.300      ;
+; 1.121 ; reg:PC|Op[5]                       ; IDRR:ID_RR|reg:PC|Op[5]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.300      ;
+; 1.123 ; IDRR:ID_RR|reg:inc|Op[13]          ; EXMEM:EX_MEM|reg:inc|Op[13]         ; clk          ; clk         ; 0.000        ; 0.000      ; 1.302      ;
+; 1.124 ; EXMEM:EX_MEM|reg:PC|Op[1]          ; MEMWB:MEM_WB|reg:PC|Op[1]           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.303      ;
+; 1.124 ; EXMEM:EX_MEM|reg:PC|Op[5]          ; MEMWB:MEM_WB|reg:PC|Op[5]           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.303      ;
+; 1.125 ; IDRR:ID_RR|reg:inc|Op[3]           ; EXMEM:EX_MEM|reg:inc|Op[3]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.304      ;
+; 1.125 ; IDRR:ID_RR|reg:inc|Op[11]          ; EXMEM:EX_MEM|reg:inc|Op[11]         ; clk          ; clk         ; 0.000        ; 0.000      ; 1.304      ;
+; 1.127 ; IDRR:ID_RR|reg:inc|Op[10]          ; EXMEM:EX_MEM|reg:inc|Op[10]         ; clk          ; clk         ; 0.000        ; 0.000      ; 1.306      ;
+; 1.128 ; RREX:RR_EX|reg:RF_D1|Op[8]         ; EXMEM:EX_MEM|reg:RF_D1|Op[8]        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.307      ;
+; 1.128 ; IDRR:ID_RR|reg:PC|Op[4]            ; EXMEM:EX_MEM|reg:PC|Op[4]           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.307      ;
+; 1.129 ; IDRR:ID_RR|reg:inc|Op[0]           ; EXMEM:EX_MEM|reg:inc|Op[0]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.308      ;
+; 1.130 ; IDRR:ID_RR|reg:PC|Op[15]           ; EXMEM:EX_MEM|reg:PC|Op[15]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.309      ;
+; 1.130 ; IDRR:ID_RR|reg:PC|Op[3]            ; EXMEM:EX_MEM|reg:PC|Op[3]           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.309      ;
+; 1.131 ; IDRR:ID_RR|reg:inc|Op[2]           ; EXMEM:EX_MEM|reg:inc|Op[2]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.310      ;
+; 1.131 ; IDRR:ID_RR|reg:inc|Op[12]          ; EXMEM:EX_MEM|reg:inc|Op[12]         ; clk          ; clk         ; 0.000        ; 0.000      ; 1.310      ;
+; 1.134 ; EXMEM:EX_MEM|reg3:dec|Op[2]        ; MEMWB:MEM_WB|reg3:dec|Op[2]         ; clk          ; clk         ; 0.000        ; 0.000      ; 1.313      ;
+; 1.136 ; EXMEM:EX_MEM|reg3:eight_six|Op[1]  ; MEMWB:MEM_WB|reg3:eight_six|Op[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.315      ;
+; 1.138 ; reg:PC|Op[9]                       ; IDRR:ID_RR|reg:PC|Op[9]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.317      ;
+; 1.139 ; EXMEM:EX_MEM|reg:PC|Op[10]         ; MEMWB:MEM_WB|reg:PC|Op[10]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.318      ;
+; 1.141 ; RREX:RR_EX|reg:RF_D2|Op[9]         ; EXMEM:EX_MEM|reg:RF_D2|Op[9]        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.320      ;
+; 1.152 ; RREX:RR_EX|reg:RF_D2|Op[14]        ; EXMEM:EX_MEM|reg:RF_D2|Op[14]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.331      ;
+; 1.184 ; incr:inc|Op[15]                    ; IDRR:ID_RR|reg:inc|Op[15]           ; wr_inc       ; clk         ; -0.500       ; -0.070     ; 0.793      ;
+; 1.201 ; incr:inc|Op[9]                     ; IDRR:ID_RR|reg:inc|Op[9]            ; wr_inc       ; clk         ; -0.500       ; -0.070     ; 0.810      ;
+; 1.222 ; incr:inc|Op[5]                     ; IDRR:ID_RR|reg:inc|Op[5]            ; wr_inc       ; clk         ; -0.500       ; -0.093     ; 0.808      ;
+; 1.230 ; incr:inc|Op[7]                     ; IDRR:ID_RR|reg:inc|Op[7]            ; wr_inc       ; clk         ; -0.500       ; -0.093     ; 0.816      ;
+; 1.264 ; incr:inc|Op[6]                     ; IDRR:ID_RR|reg:inc|Op[6]            ; wr_inc       ; clk         ; -0.500       ; -0.134     ; 0.809      ;
+; 1.273 ; incr:inc|Op[1]                     ; IDRR:ID_RR|reg:inc|Op[1]            ; wr_inc       ; clk         ; -0.500       ; -0.135     ; 0.817      ;
+; 1.277 ; incr:inc|Op[8]                     ; IDRR:ID_RR|reg:inc|Op[8]            ; wr_inc       ; clk         ; -0.500       ; -0.163     ; 0.793      ;
+; 1.289 ; incr:inc|Op[4]                     ; IDRR:ID_RR|reg:inc|Op[4]            ; wr_inc       ; clk         ; -0.500       ; -0.135     ; 0.833      ;
+; 1.334 ; IDRR:ID_RR|reg:PC|Op[2]            ; EXMEM:EX_MEM|reg:PC|Op[2]           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.513      ;
+; 1.335 ; IDRR:ID_RR|reg:PC|Op[14]           ; EXMEM:EX_MEM|reg:PC|Op[14]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.514      ;
+; 1.335 ; IDRR:ID_RR|reg:PC|Op[13]           ; EXMEM:EX_MEM|reg:PC|Op[13]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.514      ;
+; 1.335 ; EXMEM:EX_MEM|reg:RF_D2|Op[6]       ; ram:DMem|mem~605                    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.514      ;
+; 1.336 ; IDRR:ID_RR|reg:PC|Op[0]            ; EXMEM:EX_MEM|reg:PC|Op[0]           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.515      ;
+; 1.338 ; MEMWB:MEM_WB|reg:RF_D2|Op[2]       ; reg:PC|Op[2]                        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.517      ;
+; 1.338 ; MEMWB:MEM_WB|reg:RF_D2|Op[0]       ; reg:PC|Op[0]                        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.517      ;
+; 1.338 ; MEMWB:MEM_WB|reg:RF_D2|Op[12]      ; reg:PC|Op[12]                       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.517      ;
+; 1.338 ; register_bank:RF|r2[11]            ; RREX:RR_EX|reg:RF_D2|Op[11]         ; clk          ; clk         ; 0.000        ; 0.000      ; 1.517      ;
+; 1.338 ; MEMWB:MEM_WB|reg:PC|Op[13]         ; register_bank:RF|r1[13]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.517      ;
+; 1.341 ; reg:PC|Op[7]                       ; IDRR:ID_RR|reg:PC|Op[7]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.520      ;
+; 1.344 ; reg:IR|Op[1]                       ; IDRR:ID_RR|reg6:five_zero|Op[1]     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.523      ;
+; 1.353 ; IDRR:ID_RR|reg9:eight_zero|Op[6]   ; EXMEM:EX_MEM|reg3:eight_six|Op[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.532      ;
+; 1.358 ; IDRR:ID_RR|reg3:eleven_nine|Op[0]  ; EXMEM:EX_MEM|reg3:eleven_nine|Op[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.537      ;
+; 1.376 ; RREX:RR_EX|reg:RF_D2|Op[15]        ; EXMEM:EX_MEM|reg:RF_D2|Op[15]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.555      ;
+; 1.431 ; IDRR:ID_RR|reg:inc|Op[9]           ; EXMEM:EX_MEM|reg:inc|Op[9]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.610      ;
+; 1.440 ; IDRR:ID_RR|reg:PC|Op[8]            ; EXMEM:EX_MEM|reg:PC|Op[8]           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.619      ;
+; 1.447 ; RREX:RR_EX|reg:RF_D1|Op[4]         ; EXMEM:EX_MEM|reg:RF_D1|Op[4]        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.626      ;
+; 1.450 ; reg:IR|Op[9]                       ; IDRR:ID_RR|reg3:eleven_nine|Op[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.629      ;
+; 1.466 ; RREX:RR_EX|reg:RF_D2|Op[3]         ; EXMEM:EX_MEM|reg:RF_D2|Op[3]        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.645      ;
+; 1.466 ; EXMEM:EX_MEM|reg:PC|Op[11]         ; MEMWB:MEM_WB|reg:PC|Op[11]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.645      ;
+; 1.474 ; IDRR:ID_RR|reg:inc|Op[6]           ; EXMEM:EX_MEM|reg:inc|Op[6]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.653      ;
+; 1.521 ; incr:inc|Op[2]                     ; IDRR:ID_RR|reg:inc|Op[2]            ; wr_inc       ; clk         ; -0.500       ; -0.057     ; 1.143      ;
+; 1.524 ; MEMWB:MEM_WB|reg:RF_D2|Op[10]      ; reg:PC|Op[10]                       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.703      ;
+; 1.530 ; incr:inc|Op[14]                    ; IDRR:ID_RR|reg:inc|Op[14]           ; wr_inc       ; clk         ; -0.500       ; -0.072     ; 1.137      ;
+; 1.544 ; EXMEM:EX_MEM|reg:RF_D1|Op[10]      ; ram:DMem|mem~609                    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.723      ;
+; 1.553 ; incr:inc|Op[5]                     ; reg:PC|Op[5]                        ; wr_inc       ; clk         ; -0.500       ; -0.093     ; 1.139      ;
+; 1.556 ; reg1:zero|Op                       ; reg1:zero|Op                        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.735      ;
+; 1.558 ; reg1:carry|Op                      ; reg1:carry|Op                       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.737      ;
+; 1.561 ; incr:inc|Op[11]                    ; IDRR:ID_RR|reg:inc|Op[11]           ; wr_inc       ; clk         ; -0.500       ; -0.115     ; 1.125      ;
+; 1.564 ; EXMEM:EX_MEM|reg:RF_D2|Op[4]       ; ram:DMem|mem~603                    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.743      ;
+; 1.586 ; incr:inc|Op[13]                    ; IDRR:ID_RR|reg:inc|Op[13]           ; wr_inc       ; clk         ; -0.500       ; -0.112     ; 1.153      ;
+; 1.634 ; incr:inc|Op[12]                    ; IDRR:ID_RR|reg:inc|Op[12]           ; wr_inc       ; clk         ; -0.500       ; -0.169     ; 1.144      ;
+; 1.645 ; incr:inc|Op[3]                     ; IDRR:ID_RR|reg:inc|Op[3]            ; wr_inc       ; clk         ; -0.500       ; -0.170     ; 1.154      ;
+; 1.665 ; incr:inc|Op[10]                    ; IDRR:ID_RR|reg:inc|Op[10]           ; wr_inc       ; clk         ; -0.500       ; -0.163     ; 1.181      ;
+; 1.670 ; MEMWB:MEM_WB|reg:PC|Op[14]         ; register_bank:RF|r1[14]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.849      ;
+; 1.676 ; MEMWB:MEM_WB|reg:RF_D2|Op[8]       ; reg:PC|Op[8]                        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.855      ;
+; 1.679 ; MEMWB:MEM_WB|reg:RF_D2|Op[14]      ; reg:PC|Op[14]                       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.858      ;
+; 1.688 ; RREX:RR_EX|reg:RF_D2|Op[4]         ; EXMEM:EX_MEM|reg:RF_D2|Op[4]        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.867      ;
+; 1.694 ; register_bank:RF|r2[12]            ; RREX:RR_EX|reg:RF_D2|Op[12]         ; clk          ; clk         ; 0.000        ; 0.000      ; 1.873      ;
+; 1.695 ; MEMWB:MEM_WB|reg:PC|Op[11]         ; register_bank:RF|r1[11]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.874      ;
+; 1.713 ; register_bank:RF|r1[2]             ; RREX:RR_EX|reg:RF_D1|Op[2]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.892      ;
+; 1.714 ; reg:PC|Op[11]                      ; IDRR:ID_RR|reg:PC|Op[11]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.893      ;
+; 1.722 ; MEMWB:MEM_WB|reg:RF_D2|Op[3]       ; reg:PC|Op[3]                        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.901      ;
+; 1.726 ; EXMEM:EX_MEM|reg:RF_D2|Op[10]      ; ram:DMem|mem~609                    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.905      ;
+; 1.730 ; EXMEM:EX_MEM|reg:RF_D1|Op[4]       ; ram:DMem|mem~603                    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.909      ;
+; 1.802 ; EXMEM:EX_MEM|reg:RF_D1|Op[6]       ; ram:DMem|mem~605                    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.981      ;
+; 1.877 ; incr:inc|Op[9]                     ; reg:PC|Op[9]                        ; wr_inc       ; clk         ; -0.500       ; -0.070     ; 1.486      ;
+; 1.879 ; EXMEM:EX_MEM|reg:RF_D2|Op[0]       ; ram:DMem|mem~599                    ; clk          ; clk         ; 0.000        ; 0.000      ; 2.058      ;
+; 1.899 ; MEMWB:MEM_WB|reg:PC|Op[15]         ; register_bank:RF|r1[15]             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.078      ;
+; 1.900 ; EXMEM:EX_MEM|reg:RF_D1|Op[13]      ; ram:DMem|mem~324                    ; clk          ; clk         ; 0.000        ; 0.000      ; 2.079      ;
+; 1.908 ; EXMEM:EX_MEM|reg:RF_D2|Op[12]      ; ram:DMem|mem~611                    ; clk          ; clk         ; 0.000        ; 0.000      ; 2.087      ;
+; 1.910 ; incr:inc|Op[7]                     ; reg:PC|Op[7]                        ; wr_inc       ; clk         ; -0.500       ; -0.093     ; 1.496      ;
+; 1.997 ; IDRR:ID_RR|reg:inc|Op[15]          ; EXMEM:EX_MEM|reg:inc|Op[15]         ; clk          ; clk         ; 0.000        ; 0.000      ; 2.176      ;
+; 2.003 ; EXMEM:EX_MEM|reg9:eight_zero|Op[4] ; MEMWB:MEM_WB|reg9:eight_zero|Op[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.182      ;
+; 2.035 ; RREX:RR_EX|reg3:dec|Op[0]          ; EXMEM:EX_MEM|reg3:dec|Op[0]         ; clk          ; clk         ; 0.000        ; 0.000      ; 2.214      ;
+; 2.045 ; RREX:RR_EX|reg:RF_D1|Op[15]        ; EXMEM:EX_MEM|reg:RF_D1|Op[15]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.224      ;
+; 2.049 ; IDRR:ID_RR|reg:inc|Op[5]           ; EXMEM:EX_MEM|reg:inc|Op[5]          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.228      ;
+; 2.055 ; EXMEM:EX_MEM|reg:RF_D2|Op[6]       ; MEMWB:MEM_WB|reg:RF_D2|Op[6]        ; clk          ; clk         ; 0.000        ; 0.000      ; 2.234      ;
+; 2.056 ; EXMEM:EX_MEM|reg:PC|Op[0]          ; MEMWB:MEM_WB|reg:PC|Op[0]           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.235      ;
+; 2.056 ; EXMEM:EX_MEM|reg:RF_D1|Op[7]       ; ram:DMem|mem~318                    ; clk          ; clk         ; 0.000        ; 0.000      ; 2.235      ;
+; 2.064 ; reg:IR|Op[4]                       ; IDRR:ID_RR|reg9:eight_zero|Op[6]    ; clk          ; clk         ; 0.000        ; 0.000      ; 2.243      ;
+; 2.064 ; reg:PC|Op[12]                      ; IDRR:ID_RR|reg:PC|Op[12]            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.243      ;
+; 2.074 ; EXMEM:EX_MEM|reg:PC|Op[15]         ; MEMWB:MEM_WB|reg:PC|Op[15]          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.253      ;
+; 2.076 ; IDRR:ID_RR|reg:PC|Op[9]            ; EXMEM:EX_MEM|reg:PC|Op[9]           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.255      ;
+; 2.081 ; MEMWB:MEM_WB|reg:ALU_C|Op[14]      ; register_bank:RF|r1[14]             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.260      ;
+; 2.089 ; IDRR:ID_RR|reg:PC|Op[11]           ; EXMEM:EX_MEM|reg:PC|Op[11]          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.268      ;
+; 2.102 ; RREX:RR_EX|reg:RF_D1|Op[10]        ; EXMEM:EX_MEM|reg:RF_D1|Op[10]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.281      ;
++-------+------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Hold: 'wr_inc'                                                                                                ;
++-------+---------------+-----------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node     ; To Node         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------+-----------------+--------------+-------------+--------------+------------+------------+
+; 2.926 ; reg:PC|Op[0]  ; incr:inc|Op[0]  ; clk          ; wr_inc      ; -0.500       ; 0.111      ; 2.537      ;
+; 3.461 ; reg:PC|Op[15] ; incr:inc|Op[15] ; clk          ; wr_inc      ; -0.500       ; 0.070      ; 3.031      ;
+; 3.866 ; reg:PC|Op[7]  ; incr:inc|Op[7]  ; clk          ; wr_inc      ; -0.500       ; 0.093      ; 3.459      ;
+; 4.052 ; reg:PC|Op[5]  ; incr:inc|Op[5]  ; clk          ; wr_inc      ; -0.500       ; 0.093      ; 3.645      ;
+; 4.122 ; reg:PC|Op[4]  ; incr:inc|Op[4]  ; clk          ; wr_inc      ; -0.500       ; 0.135      ; 3.757      ;
+; 4.247 ; reg:PC|Op[4]  ; incr:inc|Op[7]  ; clk          ; wr_inc      ; -0.500       ; 0.093      ; 3.840      ;
+; 4.386 ; reg:PC|Op[4]  ; incr:inc|Op[5]  ; clk          ; wr_inc      ; -0.500       ; 0.093      ; 3.979      ;
+; 4.398 ; reg:PC|Op[8]  ; incr:inc|Op[8]  ; clk          ; wr_inc      ; -0.500       ; 0.163      ; 4.061      ;
+; 4.407 ; reg:PC|Op[0]  ; incr:inc|Op[7]  ; clk          ; wr_inc      ; -0.500       ; 0.093      ; 4.000      ;
+; 4.478 ; reg:PC|Op[5]  ; incr:inc|Op[7]  ; clk          ; wr_inc      ; -0.500       ; 0.093      ; 4.071      ;
+; 4.582 ; reg:PC|Op[0]  ; incr:inc|Op[15] ; clk          ; wr_inc      ; -0.500       ; 0.070      ; 4.152      ;
+; 4.591 ; reg:PC|Op[4]  ; incr:inc|Op[15] ; clk          ; wr_inc      ; -0.500       ; 0.070      ; 4.161      ;
+; 4.629 ; reg:PC|Op[0]  ; incr:inc|Op[1]  ; clk          ; wr_inc      ; -0.500       ; 0.135      ; 4.264      ;
+; 4.707 ; reg:PC|Op[12] ; incr:inc|Op[12] ; clk          ; wr_inc      ; -0.500       ; 0.169      ; 4.376      ;
+; 4.714 ; reg:PC|Op[3]  ; incr:inc|Op[3]  ; clk          ; wr_inc      ; -0.500       ; 0.170      ; 4.384      ;
+; 4.726 ; reg:PC|Op[0]  ; incr:inc|Op[5]  ; clk          ; wr_inc      ; -0.500       ; 0.093      ; 4.319      ;
+; 4.784 ; reg:PC|Op[14] ; incr:inc|Op[15] ; clk          ; wr_inc      ; -0.500       ; 0.070      ; 4.354      ;
+; 4.818 ; reg:PC|Op[7]  ; incr:inc|Op[15] ; clk          ; wr_inc      ; -0.500       ; 0.070      ; 4.388      ;
+; 4.822 ; reg:PC|Op[5]  ; incr:inc|Op[15] ; clk          ; wr_inc      ; -0.500       ; 0.070      ; 4.392      ;
+; 4.836 ; reg:PC|Op[0]  ; incr:inc|Op[3]  ; clk          ; wr_inc      ; -0.500       ; 0.170      ; 4.506      ;
+; 4.863 ; reg:PC|Op[6]  ; incr:inc|Op[7]  ; clk          ; wr_inc      ; -0.500       ; 0.093      ; 4.456      ;
+; 4.900 ; reg:PC|Op[10] ; incr:inc|Op[10] ; clk          ; wr_inc      ; -0.500       ; 0.163      ; 4.563      ;
+; 4.904 ; reg:PC|Op[8]  ; incr:inc|Op[15] ; clk          ; wr_inc      ; -0.500       ; 0.070      ; 4.474      ;
+; 4.955 ; reg:PC|Op[13] ; incr:inc|Op[15] ; clk          ; wr_inc      ; -0.500       ; 0.070      ; 4.525      ;
+; 4.961 ; reg:PC|Op[12] ; incr:inc|Op[15] ; clk          ; wr_inc      ; -0.500       ; 0.070      ; 4.531      ;
+; 4.976 ; reg:PC|Op[1]  ; incr:inc|Op[7]  ; clk          ; wr_inc      ; -0.500       ; 0.093      ; 4.569      ;
+; 4.983 ; reg:PC|Op[11] ; incr:inc|Op[11] ; clk          ; wr_inc      ; -0.500       ; 0.115      ; 4.598      ;
+; 5.003 ; reg:PC|Op[13] ; incr:inc|Op[13] ; clk          ; wr_inc      ; -0.500       ; 0.112      ; 4.615      ;
+; 5.113 ; reg:PC|Op[11] ; incr:inc|Op[15] ; clk          ; wr_inc      ; -0.500       ; 0.070      ; 4.683      ;
+; 5.117 ; reg:PC|Op[0]  ; incr:inc|Op[4]  ; clk          ; wr_inc      ; -0.500       ; 0.135      ; 4.752      ;
+; 5.151 ; reg:PC|Op[1]  ; incr:inc|Op[15] ; clk          ; wr_inc      ; -0.500       ; 0.070      ; 4.721      ;
+; 5.151 ; reg:PC|Op[1]  ; incr:inc|Op[1]  ; clk          ; wr_inc      ; -0.500       ; 0.135      ; 4.786      ;
+; 5.155 ; reg:PC|Op[10] ; incr:inc|Op[15] ; clk          ; wr_inc      ; -0.500       ; 0.070      ; 4.725      ;
+; 5.169 ; reg:PC|Op[9]  ; incr:inc|Op[9]  ; clk          ; wr_inc      ; -0.500       ; 0.070      ; 4.739      ;
+; 5.206 ; reg:PC|Op[14] ; incr:inc|Op[14] ; clk          ; wr_inc      ; -0.500       ; 0.072      ; 4.778      ;
+; 5.207 ; reg:PC|Op[6]  ; incr:inc|Op[15] ; clk          ; wr_inc      ; -0.500       ; 0.070      ; 4.777      ;
+; 5.210 ; reg:PC|Op[3]  ; incr:inc|Op[7]  ; clk          ; wr_inc      ; -0.500       ; 0.093      ; 4.803      ;
+; 5.214 ; reg:PC|Op[8]  ; incr:inc|Op[10] ; clk          ; wr_inc      ; -0.500       ; 0.163      ; 4.877      ;
+; 5.272 ; reg:PC|Op[8]  ; incr:inc|Op[12] ; clk          ; wr_inc      ; -0.500       ; 0.169      ; 4.941      ;
+; 5.295 ; reg:PC|Op[1]  ; incr:inc|Op[5]  ; clk          ; wr_inc      ; -0.500       ; 0.093      ; 4.888      ;
+; 5.296 ; reg:PC|Op[2]  ; incr:inc|Op[7]  ; clk          ; wr_inc      ; -0.500       ; 0.093      ; 4.889      ;
+; 5.304 ; reg:PC|Op[0]  ; incr:inc|Op[12] ; clk          ; wr_inc      ; -0.500       ; 0.169      ; 4.973      ;
+; 5.313 ; reg:PC|Op[4]  ; incr:inc|Op[12] ; clk          ; wr_inc      ; -0.500       ; 0.169      ; 4.982      ;
+; 5.327 ; reg:PC|Op[8]  ; incr:inc|Op[9]  ; clk          ; wr_inc      ; -0.500       ; 0.070      ; 4.897      ;
+; 5.335 ; reg:PC|Op[4]  ; incr:inc|Op[6]  ; clk          ; wr_inc      ; -0.500       ; 0.134      ; 4.969      ;
+; 5.339 ; reg:PC|Op[8]  ; incr:inc|Op[11] ; clk          ; wr_inc      ; -0.500       ; 0.115      ; 4.954      ;
+; 5.349 ; reg:PC|Op[3]  ; incr:inc|Op[5]  ; clk          ; wr_inc      ; -0.500       ; 0.093      ; 4.942      ;
+; 5.358 ; reg:PC|Op[9]  ; incr:inc|Op[15] ; clk          ; wr_inc      ; -0.500       ; 0.070      ; 4.928      ;
+; 5.386 ; reg:PC|Op[6]  ; incr:inc|Op[6]  ; clk          ; wr_inc      ; -0.500       ; 0.134      ; 5.020      ;
+; 5.402 ; reg:PC|Op[0]  ; incr:inc|Op[8]  ; clk          ; wr_inc      ; -0.500       ; 0.163      ; 5.065      ;
+; 5.405 ; reg:PC|Op[1]  ; incr:inc|Op[3]  ; clk          ; wr_inc      ; -0.500       ; 0.170      ; 5.075      ;
+; 5.411 ; reg:PC|Op[4]  ; incr:inc|Op[8]  ; clk          ; wr_inc      ; -0.500       ; 0.163      ; 5.074      ;
+; 5.422 ; reg:PC|Op[0]  ; incr:inc|Op[13] ; clk          ; wr_inc      ; -0.500       ; 0.112      ; 5.034      ;
+; 5.426 ; reg:PC|Op[0]  ; incr:inc|Op[10] ; clk          ; wr_inc      ; -0.500       ; 0.163      ; 5.089      ;
+; 5.431 ; reg:PC|Op[4]  ; incr:inc|Op[13] ; clk          ; wr_inc      ; -0.500       ; 0.112      ; 5.043      ;
+; 5.435 ; reg:PC|Op[4]  ; incr:inc|Op[10] ; clk          ; wr_inc      ; -0.500       ; 0.163      ; 5.098      ;
+; 5.461 ; reg:PC|Op[0]  ; incr:inc|Op[11] ; clk          ; wr_inc      ; -0.500       ; 0.115      ; 5.076      ;
+; 5.470 ; reg:PC|Op[4]  ; incr:inc|Op[11] ; clk          ; wr_inc      ; -0.500       ; 0.115      ; 5.085      ;
+; 5.471 ; reg:PC|Op[2]  ; incr:inc|Op[15] ; clk          ; wr_inc      ; -0.500       ; 0.070      ; 5.041      ;
+; 5.481 ; reg:PC|Op[11] ; incr:inc|Op[12] ; clk          ; wr_inc      ; -0.500       ; 0.169      ; 5.150      ;
+; 5.523 ; reg:PC|Op[10] ; incr:inc|Op[12] ; clk          ; wr_inc      ; -0.500       ; 0.169      ; 5.192      ;
+; 5.540 ; reg:PC|Op[7]  ; incr:inc|Op[12] ; clk          ; wr_inc      ; -0.500       ; 0.169      ; 5.209      ;
+; 5.544 ; reg:PC|Op[5]  ; incr:inc|Op[12] ; clk          ; wr_inc      ; -0.500       ; 0.169      ; 5.213      ;
+; 5.554 ; reg:PC|Op[3]  ; incr:inc|Op[15] ; clk          ; wr_inc      ; -0.500       ; 0.070      ; 5.124      ;
+; 5.566 ; reg:PC|Op[5]  ; incr:inc|Op[6]  ; clk          ; wr_inc      ; -0.500       ; 0.134      ; 5.200      ;
+; 5.585 ; reg:PC|Op[0]  ; incr:inc|Op[6]  ; clk          ; wr_inc      ; -0.500       ; 0.134      ; 5.219      ;
+; 5.590 ; reg:PC|Op[10] ; incr:inc|Op[11] ; clk          ; wr_inc      ; -0.500       ; 0.115      ; 5.205      ;
+; 5.615 ; reg:PC|Op[2]  ; incr:inc|Op[5]  ; clk          ; wr_inc      ; -0.500       ; 0.093      ; 5.208      ;
+; 5.629 ; reg:PC|Op[0]  ; incr:inc|Op[9]  ; clk          ; wr_inc      ; -0.500       ; 0.070      ; 5.199      ;
+; 5.638 ; reg:PC|Op[7]  ; incr:inc|Op[8]  ; clk          ; wr_inc      ; -0.500       ; 0.163      ; 5.301      ;
+; 5.638 ; reg:PC|Op[4]  ; incr:inc|Op[9]  ; clk          ; wr_inc      ; -0.500       ; 0.070      ; 5.208      ;
+; 5.642 ; reg:PC|Op[5]  ; incr:inc|Op[8]  ; clk          ; wr_inc      ; -0.500       ; 0.163      ; 5.305      ;
+; 5.650 ; reg:PC|Op[3]  ; incr:inc|Op[4]  ; clk          ; wr_inc      ; -0.500       ; 0.135      ; 5.285      ;
+; 5.658 ; reg:PC|Op[7]  ; incr:inc|Op[13] ; clk          ; wr_inc      ; -0.500       ; 0.112      ; 5.270      ;
+; 5.659 ; reg:PC|Op[0]  ; incr:inc|Op[14] ; clk          ; wr_inc      ; -0.500       ; 0.072      ; 5.231      ;
+; 5.662 ; reg:PC|Op[7]  ; incr:inc|Op[10] ; clk          ; wr_inc      ; -0.500       ; 0.163      ; 5.325      ;
+; 5.662 ; reg:PC|Op[5]  ; incr:inc|Op[13] ; clk          ; wr_inc      ; -0.500       ; 0.112      ; 5.274      ;
+; 5.666 ; reg:PC|Op[5]  ; incr:inc|Op[10] ; clk          ; wr_inc      ; -0.500       ; 0.163      ; 5.329      ;
+; 5.668 ; reg:PC|Op[9]  ; incr:inc|Op[10] ; clk          ; wr_inc      ; -0.500       ; 0.163      ; 5.331      ;
+; 5.668 ; reg:PC|Op[4]  ; incr:inc|Op[14] ; clk          ; wr_inc      ; -0.500       ; 0.072      ; 5.240      ;
+; 5.686 ; reg:PC|Op[1]  ; incr:inc|Op[4]  ; clk          ; wr_inc      ; -0.500       ; 0.135      ; 5.321      ;
+; 5.697 ; reg:PC|Op[7]  ; incr:inc|Op[11] ; clk          ; wr_inc      ; -0.500       ; 0.115      ; 5.312      ;
+; 5.701 ; reg:PC|Op[5]  ; incr:inc|Op[11] ; clk          ; wr_inc      ; -0.500       ; 0.115      ; 5.316      ;
+; 5.702 ; reg:PC|Op[0]  ; incr:inc|Op[2]  ; clk          ; wr_inc      ; -0.500       ; 0.057      ; 5.259      ;
+; 5.725 ; reg:PC|Op[2]  ; incr:inc|Op[3]  ; clk          ; wr_inc      ; -0.500       ; 0.170      ; 5.395      ;
+; 5.726 ; reg:PC|Op[9]  ; incr:inc|Op[12] ; clk          ; wr_inc      ; -0.500       ; 0.169      ; 5.395      ;
+; 5.744 ; reg:PC|Op[8]  ; incr:inc|Op[13] ; clk          ; wr_inc      ; -0.500       ; 0.112      ; 5.356      ;
+; 5.793 ; reg:PC|Op[9]  ; incr:inc|Op[11] ; clk          ; wr_inc      ; -0.500       ; 0.115      ; 5.408      ;
+; 5.801 ; reg:PC|Op[12] ; incr:inc|Op[13] ; clk          ; wr_inc      ; -0.500       ; 0.112      ; 5.413      ;
+; 5.865 ; reg:PC|Op[7]  ; incr:inc|Op[9]  ; clk          ; wr_inc      ; -0.500       ; 0.070      ; 5.435      ;
+; 5.869 ; reg:PC|Op[5]  ; incr:inc|Op[9]  ; clk          ; wr_inc      ; -0.500       ; 0.070      ; 5.439      ;
+; 5.873 ; reg:PC|Op[1]  ; incr:inc|Op[12] ; clk          ; wr_inc      ; -0.500       ; 0.169      ; 5.542      ;
+; 5.895 ; reg:PC|Op[7]  ; incr:inc|Op[14] ; clk          ; wr_inc      ; -0.500       ; 0.072      ; 5.467      ;
+; 5.899 ; reg:PC|Op[5]  ; incr:inc|Op[14] ; clk          ; wr_inc      ; -0.500       ; 0.072      ; 5.471      ;
+; 5.929 ; reg:PC|Op[6]  ; incr:inc|Op[12] ; clk          ; wr_inc      ; -0.500       ; 0.169      ; 5.598      ;
+; 5.942 ; reg:PC|Op[13] ; incr:inc|Op[14] ; clk          ; wr_inc      ; -0.500       ; 0.072      ; 5.514      ;
+; 5.953 ; reg:PC|Op[11] ; incr:inc|Op[13] ; clk          ; wr_inc      ; -0.500       ; 0.112      ; 5.565      ;
+; 5.969 ; reg:PC|Op[2]  ; incr:inc|Op[2]  ; clk          ; wr_inc      ; -0.500       ; 0.057      ; 5.526      ;
+; 5.971 ; reg:PC|Op[1]  ; incr:inc|Op[8]  ; clk          ; wr_inc      ; -0.500       ; 0.163      ; 5.634      ;
+; 5.981 ; reg:PC|Op[8]  ; incr:inc|Op[14] ; clk          ; wr_inc      ; -0.500       ; 0.072      ; 5.553      ;
++-------+---------------+-----------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------+
+; Setup Transfers                                                             ;
++----------------+----------------+----------+----------+----------+----------+
+; From Clock     ; To Clock       ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------+----------------+----------+----------+----------+----------+
+; clk            ; clk            ; 19927    ; 0        ; 0        ; 0        ;
+; select_ALU2[0] ; clk            ; 0        ; 16       ; 0        ; 0        ;
+; select_ALU[0]  ; clk            ; 0        ; 18       ; 0        ; 0        ;
+; wr_inc         ; clk            ; 0        ; 32       ; 0        ; 0        ;
+; clk            ; select_ALU2[0] ; 0        ; 0        ; 405      ; 0        ;
+; select_ALU2[0] ; select_ALU2[0] ; 0        ; 0        ; 16       ; 16       ;
+; clk            ; select_ALU[0]  ; 0        ; 0        ; 15470    ; 0        ;
+; select_ALU[0]  ; select_ALU[0]  ; 0        ; 0        ; 20       ; 20       ;
+; clk            ; wr_inc         ; 0        ; 0        ; 231      ; 0        ;
++----------------+----------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------+
+; Hold Transfers                                                              ;
++----------------+----------------+----------+----------+----------+----------+
+; From Clock     ; To Clock       ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------+----------------+----------+----------+----------+----------+
+; clk            ; clk            ; 19927    ; 0        ; 0        ; 0        ;
+; select_ALU2[0] ; clk            ; 0        ; 16       ; 0        ; 0        ;
+; select_ALU[0]  ; clk            ; 0        ; 18       ; 0        ; 0        ;
+; wr_inc         ; clk            ; 0        ; 32       ; 0        ; 0        ;
+; clk            ; select_ALU2[0] ; 0        ; 0        ; 405      ; 0        ;
+; select_ALU2[0] ; select_ALU2[0] ; 0        ; 0        ; 16       ; 16       ;
+; clk            ; select_ALU[0]  ; 0        ; 0        ; 15470    ; 0        ;
+; select_ALU[0]  ; select_ALU[0]  ; 0        ; 0        ; 20       ; 20       ;
+; clk            ; wr_inc         ; 0        ; 0        ; 231      ; 0        ;
++----------------+----------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 32    ; 32   ;
+; Unconstrained Input Port Paths  ; 4384  ; 4384 ;
+; Unconstrained Output Ports      ; 15    ; 15   ;
+; Unconstrained Output Port Paths ; 15    ; 15   ;
++---------------------------------+-------+------+
+
+
++------------------------------------------------------+
+; Clock Status Summary                                 ;
++----------------+----------------+------+-------------+
+; Target         ; Clock          ; Type ; Status      ;
++----------------+----------------+------+-------------+
+; clk            ; clk            ; Base ; Constrained ;
+; select_ALU2[0] ; select_ALU2[0] ; Base ; Constrained ;
+; select_ALU[0]  ; select_ALU[0]  ; Base ; Constrained ;
+; wr_inc         ; wr_inc         ; Base ; Constrained ;
++----------------+----------------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                                     ;
++------------------------+--------------------------------------------------------------------------------------+
+; Input Port             ; Comment                                                                              ;
++------------------------+--------------------------------------------------------------------------------------+
+; dec[0]                 ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; dec[1]                 ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; dec[2]                 ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_ALU2[1]         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_ALU[1]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_ALU2_A      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_ALU2_B[0]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_ALU2_B[1]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_ALU_A       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_ALU_B[0]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_ALU_B[1]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_DMem_A      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_DMem_Din    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_RF_A1       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_RF_A2       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_RF_A3[0]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_RF_A3[1]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_RF_D3[0]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_RF_D3[1]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_RF_D3[2]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_jump_loc[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_jump_loc[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; wr_DMem                ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; wr_EXMEM               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; wr_IDRR                ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; wr_IR                  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; wr_MEMWB               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; wr_PC                  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; wr_RF                  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; wr_RREX                ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; wr_cy                  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; wr_z                   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; IR_out[0]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[1]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[2]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[3]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[4]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[5]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[6]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[7]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[8]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[9]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[12]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[13]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[14]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cy_Op       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; z_Op        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                                     ;
++------------------------+--------------------------------------------------------------------------------------+
+; Input Port             ; Comment                                                                              ;
++------------------------+--------------------------------------------------------------------------------------+
+; dec[0]                 ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; dec[1]                 ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; dec[2]                 ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_ALU2[1]         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_ALU[1]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_ALU2_A      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_ALU2_B[0]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_ALU2_B[1]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_ALU_A       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_ALU_B[0]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_ALU_B[1]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_DMem_A      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_DMem_Din    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_RF_A1       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_RF_A2       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_RF_A3[0]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_RF_A3[1]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_RF_D3[0]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_RF_D3[1]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_RF_D3[2]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_jump_loc[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; select_Mux_jump_loc[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; wr_DMem                ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; wr_EXMEM               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; wr_IDRR                ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; wr_IR                  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; wr_MEMWB               ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; wr_PC                  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; wr_RF                  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; wr_RREX                ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; wr_cy                  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; wr_z                   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; IR_out[0]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[1]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[2]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[3]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[4]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[5]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[6]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[7]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[8]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[9]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[12]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[13]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IR_out[14]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cy_Op       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; z_Op        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Mon May 02 05:44:11 2022
+Info: Command: quartus_sta datapath -c DUT
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Warning (335093): The Timing Analyzer is analyzing 50 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'DUT.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+    Info (332105): create_clock -period 1.000 -name select_ALU[0] select_ALU[0]
+    Info (332105): create_clock -period 1.000 -name wr_inc wr_inc
+    Info (332105): create_clock -period 1.000 -name select_ALU2[0] select_ALU2[0]
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -18.739
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):   -18.739            -216.607 select_ALU[0] 
+    Info (332119):   -10.616          -10656.396 clk 
+    Info (332119):    -9.622            -132.374 select_ALU2[0] 
+    Info (332119):    -7.498            -103.687 wr_inc 
+Info (332146): Worst-case hold slack is 0.304
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.304               0.000 select_ALU[0] 
+    Info (332119):     0.506               0.000 select_ALU2[0] 
+    Info (332119):     1.118               0.000 clk 
+    Info (332119):     2.926               0.000 wr_inc 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -2.289
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.289              -2.289 clk 
+    Info (332119):    -2.289              -2.289 select_ALU2[0] 
+    Info (332119):    -2.289              -2.289 select_ALU[0] 
+    Info (332119):    -2.289              -2.289 wr_inc 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4697 megabytes
+    Info: Processing ended: Mon May 02 05:44:14 2022
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+
