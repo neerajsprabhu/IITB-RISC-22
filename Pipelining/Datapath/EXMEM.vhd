@@ -9,10 +9,12 @@ entity EXMEM is
 		EXMEM_11_9, EXMEM_8_6, EXMEM_5_3, EXMEM_dec : in std_logic_vector(2 downto 0);
 		EXMEM_8_0 : in std_logic_vector(8 downto 0);
 		EXMEM_5_0 : in std_logic_vector(5 downto 0);
+		EXMEM_cy, EXMEM_z : in std_logic;
 		EXMEM_inc_Op, EXMEM_PC_Op, EXMEM_RF_D1_Op, EXMEM_RF_D2_Op, EXMEM_ALU_C_Op, EXMEM_SE6_Op, EXMEM_SE9_Op : out std_logic_vector(15 downto 0);
 		EXMEM_11_9_Op, EXMEM_8_6_Op, EXMEM_5_3_Op, EXMEM_dec_Op : out std_logic_vector(2 downto 0);
 		EXMEM_8_0_Op : out std_logic_vector(8 downto 0);
-		EXMEM_5_0_Op : out std_logic_vector(5 downto 0)
+		EXMEM_5_0_Op : out std_logic_vector(5 downto 0);
+		EXMEM_cy_Op, EXMEM_z_Op : out std_logic
 		);
 end EXMEM;
 

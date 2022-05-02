@@ -12,7 +12,7 @@ entity datapath is
 		select_Mux_Mem_A, select_Mux_Mem_D, select_Mux_ALU_A, select_Mux_ALU2_A, select_Mux_RF_A1, select_Mux_RF_A2, select_Mux_DMem_A, select_Mux_DMem_Din : in std_logic;
 		clk : in std_logic;
 		
-		cy_Op, z_Op : out std_logic;
+		cy_out, z_out : out std_logic;
 		IR_out : out std_logic_vector(15 downto 0)
 		);
 end datapath;
@@ -80,10 +80,12 @@ architecture arch of datapath is
 			EXMEM_11_9, EXMEM_8_6, EXMEM_5_3, EXMEM_dec : in std_logic_vector(2 downto 0);
 			EXMEM_8_0 : in std_logic_vector(8 downto 0);
 			EXMEM_5_0 : in std_logic_vector(5 downto 0);
+			EXMEM_cy, EXMEM_z : in std_logic;
 			EXMEM_inc_Op, EXMEM_PC_Op, EXMEM_RF_D1_Op, EXMEM_RF_D2_Op, EXMEM_ALU_C_Op, EXMEM_SE6_Op, EXMEM_SE9_Op : out std_logic_vector(15 downto 0);
 			EXMEM_11_9_Op, EXMEM_8_6_Op, EXMEM_5_3_Op, EXMEM_dec_Op : out std_logic_vector(2 downto 0);
 			EXMEM_8_0_Op : out std_logic_vector(8 downto 0);
-			EXMEM_5_0_Op : out std_logic_vector(5 downto 0)
+			EXMEM_5_0_Op : out std_logic_vector(5 downto 0);
+			EXMEM_cy_Op, EXMEM_z_Op : out std_logic
 		);
 	end component;
 	
@@ -96,10 +98,12 @@ architecture arch of datapath is
 			MEMWB_11_9, MEMWB_8_6, MEMWB_5_3, MEMWB_dec : in std_logic_vector(2 downto 0);
 			MEMWB_8_0 : in std_logic_vector(8 downto 0);
 			MEMWB_5_0 : in std_logic_vector(5 downto 0);
+			MEMWB_cy, MEMWB_z : in std_logic;
 			MEMWB_PC_Op, MEMWB_RF_D2_Op, MEMWB_ALU_C_Op, MEMWB_ALU2_C_Op, MEMWB_DMem_D_Op : out std_logic_vector(15 downto 0);
 			MEMWB_11_9_Op, MEMWB_8_6_Op, MEMWB_5_3_Op, MEMWB_dec_Op : out std_logic_vector(2 downto 0);
 			MEMWB_8_0_Op : out std_logic_vector(8 downto 0);
-			MEMWB_5_0_Op : out std_logic_vector(5 downto 0)
+			MEMWB_5_0_Op : out std_logic_vector(5 downto 0);
+			MEMWB_cy_Op, MEMWB_z_Op : out std_logic
 		);
 	end component;
 	
@@ -279,12 +283,14 @@ architecture arch of datapath is
   signal EXMEM_11_9_Op, EXMEM_8_6_Op, EXMEM_5_3_Op, EXMEM_dec_Op : std_logic_vector(2 downto 0);
   signal EXMEM_8_0_Op : std_logic_vector(8 downto 0);
   signal EXMEM_5_0_Op : std_logic_vector(5 downto 0);
+  signal EXMEM_cy_Op, EXMEM_z_Op : std_logic;
   signal MEMWB_PC_Op, MEMWB_RF_D2_Op, MEMWB_ALU_C_Op, MEMWB_ALU2_C_Op, MEMWB_DMem_D_Op : std_logic_vector(15 downto 0);
   signal MEMWB_11_9_Op, MEMWB_8_6_Op, MEMWB_5_3_Op, MEMWB_dec_Op : std_logic_vector(2 downto 0);
   signal MEMWB_8_0_Op : std_logic_vector(8 downto 0);
   signal MEMWB_5_0_Op : std_logic_vector(5 downto 0);
+  signal MEMWB_cy_Op, MEMWB_z_Op : std_logic;
   signal RF_A1, RF_A2, RF_A3 : std_logic_vector(2 downto 0);
-  signal cy, z, cy_2, z_2 : std_logic;
+  signal cy, cy_Op, z, z_Op, cy_2, z_2 : std_logic;
 
 begin
 
@@ -378,7 +384,9 @@ EX_MEM: EXMEM port map (
 							EXMEM_RF_D2=>RREX_RF_D2_Op, EXMEM_RF_D2_Op=>EXMEM_RF_D2_Op,
 							EXMEM_8_0=>RREX_8_0_Op, EXMEM_8_0_Op=>EXMEM_8_0_Op,
 							EXMEM_5_0=>RREX_5_0_Op, EXMEM_5_0_Op=>EXMEM_5_0_Op,
-							EXMEM_5_3=>RREX_5_3_Op, EXMEM_5_3_Op=>EXMEM_5_3_Op
+							EXMEM_5_3=>RREX_5_3_Op, EXMEM_5_3_Op=>EXMEM_5_3_Op,
+							EXMEM_cy=>cy_Op, EXMEM_cy_Op=>EXMEM_cy_Op,
+							EXMEM_z=>z_Op, EXMEM_z_Op=>EXMEM_z_Op
 							);
 
 --Mux_DMem_A
@@ -413,7 +421,9 @@ MEM_WB: MEMWB port map (
 							MEMWB_RF_D2=>EXMEM_RF_D2_Op, MEMWB_RF_D2_Op=>MEMWB_RF_D2_Op,
 							MEMWB_8_0=>EXMEM_8_0_Op, MEMWB_8_0_Op=>MEMWB_8_0_Op,
 							MEMWB_5_0=>EXMEM_5_0_Op, MEMWB_5_0_Op=>MEMWB_5_0_Op,
-							MEMWB_5_3=>EXMEM_5_3_Op, MEMWB_5_3_Op=>MEMWB_5_3_Op
+							MEMWB_5_3=>EXMEM_5_3_Op, MEMWB_5_3_Op=>MEMWB_5_3_Op,
+							MEMWB_cy=>EXMEM_cy_Op, MEMWB_cy_Op=>MEMWB_cy_Op,
+							MEMWB_z=>EXMEM_z_Op, MEMWB_z_Op=>MEMWB_z_Op
 							);
 							
 --Mux_RF-A3
@@ -428,6 +438,8 @@ Mux_RF_D3: mux81 port map (A0=>MEMWB_ALU_C_Op, A1=>S7_Op, A2=>MEMWB_DMem_D_Op, A
 --Mux_jump_loc
 Mux_jump_loc: mux41 port map (A0=>inc_Op, A1=>MEMWB_ALU2_C_Op, A2=>MEMWB_RF_D2_Op, A3=>MEMWB_ALU_C_Op, S=>select_Mux_jump_loc, Op=>jump_loc);
 
+cy_out<=MEMWB_cy_Op;
+z_out<=MEMWB_z_Op;
 IR_out<=IR_Op;
 
 end arch;
