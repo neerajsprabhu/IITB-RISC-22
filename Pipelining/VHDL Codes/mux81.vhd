@@ -12,34 +12,32 @@ entity mux81 is
 		  A5: in std_logic_vector(15 downto 0);
 		  A6: in std_logic_vector(15 downto 0);
 		  A7: in std_logic_vector(15 downto 0);
-        S0: in std_logic;
-		  S1: in std_logic;
-		  S2: in std_logic;
-        O: out std_logic_vector(15 downto 0)
+        S: in std_logic_vector(2 downto 0);
+        Op: out std_logic_vector(15 downto 0)
     ) ;
 end mux81;
 architecture behavior of mux81 is
 
 begin
-alu : process( A0, A1, A2, A3, A4, A5, A6, A7, S0, S1, S2 )
+alu : process( A0, A1, A2, A3, A4, A5, A6, A7, S)
 begin
-if S0 <='0' and S1 <= '0' and S2 <='0' then
-O <= A0;
-elsif S0 <='1' and S1 <= '0' and S2 <='0' then 
-O <=  A1;
-elsif S0 <='0' and S1 <= '1' and S2 <='0' then 
-O <=  A2;
-elsif S0 <='1' and S1 <= '1' and S2 <='0' then 
-O <=  A3;
-elsif S0 <='0' and S1 <= '0' and S2 <='1' then 
-O <=  A4;
-elsif S0 <='1' and S1 <= '0' and S2 <='1' then 
-O <=  A5;
-elsif S0 <='0' and S1 <= '1' and S2 <='1' then 
-O <=  A6;
-elsif S0 <='1' and S1 <= '1' and S2 <='1' then 
-O <=  A7;
+  if S="000" then
+    Op <= A0;
+  elsif S="001" then
+    Op <= A1;
+  elsif S="010" then
+    Op <= A2;
+  elsif S="011" then
+    Op <= A3;
+  elsif S="100" then
+    Op <= A4;
+  elsif S="101" then
+    Op <= A5;
+  elsif S="110" then
+    Op <= A6;
+  else
+    Op <= A7;
 end if;
 
-end process ; -- alu
+end process ;
 end behavior;

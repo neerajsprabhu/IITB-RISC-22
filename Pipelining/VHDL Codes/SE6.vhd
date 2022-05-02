@@ -1,14 +1,14 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity bitextender is
+entity bitextender6 is
     
     port (
         A: in std_logic_vector(5 downto 0);
         Op: out std_logic_vector(15 downto 0)
     ) ;
-end bitextender;
-architecture behavior of bitextender is
+end bitextender6;
+architecture behavior of bitextender6 is
 
 begin
 	alu : process( A )

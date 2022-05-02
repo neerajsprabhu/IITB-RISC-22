@@ -5,14 +5,14 @@ use ieee.numeric_std.all;
 entity incr is
     port (
         A: in std_logic_vector(15 downto 0);
-		  wr: in std_logic;
+	  wr: in std_logic;
         Op: out std_logic_vector(15 downto 0)
     ) ;
 end incr;
 architecture behavior of incr is
 
 begin
-	alu : process( A, wr )
+	alu : process( A )
 	variable temp : std_logic_vector(15 downto 0);
 	begin
 		temp := std_logic_vector(unsigned(A)+1);
