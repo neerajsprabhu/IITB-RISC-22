@@ -19,8 +19,8 @@ end controller;
 architecture arch of controller is
 
 	--defining all the required states
-	type fsm_state is (S0, S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, S16, S17, S18, S19, S20, S21, S22, S23, S24);
-	signal state, nstate : fsm_state:=S0;
+	type fsm_state is (init, S0, S1, S_1, S2, S3, S_3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, S16, S17, S18, S19, S_19, S20, S21, S22, S23, S24, S25, S26);
+	signal state, nstate : fsm_state:=init;
 	shared variable i: integer;
 	
 begin
@@ -32,7 +32,7 @@ begin
 		end if;
 	end process; --statechange
 	
-	stateoutput : process(IR, state)
+	stateoutput : process(IR, state, cy, z)
 	
 	begin
 		
@@ -269,6 +269,15 @@ begin
 				select_Mux_RF_A3<="000";
 				select_Mux_RF_D3<="001";
 				wr_RF<='1';
+			
+			when S25=>
+				wr_inc<='1';
+				wr_T3<='1';
+			
+			when S26=>
+				select_Mux_RF_D3<="101";
+				select_Mux_RF_A3<="000";
+				wr_RF<='1';
 				
 			when others=>
 				null;
@@ -276,7 +285,7 @@ begin
 		end case;
 	end process; --stateoutput
 	
-	fsm : process(state, IR)
+	fsm : process(state, IR, z)
 	
 	variable opcode: std_logic_vector(3 downto 0);
 	variable condition: std_logic_vector(1 downto 0);
@@ -287,12 +296,22 @@ begin
 		condition:=IR(1 downto 0);
 	
 		case state is
-		
+			
+			when init=>
+				nstate<=S0;
+			
 			when S0=>
 				nstate<=S1;
 				
 			when S1=>
-				nstate<=S2;
+				nstate<=S_1;
+				
+			when S_1=>
+				if opcode="1000" then
+					nstate<=S25;
+				else
+					nstate<=S2;
+				end if;
 				
 			when S2=>
 				--LWI: opcode=0100
@@ -310,7 +329,7 @@ begin
 				end if;
 				
 			when S3=>
-				if ((opcode="0001") and (condition="00" or condition="01" or condition="10")) then
+				if (((opcode="0001") or (opcode="0010")) and (condition="00" or condition="01" or condition="10")) then
 					nstate<=S4;
 				elsif ((opcode="0001") and (condition="11")) then
 					nstate<=S5;
@@ -320,16 +339,14 @@ begin
 					if IR(i)='1' then
 						nstate<=S14;
 					else
-				      nstate<=S3;
+				      nstate<=S_3;
 					end if;
-					i:=i+1;
 				elsif opcode="1101" then
 					if IR(i)='1' then
 				      nstate<=S17;
 					else
-				      nstate<=S3;
+				      nstate<=S_3;
 					end if;
-					i:=i+1;
 				elsif opcode="1000" then
 					nstate<=S19;
 				elsif opcode="1010" then
@@ -337,7 +354,14 @@ begin
 				else
 					nstate<=S0;
 				end if;
-				
+			
+			when S_3=>
+				if i=8 then
+					nstate<=S0;
+				else
+					i:=i+1;
+					nstate<=S3;
+				end if;
 			when S4=>
 				nstate<=S0;
 				
@@ -381,23 +405,21 @@ begin
 				nstate<=S16;
 				
 			when S16=>
-				if i=8 then
-					nstate<=S0;
-				else
-					nstate<=S3;
-				end if;
+				nstate<=S_3;
 				
 			when S17=>
 				nstate<=S18;
 				
 			when S18=>
 				nstate<=S16;
-				
-			when S19=>
+			
+		   when S19=>
+				nstate<=S_19;
+			when S_19=>
 				if z='1' then
 					nstate<=S20;
 				else
-					nstate<=S0;
+					nstate<=S26;
 				end if;
 				
 			when S20=>
@@ -419,6 +441,12 @@ begin
 				nstate<=S0;
 				
 			when S24=>
+				nstate<=S0;
+				
+			when S25=>
+				nstate<=S3;
+				
+			when S26=>
 				nstate<=S0;
 				
 			when others=>
