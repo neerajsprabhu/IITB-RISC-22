@@ -1,0 +1,17 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+library work;
+
+entity register_bank is
+    port(
+	   Add1: in std_logic_vector(2 downto 0);
+		Add2: in std_logic_vector(2 downto 0);
+		Add3: in std_logic_vector(2 downto 0);
+		D3: in std_logic_vector(15 downto 0);
+		wr: in std_logic;
+		clk: in std_logic;
+		D1: out std_logic_vector(15 downto 0);
+		D2: out std_logic_vector(15 downto 0)
+		);
+end register_bank;

@@ -20,6 +20,5 @@ begin
 			Op <=temp(15 downto 0); 
 		else
 			null;
-		end if;
 	end process ; -- alu
 end behavior;

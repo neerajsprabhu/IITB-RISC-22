@@ -1,0 +1,30 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity IDRR is 
+    port(
+      IDRR_inc 
+		IDRR_11_9=>IR_Op(11 downto 9), IDRR_11_9_Op=>IDRR_11_9_Op, 
+		IDRR_8_6=>IR_Op(8 downto 6), IDRR_8_6_Op=>IDRR_8_6_Op,
+		IDRR_PC=>PC_Op, IDRR_PC_Op=>IDRR_PC_Op,
+		IDRR_8_0=>IR_Op(8 downto 0), IDRR_8_0_Op=>IDRR_8_0_Op,
+		IDRR_5_0=>IR_Op(5 downto 0), IDRR_5_0_Op=>IDRR_5_0_Op,
+		IDRR_5_3=>IR_Op(5 downto 3), IDRR_5_3_Op=>IDRR_5_3_Op,
+		);
+end reg;
+
+architecture reg1 of reg is
+begin
+process(wr, clk, data)
+begin
+if rising_edge(clk) then
+  if wr='1' then
+    Op <= data;
+  else
+    null;
+  end if;
+else
+  null;
+end if;
+end process;
+end reg1;
