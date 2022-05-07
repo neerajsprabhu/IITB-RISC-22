@@ -66,44 +66,44 @@ CHIP  "DUT"  ASSIGNED TO AN: 5M2210ZF256C4
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
 GNDIO                        : A1        : gnd    :                   :         :           :                
-GND*                         : A2        :        :                   :         : 2         :                
+IR_out[9]                    : A2        : output : 3.3-V LVTTL       :         : 2         : N              
 VCCIO2                       : A3        : power  :                   : 3.3V    : 2         :                
-GND*                         : A4        :        :                   :         : 2         :                
-GND*                         : A5        :        :                   :         : 2         :                
-GND*                         : A6        :        :                   :         : 2         :                
+select_Mux_ALU2_B[0]         : A4        : input  : 3.3-V LVTTL       :         : 2         : N              
+wr_PC                        : A5        : input  : 3.3-V LVTTL       :         : 2         : N              
+select_Mux_DMem_Din          : A6        : input  : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : A7        :        :                   :         : 2         :                
 GND*                         : A8        :        :                   :         : 2         :                
 GND*                         : A9        :        :                   :         : 2         :                
 GND*                         : A10       :        :                   :         : 2         :                
 GND*                         : A11       :        :                   :         : 2         :                
-wr_z                         : A12       : input  : 3.3-V LVTTL       :         : 2         : N              
-GND*                         : A13       :        :                   :         : 2         :                
+GND*                         : A12       :        :                   :         : 2         :                
+wr_MEMWB                     : A13       : input  : 3.3-V LVTTL       :         : 2         : N              
 VCCIO2                       : A14       : power  :                   : 3.3V    : 2         :                
 GND*                         : A15       :        :                   :         : 2         :                
 GNDIO                        : A16       : gnd    :                   :         :           :                
-GND*                         : B1        :        :                   :         : 2         :                
+wr_IR                        : B1        : input  : 3.3-V LVTTL       :         : 2         : N              
 GNDIO                        : B2        : gnd    :                   :         :           :                
-GND*                         : B3        :        :                   :         : 2         :                
-GND*                         : B4        :        :                   :         : 2         :                
-GND*                         : B5        :        :                   :         : 2         :                
-IR_out[15]                   : B6        : output : 3.3-V LVTTL       :         : 2         : N              
-wr_DMem                      : B7        : input  : 3.3-V LVTTL       :         : 2         : N              
+IR_out[14]                   : B3        : output : 3.3-V LVTTL       :         : 2         : N              
+IR_out[1]                    : B4        : output : 3.3-V LVTTL       :         : 2         : N              
+select_Mux_ALU2_B[1]         : B5        : input  : 3.3-V LVTTL       :         : 2         : N              
+select_Mux_jump_loc[1]       : B6        : input  : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : B7        :        :                   :         : 2         :                
 GND*                         : B8        :        :                   :         : 2         :                
 GND*                         : B9        :        :                   :         : 2         :                
 GND*                         : B10       :        :                   :         : 2         :                
-z_Op                         : B11       : output : 3.3-V LVTTL       :         : 2         : N              
-select_Mux_DMem_Din          : B12       : input  : 3.3-V LVTTL       :         : 2         : N              
-GND*                         : B13       :        :                   :         : 2         :                
+GND*                         : B11       :        :                   :         : 2         :                
+IR_out[11]                   : B12       : output : 3.3-V LVTTL       :         : 2         : N              
+IR_out[15]                   : B13       : output : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : B14       :        :                   :         : 2         :                
 GNDIO                        : B15       : gnd    :                   :         :           :                
 GND*                         : B16       :        :                   :         : 2         :                
 VCCIO1                       : C1        : power  :                   : 3.3V    : 1         :                
-GND*                         : C2        :        :                   :         : 1         :                
-GND*                         : C3        :        :                   :         : 1         :                
-GND*                         : C4        :        :                   :         : 2         :                
-GND*                         : C5        :        :                   :         : 2         :                
-GND*                         : C6        :        :                   :         : 2         :                
-GND*                         : C7        :        :                   :         : 2         :                
+IR_out[5]                    : C2        : output : 3.3-V LVTTL       :         : 1         : N              
+IR_out[0]                    : C3        : output : 3.3-V LVTTL       :         : 1         : N              
+select_Mux_RF_A3[0]          : C4        : input  : 3.3-V LVTTL       :         : 2         : N              
+IR_out[12]                   : C5        : output : 3.3-V LVTTL       :         : 2         : N              
+IR_out[3]                    : C6        : output : 3.3-V LVTTL       :         : 2         : N              
+select_Mux_RF_D3[1]          : C7        : input  : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : C8        :        :                   :         : 2         :                
 GND*                         : C9        :        :                   :         : 2         :                
 GND*                         : C10       :        :                   :         : 2         :                
@@ -113,14 +113,14 @@ GND*                         : C13       :        :                   :         
 GND*                         : C14       :        :                   :         : 3         :                
 GND*                         : C15       :        :                   :         : 3         :                
 VCCIO3                       : C16       : power  :                   : 3.3V    : 3         :                
-GND*                         : D1        :        :                   :         : 1         :                
-GND*                         : D2        :        :                   :         : 1         :                
-GND*                         : D3        :        :                   :         : 1         :                
-GND*                         : D4        :        :                   :         : 2         :                
-GND*                         : D5        :        :                   :         : 2         :                
-GND*                         : D6        :        :                   :         : 2         :                
-GND*                         : D7        :        :                   :         : 2         :                
-GND*                         : D8        :        :                   :         : 2         :                
+dec[2]                       : D1        : input  : 3.3-V LVTTL       :         : 1         : N              
+IR_out[6]                    : D2        : output : 3.3-V LVTTL       :         : 1         : N              
+IR_out[2]                    : D3        : output : 3.3-V LVTTL       :         : 1         : N              
+IR_out[13]                   : D4        : output : 3.3-V LVTTL       :         : 2         : N              
+select_Mux_RF_A3[1]          : D5        : input  : 3.3-V LVTTL       :         : 2         : N              
+select_Mux_RF_D3[2]          : D6        : input  : 3.3-V LVTTL       :         : 2         : N              
+select_Mux_jump_loc[0]       : D7        : input  : 3.3-V LVTTL       :         : 2         : N              
+select_Mux_RF_D3[0]          : D8        : input  : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : D9        :        :                   :         : 2         :                
 GND*                         : D10       :        :                   :         : 2         :                
 GND*                         : D11       :        :                   :         : 2         :                
@@ -128,41 +128,41 @@ GND*                         : D12       :        :                   :         
 GND*                         : D13       :        :                   :         : 3         :                
 GND*                         : D14       :        :                   :         : 3         :                
 GND*                         : D15       :        :                   :         : 3         :                
-cy_Op                        : D16       : output : 3.3-V LVTTL       :         : 3         : N              
-GND*                         : E1        :        :                   :         : 1         :                
-GND*                         : E2        :        :                   :         : 1         :                
-GND*                         : E3        :        :                   :         : 1         :                
-GND*                         : E4        :        :                   :         : 1         :                
-GND*                         : E5        :        :                   :         : 1         :                
-GND*                         : E6        :        :                   :         : 2         :                
-GND*                         : E7        :        :                   :         : 2         :                
+GND*                         : D16       :        :                   :         : 3         :                
+select_Mux_RF_A2             : E1        : input  : 3.3-V LVTTL       :         : 1         : N              
+IR_out[7]                    : E2        : output : 3.3-V LVTTL       :         : 1         : N              
+IR_out[8]                    : E3        : output : 3.3-V LVTTL       :         : 1         : N              
+IR_out[4]                    : E4        : output : 3.3-V LVTTL       :         : 1         : N              
+dec[1]                       : E5        : input  : 3.3-V LVTTL       :         : 1         : N              
+wr_IDRR                      : E6        : input  : 3.3-V LVTTL       :         : 2         : N              
+select_Mux_ALU2_A            : E7        : input  : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : E8        :        :                   :         : 2         :                
-GND*                         : E9        :        :                   :         : 2         :                
+wr_z                         : E9        : input  : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : E10       :        :                   :         : 2         :                
-GND*                         : E11       :        :                   :         : 2         :                
+select_Mux_Mem_A             : E11       : input  : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : E12       :        :                   :         : 3         :                
 GND*                         : E13       :        :                   :         : 3         :                
-GND*                         : E14       :        :                   :         : 3         :                
+z_out                        : E14       : output : 3.3-V LVTTL       :         : 3         : N              
 GND*                         : E15       :        :                   :         : 3         :                
-IR_out[11]                   : E16       : output : 3.3-V LVTTL       :         : 3         : N              
-GND*                         : F1        :        :                   :         : 1         :                
-GND*                         : F2        :        :                   :         : 1         :                
-GND*                         : F3        :        :                   :         : 1         :                
+GND*                         : E16       :        :                   :         : 3         :                
+select_Mux_RF_A1             : F1        : input  : 3.3-V LVTTL       :         : 1         : N              
+wr_EXMEM                     : F2        : input  : 3.3-V LVTTL       :         : 1         : N              
+select_ALU2[0]               : F3        : input  : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : F4        :        :                   :         : 1         :                
-GND*                         : F5        :        :                   :         : 1         :                
-GND*                         : F6        :        :                   :         : 1         :                
+wr_RREX                      : F5        : input  : 3.3-V LVTTL       :         : 1         : N              
+wr_RF                        : F6        : input  : 3.3-V LVTTL       :         : 1         : N              
 GNDINT                       : F7        : gnd    :                   :         :           :                
 VCCIO2                       : F8        : power  :                   : 3.3V    : 2         :                
 VCCIO2                       : F9        : power  :                   : 3.3V    : 2         :                
 VCCINT                       : F10       : power  :                   : 1.8V    :           :                
 GND*                         : F11       :        :                   :         : 3         :                
 GND*                         : F12       :        :                   :         : 3         :                
-select_Mux_ALU_A             : F13       : input  : 3.3-V LVTTL       :         : 3         : N              
-wr_cy                        : F14       : input  : 3.3-V LVTTL       :         : 3         : N              
-IR_out[10]                   : F15       : output : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : F13       :        :                   :         : 3         :                
+GND*                         : F14       :        :                   :         : 3         :                
+GND*                         : F15       :        :                   :         : 3         :                
 GND*                         : F16       :        :                   :         : 3         :                
 GND*                         : G1        :        :                   :         : 1         :                
-GND*                         : G2        :        :                   :         : 1         :                
+dec[0]                       : G2        : input  : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : G3        :        :                   :         : 1         :                
 GND*                         : G4        :        :                   :         : 1         :                
 GND*                         : G5        :        :                   :         : 1         :                
@@ -173,14 +173,14 @@ GNDIO                        : G9        : gnd    :                   :         
 GNDIO                        : G10       : gnd    :                   :         :           :                
 VCCINT                       : G11       : power  :                   : 1.8V    :           :                
 GND*                         : G12       :        :                   :         : 3         :                
-select_Mux_ALU_B[0]          : G13       : input  : 3.3-V LVTTL       :         : 3         : N              
-select_Mux_ALU_B[1]          : G14       : input  : 3.3-V LVTTL       :         : 3         : N              
-wr_IDRR                      : G15       : input  : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : G13       :        :                   :         : 3         :                
+GND*                         : G14       :        :                   :         : 3         :                
+GND*                         : G15       :        :                   :         : 3         :                
 GND*                         : G16       :        :                   :         : 3         :                
 GND*                         : H1        :        :                   :         : 1         :                
 GND*                         : H2        :        :                   :         : 1         :                
 GND*                         : H3        :        :                   :         : 1         :                
-GND*                         : H4        :        :                   :         : 1         :                
+select_Mux_ALU_A             : H4        : input  : 3.3-V LVTTL       :         : 1         : N              
 clk                          : H5        : input  : 3.3-V LVTTL       :         : 1         : N              
 VCCIO1                       : H6        : power  :                   : 3.3V    : 1         :                
 GNDINT                       : H7        : gnd    :                   :         :           :                
@@ -190,11 +190,11 @@ VCCINT                       : H10       : power  :                   : 1.8V    
 VCCIO3                       : H11       : power  :                   : 3.3V    : 3         :                
 GND*                         : H12       :        :                   :         : 3         :                
 GND*                         : H13       :        :                   :         : 3         :                
-dec[0]                       : H14       : input  : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : H14       :        :                   :         : 3         :                
 GND*                         : H15       :        :                   :         : 3         :                
 GND*                         : H16       :        :                   :         : 3         :                
 GND*                         : J1        :        :                   :         : 1         :                
-GND*                         : J2        :        :                   :         : 1         :                
+select_Mux_ALU_B[0]          : J2        : input  : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : J3        :        :                   :         : 1         :                
 GND*                         : J4        :        :                   :         : 1         :                
 wr_inc                       : J5        : input  : 3.3-V LVTTL       :         : 1         : N              
@@ -205,12 +205,12 @@ VCCINT                       : J9        : power  :                   : 1.8V    
 GNDINT                       : J10       : gnd    :                   :         :           :                
 VCCIO3                       : J11       : power  :                   : 3.3V    : 3         :                
 GND*                         : J12       :        :                   :         : 3         :                
-wr_RREX                      : J13       : input  : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : J13       :        :                   :         : 3         :                
 GND*                         : J14       :        :                   :         : 3         :                
-dec[1]                       : J15       : input  : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : J15       :        :                   :         : 3         :                
 GND*                         : J16       :        :                   :         : 3         :                
 GND*                         : K1        :        :                   :         : 1         :                
-GND*                         : K2        :        :                   :         : 1         :                
+select_Mux_ALU_B[1]          : K2        : input  : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : K3        :        :                   :         : 1         :                
 GND*                         : K4        :        :                   :         : 1         :                
 GND*                         : K5        :        :                   :         : 1         :                
@@ -225,7 +225,7 @@ GND*                         : K13       :        :                   :         
 GND*                         : K14       :        :                   :         : 3         :                
 GND*                         : K15       :        :                   :         : 3         :                
 GND*                         : K16       :        :                   :         : 3         :                
-select_Mux_Mem_A             : L1        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : L1        :        :                   :         : 1         :                
 GND*                         : L2        :        :                   :         : 1         :                
 GND*                         : L3        :        :                   :         : 1         :                
 GND*                         : L4        :        :                   :         : 1         :                
@@ -236,9 +236,9 @@ VCCIO4                       : L8        : power  :                   : 3.3V    
 VCCIO4                       : L9        : power  :                   : 3.3V    : 4         :                
 GNDINT                       : L10       : gnd    :                   :         :           :                
 GND*                         : L11       :        :                   :         : 3         :                
-GND*                         : L12       :        :                   :         : 3         :                
-IR_out[8]                    : L13       : output : 3.3-V LVTTL       :         : 3         : N              
-select_Mux_RF_A2             : L14       : input  : 3.3-V LVTTL       :         : 3         : N              
+IR_out[10]                   : L12       : output : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : L13       :        :                   :         : 3         :                
+GND*                         : L14       :        :                   :         : 3         :                
 GND*                         : L15       :        :                   :         : 3         :                
 GND*                         : L16       :        :                   :         : 3         :                
 GND*                         : M1        :        :                   :         : 1         :                
@@ -247,47 +247,47 @@ GND*                         : M3        :        :                   :         
 GND*                         : M4        :        :                   :         : 1         :                
 TDO                          : M5        : output :                   :         : 1         :                
 GND*                         : M6        :        :                   :         : 4         :                
-select_Mux_DMem_A            : M7        : input  : 3.3-V LVTTL       :         : 4         : N              
-select_Mux_RF_D3[1]          : M8        : input  : 3.3-V LVTTL       :         : 4         : N              
-select_Mux_RF_D3[0]          : M9        : input  : 3.3-V LVTTL       :         : 4         : N              
-wr_PC                        : M10       : input  : 3.3-V LVTTL       :         : 4         : N              
-select_ALU2[1]               : M11       : input  : 3.3-V LVTTL       :         : 4         : N              
-IR_out[3]                    : M12       : output : 3.3-V LVTTL       :         : 4         : N              
-wr_RF                        : M13       : input  : 3.3-V LVTTL       :         : 3         : N              
-IR_out[7]                    : M14       : output : 3.3-V LVTTL       :         : 3         : N              
-IR_out[0]                    : M15       : output : 3.3-V LVTTL       :         : 3         : N              
-dec[2]                       : M16       : input  : 3.3-V LVTTL       :         : 3         : N              
+select_ALU2[1]               : M7        : input  : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : M8        :        :                   :         : 4         :                
+select_ALU[1]                : M9        : input  : 3.3-V LVTTL       :         : 4         : N              
+wr_DMem                      : M10       : input  : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : M11       :        :                   :         : 4         :                
+GND*                         : M12       :        :                   :         : 4         :                
+GND*                         : M13       :        :                   :         : 3         :                
+GND*                         : M14       :        :                   :         : 3         :                
+GND*                         : M15       :        :                   :         : 3         :                
+GND*                         : M16       :        :                   :         : 3         :                
 GND*                         : N1        :        :                   :         : 1         :                
 GND*                         : N2        :        :                   :         : 1         :                
 GND*                         : N3        :        :                   :         : 1         :                
 TMS                          : N4        : input  :                   :         : 1         :                
 GND*                         : N5        :        :                   :         : 4         :                
 GND*                         : N6        :        :                   :         : 4         :                
-GND*                         : N7        :        :                   :         : 4         :                
-select_Mux_ALU2_A            : N8        : input  : 3.3-V LVTTL       :         : 4         : N              
-GND*                         : N9        :        :                   :         : 4         :                
-select_Mux_jump_loc[0]       : N10       : input  : 3.3-V LVTTL       :         : 4         : N              
-select_Mux_ALU2_B[1]         : N11       : input  : 3.3-V LVTTL       :         : 4         : N              
-IR_out[14]                   : N12       : output : 3.3-V LVTTL       :         : 4         : N              
+select_Mux_Mem_D             : N7        : input  : 3.3-V LVTTL       :         : 4         : N              
+select_ALU[0]                : N8        : input  : 3.3-V LVTTL       :         : 4         : N              
+select_Mux_DMem_A            : N9        : input  : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : N10       :        :                   :         : 4         :                
+GND*                         : N11       :        :                   :         : 4         :                
+GND*                         : N12       :        :                   :         : 4         :                
 GND*                         : N13       :        :                   :         : 3         :                
 GND*                         : N14       :        :                   :         : 3         :                
-IR_out[2]                    : N15       : output : 3.3-V LVTTL       :         : 3         : N              
-IR_out[5]                    : N16       : output : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : N15       :        :                   :         : 3         :                
+GND*                         : N16       :        :                   :         : 3         :                
 VCCIO1                       : P1        : power  :                   : 3.3V    : 1         :                
 GND*                         : P2        :        :                   :         : 1         :                
 TCK                          : P3        : input  :                   :         : 1         :                
 GND*                         : P4        :        :                   :         : 4         :                
-GND*                         : P5        :        :                   :         : 4         :                
+wr_cy                        : P5        : input  : 3.3-V LVTTL       :         : 4         : N              
 GND*                         : P6        :        :                   :         : 4         :                
 GND*                         : P7        :        :                   :         : 4         :                
-wr_EXMEM                     : P8        : input  : 3.3-V LVTTL       :         : 4         : N              
-select_Mux_RF_A3[1]          : P9        : input  : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : P8        :        :                   :         : 4         :                
+GND*                         : P9        :        :                   :         : 4         :                
 GND*                         : P10       :        :                   :         : 4         :                
-select_Mux_RF_D3[2]          : P11       : input  : 3.3-V LVTTL       :         : 4         : N              
-wr_IR                        : P12       : input  : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : P11       :        :                   :         : 4         :                
+GND*                         : P12       :        :                   :         : 4         :                
 GND*                         : P13       :        :                   :         : 4         :                
-IR_out[6]                    : P14       : output : 3.3-V LVTTL       :         : 3         : N              
-IR_out[4]                    : P15       : output : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : P14       :        :                   :         : 3         :                
+GND*                         : P15       :        :                   :         : 3         :                
 VCCIO3                       : P16       : power  :                   : 3.3V    : 3         :                
 GND*                         : R1        :        :                   :         : 4         :                
 GNDIO                        : R2        : gnd    :                   :         :           :                
@@ -297,27 +297,27 @@ GND*                         : R5        :        :                   :         
 GND*                         : R6        :        :                   :         : 4         :                
 GND*                         : R7        :        :                   :         : 4         :                
 GND*                         : R8        :        :                   :         : 4         :                
-select_Mux_RF_A3[0]          : R9        : input  : 3.3-V LVTTL       :         : 4         : N              
-select_Mux_jump_loc[1]       : R10       : input  : 3.3-V LVTTL       :         : 4         : N              
-select_ALU2[0]               : R11       : input  : 3.3-V LVTTL       :         : 4         : N              
-select_Mux_ALU2_B[0]         : R12       : input  : 3.3-V LVTTL       :         : 4         : N              
-IR_out[1]                    : R13       : output : 3.3-V LVTTL       :         : 4         : N              
-IR_out[12]                   : R14       : output : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : R9        :        :                   :         : 4         :                
+GND*                         : R10       :        :                   :         : 4         :                
+GND*                         : R11       :        :                   :         : 4         :                
+GND*                         : R12       :        :                   :         : 4         :                
+GND*                         : R13       :        :                   :         : 4         :                
+GND*                         : R14       :        :                   :         : 4         :                
 GNDIO                        : R15       : gnd    :                   :         :           :                
 GND*                         : R16       :        :                   :         : 4         :                
 GNDIO                        : T1        : gnd    :                   :         :           :                
-GND*                         : T2        :        :                   :         : 4         :                
+cy_out                       : T2        : output : 3.3-V LVTTL       :         : 4         : N              
 VCCIO4                       : T3        : power  :                   : 3.3V    : 4         :                
 GND*                         : T4        :        :                   :         : 4         :                
 GND*                         : T5        :        :                   :         : 4         :                
 GNDIO                        : T6        : gnd    :                   :         :           :                
 GND*                         : T7        :        :                   :         : 4         :                
-select_Mux_Mem_D             : T8        : input  : 3.3-V LVTTL       :         : 4         : N              
-wr_MEMWB                     : T9        : input  : 3.3-V LVTTL       :         : 4         : N              
-select_ALU[1]                : T10       : input  : 3.3-V LVTTL       :         : 4         : N              
-select_ALU[0]                : T11       : input  : 3.3-V LVTTL       :         : 4         : N              
-IR_out[9]                    : T12       : output : 3.3-V LVTTL       :         : 4         : N              
-select_Mux_RF_A1             : T13       : input  : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : T8        :        :                   :         : 4         :                
+GND*                         : T9        :        :                   :         : 4         :                
+GND*                         : T10       :        :                   :         : 4         :                
+GND*                         : T11       :        :                   :         : 4         :                
+GND*                         : T12       :        :                   :         : 4         :                
+GND*                         : T13       :        :                   :         : 4         :                
 VCCIO4                       : T14       : power  :                   : 3.3V    : 4         :                
-IR_out[13]                   : T15       : output : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : T15       :        :                   :         : 4         :                
 GNDIO                        : T16       : gnd    :                   :         :           :                

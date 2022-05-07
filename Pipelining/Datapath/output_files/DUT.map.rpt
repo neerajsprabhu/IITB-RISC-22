@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DUT
-Mon May 02 05:43:56 2022
+Sat May 07 13:55:26 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -50,12 +50,12 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Mon May 02 05:43:56 2022       ;
+; Analysis & Synthesis Status ; Successful - Sat May 07 13:55:26 2022       ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; DUT                                         ;
 ; Top-level Entity Name       ; datapath                                    ;
 ; Family                      ; MAX V                                       ;
-; Total logic elements        ; 2,613                                       ;
+; Total logic elements        ; 2,555                                       ;
 ; Total pins                  ; 56                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
@@ -148,36 +148,36 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                    ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                             ; Library ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
-; SE9.vhd                          ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Pipeline/Datapath/SE9.vhd       ;         ;
-; SE6.vhd                          ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Pipeline/Datapath/SE6.vhd       ;         ;
-; ROM.vhd                          ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Pipeline/Datapath/ROM.vhd       ;         ;
-; reg_bank.vhd                     ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Pipeline/Datapath/reg_bank.vhd  ;         ;
-; reg_16.vhd                       ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Pipeline/Datapath/reg_16.vhd    ;         ;
-; reg_1.vhd                        ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Pipeline/Datapath/reg_1.vhd     ;         ;
-; RAM.vhd                          ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Pipeline/Datapath/RAM.vhd       ;         ;
-; mux81.vhd                        ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux81.vhd     ;         ;
-; mux41_3.vhd                      ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41_3.vhd   ;         ;
-; mux41.vhd                        ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd     ;         ;
-; mux21.vhd                        ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux21.vhd     ;         ;
-; mux21 _3.vhd                     ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux21 _3.vhd  ;         ;
-; inc.vhd                          ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Pipeline/Datapath/inc.vhd       ;         ;
-; datapath.vhd                     ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd  ;         ;
-; bit7shift.vhd                    ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Pipeline/Datapath/bit7shift.vhd ;         ;
-; bit1shift.vhd                    ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Pipeline/Datapath/bit1shift.vhd ;         ;
-; alu.vhd                          ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd       ;         ;
-; reg_6.vhd                        ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Pipeline/Datapath/reg_6.vhd     ;         ;
-; reg_3.vhd                        ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Pipeline/Datapath/reg_3.vhd     ;         ;
-; reg_9.vhd                        ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Pipeline/Datapath/reg_9.vhd     ;         ;
-; IDRR.vhd                         ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Pipeline/Datapath/IDRR.vhd      ;         ;
-; RREX.vhd                         ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Pipeline/Datapath/RREX.vhd      ;         ;
-; EXMEM.vhd                        ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Pipeline/Datapath/EXMEM.vhd     ;         ;
-; MEMWB.vhd                        ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Pipeline/Datapath/MEMWB.vhd     ;         ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                          ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                   ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------+---------+
+; SE9.vhd                          ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/SE9.vhd       ;         ;
+; SE6.vhd                          ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/SE6.vhd       ;         ;
+; ROM.vhd                          ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/ROM.vhd       ;         ;
+; reg_bank.vhd                     ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/reg_bank.vhd  ;         ;
+; reg_16.vhd                       ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/reg_16.vhd    ;         ;
+; reg_1.vhd                        ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/reg_1.vhd     ;         ;
+; RAM.vhd                          ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/RAM.vhd       ;         ;
+; mux81.vhd                        ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux81.vhd     ;         ;
+; mux41_3.vhd                      ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41_3.vhd   ;         ;
+; mux41.vhd                        ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd     ;         ;
+; mux21.vhd                        ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux21.vhd     ;         ;
+; mux21 _3.vhd                     ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux21 _3.vhd  ;         ;
+; inc.vhd                          ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/inc.vhd       ;         ;
+; datapath.vhd                     ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd  ;         ;
+; bit7shift.vhd                    ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/bit7shift.vhd ;         ;
+; bit1shift.vhd                    ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/bit1shift.vhd ;         ;
+; alu.vhd                          ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd       ;         ;
+; reg_6.vhd                        ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/reg_6.vhd     ;         ;
+; reg_3.vhd                        ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/reg_3.vhd     ;         ;
+; reg_9.vhd                        ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/reg_9.vhd     ;         ;
+; IDRR.vhd                         ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/IDRR.vhd      ;         ;
+; RREX.vhd                         ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/RREX.vhd      ;         ;
+; EXMEM.vhd                        ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/EXMEM.vhd     ;         ;
+; MEMWB.vhd                        ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/MEMWB.vhd     ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -185,33 +185,33 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 2613  ;
-;     -- Combinational with no register       ; 1184  ;
+; Total logic elements                        ; 2555  ;
+;     -- Combinational with no register       ; 1128  ;
 ;     -- Register only                        ; 1330  ;
-;     -- Combinational with a register        ; 99    ;
+;     -- Combinational with a register        ; 97    ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 1042  ;
-;     -- 3 input functions                    ; 181   ;
-;     -- 2 input functions                    ; 31    ;
+;     -- 4 input functions                    ; 989   ;
+;     -- 3 input functions                    ; 178   ;
+;     -- 2 input functions                    ; 29    ;
 ;     -- 1 input functions                    ; 29    ;
 ;     -- 0 input functions                    ; 0     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 2599  ;
+;     -- normal mode                          ; 2541  ;
 ;     -- arithmetic mode                      ; 14    ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
 ;     -- synchronous clear/load mode          ; 0     ;
 ;     -- asynchronous clear/load mode         ; 0     ;
 ;                                             ;       ;
-; Total registers                             ; 1429  ;
+; Total registers                             ; 1427  ;
 ; Total logic cells in carry chains           ; 15    ;
 ; I/O pins                                    ; 56    ;
 ; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 1429  ;
-; Total fan-out                               ; 9003  ;
-; Average fan-out                             ; 3.37  ;
+; Maximum fan-out                             ; 1427  ;
+; Total fan-out                               ; 8774  ;
+; Average fan-out                             ; 3.36  ;
 +---------------------------------------------+-------+
 
 
@@ -220,7 +220,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------+---------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                     ; Entity Name   ; Library Name ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------+---------------+--------------+
-; |datapath                  ; 2613 (0)    ; 1429         ; 0          ; 56   ; 0            ; 1184 (0)     ; 1330 (0)          ; 99 (0)           ; 15 (0)          ; 0 (0)      ; |datapath                               ; datapath      ; work         ;
+; |datapath                  ; 2555 (0)    ; 1427         ; 0          ; 56   ; 0            ; 1128 (0)     ; 1330 (0)          ; 97 (0)           ; 15 (0)          ; 0 (0)      ; |datapath                               ; datapath      ; work         ;
 ;    |EXMEM:EX_MEM|          ; 89 (0)      ; 89           ; 0          ; 0    ; 0            ; 0 (0)        ; 89 (0)            ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |datapath|EXMEM:EX_MEM                  ; EXMEM         ; work         ;
 ;       |reg3:dec|           ; 3 (3)       ; 3            ; 0          ; 0    ; 0            ; 0 (0)        ; 3 (3)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |datapath|EXMEM:EX_MEM|reg3:dec         ; reg3          ; work         ;
 ;       |reg3:eight_six|     ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 2 (2)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |datapath|EXMEM:EX_MEM|reg3:eight_six   ; reg3          ; work         ;
@@ -252,7 +252,7 @@ https://fpgasoftware.intel.com/eula.
 ;       |reg6:five_zero|     ; 3 (3)       ; 3            ; 0          ; 0    ; 0            ; 0 (0)        ; 3 (3)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |datapath|RREX:RR_EX|reg6:five_zero     ; reg6          ; work         ;
 ;       |reg:RF_D1|          ; 16 (16)     ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (16)          ; 0 (0)           ; 0 (0)      ; |datapath|RREX:RR_EX|reg:RF_D1          ; reg           ; work         ;
 ;       |reg:RF_D2|          ; 16 (16)     ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (16)          ; 0 (0)           ; 0 (0)      ; |datapath|RREX:RR_EX|reg:RF_D2          ; reg           ; work         ;
-;    |alu:ALU_1|             ; 105 (105)   ; 0            ; 0          ; 0    ; 0            ; 105 (105)    ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |datapath|alu:ALU_1                     ; alu           ; work         ;
+;    |alu:ALU_1|             ; 49 (49)     ; 0            ; 0          ; 0    ; 0            ; 49 (49)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |datapath|alu:ALU_1                     ; alu           ; work         ;
 ;    |alu:ALU_2|             ; 50 (50)     ; 0            ; 0          ; 0    ; 0            ; 50 (50)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |datapath|alu:ALU_2                     ; alu           ; work         ;
 ;    |incr:inc|              ; 31 (31)     ; 0            ; 0          ; 0    ; 0            ; 31 (31)      ; 0 (0)             ; 0 (0)            ; 15 (15)         ; 0 (0)      ; |datapath|incr:inc                      ; incr          ; work         ;
 ;    |mux21:Mux_ALU2_A|      ; 16 (16)     ; 0            ; 0          ; 0    ; 0            ; 16 (16)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |datapath|mux21:Mux_ALU2_A              ; mux21         ; work         ;
@@ -267,8 +267,6 @@ https://fpgasoftware.intel.com/eula.
 ;    |mux41_3:Mux_RF_A3|     ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |datapath|mux41_3:Mux_RF_A3             ; mux41_3       ; work         ;
 ;    |mux81:Mux_RF_D3|       ; 50 (50)     ; 0            ; 0          ; 0    ; 0            ; 50 (50)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |datapath|mux81:Mux_RF_D3               ; mux81         ; work         ;
 ;    |ram:DMem|              ; 1760 (1760) ; 1024         ; 0          ; 0    ; 0            ; 736 (736)    ; 995 (995)         ; 29 (29)          ; 0 (0)           ; 0 (0)      ; |datapath|ram:DMem                      ; ram           ; work         ;
-;    |reg1:carry|            ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |datapath|reg1:carry                    ; reg1          ; work         ;
-;    |reg1:zero|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |datapath|reg1:zero                     ; reg1          ; work         ;
 ;    |reg:IR|                ; 7 (7)       ; 7            ; 0          ; 0    ; 0            ; 0 (0)        ; 3 (3)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |datapath|reg:IR                        ; reg           ; work         ;
 ;    |reg:PC|                ; 16 (16)     ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (16)          ; 0 (0)           ; 0 (0)      ; |datapath|reg:PC                        ; reg           ; work         ;
 ;    |register_bank:RF|      ; 216 (136)   ; 128          ; 0          ; 0    ; 0            ; 88 (8)       ; 128 (128)         ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |datapath|register_bank:RF              ; register_bank ; work         ;
@@ -284,8 +282,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------+---------------------+------------------------+
 ; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
 +-----------------------------------------------------+---------------------+------------------------+
-; alu:ALU_1|carry                                     ; alu:ALU_1|carry     ; yes                    ;
-; alu:ALU_1|zero                                      ; alu:ALU_1|zero      ; yes                    ;
 ; incr:inc|Op[1]                                      ; wr_inc              ; yes                    ;
 ; incr:inc|Op[2]                                      ; wr_inc              ; yes                    ;
 ; incr:inc|Op[3]                                      ; wr_inc              ; yes                    ;
@@ -318,23 +314,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; alu:ALU_2|Op[14]                                    ; alu:ALU_2|Op[15]    ; yes                    ;
 ; alu:ALU_2|Op[15]                                    ; alu:ALU_2|Op[15]    ; yes                    ;
 ; alu:ALU_2|Op[0]                                     ; alu:ALU_2|Op[15]    ; yes                    ;
-; alu:ALU_1|Op[1]                                     ; alu:ALU_1|zero      ; yes                    ;
-; alu:ALU_1|Op[2]                                     ; alu:ALU_1|zero      ; yes                    ;
-; alu:ALU_1|Op[3]                                     ; alu:ALU_1|zero      ; yes                    ;
-; alu:ALU_1|Op[4]                                     ; alu:ALU_1|zero      ; yes                    ;
-; alu:ALU_1|Op[5]                                     ; alu:ALU_1|zero      ; yes                    ;
-; alu:ALU_1|Op[6]                                     ; alu:ALU_1|zero      ; yes                    ;
-; alu:ALU_1|Op[7]                                     ; alu:ALU_1|zero      ; yes                    ;
-; alu:ALU_1|Op[8]                                     ; alu:ALU_1|zero      ; yes                    ;
-; alu:ALU_1|Op[9]                                     ; alu:ALU_1|zero      ; yes                    ;
-; alu:ALU_1|Op[10]                                    ; alu:ALU_1|zero      ; yes                    ;
-; alu:ALU_1|Op[11]                                    ; alu:ALU_1|zero      ; yes                    ;
-; alu:ALU_1|Op[12]                                    ; alu:ALU_1|zero      ; yes                    ;
-; alu:ALU_1|Op[13]                                    ; alu:ALU_1|zero      ; yes                    ;
-; alu:ALU_1|Op[14]                                    ; alu:ALU_1|zero      ; yes                    ;
-; alu:ALU_1|Op[15]                                    ; alu:ALU_1|zero      ; yes                    ;
-; alu:ALU_1|Op[0]                                     ; alu:ALU_1|zero      ; yes                    ;
-; Number of user-specified and inferred latches = 50  ;                     ;                        ;
+; alu:ALU_1|Op[1]                                     ; alu:ALU_1|Op[15]    ; yes                    ;
+; alu:ALU_1|Op[2]                                     ; alu:ALU_1|Op[15]    ; yes                    ;
+; alu:ALU_1|Op[3]                                     ; alu:ALU_1|Op[15]    ; yes                    ;
+; alu:ALU_1|Op[4]                                     ; alu:ALU_1|Op[15]    ; yes                    ;
+; alu:ALU_1|Op[5]                                     ; alu:ALU_1|Op[15]    ; yes                    ;
+; alu:ALU_1|Op[6]                                     ; alu:ALU_1|Op[15]    ; yes                    ;
+; alu:ALU_1|Op[7]                                     ; alu:ALU_1|Op[15]    ; yes                    ;
+; alu:ALU_1|Op[8]                                     ; alu:ALU_1|Op[15]    ; yes                    ;
+; alu:ALU_1|Op[9]                                     ; alu:ALU_1|Op[15]    ; yes                    ;
+; alu:ALU_1|Op[10]                                    ; alu:ALU_1|Op[15]    ; yes                    ;
+; alu:ALU_1|Op[11]                                    ; alu:ALU_1|Op[15]    ; yes                    ;
+; alu:ALU_1|Op[12]                                    ; alu:ALU_1|Op[15]    ; yes                    ;
+; alu:ALU_1|Op[13]                                    ; alu:ALU_1|Op[15]    ; yes                    ;
+; alu:ALU_1|Op[14]                                    ; alu:ALU_1|Op[15]    ; yes                    ;
+; alu:ALU_1|Op[15]                                    ; alu:ALU_1|Op[15]    ; yes                    ;
+; alu:ALU_1|Op[0]                                     ; alu:ALU_1|Op[15]    ; yes                    ;
+; Number of user-specified and inferred latches = 48  ;                     ;                        ;
 +-----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -397,20 +393,20 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; IDRR:ID_RR|reg6:five_zero|Op[0,2,5]      ; Merged with IDRR:ID_RR|reg9:eight_zero|Op[8]   ;
 ; IDRR:ID_RR|reg9:eight_zero|Op[7]         ; Merged with IDRR:ID_RR|reg9:eight_zero|Op[8]   ;
 ; IDRR:ID_RR|reg6:five_zero|Op[4]          ; Merged with IDRR:ID_RR|reg9:eight_zero|Op[6]   ;
+; RREX:RR_EX|reg9:eight_zero|Op[8]         ; Merged with RREX:RR_EX|reg6:five_zero|Op[2]    ;
+; RREX:RR_EX|reg6:five_zero|Op[0,5]        ; Merged with RREX:RR_EX|reg6:five_zero|Op[2]    ;
+; RREX:RR_EX|reg9:eight_zero|Op[7]         ; Merged with RREX:RR_EX|reg6:five_zero|Op[2]    ;
+; RREX:RR_EX|reg9:eight_zero|Op[6]         ; Merged with RREX:RR_EX|reg6:five_zero|Op[4]    ;
 ; IDRR:ID_RR|reg6:five_zero|Op[3]          ; Merged with IDRR:ID_RR|reg6:five_zero|Op[1]    ;
 ; EXMEM:EX_MEM|reg3:eight_six|Op[2]        ; Merged with EXMEM:EX_MEM|reg3:eight_six|Op[1]  ;
-; RREX:RR_EX|reg9:eight_zero|Op[8]         ; Merged with RREX:RR_EX|reg6:five_zero|Op[0]    ;
-; RREX:RR_EX|reg6:five_zero|Op[2,5]        ; Merged with RREX:RR_EX|reg6:five_zero|Op[0]    ;
-; RREX:RR_EX|reg9:eight_zero|Op[7]         ; Merged with RREX:RR_EX|reg6:five_zero|Op[0]    ;
-; RREX:RR_EX|reg6:five_zero|Op[3]          ; Merged with RREX:RR_EX|reg6:five_zero|Op[1]    ;
-; RREX:RR_EX|reg9:eight_zero|Op[6]         ; Merged with RREX:RR_EX|reg6:five_zero|Op[4]    ;
-; MEMWB:MEM_WB|reg3:eight_six|Op[2]        ; Merged with MEMWB:MEM_WB|reg3:eight_six|Op[1]  ;
-; EXMEM:EX_MEM|reg9:eight_zero|Op[3]       ; Merged with EXMEM:EX_MEM|reg9:eight_zero|Op[1] ;
 ; EXMEM:EX_MEM|reg9:eight_zero|Op[2,5,7,8] ; Merged with EXMEM:EX_MEM|reg9:eight_zero|Op[0] ;
 ; EXMEM:EX_MEM|reg9:eight_zero|Op[6]       ; Merged with EXMEM:EX_MEM|reg9:eight_zero|Op[4] ;
-; MEMWB:MEM_WB|reg9:eight_zero|Op[1]       ; Merged with MEMWB:MEM_WB|reg9:eight_zero|Op[3] ;
+; RREX:RR_EX|reg6:five_zero|Op[3]          ; Merged with RREX:RR_EX|reg6:five_zero|Op[1]    ;
 ; MEMWB:MEM_WB|reg9:eight_zero|Op[6]       ; Merged with MEMWB:MEM_WB|reg9:eight_zero|Op[4] ;
+; MEMWB:MEM_WB|reg3:eight_six|Op[2]        ; Merged with MEMWB:MEM_WB|reg3:eight_six|Op[1]  ;
 ; MEMWB:MEM_WB|reg9:eight_zero|Op[0,2,7,8] ; Merged with MEMWB:MEM_WB|reg9:eight_zero|Op[5] ;
+; EXMEM:EX_MEM|reg9:eight_zero|Op[3]       ; Merged with EXMEM:EX_MEM|reg9:eight_zero|Op[1] ;
+; MEMWB:MEM_WB|reg9:eight_zero|Op[1]       ; Merged with MEMWB:MEM_WB|reg9:eight_zero|Op[3] ;
 ; Total Number of Removed Registers = 100  ;                                                ;
 +------------------------------------------+------------------------------------------------+
 
@@ -432,7 +428,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1429  ;
+; Total registers                              ; 1427  ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -442,22 +438,22 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |datapath|reg:PC|Op[7]                ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; Yes        ; |datapath|RREX:RR_EX|reg:RF_D2|Op[11] ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; Yes        ; |datapath|RREX:RR_EX|reg:RF_D1|Op[15] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |datapath|mux41:Mux_ALU_B|Op[15]      ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |datapath|mux41_3:Mux_RF_A3|Op[1]     ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |datapath|mux41:Mux_ALU2_B|Op[7]      ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |datapath|mux41:Mux_ALU_B|Op[7]       ;
-; 8:1                ; 7 bits    ; 35 LEs        ; 21 LEs               ; 14 LEs                 ; No         ; |datapath|mux81:Mux_RF_D3|Op[6]       ;
-; 8:1                ; 9 bits    ; 45 LEs        ; 36 LEs               ; 9 LEs                  ; No         ; |datapath|mux81:Mux_RF_D3|Op[7]       ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |datapath|mux41:Mux_ALU_B|Op[1]       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |datapath|reg:PC|Op[0]               ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; Yes        ; |datapath|RREX:RR_EX|reg:RF_D2|Op[0] ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; Yes        ; |datapath|RREX:RR_EX|reg:RF_D1|Op[8] ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |datapath|mux41:Mux_ALU2_B|Op[6]     ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |datapath|mux41:Mux_ALU_B|Op[15]     ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |datapath|mux41_3:Mux_RF_A3|Op[1]    ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |datapath|mux41:Mux_ALU_B|Op[7]      ;
+; 8:1                ; 7 bits    ; 35 LEs        ; 21 LEs               ; 14 LEs                 ; No         ; |datapath|mux81:Mux_RF_D3|Op[5]      ;
+; 8:1                ; 9 bits    ; 45 LEs        ; 36 LEs               ; 9 LEs                  ; No         ; |datapath|mux81:Mux_RF_D3|Op[11]     ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |datapath|mux41:Mux_ALU_B|Op[5]      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
 
 
 +---------------------------------------------+
@@ -519,367 +515,369 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon May 02 05:43:46 2022
+    Info: Processing started: Sat May 07 13:55:03 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off datapath -c DUT
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file se9.vhd
-    Info (12022): Found design unit 1: bitextender9-behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/SE9.vhd Line: 11
-    Info (12023): Found entity 1: bitextender9 File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/SE9.vhd Line: 4
+    Info (12022): Found design unit 1: bitextender9-behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/SE9.vhd Line: 11
+    Info (12023): Found entity 1: bitextender9 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/SE9.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file se6.vhd
-    Info (12022): Found design unit 1: bitextender6-behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/SE6.vhd Line: 11
-    Info (12023): Found entity 1: bitextender6 File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/SE6.vhd Line: 4
+    Info (12022): Found design unit 1: bitextender6-behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/SE6.vhd Line: 11
+    Info (12023): Found entity 1: bitextender6 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/SE6.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file rom.vhd
-    Info (12022): Found design unit 1: rom-mem1 File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/ROM.vhd Line: 12
-    Info (12023): Found entity 1: rom File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/ROM.vhd Line: 5
+    Info (12022): Found design unit 1: rom-mem1 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/ROM.vhd Line: 12
+    Info (12023): Found entity 1: rom File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/ROM.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file reg_bank.vhd
-    Info (12022): Found design unit 1: register_bank-rb1 File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/reg_bank.vhd Line: 19
-    Info (12023): Found entity 1: register_bank File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/reg_bank.vhd Line: 6
+    Info (12022): Found design unit 1: register_bank-rb1 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/reg_bank.vhd Line: 19
+    Info (12023): Found entity 1: register_bank File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/reg_bank.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file reg_16.vhd
-    Info (12022): Found design unit 1: reg-reg1 File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/reg_16.vhd Line: 13
-    Info (12023): Found entity 1: reg File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/reg_16.vhd Line: 4
+    Info (12022): Found design unit 1: reg-reg1 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/reg_16.vhd Line: 13
+    Info (12023): Found entity 1: reg File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/reg_16.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file reg_1.vhd
-    Info (12022): Found design unit 1: reg1-reg_1 File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/reg_1.vhd Line: 13
-    Info (12023): Found entity 1: reg1 File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/reg_1.vhd Line: 4
+    Info (12022): Found design unit 1: reg1-reg_1 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/reg_1.vhd Line: 13
+    Info (12023): Found entity 1: reg1 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/reg_1.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file ram.vhd
-    Info (12022): Found design unit 1: ram-mem1 File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/RAM.vhd Line: 15
-    Info (12023): Found entity 1: ram File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/RAM.vhd Line: 5
+    Info (12022): Found design unit 1: ram-mem1 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/RAM.vhd Line: 15
+    Info (12023): Found entity 1: ram File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/RAM.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file mux81_3.vhd
-    Info (12022): Found design unit 1: mux81_3-behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux81_3.vhd Line: 19
-    Info (12023): Found entity 1: mux81_3 File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux81_3.vhd Line: 4
+    Info (12022): Found design unit 1: mux81_3-behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux81_3.vhd Line: 19
+    Info (12023): Found entity 1: mux81_3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux81_3.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file mux81.vhd
-    Info (12022): Found design unit 1: mux81-behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux81.vhd Line: 19
-    Info (12023): Found entity 1: mux81 File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux81.vhd Line: 4
+    Info (12022): Found design unit 1: mux81-behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux81.vhd Line: 19
+    Info (12023): Found entity 1: mux81 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux81.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file mux41_3.vhd
-    Info (12022): Found design unit 1: mux41_3-behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41_3.vhd Line: 15
-    Info (12023): Found entity 1: mux41_3 File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41_3.vhd Line: 4
-Warning (12090): Entity "mux41" obtained from "mux41.vhd" instead of from Quartus Prime megafunction library File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 4
+    Info (12022): Found design unit 1: mux41_3-behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41_3.vhd Line: 15
+    Info (12023): Found entity 1: mux41_3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41_3.vhd Line: 4
+Warning (12090): Entity "mux41" obtained from "mux41.vhd" instead of from Quartus Prime megafunction library File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file mux41.vhd
-    Info (12022): Found design unit 1: mux41-behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 15
-    Info (12023): Found entity 1: mux41 File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 4
+    Info (12022): Found design unit 1: mux41-behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 15
+    Info (12023): Found entity 1: mux41 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file mux21.vhd
-    Info (12022): Found design unit 1: mux21-behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux21.vhd Line: 13
-    Info (12023): Found entity 1: mux21 File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux21.vhd Line: 4
+    Info (12022): Found design unit 1: mux21-behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux21.vhd Line: 13
+    Info (12023): Found entity 1: mux21 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux21.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file mux21 _3.vhd
-    Info (12022): Found design unit 1: mux21_3-behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux21 _3.vhd Line: 13
-    Info (12023): Found entity 1: mux21_3 File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux21 _3.vhd Line: 4
+    Info (12022): Found design unit 1: mux21_3-behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux21 _3.vhd Line: 13
+    Info (12023): Found entity 1: mux21_3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux21 _3.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file inc.vhd
-    Info (12022): Found design unit 1: incr-behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/inc.vhd Line: 12
-    Info (12023): Found entity 1: incr File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/inc.vhd Line: 5
+    Info (12022): Found design unit 1: incr-behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/inc.vhd Line: 12
+    Info (12023): Found entity 1: incr File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/inc.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file datapath.vhd
-    Info (12022): Found design unit 1: datapath-arch File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 20
-    Info (12023): Found entity 1: datapath File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 6
+    Info (12022): Found design unit 1: datapath-arch File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 20
+    Info (12023): Found entity 1: datapath File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file bit7shift.vhd
-    Info (12022): Found design unit 1: bit7shift-a1 File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/bit7shift.vhd Line: 12
-    Info (12023): Found entity 1: bit7shift File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/bit7shift.vhd Line: 4
+    Info (12022): Found design unit 1: bit7shift-a1 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/bit7shift.vhd Line: 12
+    Info (12023): Found entity 1: bit7shift File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/bit7shift.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file bit1shift.vhd
-    Info (12022): Found design unit 1: bit1shift-a1 File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/bit1shift.vhd Line: 11
-    Info (12023): Found entity 1: bit1shift File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/bit1shift.vhd Line: 4
+    Info (12022): Found design unit 1: bit1shift-a1 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/bit1shift.vhd Line: 11
+    Info (12023): Found entity 1: bit1shift File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/bit1shift.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
-    Info (12022): Found design unit 1: alu-a1 File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 16
-    Info (12023): Found entity 1: alu File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 4
+    Info (12022): Found design unit 1: alu-a1 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 16
+    Info (12023): Found entity 1: alu File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file reg_6.vhd
-    Info (12022): Found design unit 1: reg6-reg1 File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/reg_6.vhd Line: 13
-    Info (12023): Found entity 1: reg6 File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/reg_6.vhd Line: 4
+    Info (12022): Found design unit 1: reg6-reg1 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/reg_6.vhd Line: 13
+    Info (12023): Found entity 1: reg6 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/reg_6.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file reg_3.vhd
-    Info (12022): Found design unit 1: reg3-reg1 File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/reg_3.vhd Line: 13
-    Info (12023): Found entity 1: reg3 File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/reg_3.vhd Line: 4
+    Info (12022): Found design unit 1: reg3-reg1 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/reg_3.vhd Line: 13
+    Info (12023): Found entity 1: reg3 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/reg_3.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file reg_9.vhd
-    Info (12022): Found design unit 1: reg9-reg1 File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/reg_9.vhd Line: 13
-    Info (12023): Found entity 1: reg9 File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/reg_9.vhd Line: 4
+    Info (12022): Found design unit 1: reg9-reg1 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/reg_9.vhd Line: 13
+    Info (12023): Found entity 1: reg9 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/reg_9.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file idrr.vhd
-    Info (12022): Found design unit 1: IDRR-arch File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/IDRR.vhd Line: 19
-    Info (12023): Found entity 1: IDRR File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/IDRR.vhd Line: 4
+    Info (12022): Found design unit 1: IDRR-arch File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/IDRR.vhd Line: 19
+    Info (12023): Found entity 1: IDRR File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/IDRR.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file rrex.vhd
-    Info (12022): Found design unit 1: RREX-arch File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/RREX.vhd Line: 19
-    Info (12023): Found entity 1: RREX File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/RREX.vhd Line: 4
+    Info (12022): Found design unit 1: RREX-arch File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/RREX.vhd Line: 19
+    Info (12023): Found entity 1: RREX File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/RREX.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file exmem.vhd
-    Info (12022): Found design unit 1: EXMEM-arch File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/EXMEM.vhd Line: 19
-    Info (12023): Found entity 1: EXMEM File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/EXMEM.vhd Line: 4
+    Info (12022): Found design unit 1: EXMEM-arch File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/EXMEM.vhd Line: 21
+    Info (12023): Found entity 1: EXMEM File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/EXMEM.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file memwb.vhd
-    Info (12022): Found design unit 1: MEMWB-arch File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/MEMWB.vhd Line: 19
-    Info (12023): Found entity 1: MEMWB File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/MEMWB.vhd Line: 4
+    Info (12022): Found design unit 1: MEMWB-arch File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/MEMWB.vhd Line: 21
+    Info (12023): Found entity 1: MEMWB File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/MEMWB.vhd Line: 4
 Info (12127): Elaborating entity "datapath" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(274): object "RREX_inc_Op" assigned a value but never read File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 274
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(274): object "RREX_PC_Op" assigned a value but never read File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 274
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(275): object "RREX_11_9_Op" assigned a value but never read File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 275
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(275): object "RREX_8_6_Op" assigned a value but never read File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 275
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(285): object "MEMWB_5_0_Op" assigned a value but never read File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 285
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(287): object "cy_2" assigned a value but never read File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 287
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(287): object "z_2" assigned a value but never read File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 287
-Info (12128): Elaborating entity "reg" for hierarchy "reg:PC" File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 292
-Info (12128): Elaborating entity "rom" for hierarchy "rom:IMem" File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 295
-Info (12128): Elaborating entity "incr" for hierarchy "incr:inc" File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 301
-Warning (10492): VHDL Process Statement warning at inc.vhd(19): signal "wr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/inc.vhd Line: 19
-Warning (10631): VHDL Process Statement warning at inc.vhd(15): inferring latch(es) for signal or variable "Op", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/inc.vhd Line: 15
-Info (10041): Inferred latch for "Op[0]" at inc.vhd(15) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/inc.vhd Line: 15
-Info (10041): Inferred latch for "Op[1]" at inc.vhd(15) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/inc.vhd Line: 15
-Info (10041): Inferred latch for "Op[2]" at inc.vhd(15) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/inc.vhd Line: 15
-Info (10041): Inferred latch for "Op[3]" at inc.vhd(15) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/inc.vhd Line: 15
-Info (10041): Inferred latch for "Op[4]" at inc.vhd(15) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/inc.vhd Line: 15
-Info (10041): Inferred latch for "Op[5]" at inc.vhd(15) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/inc.vhd Line: 15
-Info (10041): Inferred latch for "Op[6]" at inc.vhd(15) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/inc.vhd Line: 15
-Info (10041): Inferred latch for "Op[7]" at inc.vhd(15) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/inc.vhd Line: 15
-Info (10041): Inferred latch for "Op[8]" at inc.vhd(15) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/inc.vhd Line: 15
-Info (10041): Inferred latch for "Op[9]" at inc.vhd(15) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/inc.vhd Line: 15
-Info (10041): Inferred latch for "Op[10]" at inc.vhd(15) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/inc.vhd Line: 15
-Info (10041): Inferred latch for "Op[11]" at inc.vhd(15) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/inc.vhd Line: 15
-Info (10041): Inferred latch for "Op[12]" at inc.vhd(15) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/inc.vhd Line: 15
-Info (10041): Inferred latch for "Op[13]" at inc.vhd(15) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/inc.vhd Line: 15
-Info (10041): Inferred latch for "Op[14]" at inc.vhd(15) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/inc.vhd Line: 15
-Info (10041): Inferred latch for "Op[15]" at inc.vhd(15) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/inc.vhd Line: 15
-Info (12128): Elaborating entity "IDRR" for hierarchy "IDRR:ID_RR" File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 304
-Info (12128): Elaborating entity "reg3" for hierarchy "IDRR:ID_RR|reg3:eleven_nine" File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/IDRR.vhd Line: 65
-Info (12128): Elaborating entity "reg9" for hierarchy "IDRR:ID_RR|reg9:eight_zero" File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/IDRR.vhd Line: 68
-Info (12128): Elaborating entity "reg6" for hierarchy "IDRR:ID_RR|reg6:five_zero" File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/IDRR.vhd Line: 69
-Info (12128): Elaborating entity "mux21_3" for hierarchy "mux21_3:Mux_RF_A1" File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 317
-Warning (10631): VHDL Process Statement warning at mux21 _3.vhd(16): inferring latch(es) for signal or variable "Op", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux21 _3.vhd Line: 16
-Info (10041): Inferred latch for "Op[0]" at mux21 _3.vhd(16) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux21 _3.vhd Line: 16
-Info (10041): Inferred latch for "Op[1]" at mux21 _3.vhd(16) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux21 _3.vhd Line: 16
-Info (10041): Inferred latch for "Op[2]" at mux21 _3.vhd(16) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux21 _3.vhd Line: 16
-Info (12128): Elaborating entity "register_bank" for hierarchy "register_bank:RF" File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 323
-Warning (10492): VHDL Process Statement warning at reg_bank.vhd(40): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/reg_bank.vhd Line: 40
-Info (12128): Elaborating entity "mux81" for hierarchy "register_bank:RF|mux81:m1" File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/reg_bank.vhd Line: 36
-Info (12128): Elaborating entity "RREX" for hierarchy "RREX:RR_EX" File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 326
-Info (12128): Elaborating entity "mux21" for hierarchy "mux21:Mux_ALU_A" File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 342
-Warning (10631): VHDL Process Statement warning at mux21.vhd(16): inferring latch(es) for signal or variable "Op", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux21.vhd Line: 16
-Info (10041): Inferred latch for "Op[0]" at mux21.vhd(16) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux21.vhd Line: 16
-Info (10041): Inferred latch for "Op[1]" at mux21.vhd(16) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux21.vhd Line: 16
-Info (10041): Inferred latch for "Op[2]" at mux21.vhd(16) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux21.vhd Line: 16
-Info (10041): Inferred latch for "Op[3]" at mux21.vhd(16) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux21.vhd Line: 16
-Info (10041): Inferred latch for "Op[4]" at mux21.vhd(16) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux21.vhd Line: 16
-Info (10041): Inferred latch for "Op[5]" at mux21.vhd(16) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux21.vhd Line: 16
-Info (10041): Inferred latch for "Op[6]" at mux21.vhd(16) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux21.vhd Line: 16
-Info (10041): Inferred latch for "Op[7]" at mux21.vhd(16) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux21.vhd Line: 16
-Info (10041): Inferred latch for "Op[8]" at mux21.vhd(16) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux21.vhd Line: 16
-Info (10041): Inferred latch for "Op[9]" at mux21.vhd(16) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux21.vhd Line: 16
-Info (10041): Inferred latch for "Op[10]" at mux21.vhd(16) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux21.vhd Line: 16
-Info (10041): Inferred latch for "Op[11]" at mux21.vhd(16) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux21.vhd Line: 16
-Info (10041): Inferred latch for "Op[12]" at mux21.vhd(16) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux21.vhd Line: 16
-Info (10041): Inferred latch for "Op[13]" at mux21.vhd(16) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux21.vhd Line: 16
-Info (10041): Inferred latch for "Op[14]" at mux21.vhd(16) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux21.vhd Line: 16
-Info (10041): Inferred latch for "Op[15]" at mux21.vhd(16) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux21.vhd Line: 16
-Info (12128): Elaborating entity "bit1shift" for hierarchy "bit1shift:S1" File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 345
-Info (12128): Elaborating entity "bitextender6" for hierarchy "bitextender6:SE6" File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 348
-Warning (10631): VHDL Process Statement warning at SE6.vhd(14): inferring latch(es) for signal or variable "Op", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/SE6.vhd Line: 14
-Info (10041): Inferred latch for "Op[0]" at SE6.vhd(14) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/SE6.vhd Line: 14
-Info (10041): Inferred latch for "Op[1]" at SE6.vhd(14) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/SE6.vhd Line: 14
-Info (10041): Inferred latch for "Op[2]" at SE6.vhd(14) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/SE6.vhd Line: 14
-Info (10041): Inferred latch for "Op[3]" at SE6.vhd(14) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/SE6.vhd Line: 14
-Info (10041): Inferred latch for "Op[4]" at SE6.vhd(14) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/SE6.vhd Line: 14
-Info (10041): Inferred latch for "Op[5]" at SE6.vhd(14) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/SE6.vhd Line: 14
-Info (10041): Inferred latch for "Op[6]" at SE6.vhd(14) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/SE6.vhd Line: 14
-Info (10041): Inferred latch for "Op[7]" at SE6.vhd(14) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/SE6.vhd Line: 14
-Info (10041): Inferred latch for "Op[8]" at SE6.vhd(14) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/SE6.vhd Line: 14
-Info (10041): Inferred latch for "Op[9]" at SE6.vhd(14) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/SE6.vhd Line: 14
-Info (10041): Inferred latch for "Op[10]" at SE6.vhd(14) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/SE6.vhd Line: 14
-Info (10041): Inferred latch for "Op[11]" at SE6.vhd(14) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/SE6.vhd Line: 14
-Info (10041): Inferred latch for "Op[12]" at SE6.vhd(14) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/SE6.vhd Line: 14
-Info (10041): Inferred latch for "Op[13]" at SE6.vhd(14) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/SE6.vhd Line: 14
-Info (10041): Inferred latch for "Op[14]" at SE6.vhd(14) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/SE6.vhd Line: 14
-Info (10041): Inferred latch for "Op[15]" at SE6.vhd(14) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/SE6.vhd Line: 14
-Info (12128): Elaborating entity "bitextender9" for hierarchy "bitextender9:SE9" File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 351
-Warning (10631): VHDL Process Statement warning at SE9.vhd(14): inferring latch(es) for signal or variable "Op", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/SE9.vhd Line: 14
-Info (10041): Inferred latch for "Op[0]" at SE9.vhd(14) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/SE9.vhd Line: 14
-Info (10041): Inferred latch for "Op[1]" at SE9.vhd(14) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/SE9.vhd Line: 14
-Info (10041): Inferred latch for "Op[2]" at SE9.vhd(14) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/SE9.vhd Line: 14
-Info (10041): Inferred latch for "Op[3]" at SE9.vhd(14) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/SE9.vhd Line: 14
-Info (10041): Inferred latch for "Op[4]" at SE9.vhd(14) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/SE9.vhd Line: 14
-Info (10041): Inferred latch for "Op[5]" at SE9.vhd(14) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/SE9.vhd Line: 14
-Info (10041): Inferred latch for "Op[6]" at SE9.vhd(14) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/SE9.vhd Line: 14
-Info (10041): Inferred latch for "Op[7]" at SE9.vhd(14) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/SE9.vhd Line: 14
-Info (10041): Inferred latch for "Op[8]" at SE9.vhd(14) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/SE9.vhd Line: 14
-Info (10041): Inferred latch for "Op[9]" at SE9.vhd(14) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/SE9.vhd Line: 14
-Info (10041): Inferred latch for "Op[10]" at SE9.vhd(14) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/SE9.vhd Line: 14
-Info (10041): Inferred latch for "Op[11]" at SE9.vhd(14) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/SE9.vhd Line: 14
-Info (10041): Inferred latch for "Op[12]" at SE9.vhd(14) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/SE9.vhd Line: 14
-Info (10041): Inferred latch for "Op[13]" at SE9.vhd(14) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/SE9.vhd Line: 14
-Info (10041): Inferred latch for "Op[14]" at SE9.vhd(14) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/SE9.vhd Line: 14
-Info (10041): Inferred latch for "Op[15]" at SE9.vhd(14) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/SE9.vhd Line: 14
-Info (12128): Elaborating entity "mux41" for hierarchy "mux41:Mux_ALU_B" File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 354
-Warning (10631): VHDL Process Statement warning at mux41.vhd(18): inferring latch(es) for signal or variable "Op", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Info (10041): Inferred latch for "Op[0]" at mux41.vhd(18) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Info (10041): Inferred latch for "Op[1]" at mux41.vhd(18) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Info (10041): Inferred latch for "Op[2]" at mux41.vhd(18) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Info (10041): Inferred latch for "Op[3]" at mux41.vhd(18) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Info (10041): Inferred latch for "Op[4]" at mux41.vhd(18) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Info (10041): Inferred latch for "Op[5]" at mux41.vhd(18) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Info (10041): Inferred latch for "Op[6]" at mux41.vhd(18) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Info (10041): Inferred latch for "Op[7]" at mux41.vhd(18) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Info (10041): Inferred latch for "Op[8]" at mux41.vhd(18) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Info (10041): Inferred latch for "Op[9]" at mux41.vhd(18) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Info (10041): Inferred latch for "Op[10]" at mux41.vhd(18) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Info (10041): Inferred latch for "Op[11]" at mux41.vhd(18) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Info (10041): Inferred latch for "Op[12]" at mux41.vhd(18) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Info (10041): Inferred latch for "Op[13]" at mux41.vhd(18) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Info (10041): Inferred latch for "Op[14]" at mux41.vhd(18) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Info (10041): Inferred latch for "Op[15]" at mux41.vhd(18) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Info (12128): Elaborating entity "alu" for hierarchy "alu:ALU_1" File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 357
-Warning (10631): VHDL Process Statement warning at alu.vhd(33): inferring latch(es) for signal or variable "Op", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-Warning (10631): VHDL Process Statement warning at alu.vhd(33): inferring latch(es) for signal or variable "carry", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-Warning (10631): VHDL Process Statement warning at alu.vhd(33): inferring latch(es) for signal or variable "zero", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-Info (10041): Inferred latch for "zero" at alu.vhd(33) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-Info (10041): Inferred latch for "carry" at alu.vhd(33) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-Info (10041): Inferred latch for "Op[0]" at alu.vhd(33) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-Info (10041): Inferred latch for "Op[1]" at alu.vhd(33) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-Info (10041): Inferred latch for "Op[2]" at alu.vhd(33) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-Info (10041): Inferred latch for "Op[3]" at alu.vhd(33) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-Info (10041): Inferred latch for "Op[4]" at alu.vhd(33) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-Info (10041): Inferred latch for "Op[5]" at alu.vhd(33) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-Info (10041): Inferred latch for "Op[6]" at alu.vhd(33) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-Info (10041): Inferred latch for "Op[7]" at alu.vhd(33) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-Info (10041): Inferred latch for "Op[8]" at alu.vhd(33) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-Info (10041): Inferred latch for "Op[9]" at alu.vhd(33) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-Info (10041): Inferred latch for "Op[10]" at alu.vhd(33) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-Info (10041): Inferred latch for "Op[11]" at alu.vhd(33) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-Info (10041): Inferred latch for "Op[12]" at alu.vhd(33) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-Info (10041): Inferred latch for "Op[13]" at alu.vhd(33) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-Info (10041): Inferred latch for "Op[14]" at alu.vhd(33) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-Info (10041): Inferred latch for "Op[15]" at alu.vhd(33) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-Info (12128): Elaborating entity "reg1" for hierarchy "reg1:carry" File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 360
-Info (12128): Elaborating entity "EXMEM" for hierarchy "EXMEM:EX_MEM" File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 366
-Info (12128): Elaborating entity "ram" for hierarchy "ram:DMem" File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 391
-Info (12128): Elaborating entity "MEMWB" for hierarchy "MEMWB:MEM_WB" File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 403
-Info (12128): Elaborating entity "mux41_3" for hierarchy "mux41_3:Mux_RF_A3" File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 420
-Warning (10631): VHDL Process Statement warning at mux41_3.vhd(18): inferring latch(es) for signal or variable "Op", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41_3.vhd Line: 18
-Info (10041): Inferred latch for "Op[0]" at mux41_3.vhd(18) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41_3.vhd Line: 18
-Info (10041): Inferred latch for "Op[1]" at mux41_3.vhd(18) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41_3.vhd Line: 18
-Info (10041): Inferred latch for "Op[2]" at mux41_3.vhd(18) File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41_3.vhd Line: 18
-Info (12128): Elaborating entity "bit7shift" for hierarchy "bit7shift:S7" File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 423
-Warning (14026): LATCH primitive "mux41:Mux_jump_loc|Op[0]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_jump_loc|Op[1]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_jump_loc|Op[2]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_jump_loc|Op[3]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_jump_loc|Op[4]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_jump_loc|Op[5]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_jump_loc|Op[6]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_jump_loc|Op[7]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_jump_loc|Op[8]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_jump_loc|Op[9]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_jump_loc|Op[10]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_jump_loc|Op[11]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_jump_loc|Op[12]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_jump_loc|Op[13]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_jump_loc|Op[14]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_jump_loc|Op[15]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41_3:Mux_RF_A3|Op[0]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41_3.vhd Line: 18
-Warning (14026): LATCH primitive "mux41_3:Mux_RF_A3|Op[1]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41_3.vhd Line: 18
-Warning (14026): LATCH primitive "mux41_3:Mux_RF_A3|Op[2]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41_3.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_ALU2_B|Op[0]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_ALU2_B|Op[1]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_ALU2_B|Op[2]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_ALU2_B|Op[3]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_ALU2_B|Op[4]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_ALU2_B|Op[5]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_ALU2_B|Op[6]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_ALU2_B|Op[7]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_ALU2_B|Op[8]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_ALU2_B|Op[9]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_ALU2_B|Op[10]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_ALU2_B|Op[11]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_ALU2_B|Op[12]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_ALU2_B|Op[13]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_ALU2_B|Op[14]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_ALU2_B|Op[15]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_ALU_B|Op[0]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_ALU_B|Op[1]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_ALU_B|Op[2]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_ALU_B|Op[3]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_ALU_B|Op[4]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_ALU_B|Op[5]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_ALU_B|Op[6]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_ALU_B|Op[7]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_ALU_B|Op[8]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_ALU_B|Op[9]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_ALU_B|Op[10]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_ALU_B|Op[11]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_ALU_B|Op[12]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_ALU_B|Op[13]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_ALU_B|Op[14]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (14026): LATCH primitive "mux41:Mux_ALU_B|Op[15]" is permanently enabled File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/mux41.vhd Line: 18
-Warning (13012): Latch alu:ALU_1|carry has unsafe behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 11
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU[0] File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 11
-Warning (13012): Latch alu:ALU_1|zero has unsafe behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 12
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU[0] File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 11
-Warning (13012): Latch alu:ALU_2|Op[1] has unsafe behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU2[0] File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 11
-Warning (13012): Latch alu:ALU_2|Op[2] has unsafe behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU2[0] File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 11
-Warning (13012): Latch alu:ALU_2|Op[3] has unsafe behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU2[0] File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 11
-Warning (13012): Latch alu:ALU_2|Op[4] has unsafe behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU2[0] File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 11
-Warning (13012): Latch alu:ALU_2|Op[5] has unsafe behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU2[0] File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 11
-Warning (13012): Latch alu:ALU_2|Op[6] has unsafe behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU2[0] File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 11
-Warning (13012): Latch alu:ALU_2|Op[7] has unsafe behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU2[0] File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 11
-Warning (13012): Latch alu:ALU_2|Op[8] has unsafe behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU2[0] File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 11
-Warning (13012): Latch alu:ALU_2|Op[9] has unsafe behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU2[0] File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 11
-Warning (13012): Latch alu:ALU_2|Op[10] has unsafe behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU2[0] File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 11
-Warning (13012): Latch alu:ALU_2|Op[11] has unsafe behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU2[0] File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 11
-Warning (13012): Latch alu:ALU_2|Op[12] has unsafe behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU2[0] File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 11
-Warning (13012): Latch alu:ALU_2|Op[13] has unsafe behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU2[0] File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 11
-Warning (13012): Latch alu:ALU_2|Op[14] has unsafe behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU2[0] File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 11
-Warning (13012): Latch alu:ALU_2|Op[15] has unsafe behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU2[0] File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 11
-Warning (13012): Latch alu:ALU_2|Op[0] has unsafe behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU2[0] File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 11
-Warning (13012): Latch alu:ALU_1|Op[1] has unsafe behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU[0] File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 11
-Warning (13012): Latch alu:ALU_1|Op[2] has unsafe behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU[0] File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 11
-Warning (13012): Latch alu:ALU_1|Op[3] has unsafe behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU[0] File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 11
-Warning (13012): Latch alu:ALU_1|Op[4] has unsafe behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU[0] File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 11
-Warning (13012): Latch alu:ALU_1|Op[5] has unsafe behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU[0] File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 11
-Warning (13012): Latch alu:ALU_1|Op[6] has unsafe behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU[0] File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 11
-Warning (13012): Latch alu:ALU_1|Op[7] has unsafe behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU[0] File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 11
-Warning (13012): Latch alu:ALU_1|Op[8] has unsafe behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU[0] File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 11
-Warning (13012): Latch alu:ALU_1|Op[9] has unsafe behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU[0] File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 11
-Warning (13012): Latch alu:ALU_1|Op[10] has unsafe behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU[0] File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 11
-Warning (13012): Latch alu:ALU_1|Op[11] has unsafe behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU[0] File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 11
-Warning (13012): Latch alu:ALU_1|Op[12] has unsafe behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU[0] File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 11
-Warning (13012): Latch alu:ALU_1|Op[13] has unsafe behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU[0] File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 11
-Warning (13012): Latch alu:ALU_1|Op[14] has unsafe behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU[0] File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 11
-Warning (13012): Latch alu:ALU_1|Op[15] has unsafe behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU[0] File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 11
-Warning (13012): Latch alu:ALU_1|Op[0] has unsafe behavior File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/alu.vhd Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU[0] File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 11
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(278): object "RREX_inc_Op" assigned a value but never read File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 278
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(278): object "RREX_PC_Op" assigned a value but never read File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 278
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(279): object "RREX_11_9_Op" assigned a value but never read File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 279
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(279): object "RREX_8_6_Op" assigned a value but never read File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 279
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(290): object "MEMWB_5_0_Op" assigned a value but never read File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 290
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(293): object "cy_2" assigned a value but never read File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 293
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(293): object "z_2" assigned a value but never read File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 293
+Info (12128): Elaborating entity "reg" for hierarchy "reg:PC" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 298
+Info (12128): Elaborating entity "rom" for hierarchy "rom:IMem" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 301
+Info (12128): Elaborating entity "incr" for hierarchy "incr:inc" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 307
+Warning (10631): VHDL Process Statement warning at inc.vhd(15): inferring latch(es) for signal or variable "Op", which holds its previous value in one or more paths through the process File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/inc.vhd Line: 15
+Info (10041): Inferred latch for "Op[0]" at inc.vhd(15) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/inc.vhd Line: 15
+Info (10041): Inferred latch for "Op[1]" at inc.vhd(15) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/inc.vhd Line: 15
+Info (10041): Inferred latch for "Op[2]" at inc.vhd(15) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/inc.vhd Line: 15
+Info (10041): Inferred latch for "Op[3]" at inc.vhd(15) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/inc.vhd Line: 15
+Info (10041): Inferred latch for "Op[4]" at inc.vhd(15) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/inc.vhd Line: 15
+Info (10041): Inferred latch for "Op[5]" at inc.vhd(15) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/inc.vhd Line: 15
+Info (10041): Inferred latch for "Op[6]" at inc.vhd(15) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/inc.vhd Line: 15
+Info (10041): Inferred latch for "Op[7]" at inc.vhd(15) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/inc.vhd Line: 15
+Info (10041): Inferred latch for "Op[8]" at inc.vhd(15) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/inc.vhd Line: 15
+Info (10041): Inferred latch for "Op[9]" at inc.vhd(15) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/inc.vhd Line: 15
+Info (10041): Inferred latch for "Op[10]" at inc.vhd(15) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/inc.vhd Line: 15
+Info (10041): Inferred latch for "Op[11]" at inc.vhd(15) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/inc.vhd Line: 15
+Info (10041): Inferred latch for "Op[12]" at inc.vhd(15) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/inc.vhd Line: 15
+Info (10041): Inferred latch for "Op[13]" at inc.vhd(15) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/inc.vhd Line: 15
+Info (10041): Inferred latch for "Op[14]" at inc.vhd(15) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/inc.vhd Line: 15
+Info (10041): Inferred latch for "Op[15]" at inc.vhd(15) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/inc.vhd Line: 15
+Info (12128): Elaborating entity "IDRR" for hierarchy "IDRR:ID_RR" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 310
+Info (12128): Elaborating entity "reg3" for hierarchy "IDRR:ID_RR|reg3:eleven_nine" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/IDRR.vhd Line: 65
+Info (12128): Elaborating entity "reg9" for hierarchy "IDRR:ID_RR|reg9:eight_zero" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/IDRR.vhd Line: 68
+Info (12128): Elaborating entity "reg6" for hierarchy "IDRR:ID_RR|reg6:five_zero" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/IDRR.vhd Line: 69
+Info (12128): Elaborating entity "mux21_3" for hierarchy "mux21_3:Mux_RF_A1" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 323
+Warning (10631): VHDL Process Statement warning at mux21 _3.vhd(16): inferring latch(es) for signal or variable "Op", which holds its previous value in one or more paths through the process File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux21 _3.vhd Line: 16
+Info (10041): Inferred latch for "Op[0]" at mux21 _3.vhd(16) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux21 _3.vhd Line: 16
+Info (10041): Inferred latch for "Op[1]" at mux21 _3.vhd(16) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux21 _3.vhd Line: 16
+Info (10041): Inferred latch for "Op[2]" at mux21 _3.vhd(16) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux21 _3.vhd Line: 16
+Info (12128): Elaborating entity "register_bank" for hierarchy "register_bank:RF" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 329
+Info (12128): Elaborating entity "mux81" for hierarchy "register_bank:RF|mux81:m1" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/reg_bank.vhd Line: 36
+Info (12128): Elaborating entity "RREX" for hierarchy "RREX:RR_EX" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 332
+Info (12128): Elaborating entity "mux21" for hierarchy "mux21:Mux_ALU_A" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 348
+Warning (10631): VHDL Process Statement warning at mux21.vhd(16): inferring latch(es) for signal or variable "Op", which holds its previous value in one or more paths through the process File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux21.vhd Line: 16
+Info (10041): Inferred latch for "Op[0]" at mux21.vhd(16) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux21.vhd Line: 16
+Info (10041): Inferred latch for "Op[1]" at mux21.vhd(16) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux21.vhd Line: 16
+Info (10041): Inferred latch for "Op[2]" at mux21.vhd(16) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux21.vhd Line: 16
+Info (10041): Inferred latch for "Op[3]" at mux21.vhd(16) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux21.vhd Line: 16
+Info (10041): Inferred latch for "Op[4]" at mux21.vhd(16) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux21.vhd Line: 16
+Info (10041): Inferred latch for "Op[5]" at mux21.vhd(16) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux21.vhd Line: 16
+Info (10041): Inferred latch for "Op[6]" at mux21.vhd(16) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux21.vhd Line: 16
+Info (10041): Inferred latch for "Op[7]" at mux21.vhd(16) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux21.vhd Line: 16
+Info (10041): Inferred latch for "Op[8]" at mux21.vhd(16) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux21.vhd Line: 16
+Info (10041): Inferred latch for "Op[9]" at mux21.vhd(16) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux21.vhd Line: 16
+Info (10041): Inferred latch for "Op[10]" at mux21.vhd(16) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux21.vhd Line: 16
+Info (10041): Inferred latch for "Op[11]" at mux21.vhd(16) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux21.vhd Line: 16
+Info (10041): Inferred latch for "Op[12]" at mux21.vhd(16) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux21.vhd Line: 16
+Info (10041): Inferred latch for "Op[13]" at mux21.vhd(16) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux21.vhd Line: 16
+Info (10041): Inferred latch for "Op[14]" at mux21.vhd(16) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux21.vhd Line: 16
+Info (10041): Inferred latch for "Op[15]" at mux21.vhd(16) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux21.vhd Line: 16
+Info (12128): Elaborating entity "bit1shift" for hierarchy "bit1shift:S1" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 351
+Info (12128): Elaborating entity "bitextender6" for hierarchy "bitextender6:SE6" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 354
+Warning (10631): VHDL Process Statement warning at SE6.vhd(14): inferring latch(es) for signal or variable "Op", which holds its previous value in one or more paths through the process File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/SE6.vhd Line: 14
+Info (10041): Inferred latch for "Op[0]" at SE6.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/SE6.vhd Line: 14
+Info (10041): Inferred latch for "Op[1]" at SE6.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/SE6.vhd Line: 14
+Info (10041): Inferred latch for "Op[2]" at SE6.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/SE6.vhd Line: 14
+Info (10041): Inferred latch for "Op[3]" at SE6.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/SE6.vhd Line: 14
+Info (10041): Inferred latch for "Op[4]" at SE6.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/SE6.vhd Line: 14
+Info (10041): Inferred latch for "Op[5]" at SE6.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/SE6.vhd Line: 14
+Info (10041): Inferred latch for "Op[6]" at SE6.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/SE6.vhd Line: 14
+Info (10041): Inferred latch for "Op[7]" at SE6.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/SE6.vhd Line: 14
+Info (10041): Inferred latch for "Op[8]" at SE6.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/SE6.vhd Line: 14
+Info (10041): Inferred latch for "Op[9]" at SE6.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/SE6.vhd Line: 14
+Info (10041): Inferred latch for "Op[10]" at SE6.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/SE6.vhd Line: 14
+Info (10041): Inferred latch for "Op[11]" at SE6.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/SE6.vhd Line: 14
+Info (10041): Inferred latch for "Op[12]" at SE6.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/SE6.vhd Line: 14
+Info (10041): Inferred latch for "Op[13]" at SE6.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/SE6.vhd Line: 14
+Info (10041): Inferred latch for "Op[14]" at SE6.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/SE6.vhd Line: 14
+Info (10041): Inferred latch for "Op[15]" at SE6.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/SE6.vhd Line: 14
+Info (12128): Elaborating entity "bitextender9" for hierarchy "bitextender9:SE9" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 357
+Warning (10631): VHDL Process Statement warning at SE9.vhd(14): inferring latch(es) for signal or variable "Op", which holds its previous value in one or more paths through the process File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/SE9.vhd Line: 14
+Info (10041): Inferred latch for "Op[0]" at SE9.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/SE9.vhd Line: 14
+Info (10041): Inferred latch for "Op[1]" at SE9.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/SE9.vhd Line: 14
+Info (10041): Inferred latch for "Op[2]" at SE9.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/SE9.vhd Line: 14
+Info (10041): Inferred latch for "Op[3]" at SE9.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/SE9.vhd Line: 14
+Info (10041): Inferred latch for "Op[4]" at SE9.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/SE9.vhd Line: 14
+Info (10041): Inferred latch for "Op[5]" at SE9.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/SE9.vhd Line: 14
+Info (10041): Inferred latch for "Op[6]" at SE9.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/SE9.vhd Line: 14
+Info (10041): Inferred latch for "Op[7]" at SE9.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/SE9.vhd Line: 14
+Info (10041): Inferred latch for "Op[8]" at SE9.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/SE9.vhd Line: 14
+Info (10041): Inferred latch for "Op[9]" at SE9.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/SE9.vhd Line: 14
+Info (10041): Inferred latch for "Op[10]" at SE9.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/SE9.vhd Line: 14
+Info (10041): Inferred latch for "Op[11]" at SE9.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/SE9.vhd Line: 14
+Info (10041): Inferred latch for "Op[12]" at SE9.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/SE9.vhd Line: 14
+Info (10041): Inferred latch for "Op[13]" at SE9.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/SE9.vhd Line: 14
+Info (10041): Inferred latch for "Op[14]" at SE9.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/SE9.vhd Line: 14
+Info (10041): Inferred latch for "Op[15]" at SE9.vhd(14) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/SE9.vhd Line: 14
+Info (12128): Elaborating entity "mux41" for hierarchy "mux41:Mux_ALU_B" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 360
+Warning (10631): VHDL Process Statement warning at mux41.vhd(18): inferring latch(es) for signal or variable "Op", which holds its previous value in one or more paths through the process File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Info (10041): Inferred latch for "Op[0]" at mux41.vhd(18) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Info (10041): Inferred latch for "Op[1]" at mux41.vhd(18) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Info (10041): Inferred latch for "Op[2]" at mux41.vhd(18) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Info (10041): Inferred latch for "Op[3]" at mux41.vhd(18) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Info (10041): Inferred latch for "Op[4]" at mux41.vhd(18) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Info (10041): Inferred latch for "Op[5]" at mux41.vhd(18) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Info (10041): Inferred latch for "Op[6]" at mux41.vhd(18) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Info (10041): Inferred latch for "Op[7]" at mux41.vhd(18) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Info (10041): Inferred latch for "Op[8]" at mux41.vhd(18) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Info (10041): Inferred latch for "Op[9]" at mux41.vhd(18) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Info (10041): Inferred latch for "Op[10]" at mux41.vhd(18) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Info (10041): Inferred latch for "Op[11]" at mux41.vhd(18) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Info (10041): Inferred latch for "Op[12]" at mux41.vhd(18) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Info (10041): Inferred latch for "Op[13]" at mux41.vhd(18) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Info (10041): Inferred latch for "Op[14]" at mux41.vhd(18) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Info (10041): Inferred latch for "Op[15]" at mux41.vhd(18) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Info (12128): Elaborating entity "alu" for hierarchy "alu:ALU_1" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 363
+Warning (10631): VHDL Process Statement warning at alu.vhd(33): inferring latch(es) for signal or variable "Op", which holds its previous value in one or more paths through the process File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+Warning (10631): VHDL Process Statement warning at alu.vhd(33): inferring latch(es) for signal or variable "carry", which holds its previous value in one or more paths through the process File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+Warning (10631): VHDL Process Statement warning at alu.vhd(33): inferring latch(es) for signal or variable "zero", which holds its previous value in one or more paths through the process File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+Info (10041): Inferred latch for "zero" at alu.vhd(33) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+Info (10041): Inferred latch for "carry" at alu.vhd(33) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+Info (10041): Inferred latch for "Op[0]" at alu.vhd(33) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+Info (10041): Inferred latch for "Op[1]" at alu.vhd(33) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+Info (10041): Inferred latch for "Op[2]" at alu.vhd(33) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+Info (10041): Inferred latch for "Op[3]" at alu.vhd(33) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+Info (10041): Inferred latch for "Op[4]" at alu.vhd(33) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+Info (10041): Inferred latch for "Op[5]" at alu.vhd(33) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+Info (10041): Inferred latch for "Op[6]" at alu.vhd(33) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+Info (10041): Inferred latch for "Op[7]" at alu.vhd(33) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+Info (10041): Inferred latch for "Op[8]" at alu.vhd(33) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+Info (10041): Inferred latch for "Op[9]" at alu.vhd(33) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+Info (10041): Inferred latch for "Op[10]" at alu.vhd(33) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+Info (10041): Inferred latch for "Op[11]" at alu.vhd(33) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+Info (10041): Inferred latch for "Op[12]" at alu.vhd(33) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+Info (10041): Inferred latch for "Op[13]" at alu.vhd(33) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+Info (10041): Inferred latch for "Op[14]" at alu.vhd(33) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+Info (10041): Inferred latch for "Op[15]" at alu.vhd(33) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+Info (12128): Elaborating entity "reg1" for hierarchy "reg1:carry" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 366
+Info (12128): Elaborating entity "EXMEM" for hierarchy "EXMEM:EX_MEM" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 372
+Warning (10541): VHDL Signal Declaration warning at EXMEM.vhd(17): used implicit default value for signal "EXMEM_cy_Op" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/EXMEM.vhd Line: 17
+Warning (10541): VHDL Signal Declaration warning at EXMEM.vhd(17): used implicit default value for signal "EXMEM_z_Op" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/EXMEM.vhd Line: 17
+Info (12128): Elaborating entity "ram" for hierarchy "ram:DMem" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 399
+Info (12128): Elaborating entity "MEMWB" for hierarchy "MEMWB:MEM_WB" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 411
+Warning (10541): VHDL Signal Declaration warning at MEMWB.vhd(17): used implicit default value for signal "MEMWB_cy_Op" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/MEMWB.vhd Line: 17
+Warning (10541): VHDL Signal Declaration warning at MEMWB.vhd(17): used implicit default value for signal "MEMWB_z_Op" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/MEMWB.vhd Line: 17
+Info (12128): Elaborating entity "mux41_3" for hierarchy "mux41_3:Mux_RF_A3" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 430
+Warning (10631): VHDL Process Statement warning at mux41_3.vhd(18): inferring latch(es) for signal or variable "Op", which holds its previous value in one or more paths through the process File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41_3.vhd Line: 18
+Info (10041): Inferred latch for "Op[0]" at mux41_3.vhd(18) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41_3.vhd Line: 18
+Info (10041): Inferred latch for "Op[1]" at mux41_3.vhd(18) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41_3.vhd Line: 18
+Info (10041): Inferred latch for "Op[2]" at mux41_3.vhd(18) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41_3.vhd Line: 18
+Info (12128): Elaborating entity "bit7shift" for hierarchy "bit7shift:S7" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 433
+Warning (14026): LATCH primitive "mux41:Mux_jump_loc|Op[0]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_jump_loc|Op[1]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_jump_loc|Op[2]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_jump_loc|Op[3]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_jump_loc|Op[4]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_jump_loc|Op[5]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_jump_loc|Op[6]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_jump_loc|Op[7]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_jump_loc|Op[8]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_jump_loc|Op[9]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_jump_loc|Op[10]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_jump_loc|Op[11]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_jump_loc|Op[12]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_jump_loc|Op[13]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_jump_loc|Op[14]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_jump_loc|Op[15]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41_3:Mux_RF_A3|Op[0]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41_3.vhd Line: 18
+Warning (14026): LATCH primitive "mux41_3:Mux_RF_A3|Op[1]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41_3.vhd Line: 18
+Warning (14026): LATCH primitive "mux41_3:Mux_RF_A3|Op[2]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41_3.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_ALU2_B|Op[0]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_ALU2_B|Op[1]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_ALU2_B|Op[2]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_ALU2_B|Op[3]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_ALU2_B|Op[4]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_ALU2_B|Op[5]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_ALU2_B|Op[6]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_ALU2_B|Op[7]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_ALU2_B|Op[8]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_ALU2_B|Op[9]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_ALU2_B|Op[10]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_ALU2_B|Op[11]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_ALU2_B|Op[12]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_ALU2_B|Op[13]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_ALU2_B|Op[14]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_ALU2_B|Op[15]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_ALU_B|Op[0]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_ALU_B|Op[1]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_ALU_B|Op[2]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_ALU_B|Op[3]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_ALU_B|Op[4]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_ALU_B|Op[5]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_ALU_B|Op[6]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_ALU_B|Op[7]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_ALU_B|Op[8]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_ALU_B|Op[9]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_ALU_B|Op[10]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_ALU_B|Op[11]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_ALU_B|Op[12]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_ALU_B|Op[13]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_ALU_B|Op[14]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (14026): LATCH primitive "mux41:Mux_ALU_B|Op[15]" is permanently enabled File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/mux41.vhd Line: 18
+Warning (13012): Latch alu:ALU_2|Op[1] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU2[0] File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 11
+Warning (13012): Latch alu:ALU_2|Op[2] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU2[0] File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 11
+Warning (13012): Latch alu:ALU_2|Op[3] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU2[0] File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 11
+Warning (13012): Latch alu:ALU_2|Op[4] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU2[0] File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 11
+Warning (13012): Latch alu:ALU_2|Op[5] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU2[0] File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 11
+Warning (13012): Latch alu:ALU_2|Op[6] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU2[0] File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 11
+Warning (13012): Latch alu:ALU_2|Op[7] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU2[0] File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 11
+Warning (13012): Latch alu:ALU_2|Op[8] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU2[0] File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 11
+Warning (13012): Latch alu:ALU_2|Op[9] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU2[0] File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 11
+Warning (13012): Latch alu:ALU_2|Op[10] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU2[0] File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 11
+Warning (13012): Latch alu:ALU_2|Op[11] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU2[0] File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 11
+Warning (13012): Latch alu:ALU_2|Op[12] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU2[0] File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 11
+Warning (13012): Latch alu:ALU_2|Op[13] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU2[0] File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 11
+Warning (13012): Latch alu:ALU_2|Op[14] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU2[0] File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 11
+Warning (13012): Latch alu:ALU_2|Op[15] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU2[0] File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 11
+Warning (13012): Latch alu:ALU_2|Op[0] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU2[0] File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 11
+Warning (13012): Latch alu:ALU_1|Op[1] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU[0] File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 11
+Warning (13012): Latch alu:ALU_1|Op[2] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU[0] File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 11
+Warning (13012): Latch alu:ALU_1|Op[3] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU[0] File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 11
+Warning (13012): Latch alu:ALU_1|Op[4] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU[0] File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 11
+Warning (13012): Latch alu:ALU_1|Op[5] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU[0] File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 11
+Warning (13012): Latch alu:ALU_1|Op[6] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU[0] File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 11
+Warning (13012): Latch alu:ALU_1|Op[7] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU[0] File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 11
+Warning (13012): Latch alu:ALU_1|Op[8] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU[0] File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 11
+Warning (13012): Latch alu:ALU_1|Op[9] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU[0] File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 11
+Warning (13012): Latch alu:ALU_1|Op[10] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU[0] File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 11
+Warning (13012): Latch alu:ALU_1|Op[11] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU[0] File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 11
+Warning (13012): Latch alu:ALU_1|Op[12] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU[0] File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 11
+Warning (13012): Latch alu:ALU_1|Op[13] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU[0] File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 11
+Warning (13012): Latch alu:ALU_1|Op[14] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU[0] File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 11
+Warning (13012): Latch alu:ALU_1|Op[15] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU[0] File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 11
+Warning (13012): Latch alu:ALU_1|Op[0] has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/alu.vhd Line: 33
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal select_ALU[0] File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 11
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "IR_out[10]" is stuck at GND File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 16
-    Warning (13410): Pin "IR_out[11]" is stuck at GND File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 16
-    Warning (13410): Pin "IR_out[15]" is stuck at GND File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 16
-Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "select_Mux_Mem_A" File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 12
-    Warning (15610): No output dependent on input pin "select_Mux_Mem_D" File: D:/IITB/Semester_4/EE309/Pipeline/Datapath/datapath.vhd Line: 12
-Info (21057): Implemented 2669 device resources after synthesis - the final resource count might be different
+    Warning (13410): Pin "cy_out" is stuck at GND File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 15
+    Warning (13410): Pin "z_out" is stuck at GND File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 15
+    Warning (13410): Pin "IR_out[10]" is stuck at GND File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 16
+    Warning (13410): Pin "IR_out[11]" is stuck at GND File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 16
+    Warning (13410): Pin "IR_out[15]" is stuck at GND File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 16
+Warning (21074): Design contains 4 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "wr_cy" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 8
+    Warning (15610): No output dependent on input pin "wr_z" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 8
+    Warning (15610): No output dependent on input pin "select_Mux_Mem_A" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 12
+    Warning (15610): No output dependent on input pin "select_Mux_Mem_D" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 12
+Info (21057): Implemented 2611 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 38 input pins
     Info (21059): Implemented 18 output pins
-    Info (21061): Implemented 2613 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 147 warnings
-    Info: Peak virtual memory: 4822 megabytes
-    Info: Processing ended: Mon May 02 05:43:57 2022
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:21
+    Info (21061): Implemented 2555 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 149 warnings
+    Info: Peak virtual memory: 4823 megabytes
+    Info: Processing ended: Sat May 07 13:55:26 2022
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:29
 
 

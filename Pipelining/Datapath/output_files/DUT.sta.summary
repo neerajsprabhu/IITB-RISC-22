@@ -2,36 +2,36 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Setup 'select_ALU[0]'
-Slack : -18.739
-TNS   : -216.607
-
 Type  : Setup 'clk'
-Slack : -10.616
-TNS   : -10656.396
+Slack : -10.627
+TNS   : -10729.837
 
 Type  : Setup 'select_ALU2[0]'
-Slack : -9.622
-TNS   : -132.374
+Slack : -9.014
+TNS   : -114.246
+
+Type  : Setup 'select_ALU[0]'
+Slack : -8.505
+TNS   : -107.008
 
 Type  : Setup 'wr_inc'
-Slack : -7.498
-TNS   : -103.687
-
-Type  : Hold 'select_ALU[0]'
-Slack : 0.304
-TNS   : 0.000
+Slack : -7.363
+TNS   : -106.214
 
 Type  : Hold 'select_ALU2[0]'
-Slack : 0.506
+Slack : -0.707
+TNS   : -1.653
+
+Type  : Hold 'select_ALU[0]'
+Slack : 0.177
 TNS   : 0.000
 
 Type  : Hold 'clk'
-Slack : 1.118
+Slack : 1.120
 TNS   : 0.000
 
 Type  : Hold 'wr_inc'
-Slack : 2.926
+Slack : 2.980
 TNS   : 0.000
 
 Type  : Minimum Pulse Width 'clk'

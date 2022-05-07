@@ -1,11 +1,11 @@
-Fitter Status : Successful - Mon May 02 05:44:09 2022
+Fitter Status : Successful - Sat May 07 13:55:47 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : DUT
 Top-level Entity Name : datapath
 Family : MAX V
 Device : 5M2210ZF256C4
 Timing Models : Final
-Total logic elements : 1,883 / 2,210 ( 85 % )
+Total logic elements : 1,825 / 2,210 ( 83 % )
 Total pins : 56 / 203 ( 28 % )
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )
