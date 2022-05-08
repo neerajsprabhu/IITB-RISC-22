@@ -21,7 +21,7 @@ end register_bank;
 
 architecture rb1 of register_bank is
 	type reg_bank_type is array(7 downto 0) of std_logic_vector(15 downto 0);
-	signal reg_bank: reg_bank_type := others ;
+	signal reg_bank: reg_bank_type := others=>"0000000000000000" ;
 begin
 	process(Add1, Add2, Add3, D3, wr, clk, wr_r7)
 	begin
