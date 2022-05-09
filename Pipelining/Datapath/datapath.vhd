@@ -9,6 +9,7 @@ entity datapath is
 		wr_IFID, wr_IDRR, wr_RREX, wr_EXMEM, wr_MEMWB : in std_logic;
 		select_Mux_RF_D3, dec : in std_logic_vector(2 downto 0);
 		select_Mux_ALU_B, select_Mux_ALU2_B, select_ALU, select_ALU2, select_Mux_RF_A3, select_Mux_jump_loc : in std_logic_vector(1 downto 0);
+		select_Mux_forward1, select_Mux_forward2 : in std_logic_vector(1 downto 0);
 		select_Mux_Mem_A, select_Mux_Mem_D, select_Mux_ALU_A, select_Mux_ALU2_A, select_Mux_RF_A1, select_Mux_RF_A2, select_Mux_DMem_A, select_Mux_DMem_Din : in std_logic;
 		clk : in std_logic;
 		--NEEDS TO BE REMOVED LATER!!
@@ -47,8 +48,8 @@ architecture arch of datapath is
 			clk : in std_logic;
 			wr_IFID : in std_logic;
 			IFID_indexout : in integer;
-			IFID_inc, IFID_PC : in std_logic_vector(15 downto 0);
-			IFID_inc_Op, IFID_PC_Op : out std_logic_vector(15 downto 0);
+			IFID_inc, IFID_PC, IFID_IMem : in std_logic_vector(15 downto 0);
+			IFID_inc_Op, IFID_PC_Op, IFID_IMem_Op : out std_logic_vector(15 downto 0);
 			IFID_indexout_Op : out integer
 		);
 	end component;
@@ -310,31 +311,46 @@ architecture arch of datapath is
 		);
   end component;
   
-  signal DMem_A, DMem_Din, DMem_Dout, PC_in, PC_Op, IMem_Op, IR_Op, branch_add, RF_D3, r7_Op, RF_D1_Op, RF_D2_Op, S7_Op, S1_Op, inc_Op, ALU_A, ALU_B, ALU_C, ALU2_A, ALU2_B, ALU2_C, SE6_Op, SE9_Op, Mem_A : std_logic_vector(15 downto 0); 
-  signal IFID_inc_Op, IFID_PC_Op : std_logic_vector(15 downto 0);
+  signal DMem_A, DMem_Din, DMem_Dout : std_logic_vector(15 downto 0); 
+  signal PC_in, PC_Op, branch_add : std_logic_vector(15 downto 0); 
+  signal IMem_Op, IR_Op : std_logic_vector(15 downto 0); 
+  signal RF_D3, r7_Op, RF_D1_Op, RF_D2_Op : std_logic_vector(15 downto 0); 
+  signal forward1, forward2 : std_logic_vector(15 downto 0);
+  signal S7_Op, S1_Op : std_logic_vector(15 downto 0); 
+  signal inc_Op : std_logic_vector(15 downto 0); 
+  signal ALU_A, ALU_B, ALU_C : std_logic_vector(15 downto 0); 
+  signal ALU2_A, ALU2_B, ALU2_C : std_logic_vector(15 downto 0); 
+  signal SE6_Op, SE9_Op : std_logic_vector(15 downto 0); 
+  
+  signal IFID_inc_Op, IFID_PC_Op, IFID_IMem_Op : std_logic_vector(15 downto 0);
   signal IFID_indexout_Op : integer;
+  
   signal IDRR_opcode_Op : std_logic_vector(3 downto 0);
   signal IDRR_inc_Op, IDRR_PC_Op : std_logic_vector(15 downto 0);
   signal IDRR_11_9_Op, IDRR_8_6_Op, IDRR_5_3_Op : std_logic_vector(2 downto 0);
   signal IDRR_8_0_Op : std_logic_vector(8 downto 0);
   signal IDRR_5_0_Op : std_logic_vector(5 downto 0);
+  
   signal RREX_opcode_Op : std_logic_vector(3 downto 0);
   signal RREX_inc_Op, RREX_PC_Op, RREX_RF_D1_Op, RREX_RF_D2_Op : std_logic_vector(15 downto 0);
   signal RREX_11_9_Op, RREX_8_6_Op, RREX_5_3_Op, RREX_dec_Op : std_logic_vector(2 downto 0);
   signal RREX_8_0_Op : std_logic_vector(8 downto 0);
   signal RREX_5_0_Op : std_logic_vector(5 downto 0);
+  
   signal EXMEM_opcode_Op : std_logic_vector(3 downto 0);
   signal EXMEM_inc_Op, EXMEM_PC_Op, EXMEM_RF_D1_Op, EXMEM_RF_D2_Op, EXMEM_SE6_Op, EXMEM_SE9_Op, EXMEM_ALU_C_Op : std_logic_vector(15 downto 0);
   signal EXMEM_11_9_Op, EXMEM_8_6_Op, EXMEM_5_3_Op, EXMEM_dec_Op : std_logic_vector(2 downto 0);
   signal EXMEM_8_0_Op : std_logic_vector(8 downto 0);
   signal EXMEM_5_0_Op : std_logic_vector(5 downto 0);
   signal EXMEM_cy_Op, EXMEM_z_Op : std_logic;
+  
   signal MEMWB_opcode_Op : std_logic_vector(3 downto 0);
   signal MEMWB_inc_Op, MEMWB_PC_Op, MEMWB_RF_D2_Op, MEMWB_ALU_C_Op, MEMWB_ALU2_C_Op, MEMWB_DMem_D_Op : std_logic_vector(15 downto 0);
   signal MEMWB_11_9_Op, MEMWB_8_6_Op, MEMWB_5_3_Op, MEMWB_dec_Op : std_logic_vector(2 downto 0);
   signal MEMWB_8_0_Op : std_logic_vector(8 downto 0);
   signal MEMWB_5_0_Op : std_logic_vector(5 downto 0);
   signal MEMWB_cy_Op, MEMWB_z_Op : std_logic;
+  
   signal RF_A1, RF_A2, RF_A3 : std_logic_vector(2 downto 0);
   signal match, history, cy, cy_Op, z, z_Op, cy_2, z_2 : std_logic;
   signal indexout : integer;
@@ -346,9 +362,6 @@ PC: reg port map (wr=>wr_PC, clk=>clk, data=>PC_in, Op=>PC_Op);
 
 --Instruction Memory
 IMem: rom port map (A=>PC_Op, Dout=>IMem_Op);
-
---IR
-IR: reg port map (wr=>wr_IR, clk=>clk, data=>IMem_Op, Op=>IR_Op);
 
 --Incrementer
 inc: incr port map (wr=>wr_inc, A=>PC_Op, Op=>inc_Op);
@@ -382,8 +395,12 @@ IF_ID: IFID port map (
 							wr_IFID=>wr_IFID,
 							IFID_inc=>inc_Op, IFID_inc_Op=>IFID_inc_Op,
 							IFID_PC=>PC_Op, IFID_PC_Op=>IFID_PC_Op,
+							IFID_IMem=>IMem_Op, IFID_IMem_Op=>IFID_IMem_Op,
 							IFID_indexout=>indexout, IFID_indexout_Op=>IFID_indexout_Op
 							);
+							
+--IR
+IR: reg port map (wr=>wr_IR, clk=>clk, data=>IFID_IMem_Op, Op=>IR_Op);
 
 --ID/RR Register
 ID_RR: IDRR port map (
@@ -419,6 +436,12 @@ RF: register_bank port map (
 							D2=>RF_D2_Op,
 							r7_out=>r7_Op
 							);
+							
+--Forwarding Mux-1
+forwardingmux1: mux41 port map(A0=>RF_D1_Op, A1=>ALU_C, A2=>DMem_Dout, A3=>RF_D3, S=>select_Mux_forward1, Op=>forward1); 
+
+--Forwarding Mux-2
+forwardingmux2: mux41 port map(A0=>RF_D2_Op, A1=>ALU_C, A2=>DMem_Dout, A3=>RF_D3, S=>select_Mux_forward2, Op=>forward2); 
 
 --RR/EX Register
 RR_EX: RREX port map (
@@ -429,9 +452,9 @@ RR_EX: RREX port map (
 							RREX_11_9=>IDRR_11_9_Op, RREX_11_9_Op=>RREX_11_9_Op, 
 							RREX_8_6=>IDRR_8_6_Op, RREX_8_6_Op=>RREX_8_6_Op,
 							RREX_inc=>IDRR_inc_Op, RREX_inc_Op=>RREX_inc_Op,
-							RREX_RF_D1=>RF_D1_Op, RREX_RF_D1_Op=>RREX_RF_D1_Op,
+							RREX_RF_D1=>forward1, RREX_RF_D1_Op=>RREX_RF_D1_Op,
 							RREX_dec=>dec, RREX_dec_Op=>RREX_dec_Op,
-							RREX_RF_D2=>RF_D2_Op, RREX_RF_D2_Op=>RREX_RF_D2_Op,
+							RREX_RF_D2=>forward2, RREX_RF_D2_Op=>RREX_RF_D2_Op,
 							RREX_8_0=>IDRR_8_0_Op, RREX_8_0_Op=>RREX_8_0_Op,
 							RREX_5_0=>IDRR_5_0_Op, RREX_5_0_Op=>RREX_5_0_Op,
 							RREX_5_3=>IDRR_5_3_Op, RREX_5_3_Op=>RREX_5_3_Op
