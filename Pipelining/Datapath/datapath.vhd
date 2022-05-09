@@ -9,7 +9,6 @@ entity datapath is
 		wr_IFID, wr_IDRR, wr_RREX, wr_EXMEM, wr_MEMWB : in std_logic;
 		select_Mux_RF_D3, dec : in std_logic_vector(2 downto 0);
 		select_Mux_ALU_B, select_Mux_ALU2_B, select_ALU, select_ALU2, select_Mux_RF_A3, select_Mux_jump_loc : in std_logic_vector(1 downto 0);
-		select_Mux_forward1, select_Mux_forward2 : in std_logic_vector(1 downto 0);
 		select_Mux_Mem_A, select_Mux_Mem_D, select_Mux_ALU_A, select_Mux_ALU2_A, select_Mux_RF_A1, select_Mux_RF_A2, select_Mux_DMem_A, select_Mux_DMem_Din : in std_logic;
 		select_Mux_LMSM : in std_logic;
 		clk : in std_logic;
@@ -318,7 +317,17 @@ architecture arch of datapath is
 			S: in std_logic_vector(2 downto 0);
 			Op: out std_logic_vector(15 downto 0)
 		);
-  end component;
+   end component;
+   
+	--Forwarding block
+	component fwd_logic is
+	port(
+			IDRR_opcode, RREX_opcode, EXMEM_opcode, MEMWB_opcode: in std_logic_vector(3 downto 0);
+			IDRR_11_9, IDRR_8_6, RREX_8_6, RREX_5_3, EXMEM_11_9, MEMWB_11_9, MEMWB_8_6, MEMWB_5_3: in std_logic_vector(2 downto 0);
+			select_Mux_forward1, select_Mux_forward2: out std_logic_vector(1 downto 0)
+			);
+   end component;
+  
   
   signal DMem_A, DMem_Din, DMem_Dout : std_logic_vector(15 downto 0); 
   signal PC_in, PC_Op, branch_add : std_logic_vector(15 downto 0); 
@@ -364,6 +373,8 @@ architecture arch of datapath is
   signal RF_A1, RF_A2, RF_A3 : std_logic_vector(2 downto 0);
   signal match, history, cy, cy_Op, z, z_Op, cy_2, z_2 : std_logic;
   signal indexout : integer;
+  
+  signal select_Mux_forward1, select_Mux_forward2: std_logic_vector(1 downto 0);
 
 begin
 
@@ -562,6 +573,24 @@ MEM_WB: MEMWB port map (
 							MEMWB_cy=>EXMEM_cy_Op, MEMWB_cy_Op=>MEMWB_cy_Op,
 							MEMWB_z=>EXMEM_z_Op, MEMWB_z_Op=>MEMWB_z_Op
 							);
+
+--Forwarding Block
+Fwd_Block: fwd_logic port map (
+									IDRR_opcode=>IDRR_opcode_Op,
+									RREX_opcode=>RREX_opcode_Op,
+									EXMEM_opcode=>EXMEM_opcode_Op,
+									MEMWB_opcode=>MEMWB_opcode_Op,
+									IDRR_11_9=>IDRR_11_9_Op,
+									IDRR_8_6=>IDRR_8_6_Op,
+									RREX_8_6=>RREX_8_6_Op,
+									RREX_5_3=>RREX_5_3_Op,
+									EXMEM_11_9=>EXMEM_11_9_Op,
+									MEMWB_11_9=>MEMWB_11_9_Op,
+									MEMWB_8_6=>MEMWB_8_6_Op,
+									MEMWB_5_3=>MEMWB_5_3_Op,
+									select_Mux_forward1=>select_Mux_forward1,
+									select_Mux_forward2=>select_Mux_forward2
+									);
 							
 --Mux_RF-A3
 Mux_RF_A3: mux41_3 port map (A0=>MEMWB_5_3_Op, A1=>MEMWB_8_6_Op, A2=>MEMWB_11_9_Op, A3=>MEMWB_dec_Op, S=>select_Mux_RF_A3, Op=>RF_A3);
