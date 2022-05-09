@@ -6,13 +6,13 @@ entity EXMEM is
 		clk : in std_logic;
 		wr_EXMEM : in std_logic;
 		EXMEM_opcode : in std_logic_vector(3 downto 0);
-      EXMEM_inc, EXMEM_PC, EXMEM_RF_D1, EXMEM_RF_D2, EXMEM_ALU_C, EXMEM_SE6, EXMEM_SE9 : in std_logic_vector(15 downto 0);
+      EXMEM_inc, EXMEM_PC, EXMEM_RF_D1, EXMEM_LMSM, EXMEM_RF_D2, EXMEM_ALU_C, EXMEM_SE6, EXMEM_SE9 : in std_logic_vector(15 downto 0);
 		EXMEM_11_9, EXMEM_8_6, EXMEM_5_3, EXMEM_dec : in std_logic_vector(2 downto 0);
 		EXMEM_8_0 : in std_logic_vector(8 downto 0);
 		EXMEM_5_0 : in std_logic_vector(5 downto 0);
 		EXMEM_cy, EXMEM_z : in std_logic;
 		EXMEM_opcode_Op : out std_logic_vector(3 downto 0);
-		EXMEM_inc_Op, EXMEM_PC_Op, EXMEM_RF_D1_Op, EXMEM_RF_D2_Op, EXMEM_ALU_C_Op, EXMEM_SE6_Op, EXMEM_SE9_Op : out std_logic_vector(15 downto 0);
+		EXMEM_inc_Op, EXMEM_PC_Op, EXMEM_RF_D1_Op, EXMEM_LMSM_Op, EXMEM_RF_D2_Op, EXMEM_ALU_C_Op, EXMEM_SE6_Op, EXMEM_SE9_Op : out std_logic_vector(15 downto 0);
 		EXMEM_11_9_Op, EXMEM_8_6_Op, EXMEM_5_3_Op, EXMEM_dec_Op : out std_logic_vector(2 downto 0);
 		EXMEM_8_0_Op : out std_logic_vector(8 downto 0);
 		EXMEM_5_0_Op : out std_logic_vector(5 downto 0);
@@ -78,6 +78,7 @@ opcode: reg4 port map (wr=>wr_EXMEM, clk=>clk, data=>EXMEM_opcode, Op=>EXMEM_opc
 inc: reg port map (wr=>wr_EXMEM, clk=>clk, data=>EXMEM_inc, Op=>EXMEM_inc_Op);
 PC: reg port map (wr=>wr_EXMEM, clk=>clk, data=>EXMEM_PC, Op=>EXMEM_PC_Op);
 RF_D1: reg port map (wr=>wr_EXMEM, clk=>clk, data=>EXMEM_RF_D1, Op=>EXMEM_RF_D1_Op);
+LMSM: reg port map (wr=>wr_EXMEM, clk=>clk, data=>EXMEM_LMSM, Op=>EXMEM_LMSM_Op);
 RF_D2: reg port map (wr=>wr_EXMEM, clk=>clk, data=>EXMEM_RF_D2, Op=>EXMEM_RF_D2_Op);
 ALU_C: reg port map (wr=>wr_EXMEM, clk=>clk, data=>EXMEM_ALU_C, Op=>EXMEM_ALU_C_Op);
 SE6: reg port map (wr=>wr_EXMEM, clk=>clk, data=>EXMEM_SE6, Op=>EXMEM_SE6_Op);

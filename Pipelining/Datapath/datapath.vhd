@@ -11,6 +11,7 @@ entity datapath is
 		select_Mux_ALU_B, select_Mux_ALU2_B, select_ALU, select_ALU2, select_Mux_RF_A3, select_Mux_jump_loc : in std_logic_vector(1 downto 0);
 		select_Mux_forward1, select_Mux_forward2 : in std_logic_vector(1 downto 0);
 		select_Mux_Mem_A, select_Mux_Mem_D, select_Mux_ALU_A, select_Mux_ALU2_A, select_Mux_RF_A1, select_Mux_RF_A2, select_Mux_DMem_A, select_Mux_DMem_Din : in std_logic;
+		select_Mux_LMSM : in std_logic;
 		clk : in std_logic;
 		--NEEDS TO BE REMOVED LATER!!
 		indexin : in integer;
@@ -78,12 +79,12 @@ architecture arch of datapath is
 			clk : in std_logic;
 			wr_RREX : in std_logic;
 			RREX_opcode : in std_logic_vector(3 downto 0);
-			RREX_inc, RREX_PC, RREX_RF_D1, RREX_RF_D2 : in std_logic_vector(15 downto 0);
+			RREX_inc, RREX_PC, RREX_RF_D1, RREX_LMSM, RREX_RF_D2 : in std_logic_vector(15 downto 0);
 			RREX_11_9, RREX_8_6, RREX_5_3, RREX_dec : in std_logic_vector(2 downto 0);
 			RREX_8_0 : in std_logic_vector(8 downto 0);
 			RREX_5_0 : in std_logic_vector(5 downto 0);
 			RREX_opcode_Op : out std_logic_vector(3 downto 0);
-			RREX_inc_Op, RREX_PC_Op, RREX_RF_D1_Op, RREX_RF_D2_Op : out std_logic_vector(15 downto 0);
+			RREX_inc_Op, RREX_PC_Op, RREX_RF_D1_Op, RREX_LMSM_Op, RREX_RF_D2_Op : out std_logic_vector(15 downto 0);
 			RREX_11_9_Op, RREX_8_6_Op, RREX_5_3_Op, RREX_dec_Op : out std_logic_vector(2 downto 0);
 			RREX_8_0_Op : out std_logic_vector(8 downto 0);
 			RREX_5_0_Op : out std_logic_vector(5 downto 0)
@@ -96,13 +97,13 @@ architecture arch of datapath is
 			clk : in std_logic;
 			wr_EXMEM : in std_logic;
 			EXMEM_opcode : in std_logic_vector(3 downto 0);
-			EXMEM_inc, EXMEM_PC, EXMEM_RF_D1, EXMEM_RF_D2, EXMEM_ALU_C, EXMEM_SE6, EXMEM_SE9 : in std_logic_vector(15 downto 0);
+			EXMEM_inc, EXMEM_PC, EXMEM_RF_D1, EXMEM_LMSM, EXMEM_RF_D2, EXMEM_ALU_C, EXMEM_SE6, EXMEM_SE9 : in std_logic_vector(15 downto 0);
 			EXMEM_11_9, EXMEM_8_6, EXMEM_5_3, EXMEM_dec : in std_logic_vector(2 downto 0);
 			EXMEM_8_0 : in std_logic_vector(8 downto 0);
 			EXMEM_5_0 : in std_logic_vector(5 downto 0);
 			EXMEM_cy, EXMEM_z : in std_logic;
 			EXMEM_opcode_Op : out std_logic_vector(3 downto 0);
-			EXMEM_inc_Op, EXMEM_PC_Op, EXMEM_RF_D1_Op, EXMEM_RF_D2_Op, EXMEM_ALU_C_Op, EXMEM_SE6_Op, EXMEM_SE9_Op : out std_logic_vector(15 downto 0);
+			EXMEM_inc_Op, EXMEM_PC_Op, EXMEM_RF_D1_Op, EXMEM_LMSM_Op, EXMEM_RF_D2_Op, EXMEM_ALU_C_Op, EXMEM_SE6_Op, EXMEM_SE9_Op : out std_logic_vector(15 downto 0);
 			EXMEM_11_9_Op, EXMEM_8_6_Op, EXMEM_5_3_Op, EXMEM_dec_Op : out std_logic_vector(2 downto 0);
 			EXMEM_8_0_Op : out std_logic_vector(8 downto 0);
 			EXMEM_5_0_Op : out std_logic_vector(5 downto 0);
@@ -199,6 +200,14 @@ architecture arch of datapath is
 		port (
 			A: in std_logic_vector(15 downto 0);
 			wr: in std_logic;
+			Op: out std_logic_vector(15 downto 0)
+		);
+	end component;
+	
+	--Incrementer for LMSM
+	component incr_LMSM is
+		port (
+			A: in std_logic_vector(15 downto 0);
 			Op: out std_logic_vector(15 downto 0)
 		);
 	end component;
@@ -317,10 +326,11 @@ architecture arch of datapath is
   signal RF_D3, r7_Op, RF_D1_Op, RF_D2_Op : std_logic_vector(15 downto 0); 
   signal forward1, forward2 : std_logic_vector(15 downto 0);
   signal S7_Op, S1_Op : std_logic_vector(15 downto 0); 
-  signal inc_Op : std_logic_vector(15 downto 0); 
+  signal inc_Op, inc_LMSM_Op : std_logic_vector(15 downto 0); 
   signal ALU_A, ALU_B, ALU_C : std_logic_vector(15 downto 0); 
   signal ALU2_A, ALU2_B, ALU2_C : std_logic_vector(15 downto 0); 
   signal SE6_Op, SE9_Op : std_logic_vector(15 downto 0); 
+  signal RREX_LMSM : std_logic_vector(15 downto 0);
   
   signal IFID_inc_Op, IFID_PC_Op, IFID_IMem_Op : std_logic_vector(15 downto 0);
   signal IFID_indexout_Op : integer;
@@ -332,13 +342,13 @@ architecture arch of datapath is
   signal IDRR_5_0_Op : std_logic_vector(5 downto 0);
   
   signal RREX_opcode_Op : std_logic_vector(3 downto 0);
-  signal RREX_inc_Op, RREX_PC_Op, RREX_RF_D1_Op, RREX_RF_D2_Op : std_logic_vector(15 downto 0);
+  signal RREX_inc_Op, RREX_PC_Op, RREX_RF_D1_Op, RREX_LMSM_Op, RREX_RF_D2_Op : std_logic_vector(15 downto 0);
   signal RREX_11_9_Op, RREX_8_6_Op, RREX_5_3_Op, RREX_dec_Op : std_logic_vector(2 downto 0);
   signal RREX_8_0_Op : std_logic_vector(8 downto 0);
   signal RREX_5_0_Op : std_logic_vector(5 downto 0);
   
   signal EXMEM_opcode_Op : std_logic_vector(3 downto 0);
-  signal EXMEM_inc_Op, EXMEM_PC_Op, EXMEM_RF_D1_Op, EXMEM_RF_D2_Op, EXMEM_SE6_Op, EXMEM_SE9_Op, EXMEM_ALU_C_Op : std_logic_vector(15 downto 0);
+  signal EXMEM_inc_Op, EXMEM_PC_Op, EXMEM_RF_D1_Op, EXMEM_LMSM_Op, EXMEM_RF_D2_Op, EXMEM_SE6_Op, EXMEM_SE9_Op, EXMEM_ALU_C_Op : std_logic_vector(15 downto 0);
   signal EXMEM_11_9_Op, EXMEM_8_6_Op, EXMEM_5_3_Op, EXMEM_dec_Op : std_logic_vector(2 downto 0);
   signal EXMEM_8_0_Op : std_logic_vector(8 downto 0);
   signal EXMEM_5_0_Op : std_logic_vector(5 downto 0);
@@ -443,6 +453,9 @@ forwardingmux1: mux41 port map(A0=>RF_D1_Op, A1=>ALU_C, A2=>DMem_Dout, A3=>RF_D3
 --Forwarding Mux-2
 forwardingmux2: mux41 port map(A0=>RF_D2_Op, A1=>ALU_C, A2=>DMem_Dout, A3=>RF_D3, S=>select_Mux_forward2, Op=>forward2); 
 
+--LMSM Mux-1
+LMSMmux: mux21 port map (A0=>forward1, A1=>inc_LMSM_Op, S=>select_Mux_LMSM, Op=>RREX_LMSM);
+
 --RR/EX Register
 RR_EX: RREX port map (
 							clk=>clk,
@@ -453,6 +466,7 @@ RR_EX: RREX port map (
 							RREX_8_6=>IDRR_8_6_Op, RREX_8_6_Op=>RREX_8_6_Op,
 							RREX_inc=>IDRR_inc_Op, RREX_inc_Op=>RREX_inc_Op,
 							RREX_RF_D1=>forward1, RREX_RF_D1_Op=>RREX_RF_D1_Op,
+							RREX_LMSM=>RREX_LMSM, RREX_LMSM_Op=>RREX_LMSM_Op,
 							RREX_dec=>dec, RREX_dec_Op=>RREX_dec_Op,
 							RREX_RF_D2=>forward2, RREX_RF_D2_Op=>RREX_RF_D2_Op,
 							RREX_8_0=>IDRR_8_0_Op, RREX_8_0_Op=>RREX_8_0_Op,
@@ -460,6 +474,9 @@ RR_EX: RREX port map (
 							RREX_5_3=>IDRR_5_3_Op, RREX_5_3_Op=>RREX_5_3_Op
 							);
 
+--Incrementer for LMSM
+inc_LMSM: incr_LMSM port map (A=>RREX_LMSM_Op, Op=>inc_LMSM_Op);						
+							
 --Mux_ALU_A
 Mux_ALU_A: mux21 port map (A0=>RREX_RF_D1_Op, A1=>RREX_RF_D2_Op, S=>select_Mux_ALU_A, Op=>ALU_A);
 
@@ -498,6 +515,7 @@ EX_MEM: EXMEM port map (
 							EXMEM_ALU_C=>ALU_C, EXMEM_ALU_C_Op=>EXMEM_ALU_C_Op,
 							EXMEM_dec=>RREX_dec_Op, EXMEM_dec_Op=>EXMEM_dec_Op,
 							EXMEM_RF_D1=>RREX_RF_D1_Op, EXMEM_RF_D1_Op=>EXMEM_RF_D1_Op,
+							EXMEM_LMSM=>RREX_LMSM_Op, EXMEM_LMSM_Op=>EXMEM_LMSM_Op,
 							EXMEM_RF_D2=>RREX_RF_D2_Op, EXMEM_RF_D2_Op=>EXMEM_RF_D2_Op,
 							EXMEM_8_0=>RREX_8_0_Op, EXMEM_8_0_Op=>EXMEM_8_0_Op,
 							EXMEM_5_0=>RREX_5_0_Op, EXMEM_5_0_Op=>EXMEM_5_0_Op,
@@ -507,7 +525,7 @@ EX_MEM: EXMEM port map (
 							);
 
 --Mux_DMem_A
-Mux_DMem_A: mux21 port map (A0=>EXMEM_ALU_C_Op, A1=>EXMEM_RF_D1_Op, S=>select_Mux_DMem_A, Op=>DMem_A);
+Mux_DMem_A: mux21 port map (A0=>EXMEM_ALU_C_Op, A1=>EXMEM_LMSM_Op, S=>select_Mux_DMem_A, Op=>DMem_A);
 
 --Mux_DMem_Din
 Mux_DMem_Din: mux21 port map (A0=>EXMEM_RF_D1_Op, A1=>EXMEM_RF_D2_Op, S=>select_Mux_DMem_Din, Op=>DMem_Din);

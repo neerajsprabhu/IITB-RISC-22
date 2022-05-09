@@ -6,12 +6,12 @@ entity RREX is
 		clk : in std_logic;
 		wr_RREX : in std_logic;
 		RREX_opcode : in std_logic_vector(3 downto 0);
-      RREX_inc, RREX_PC, RREX_RF_D1, RREX_RF_D2 : in std_logic_vector(15 downto 0);
+      RREX_inc, RREX_PC, RREX_RF_D1, RREX_LMSM, RREX_RF_D2 : in std_logic_vector(15 downto 0);
 		RREX_11_9, RREX_8_6, RREX_5_3, RREX_dec : in std_logic_vector(2 downto 0);
 		RREX_8_0 : in std_logic_vector(8 downto 0);
 		RREX_5_0 : in std_logic_vector(5 downto 0);
 		RREX_opcode_Op : out std_logic_vector(3 downto 0);
-		RREX_inc_Op, RREX_PC_Op, RREX_RF_D1_Op, RREX_RF_D2_Op : out std_logic_vector(15 downto 0);
+		RREX_inc_Op, RREX_PC_Op, RREX_RF_D1_Op, RREX_LMSM_Op, RREX_RF_D2_Op : out std_logic_vector(15 downto 0);
 		RREX_11_9_Op, RREX_8_6_Op, RREX_5_3_Op, RREX_dec_Op : out std_logic_vector(2 downto 0);
 		RREX_8_0_Op : out std_logic_vector(8 downto 0);
 		RREX_5_0_Op : out std_logic_vector(5 downto 0)
@@ -76,6 +76,7 @@ opcode: reg4 port map (wr=>wr_RREX, clk=>clk, data=>RREX_opcode, Op=>RREX_opcode
 inc: reg port map (wr=>wr_RREX, clk=>clk, data=>RREX_inc, Op=>RREX_inc_Op);
 PC: reg port map (wr=>wr_RREX, clk=>clk, data=>RREX_PC, Op=>RREX_PC_Op);
 RF_D1: reg port map (wr=>wr_RREX, clk=>clk, data=>RREX_RF_D1, Op=>RREX_RF_D1_Op);
+LMSM: reg port map (wr=>wr_RREX, clk=>clk, data=>RREX_LMSM, Op=>RREX_LMSM_Op);
 RF_D2: reg port map (wr=>wr_RREX, clk=>clk, data=>RREX_RF_D2, Op=>RREX_RF_D2_Op);
 dec: reg3 port map (wr=>wr_RREX, clk=>clk, data=>RREX_dec, Op=>RREX_dec_Op);
 eleven_nine: reg3 port map (wr=>wr_RREX, clk=>clk, data=>RREX_11_9, Op=>RREX_11_9_Op);
