@@ -3,27 +3,27 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Setup 'clk'
-Slack : -8.982
-TNS   : -252.510
+Slack : -9.884
+TNS   : -247.354
 
 Type  : Setup 'haz_BEQ'
-Slack : -4.853
-TNS   : -10.856
+Slack : -5.147
+TNS   : -10.043
 
 Type  : Hold 'haz_BEQ'
-Slack : -3.197
-TNS   : -3.197
+Slack : -3.615
+TNS   : -3.723
 
 Type  : Hold 'clk'
-Slack : 2.824
+Slack : 2.288
 TNS   : 0.000
 
 Type  : Recovery 'haz_BEQ'
-Slack : -2.756
-TNS   : -2.756
+Slack : -2.134
+TNS   : -2.134
 
 Type  : Removal 'haz_BEQ'
-Slack : 0.671
+Slack : 0.119
 TNS   : 0.000
 
 Type  : Minimum Pulse Width 'clk'

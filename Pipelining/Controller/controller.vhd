@@ -19,6 +19,7 @@ entity controller is
 		select_Mux_ALU_B, select_Mux_ALU2_B, select_ALU, select_ALU2, select_Mux_RF_A3: out std_logic_vector(1 downto 0);
 		select_Mux_ALU_A, select_Mux_ALU2_A, select_Mux_RF_A1, select_Mux_RF_A2, select_Mux_DMem_A, select_Mux_DMem_Din : out std_logic;
 		select_Mux_LMSM : out std_logic;
+		select_Mux_LUT: out std_logic_vector(1 downto 0);
 		cy_in, z_in : out std_logic
 		);
 end controller;
@@ -59,6 +60,8 @@ begin
 		select_Mux_DMem_A<='0';
 		select_Mux_DMem_Din<='0';
 		select_Mux_LMSM<='0';
+		
+		select_Mux_LUT<="00";
 		
 		cy_in<='0';
 		z_in<='0';
@@ -332,21 +335,25 @@ begin
 			clr_IFID<='1';
 			clr_IDRR<='1';
 			clr_RREX<='1';
+			select_Mux_LUT<="00";
 			
 		elsif (haz_JAL='1') then 
 			select_Mux_PC<="001";
 			clr_IFID<='1';
 			clr_IDRR<='1';
 			clr_RREX<='1';
+			select_Mux_LUT<="01";
 			
 		elsif (haz_JRI='1') then 
 			select_Mux_PC<="011";
 			clr_IFID<='1';
 			clr_IDRR<='1';
+			select_Mux_LUT<="10";
 			
 		elsif (haz_JLR='1') then 
 			select_Mux_PC<="010";
 			clr_IFID<='1';
+			select_Mux_LUT<="11";
 			
 		elsif (haz_WB='1') then 
 			select_Mux_PC<="100";
