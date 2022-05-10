@@ -10,6 +10,7 @@ entity controller is
 		clk : in std_logic;
 		haz_EX, haz_MEM, haz_WB, haz_BEQ, haz_JAL, haz_JLR, haz_JRI : in std_logic;
 		IDRR_5_0_Op, RREX_5_0_Op : in std_logic_vector(5 downto 0);
+		IDRR_11_9, IDRR_8_6, RREX_11_9: in std_logic_vector(2 downto 0);
 		
 		wr_PC, wr_IR, wr_RF, wr_RF_r7, wr_inc, wr_DMem, wr_cy, wr_z : out std_logic;
 		wr_IFID, wr_IDRR, wr_RREX, wr_EXMEM, wr_MEMWB : out std_logic;
@@ -24,7 +25,7 @@ end controller;
 
 architecture arch of controller is
 
-	shared variable i: integer;
+	shared variable i: integer:=0;
 	
 begin
 	
@@ -356,19 +357,100 @@ begin
 		elsif (haz_EX='1') then 
 			select_Mux_PC<="011";
 			
-		elsif (IDRR_opcode_Op="1100" or IDRR_opcode_Op="1101") then 
+		elsif (((IDRR_opcode_Op="0001" or IDRR_opcode_Op="0010") and RREX_opcode_Op="0111") and (IDRR_11_9=RREX_11_9 or IDRR_8_6=RREX_11_9)) then
+			wr_IFID<='0';
+			wr_IDRR<='0';
+			wr_RREX<='0';
+			wr_PC<='0';
+			wr_IR<='0';
+			wr_inc<='0';
+			clr_RREX<='1';
+			
+		elsif (IDRR_opcode_Op="1100") then
 			select_Mux_PC<="000";
+			dec<=std_logic_vector(to_unsigned(i, 3));
+			if i=0 then
+				wr_IDRR<='0';
+				wr_IFID<='0';
+				wr_PC<='0';
+				wr_inc<='0';
+				wr_IR<='0';
+				select_Mux_LMSM<='0';
+			elsif i=7 then
+				wr_IDRR<='1';
+				wr_IFID<='1';
+				wr_PC<='1';
+				wr_inc<='1';
+				wr_IR<='1';
+				select_Mux_LMSM<='0';
+			else
+				wr_IDRR<='0';
+				wr_IFID<='0';
+				wr_PC<='0';
+				wr_inc<='0';
+				wr_IR<='0';
+				select_Mux_LMSM<='1';
+			end if;
+			
+			wr_RREX<='1';
+			wr_EXMEM<='1';
+			wr_MEMWB<='1';
+			select_Mux_RF_D3<="010";
+			select_Mux_RF_A3<="11";	
+			select_Mux_DMem_A<='1';
+			
+		elsif (IDRR_opcode_Op="1101") then
+			select_Mux_PC<="000";
+			dec<=std_logic_vector(to_unsigned(i, 3));
+			if i=0 then
+				wr_IDRR<='0';
+				wr_IFID<='0';
+				wr_PC<='0';
+				wr_inc<='0';
+				wr_IR<='0';
+				select_Mux_LMSM<='0';
+			elsif i=7 then
+				wr_IDRR<='1';
+				wr_IFID<='1';
+				wr_PC<='1';
+				wr_inc<='1';
+				wr_IR<='1';
+				select_Mux_LMSM<='0';
+			else
+				wr_IDRR<='0';
+				wr_IFID<='0';
+				wr_PC<='0';
+				wr_inc<='0';
+				wr_IR<='0';
+				select_Mux_LMSM<='1';
+			end if;
+			
+			wr_RREX<='1';
+			wr_EXMEM<='1';
+			wr_MEMWB<='1';
+			wr_DMem<='1';
+			select_Mux_RF_A2<='1';
+			select_Mux_DMem_A<='1';
+			select_Mux_DMem_Din<='1';
 			
 		end if;
 				
-
-		dec<="000";
-
-		select_Mux_LMSM<='0';
 		
 		cy_in<=cy;
 		z_in<=z;
 		
 	end process; --stateoutput
 	
+	process(clk, IDRR_opcode_Op)
+	begin
+		if rising_edge(clk) then
+			if IDRR_opcode_Op="1100" or IDRR_opcode_Op="1101" then
+				if i=8 then
+					i:=0;
+				else
+					i:=i+1;
+				end if;
+			end if;
+		end if;
+	end process;
 end arch;

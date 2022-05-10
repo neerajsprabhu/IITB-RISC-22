@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DUT
-Tue May 10 05:47:33 2022
+Tue May 10 08:36:28 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -15,7 +15,8 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. User-Specified and Inferred Latches
   9. General Register Statistics
- 10. Analysis & Synthesis Messages
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -42,13 +43,13 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Tue May 10 05:47:33 2022       ;
+; Analysis & Synthesis Status ; Successful - Tue May 10 08:36:28 2022       ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; DUT                                         ;
 ; Top-level Entity Name       ; controller                                  ;
 ; Family                      ; MAX V                                       ;
-; Total logic elements        ; 48                                          ;
-; Total pins                  ; 80                                          ;
+; Total logic elements        ; 153                                         ;
+; Total pins                  ; 93                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
@@ -140,47 +141,48 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                       ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                ; Library ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------+---------+
-; controller.vhd                   ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/Pipeline/Controller/controller.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                             ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                      ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------+---------+
+; controller.vhd                   ; yes             ; User VHDL File  ; C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Total logic elements                        ; 48          ;
-;     -- Combinational with no register       ; 48          ;
-;     -- Register only                        ; 0           ;
-;     -- Combinational with a register        ; 0           ;
-;                                             ;             ;
-; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 27          ;
-;     -- 3 input functions                    ; 8           ;
-;     -- 2 input functions                    ; 13          ;
-;     -- 1 input functions                    ; 0           ;
-;     -- 0 input functions                    ; 0           ;
-;                                             ;             ;
-; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 48          ;
-;     -- arithmetic mode                      ; 0           ;
-;     -- qfbk mode                            ; 0           ;
-;     -- register cascade mode                ; 0           ;
-;     -- synchronous clear/load mode          ; 0           ;
-;     -- asynchronous clear/load mode         ; 0           ;
-;                                             ;             ;
-; Total registers                             ; 0           ;
-; I/O pins                                    ; 80          ;
-; Maximum fan-out node                        ; process_0~2 ;
-; Maximum fan-out                             ; 20          ;
-; Total fan-out                               ; 184         ;
-; Average fan-out                             ; 1.44        ;
-+---------------------------------------------+-------------+
++-------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                       ;
++---------------------------------------------+---------------------+
+; Resource                                    ; Usage               ;
++---------------------------------------------+---------------------+
+; Total logic elements                        ; 153                 ;
+;     -- Combinational with no register       ; 121                 ;
+;     -- Register only                        ; 30                  ;
+;     -- Combinational with a register        ; 2                   ;
+;                                             ;                     ;
+; Logic element usage by number of LUT inputs ;                     ;
+;     -- 4 input functions                    ; 55                  ;
+;     -- 3 input functions                    ; 22                  ;
+;     -- 2 input functions                    ; 45                  ;
+;     -- 1 input functions                    ; 1                   ;
+;     -- 0 input functions                    ; 0                   ;
+;                                             ;                     ;
+; Logic elements by mode                      ;                     ;
+;     -- normal mode                          ; 122                 ;
+;     -- arithmetic mode                      ; 31                  ;
+;     -- qfbk mode                            ; 0                   ;
+;     -- register cascade mode                ; 0                   ;
+;     -- synchronous clear/load mode          ; 0                   ;
+;     -- asynchronous clear/load mode         ; 0                   ;
+;                                             ;                     ;
+; Total registers                             ; 32                  ;
+; Total logic cells in carry chains           ; 32                  ;
+; I/O pins                                    ; 93                  ;
+; Maximum fan-out node                        ; select_Mux_DMem_A~2 ;
+; Maximum fan-out                             ; 42                  ;
+; Total fan-out                               ; 509                 ;
+; Average fan-out                             ; 2.07                ;
++---------------------------------------------+---------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -188,7 +190,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
-; |controller                ; 48 (48)     ; 0            ; 0          ; 80   ; 0            ; 48 (48)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |controller         ; controller  ; work         ;
+; |controller                ; 153 (153)   ; 32           ; 0          ; 93   ; 0            ; 121 (121)    ; 30 (30)           ; 2 (2)            ; 32 (32)         ; 0 (0)      ; |controller         ; controller  ; work         ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -198,9 +200,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------+---------------------+------------------------+
 ; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
 +----------------------------------------------------+---------------------+------------------------+
-; wr_RREX$latch                                      ; process_0           ; yes                    ;
-; wr_EXMEM$latch                                     ; process_0           ; yes                    ;
-; Number of user-specified and inferred latches = 2  ;                     ;                        ;
+; wr_IFID$latch                                      ; wr_IFID             ; yes                    ;
+; wr_IDRR$latch                                      ; wr_IFID             ; yes                    ;
+; wr_RREX$latch                                      ; wr_RREX             ; yes                    ;
+; wr_EXMEM$latch                                     ; wr_EXMEM            ; yes                    ;
+; Number of user-specified and inferred latches = 4  ;                     ;                        ;
 +----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -210,14 +214,23 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 32    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 32    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 9:1                ; 3 bits    ; 18 LEs        ; 3 LEs                ; 15 LEs                 ; No         ; |controller|dec            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +-------------------------------+
@@ -226,61 +239,68 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue May 10 05:47:27 2022
+    Info: Processing started: Tue May 10 08:36:15 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off control -c DUT
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file controller.vhd
-    Info (12022): Found design unit 1: controller-arch File: D:/IITB/Semester_4/EE309/Pipeline/Controller/controller.vhd Line: 24
-    Info (12023): Found entity 1: controller File: D:/IITB/Semester_4/EE309/Pipeline/Controller/controller.vhd Line: 6
+    Info (12022): Found design unit 1: controller-arch File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 26
+    Info (12023): Found entity 1: controller File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 6
 Info (12127): Elaborating entity "controller" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at controller.vhd(18): used implicit default value for signal "select_Mux_Mem_A" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/IITB/Semester_4/EE309/Pipeline/Controller/controller.vhd Line: 18
-Warning (10541): VHDL Signal Declaration warning at controller.vhd(18): used implicit default value for signal "select_Mux_Mem_D" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/IITB/Semester_4/EE309/Pipeline/Controller/controller.vhd Line: 18
-Warning (10631): VHDL Process Statement warning at controller.vhd(30): inferring latch(es) for signal or variable "wr_IFID", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/Pipeline/Controller/controller.vhd Line: 30
-Warning (10631): VHDL Process Statement warning at controller.vhd(30): inferring latch(es) for signal or variable "wr_IDRR", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/Pipeline/Controller/controller.vhd Line: 30
-Warning (10631): VHDL Process Statement warning at controller.vhd(30): inferring latch(es) for signal or variable "wr_RREX", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/Pipeline/Controller/controller.vhd Line: 30
-Warning (10631): VHDL Process Statement warning at controller.vhd(30): inferring latch(es) for signal or variable "wr_EXMEM", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/Pipeline/Controller/controller.vhd Line: 30
-Warning (10631): VHDL Process Statement warning at controller.vhd(30): inferring latch(es) for signal or variable "wr_MEMWB", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/Pipeline/Controller/controller.vhd Line: 30
-Info (10041): Inferred latch for "wr_MEMWB" at controller.vhd(30) File: D:/IITB/Semester_4/EE309/Pipeline/Controller/controller.vhd Line: 30
-Info (10041): Inferred latch for "wr_EXMEM" at controller.vhd(30) File: D:/IITB/Semester_4/EE309/Pipeline/Controller/controller.vhd Line: 30
-Info (10041): Inferred latch for "wr_RREX" at controller.vhd(30) File: D:/IITB/Semester_4/EE309/Pipeline/Controller/controller.vhd Line: 30
-Info (10041): Inferred latch for "wr_IDRR" at controller.vhd(30) File: D:/IITB/Semester_4/EE309/Pipeline/Controller/controller.vhd Line: 30
-Info (10041): Inferred latch for "wr_IFID" at controller.vhd(30) File: D:/IITB/Semester_4/EE309/Pipeline/Controller/controller.vhd Line: 30
-Warning (13012): Latch wr_RREX$latch has unsafe behavior File: D:/IITB/Semester_4/EE309/Pipeline/Controller/controller.vhd Line: 30
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IDRR_opcode_Op[2] File: D:/IITB/Semester_4/EE309/Pipeline/Controller/controller.vhd Line: 8
+Warning (10541): VHDL Signal Declaration warning at controller.vhd(17): used implicit default value for signal "clr_EXMEM" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 17
+Warning (10541): VHDL Signal Declaration warning at controller.vhd(17): used implicit default value for signal "clr_MEMWB" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 17
+Warning (10492): VHDL Process Statement warning at controller.vhd(360): signal "IDRR_11_9" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 360
+Warning (10492): VHDL Process Statement warning at controller.vhd(360): signal "RREX_11_9" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 360
+Warning (10492): VHDL Process Statement warning at controller.vhd(360): signal "IDRR_8_6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 360
+Warning (10631): VHDL Process Statement warning at controller.vhd(32): inferring latch(es) for signal or variable "wr_IFID", which holds its previous value in one or more paths through the process File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 32
+Warning (10631): VHDL Process Statement warning at controller.vhd(32): inferring latch(es) for signal or variable "wr_IDRR", which holds its previous value in one or more paths through the process File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 32
+Warning (10631): VHDL Process Statement warning at controller.vhd(32): inferring latch(es) for signal or variable "wr_RREX", which holds its previous value in one or more paths through the process File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 32
+Warning (10631): VHDL Process Statement warning at controller.vhd(32): inferring latch(es) for signal or variable "wr_EXMEM", which holds its previous value in one or more paths through the process File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 32
+Warning (10631): VHDL Process Statement warning at controller.vhd(32): inferring latch(es) for signal or variable "wr_MEMWB", which holds its previous value in one or more paths through the process File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 32
+Warning (10631): VHDL Process Statement warning at controller.vhd(32): inferring latch(es) for signal or variable "clr_IFID", which holds its previous value in one or more paths through the process File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 32
+Warning (10631): VHDL Process Statement warning at controller.vhd(32): inferring latch(es) for signal or variable "clr_IDRR", which holds its previous value in one or more paths through the process File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 32
+Warning (10631): VHDL Process Statement warning at controller.vhd(32): inferring latch(es) for signal or variable "clr_RREX", which holds its previous value in one or more paths through the process File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 32
+Info (10041): Inferred latch for "clr_RREX" at controller.vhd(32) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 32
+Info (10041): Inferred latch for "clr_IDRR" at controller.vhd(32) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 32
+Info (10041): Inferred latch for "clr_IFID" at controller.vhd(32) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 32
+Info (10041): Inferred latch for "wr_MEMWB" at controller.vhd(32) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 32
+Info (10041): Inferred latch for "wr_EXMEM" at controller.vhd(32) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 32
+Info (10041): Inferred latch for "wr_RREX" at controller.vhd(32) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 32
+Info (10041): Inferred latch for "wr_IDRR" at controller.vhd(32) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 32
+Info (10041): Inferred latch for "wr_IFID" at controller.vhd(32) File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 32
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "wr_IDRR$latch" merged with LATCH primitive "wr_IFID$latch" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 32
+Warning (13012): Latch wr_IFID$latch has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 32
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RREX_opcode_Op[0] File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 8
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal haz_EX File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 11
+Warning (13012): Latch wr_RREX$latch has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 32
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IDRR_opcode_Op[2] File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 8
+Warning (13012): Latch wr_EXMEM$latch has unsafe behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 32
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RREX_opcode_Op[2] File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 8
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "wr_IFID" is stuck at VCC File: D:/IITB/Semester_4/EE309/Pipeline/Controller/controller.vhd Line: 15
-    Warning (13410): Pin "wr_IDRR" is stuck at VCC File: D:/IITB/Semester_4/EE309/Pipeline/Controller/controller.vhd Line: 15
-    Warning (13410): Pin "wr_MEMWB" is stuck at VCC File: D:/IITB/Semester_4/EE309/Pipeline/Controller/controller.vhd Line: 15
-    Warning (13410): Pin "select_Mux_RF_D3[2]" is stuck at GND File: D:/IITB/Semester_4/EE309/Pipeline/Controller/controller.vhd Line: 16
-    Warning (13410): Pin "dec[0]" is stuck at GND File: D:/IITB/Semester_4/EE309/Pipeline/Controller/controller.vhd Line: 16
-    Warning (13410): Pin "dec[1]" is stuck at GND File: D:/IITB/Semester_4/EE309/Pipeline/Controller/controller.vhd Line: 16
-    Warning (13410): Pin "dec[2]" is stuck at GND File: D:/IITB/Semester_4/EE309/Pipeline/Controller/controller.vhd Line: 16
-    Warning (13410): Pin "select_ALU2[1]" is stuck at GND File: D:/IITB/Semester_4/EE309/Pipeline/Controller/controller.vhd Line: 17
-    Warning (13410): Pin "select_Mux_jump_loc[0]" is stuck at GND File: D:/IITB/Semester_4/EE309/Pipeline/Controller/controller.vhd Line: 17
-    Warning (13410): Pin "select_Mux_jump_loc[1]" is stuck at GND File: D:/IITB/Semester_4/EE309/Pipeline/Controller/controller.vhd Line: 17
-    Warning (13410): Pin "select_Mux_Mem_A" is stuck at GND File: D:/IITB/Semester_4/EE309/Pipeline/Controller/controller.vhd Line: 18
-    Warning (13410): Pin "select_Mux_Mem_D" is stuck at GND File: D:/IITB/Semester_4/EE309/Pipeline/Controller/controller.vhd Line: 18
-    Warning (13410): Pin "select_Mux_RF_A2" is stuck at GND File: D:/IITB/Semester_4/EE309/Pipeline/Controller/controller.vhd Line: 18
-    Warning (13410): Pin "select_Mux_DMem_A" is stuck at GND File: D:/IITB/Semester_4/EE309/Pipeline/Controller/controller.vhd Line: 18
-    Warning (13410): Pin "select_Mux_DMem_Din" is stuck at GND File: D:/IITB/Semester_4/EE309/Pipeline/Controller/controller.vhd Line: 18
-    Warning (13410): Pin "select_Mux_LMSM" is stuck at GND File: D:/IITB/Semester_4/EE309/Pipeline/Controller/controller.vhd Line: 19
-Warning (21074): Design contains 7 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clk" File: D:/IITB/Semester_4/EE309/Pipeline/Controller/controller.vhd Line: 10
-    Warning (15610): No output dependent on input pin "IDRR_5_0_Op[3]" File: D:/IITB/Semester_4/EE309/Pipeline/Controller/controller.vhd Line: 12
-    Warning (15610): No output dependent on input pin "IDRR_5_0_Op[4]" File: D:/IITB/Semester_4/EE309/Pipeline/Controller/controller.vhd Line: 12
-    Warning (15610): No output dependent on input pin "IDRR_5_0_Op[5]" File: D:/IITB/Semester_4/EE309/Pipeline/Controller/controller.vhd Line: 12
-    Warning (15610): No output dependent on input pin "RREX_5_0_Op[3]" File: D:/IITB/Semester_4/EE309/Pipeline/Controller/controller.vhd Line: 12
-    Warning (15610): No output dependent on input pin "RREX_5_0_Op[4]" File: D:/IITB/Semester_4/EE309/Pipeline/Controller/controller.vhd Line: 12
-    Warning (15610): No output dependent on input pin "RREX_5_0_Op[5]" File: D:/IITB/Semester_4/EE309/Pipeline/Controller/controller.vhd Line: 12
-Info (21057): Implemented 128 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 38 input pins
-    Info (21059): Implemented 42 output pins
-    Info (21061): Implemented 48 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 35 warnings
-    Info: Peak virtual memory: 4760 megabytes
-    Info: Processing ended: Tue May 10 05:47:33 2022
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:14
+    Warning (13410): Pin "wr_MEMWB" is stuck at VCC File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 16
+    Warning (13410): Pin "clr_IFID" is stuck at VCC File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 17
+    Warning (13410): Pin "clr_IDRR" is stuck at VCC File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 17
+    Warning (13410): Pin "clr_RREX" is stuck at VCC File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 17
+    Warning (13410): Pin "clr_EXMEM" is stuck at GND File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 17
+    Warning (13410): Pin "clr_MEMWB" is stuck at GND File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 17
+    Warning (13410): Pin "select_Mux_RF_D3[2]" is stuck at GND File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 18
+    Warning (13410): Pin "select_ALU2[1]" is stuck at GND File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 19
+Warning (21074): Design contains 6 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "IDRR_5_0_Op[3]" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 12
+    Warning (15610): No output dependent on input pin "IDRR_5_0_Op[4]" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 12
+    Warning (15610): No output dependent on input pin "IDRR_5_0_Op[5]" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 12
+    Warning (15610): No output dependent on input pin "RREX_5_0_Op[3]" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 12
+    Warning (15610): No output dependent on input pin "RREX_5_0_Op[4]" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 12
+    Warning (15610): No output dependent on input pin "RREX_5_0_Op[5]" File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Controller/controller.vhd Line: 12
+Info (21057): Implemented 246 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 47 input pins
+    Info (21059): Implemented 46 output pins
+    Info (21061): Implemented 153 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 37 warnings
+    Info: Peak virtual memory: 4758 megabytes
+    Info: Processing ended: Tue May 10 08:36:28 2022
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:29
 
 

@@ -59,151 +59,263 @@
  ---------------------------------------------------------------------------------
 
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-CHIP  "DUT"  ASSIGNED TO AN: 5M240ZT144C4
+CHIP  "DUT"  ASSIGNED TO AN: 5M570ZF256C4
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
-EXMEM_opcode_Op[2]           : 1         : input  : 3.3-V LVTTL       :         : 1         : N              
-IDRR_5_0_Op[5]               : 2         : input  : 3.3-V LVTTL       :         : 1         : N              
-wr_MEMWB                     : 3         : output : 3.3-V LVTTL       :         : 1         : N              
-select_Mux_ALU2_A            : 4         : output : 3.3-V LVTTL       :         : 1         : N              
-RREX_5_0_Op[4]               : 5         : input  : 3.3-V LVTTL       :         : 1         : N              
-GND*                         : 6         :        :                   :         : 1         :                
-select_ALU2[0]               : 7         : output : 3.3-V LVTTL       :         : 1         : N              
-GND                          : 8         : gnd    :                   :         :           :                
-VCCIO1                       : 9         : power  :                   : 3.3V    : 1         :                
-GND                          : 10        : gnd    :                   :         :           :                
-GND*                         : 11        :        :                   :         : 1         :                
-GND*                         : 12        :        :                   :         : 1         :                
-GND*                         : 13        :        :                   :         : 1         :                
-select_Mux_DMem_A            : 14        : output : 3.3-V LVTTL       :         : 1         : N              
-EXMEM_opcode_Op[3]           : 15        : input  : 3.3-V LVTTL       :         : 1         : N              
-GND*                         : 16        :        :                   :         : 1         :                
-GND                          : 17        : gnd    :                   :         :           :                
-RREX_5_0_Op[5]               : 18        : input  : 3.3-V LVTTL       :         : 1         : N              
-VCCINT                       : 19        : power  :                   : 1.8V    :           :                
-GND*                         : 20        :        :                   :         : 1         :                
-GND*                         : 21        :        :                   :         : 1         :                
-GND*                         : 22        :        :                   :         : 1         :                
-select_Mux_jump_loc[1]       : 23        : output : 3.3-V LVTTL       :         : 1         : N              
-GND*                         : 24        :        :                   :         : 1         :                
-VCCIO1                       : 25        : power  :                   : 3.3V    : 1         :                
-GND                          : 26        : gnd    :                   :         :           :                
-GND*                         : 27        :        :                   :         : 1         :                
-select_Mux_ALU_B[1]          : 28        : output : 3.3-V LVTTL       :         : 1         : N              
-wr_IDRR                      : 29        : output : 3.3-V LVTTL       :         : 1         : N              
-RREX_opcode_Op[0]            : 30        : input  : 3.3-V LVTTL       :         : 1         : N              
-GND*                         : 31        :        :                   :         : 1         :                
-GND*                         : 32        :        :                   :         : 1         :                
-TMS                          : 33        : input  :                   :         : 1         :                
-TDI                          : 34        : input  :                   :         : 1         :                
-TCK                          : 35        : input  :                   :         : 1         :                
-TDO                          : 36        : output :                   :         : 1         :                
-wr_inc                       : 37        : output : 3.3-V LVTTL       :         : 1         : N              
-select_Mux_Mem_A             : 38        : output : 3.3-V LVTTL       :         : 1         : N              
-wr_PC                        : 39        : output : 3.3-V LVTTL       :         : 1         : N              
-GND*                         : 40        :        :                   :         : 1         :                
-RREX_5_0_Op[0]               : 41        : input  : 3.3-V LVTTL       :         : 1         : N              
-wr_RF_r7                     : 42        : output : 3.3-V LVTTL       :         : 1         : N              
-select_Mux_RF_A2             : 43        : output : 3.3-V LVTTL       :         : 1         : N              
-GND*                         : 44        :        :                   :         : 1         :                
-RREX_5_0_Op[2]               : 45        : input  : 3.3-V LVTTL       :         : 1         : N              
-VCCIO1                       : 46        : power  :                   : 3.3V    : 1         :                
-GND                          : 47        : gnd    :                   :         :           :                
-wr_IR                        : 48        : output : 3.3-V LVTTL       :         : 1         : N              
-wr_z                         : 49        : output : 3.3-V LVTTL       :         : 1         : N              
-RREX_5_0_Op[1]               : 50        : input  : 3.3-V LVTTL       :         : 1         : N              
-wr_cy                        : 51        : output : 3.3-V LVTTL       :         : 1         : N              
-RREX_opcode_Op[3]            : 52        : input  : 3.3-V LVTTL       :         : 1         : N              
-select_ALU[1]                : 53        : output : 3.3-V LVTTL       :         : 1         : N              
-GND                          : 54        : gnd    :                   :         :           :                
-cy                           : 55        : input  : 3.3-V LVTTL       :         : 1         : N              
-VCCINT                       : 56        : power  :                   : 1.8V    :           :                
-select_ALU[0]                : 57        : output : 3.3-V LVTTL       :         : 1         : N              
-cy_in                        : 58        : output : 3.3-V LVTTL       :         : 1         : N              
-select_Mux_ALU_B[0]          : 59        : output : 3.3-V LVTTL       :         : 1         : N              
-GND*                         : 60        :        :                   :         : 1         :                
-haz_EX                       : 61        : input  : 3.3-V LVTTL       :         : 1         : N              
-haz_JAL                      : 62        : input  : 3.3-V LVTTL       :         : 1         : N              
-select_Mux_LMSM              : 63        : output : 3.3-V LVTTL       :         : 1         : N              
-VCCIO1                       : 64        : power  :                   : 3.3V    : 1         :                
-GND                          : 65        : gnd    :                   :         :           :                
-GND*                         : 66        :        :                   :         : 1         :                
-IDRR_5_0_Op[4]               : 67        : input  : 3.3-V LVTTL       :         : 1         : N              
-GND*                         : 68        :        :                   :         : 1         :                
-RREX_5_0_Op[3]               : 69        : input  : 3.3-V LVTTL       :         : 1         : N              
-clk                          : 70        : input  : 3.3-V LVTTL       :         : 1         : N              
-GND*                         : 71        :        :                   :         : 1         :                
-GND*                         : 72        :        :                   :         : 1         :                
-GND*                         : 73        :        :                   :         : 2         :                
-dec[2]                       : 74        : output : 3.3-V LVTTL       :         : 2         : N              
-GND*                         : 75        :        :                   :         : 2         :                
-wr_RREX                      : 76        : output : 3.3-V LVTTL       :         : 2         : N              
-IDRR_5_0_Op[3]               : 77        : input  : 3.3-V LVTTL       :         : 2         : N              
-select_Mux_Mem_D             : 78        : output : 3.3-V LVTTL       :         : 2         : N              
-GND*                         : 79        :        :                   :         : 2         :                
-GND*                         : 80        :        :                   :         : 2         :                
-select_Mux_RF_D3[2]          : 81        : output : 3.3-V LVTTL       :         : 2         : N              
-VCCIO2                       : 82        : power  :                   : 3.3V    : 2         :                
-GND                          : 83        : gnd    :                   :         :           :                
-IDRR_5_0_Op[0]               : 84        : input  : 3.3-V LVTTL       :         : 2         : N              
-GND*                         : 85        :        :                   :         : 2         :                
-IDRR_5_0_Op[2]               : 86        : input  : 3.3-V LVTTL       :         : 2         : N              
-IDRR_opcode_Op[3]            : 87        : input  : 3.3-V LVTTL       :         : 2         : N              
-haz_WB                       : 88        : input  : 3.3-V LVTTL       :         : 2         : N              
-IDRR_opcode_Op[2]            : 89        : input  : 3.3-V LVTTL       :         : 2         : N              
-VCCINT                       : 90        : power  :                   : 1.8V    :           :                
-haz_JLR                      : 91        : input  : 3.3-V LVTTL       :         : 2         : N              
-GND                          : 92        : gnd    :                   :         :           :                
-select_Mux_RF_A1             : 93        : output : 3.3-V LVTTL       :         : 2         : N              
-IDRR_opcode_Op[0]            : 94        : input  : 3.3-V LVTTL       :         : 2         : N              
-IDRR_opcode_Op[1]            : 95        : input  : 3.3-V LVTTL       :         : 2         : N              
-haz_JRI                      : 96        : input  : 3.3-V LVTTL       :         : 2         : N              
-GND*                         : 97        :        :                   :         : 2         :                
-GND*                         : 98        :        :                   :         : 2         :                
-GND                          : 99        : gnd    :                   :         :           :                
-VCCIO2                       : 100       : power  :                   : 3.3V    : 2         :                
-haz_BEQ                      : 101       : input  : 3.3-V LVTTL       :         : 2         : N              
-haz_MEM                      : 102       : input  : 3.3-V LVTTL       :         : 2         : N              
-dec[1]                       : 103       : output : 3.3-V LVTTL       :         : 2         : N              
-GND*                         : 104       :        :                   :         : 2         :                
-GND*                         : 105       :        :                   :         : 2         :                
-GND*                         : 106       :        :                   :         : 2         :                
-GND*                         : 107       :        :                   :         : 2         :                
-GND*                         : 108       :        :                   :         : 2         :                
-dec[0]                       : 109       : output : 3.3-V LVTTL       :         : 2         : N              
-IDRR_5_0_Op[1]               : 110       : input  : 3.3-V LVTTL       :         : 2         : N              
-select_Mux_DMem_Din          : 111       : output : 3.3-V LVTTL       :         : 2         : N              
-z_in                         : 112       : output : 3.3-V LVTTL       :         : 2         : N              
-select_ALU2[1]               : 113       : output : 3.3-V LVTTL       :         : 2         : N              
-z                            : 114       : input  : 3.3-V LVTTL       :         : 2         : N              
-GND                          : 115       : gnd    :                   :         :           :                
-VCCIO2                       : 116       : power  :                   : 3.3V    : 2         :                
-GND*                         : 117       :        :                   :         : 2         :                
-GND*                         : 118       :        :                   :         : 2         :                
-select_Mux_jump_loc[0]       : 119       : output : 3.3-V LVTTL       :         : 2         : N              
-select_Mux_RF_D3[0]          : 120       : output : 3.3-V LVTTL       :         : 2         : N              
-select_Mux_RF_A3[1]          : 121       : output : 3.3-V LVTTL       :         : 2         : N              
-MEMWB_opcode_Op[3]           : 122       : input  : 3.3-V LVTTL       :         : 2         : N              
-select_Mux_ALU_A             : 123       : output : 3.3-V LVTTL       :         : 2         : N              
-select_Mux_RF_D3[1]          : 124       : output : 3.3-V LVTTL       :         : 2         : N              
-MEMWB_opcode_Op[0]           : 125       : input  : 3.3-V LVTTL       :         : 2         : N              
-VCCINT                       : 126       : power  :                   : 1.8V    :           :                
-MEMWB_opcode_Op[1]           : 127       : input  : 3.3-V LVTTL       :         : 2         : N              
-GND                          : 128       : gnd    :                   :         :           :                
-MEMWB_opcode_Op[2]           : 129       : input  : 3.3-V LVTTL       :         : 2         : N              
-select_Mux_RF_A3[0]          : 130       : output : 3.3-V LVTTL       :         : 2         : N              
-wr_IFID                      : 131       : output : 3.3-V LVTTL       :         : 2         : N              
-wr_RF                        : 132       : output : 3.3-V LVTTL       :         : 2         : N              
-RREX_opcode_Op[1]            : 133       : input  : 3.3-V LVTTL       :         : 2         : N              
-RREX_opcode_Op[2]            : 134       : input  : 3.3-V LVTTL       :         : 2         : N              
-GND                          : 135       : gnd    :                   :         :           :                
-VCCIO2                       : 136       : power  :                   : 3.3V    : 2         :                
-GND                          : 137       : gnd    :                   :         :           :                
-GND*                         : 138       :        :                   :         : 2         :                
-wr_EXMEM                     : 139       : output : 3.3-V LVTTL       :         : 2         : N              
-wr_DMem                      : 140       : output : 3.3-V LVTTL       :         : 2         : N              
-EXMEM_opcode_Op[0]           : 141       : input  : 3.3-V LVTTL       :         : 2         : N              
-EXMEM_opcode_Op[1]           : 142       : input  : 3.3-V LVTTL       :         : 2         : N              
-select_Mux_ALU2_B[0]         : 143       : output : 3.3-V LVTTL       :         : 2         : N              
-select_Mux_ALU2_B[1]         : 144       : output : 3.3-V LVTTL       :         : 2         : N              
+GND                          : A1        : gnd    :                   :         :           :                
+wr_IDRR                      : A2        : output : 3.3-V LVTTL       :         : 2         : N              
+VCCIO2                       : A3        : power  :                   : 3.3V    : 2         :                
+GND*                         : A4        :        :                   :         : 2         :                
+dec[0]                       : A5        : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : A6        :        :                   :         : 2         :                
+wr_inc                       : A7        : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : A8        :        :                   :         : 2         :                
+clr_IDRR                     : A9        : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : A10       :        :                   :         : 2         :                
+GND*                         : A11       :        :                   :         : 2         :                
+GND*                         : A12       :        :                   :         : 2         :                
+select_Mux_RF_A2             : A13       : output : 3.3-V LVTTL       :         : 2         : N              
+VCCIO2                       : A14       : power  :                   : 3.3V    : 2         :                
+select_Mux_ALU2_A            : A15       : output : 3.3-V LVTTL       :         : 2         : N              
+GND                          : A16       : gnd    :                   :         :           :                
+IDRR_opcode_Op[3]            : B1        : input  : 3.3-V LVTTL       :         : 2         : N              
+GND                          : B2        : gnd    :                   :         :           :                
+select_Mux_RF_A1             : B3        : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : B4        :        :                   :         : 2         :                
+GND*                         : B5        :        :                   :         : 2         :                
+GND*                         : B6        :        :                   :         : 2         :                
+GND                          : B7        : gnd    :                   :         :           :                
+wr_PC                        : B8        : output : 3.3-V LVTTL       :         : 2         : N              
+clr_IFID                     : B9        : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : B10       :        :                   :         : 2         :                
+GND*                         : B11       :        :                   :         : 2         :                
+clr_RREX                     : B12       : output : 3.3-V LVTTL       :         : 2         : N              
+IDRR_5_0_Op[5]               : B13       : input  : 3.3-V LVTTL       :         : 2         : N              
+select_ALU2[0]               : B14       : output : 3.3-V LVTTL       :         : 2         : N              
+GND                          : B15       : gnd    :                   :         :           :                
+select_Mux_ALU2_B[0]         : B16       : output : 3.3-V LVTTL       :         : 2         : N              
+VCCIO1                       : C1        : power  :                   : 3.3V    : 1         :                
+IDRR_opcode_Op[2]            : C2        : input  : 3.3-V LVTTL       :         : 1         : N              
+select_Mux_DMem_A            : C3        : output : 3.3-V LVTTL       :         : 1         : N              
+IDRR_opcode_Op[0]            : C4        : input  : 3.3-V LVTTL       :         : 2         : N              
+dec[2]                       : C5        : output : 3.3-V LVTTL       :         : 2         : N              
+wr_IR                        : C6        : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : C7        :        :                   :         : 2         :                
+GND*                         : C8        :        :                   :         : 2         :                
+GND*                         : C9        :        :                   :         : 2         :                
+select_Mux_LMSM              : C10       : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : C11       :        :                   :         : 2         :                
+select_Mux_DMem_Din          : C12       : output : 3.3-V LVTTL       :         : 2         : N              
+select_ALU2[1]               : C13       : output : 3.3-V LVTTL       :         : 2         : N              
+EXMEM_opcode_Op[2]           : C14       : input  : 3.3-V LVTTL       :         : 2         : N              
+EXMEM_opcode_Op[1]           : C15       : input  : 3.3-V LVTTL       :         : 2         : N              
+VCCIO2                       : C16       : power  :                   : 3.3V    : 2         :                
+RREX_11_9[0]                 : D1        : input  : 3.3-V LVTTL       :         : 1         : N              
+select_Mux_PC[2]             : D2        : output : 3.3-V LVTTL       :         : 1         : N              
+IDRR_8_6[2]                  : D3        : input  : 3.3-V LVTTL       :         : 1         : N              
+wr_IFID                      : D4        : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : D5        :        :                   :         : 2         :                
+NC                           : D6        :        :                   :         :           :                
+NC                           : D7        :        :                   :         :           :                
+NC                           : D8        :        :                   :         :           :                
+NC                           : D9        :        :                   :         :           :                
+NC                           : D10       :        :                   :         :           :                
+dec[1]                       : D11       : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : D12       :        :                   :         : 2         :                
+EXMEM_opcode_Op[3]           : D13       : input  : 3.3-V LVTTL       :         : 2         : N              
+wr_RF_r7                     : D14       : output : 3.3-V LVTTL       :         : 2         : N              
+select_Mux_ALU2_B[1]         : D15       : output : 3.3-V LVTTL       :         : 2         : N              
+wr_DMem                      : D16       : output : 3.3-V LVTTL       :         : 2         : N              
+RREX_5_0_Op[4]               : E1        : input  : 3.3-V LVTTL       :         : 1         : N              
+IDRR_11_9[0]                 : E2        : input  : 3.3-V LVTTL       :         : 1         : N              
+RREX_11_9[1]                 : E3        : input  : 3.3-V LVTTL       :         : 1         : N              
+RREX_11_9[2]                 : E4        : input  : 3.3-V LVTTL       :         : 1         : N              
+NC                           : E5        :        :                   :         :           :                
+NC                           : E6        :        :                   :         :           :                
+NC                           : E7        :        :                   :         :           :                
+NC                           : E8        :        :                   :         :           :                
+NC                           : E9        :        :                   :         :           :                
+NC                           : E10       :        :                   :         :           :                
+NC                           : E11       :        :                   :         :           :                
+NC                           : E12       :        :                   :         :           :                
+GND*                         : E13       :        :                   :         : 2         :                
+RREX_5_0_Op[3]               : E14       : input  : 3.3-V LVTTL       :         : 2         : N              
+EXMEM_opcode_Op[0]           : E15       : input  : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : E16       :        :                   :         : 2         :                
+IDRR_11_9[2]                 : F1        : input  : 3.3-V LVTTL       :         : 1         : N              
+IDRR_8_6[1]                  : F2        : input  : 3.3-V LVTTL       :         : 1         : N              
+IDRR_8_6[0]                  : F3        : input  : 3.3-V LVTTL       :         : 1         : N              
+NC                           : F4        :        :                   :         :           :                
+NC                           : F5        :        :                   :         :           :                
+NC                           : F6        :        :                   :         :           :                
+NC                           : F7        :        :                   :         :           :                
+VCCIO2                       : F8        : power  :                   : 3.3V    : 2         :                
+VCCIO2                       : F9        : power  :                   : 3.3V    : 2         :                
+NC                           : F10       :        :                   :         :           :                
+NC                           : F11       :        :                   :         :           :                
+NC                           : F12       :        :                   :         :           :                
+MEMWB_opcode_Op[3]           : F13       : input  : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : F14       :        :                   :         : 2         :                
+GND*                         : F15       :        :                   :         : 2         :                
+GND*                         : F16       :        :                   :         : 2         :                
+select_Mux_PC[1]             : G1        : output : 3.3-V LVTTL       :         : 1         : N              
+IDRR_11_9[1]                 : G2        : input  : 3.3-V LVTTL       :         : 1         : N              
+haz_JLR                      : G3        : input  : 3.3-V LVTTL       :         : 1         : N              
+NC                           : G4        :        :                   :         :           :                
+NC                           : G5        :        :                   :         :           :                
+NC                           : G6        :        :                   :         :           :                
+GND                          : G7        : gnd    :                   :         :           :                
+GND                          : G8        : gnd    :                   :         :           :                
+GND                          : G9        : gnd    :                   :         :           :                
+GND                          : G10       : gnd    :                   :         :           :                
+NC                           : G11       :        :                   :         :           :                
+NC                           : G12       :        :                   :         :           :                
+NC                           : G13       :        :                   :         :           :                
+GND*                         : G14       :        :                   :         : 2         :                
+select_Mux_RF_D3[1]          : G15       : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : G16       :        :                   :         : 2         :                
+select_Mux_PC[0]             : H1        : output : 3.3-V LVTTL       :         : 1         : N              
+haz_EX                       : H2        : input  : 3.3-V LVTTL       :         : 1         : N              
+RREX_opcode_Op[3]            : H3        : input  : 3.3-V LVTTL       :         : 1         : N              
+NC                           : H4        :        :                   :         :           :                
+clk                          : H5        : input  : 3.3-V LVTTL       :         : 1         : N              
+VCCIO1                       : H6        : power  :                   : 3.3V    : 1         :                
+GND                          : H7        : gnd    :                   :         :           :                
+VCCINT                       : H8        : power  :                   : 1.8V    :           :                
+GND                          : H9        : gnd    :                   :         :           :                
+VCCINT                       : H10       : power  :                   : 1.8V    :           :                
+VCCIO2                       : H11       : power  :                   : 3.3V    : 2         :                
+wr_RF                        : H12       : output : 3.3-V LVTTL       :         : 2         : N              
+NC                           : H13       :        :                   :         :           :                
+MEMWB_opcode_Op[1]           : H14       : input  : 3.3-V LVTTL       :         : 2         : N              
+IDRR_5_0_Op[4]               : H15       : input  : 3.3-V LVTTL       :         : 2         : N              
+select_Mux_RF_A3[1]          : H16       : output : 3.3-V LVTTL       :         : 2         : N              
+select_Mux_ALU_B[0]          : J1        : output : 3.3-V LVTTL       :         : 1         : N              
+wr_EXMEM                     : J2        : output : 3.3-V LVTTL       :         : 1         : N              
+haz_JRI                      : J3        : input  : 3.3-V LVTTL       :         : 1         : N              
+NC                           : J4        :        :                   :         :           :                
+haz_BEQ                      : J5        : input  : 3.3-V LVTTL       :         : 1         : N              
+VCCIO1                       : J6        : power  :                   : 3.3V    : 1         :                
+VCCINT                       : J7        : power  :                   : 1.8V    :           :                
+GND                          : J8        : gnd    :                   :         :           :                
+VCCINT                       : J9        : power  :                   : 1.8V    :           :                
+GND                          : J10       : gnd    :                   :         :           :                
+VCCIO2                       : J11       : power  :                   : 3.3V    : 2         :                
+select_Mux_RF_D3[0]          : J12       : output : 3.3-V LVTTL       :         : 2         : N              
+NC                           : J13       :        :                   :         :           :                
+MEMWB_opcode_Op[0]           : J14       : input  : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : J15       :        :                   :         : 2         :                
+select_Mux_RF_A3[0]          : J16       : output : 3.3-V LVTTL       :         : 2         : N              
+wr_RREX                      : K1        : output : 3.3-V LVTTL       :         : 1         : N              
+RREX_5_0_Op[2]               : K2        : input  : 3.3-V LVTTL       :         : 1         : N              
+haz_WB                       : K3        : input  : 3.3-V LVTTL       :         : 1         : N              
+NC                           : K4        :        :                   :         :           :                
+NC                           : K5        :        :                   :         :           :                
+NC                           : K6        :        :                   :         :           :                
+GND                          : K7        : gnd    :                   :         :           :                
+GND                          : K8        : gnd    :                   :         :           :                
+GND                          : K9        : gnd    :                   :         :           :                
+GND                          : K10       : gnd    :                   :         :           :                
+NC                           : K11       :        :                   :         :           :                
+NC                           : K12       :        :                   :         :           :                
+NC                           : K13       :        :                   :         :           :                
+MEMWB_opcode_Op[2]           : K14       : input  : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : K15       :        :                   :         : 2         :                
+GND*                         : K16       :        :                   :         : 2         :                
+IDRR_5_0_Op[1]               : L1        : input  : 3.3-V LVTTL       :         : 1         : N              
+RREX_opcode_Op[2]            : L2        : input  : 3.3-V LVTTL       :         : 1         : N              
+haz_MEM                      : L3        : input  : 3.3-V LVTTL       :         : 1         : N              
+haz_JAL                      : L4        : input  : 3.3-V LVTTL       :         : 1         : N              
+NC                           : L5        :        :                   :         :           :                
+TDI                          : L6        : input  :                   :         : 1         :                
+NC                           : L7        :        :                   :         :           :                
+VCCIO1                       : L8        : power  :                   : 3.3V    : 1         :                
+VCCIO1                       : L9        : power  :                   : 3.3V    : 1         :                
+NC                           : L10       :        :                   :         :           :                
+NC                           : L11       :        :                   :         :           :                
+NC                           : L12       :        :                   :         :           :                
+GND*                         : L13       :        :                   :         : 2         :                
+GND*                         : L14       :        :                   :         : 2         :                
+GND*                         : L15       :        :                   :         : 2         :                
+GND*                         : L16       :        :                   :         : 2         :                
+RREX_opcode_Op[1]            : M1        : input  : 3.3-V LVTTL       :         : 1         : N              
+cy_in                        : M2        : output : 3.3-V LVTTL       :         : 1         : N              
+cy                           : M3        : input  : 3.3-V LVTTL       :         : 1         : N              
+RREX_opcode_Op[0]            : M4        : input  : 3.3-V LVTTL       :         : 1         : N              
+TDO                          : M5        : output :                   :         : 1         :                
+NC                           : M6        :        :                   :         :           :                
+NC                           : M7        :        :                   :         :           :                
+GND*                         : M8        :        :                   :         : 1         :                
+GND*                         : M9        :        :                   :         : 1         :                
+NC                           : M10       :        :                   :         :           :                
+NC                           : M11       :        :                   :         :           :                
+NC                           : M12       :        :                   :         :           :                
+GND*                         : M13       :        :                   :         : 2         :                
+GND*                         : M14       :        :                   :         : 2         :                
+GND*                         : M15       :        :                   :         : 2         :                
+GND*                         : M16       :        :                   :         : 2         :                
+select_Mux_ALU_B[1]          : N1        : output : 3.3-V LVTTL       :         : 1         : N              
+select_Mux_ALU_A             : N2        : output : 3.3-V LVTTL       :         : 1         : N              
+select_ALU[0]                : N3        : output : 3.3-V LVTTL       :         : 1         : N              
+TMS                          : N4        : input  :                   :         : 1         :                
+RREX_5_0_Op[1]               : N5        : input  : 3.3-V LVTTL       :         : 1         : N              
+NC                           : N6        :        :                   :         :           :                
+NC                           : N7        :        :                   :         :           :                
+NC                           : N8        :        :                   :         :           :                
+NC                           : N9        :        :                   :         :           :                
+NC                           : N10       :        :                   :         :           :                
+NC                           : N11       :        :                   :         :           :                
+GND*                         : N12       :        :                   :         : 1         :                
+IDRR_5_0_Op[3]               : N13       : input  : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : N14       :        :                   :         : 2         :                
+GND*                         : N15       :        :                   :         : 2         :                
+GND*                         : N16       :        :                   :         : 2         :                
+VCCIO1                       : P1        : power  :                   : 3.3V    : 1         :                
+wr_MEMWB                     : P2        : output : 3.3-V LVTTL       :         : 1         : N              
+TCK                          : P3        : input  :                   :         : 1         :                
+select_ALU[1]                : P4        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : P5        :        :                   :         : 1         :                
+clr_MEMWB                    : P6        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : P7        :        :                   :         : 1         :                
+GND*                         : P8        :        :                   :         : 1         :                
+GND*                         : P9        :        :                   :         : 1         :                
+GND*                         : P10       :        :                   :         : 1         :                
+GND*                         : P11       :        :                   :         : 1         :                
+clr_EXMEM                    : P12       : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : P13       :        :                   :         : 1         :                
+select_Mux_RF_D3[2]          : P14       : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : P15       :        :                   :         : 2         :                
+VCCIO2                       : P16       : power  :                   : 3.3V    : 2         :                
+IDRR_5_0_Op[0]               : R1        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND                          : R2        : gnd    :                   :         :           :                
+wr_z                         : R3        : output : 3.3-V LVTTL       :         : 1         : N              
+RREX_5_0_Op[0]               : R4        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : R5        :        :                   :         : 1         :                
+z                            : R6        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : R7        :        :                   :         : 1         :                
+GND*                         : R8        :        :                   :         : 1         :                
+RREX_5_0_Op[5]               : R9        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : R10       :        :                   :         : 1         :                
+GND*                         : R11       :        :                   :         : 1         :                
+GND*                         : R12       :        :                   :         : 1         :                
+GND*                         : R13       :        :                   :         : 1         :                
+GND*                         : R14       :        :                   :         : 1         :                
+GND                          : R15       : gnd    :                   :         :           :                
+GND*                         : R16       :        :                   :         : 1         :                
+GND                          : T1        : gnd    :                   :         :           :                
+IDRR_opcode_Op[1]            : T2        : input  : 3.3-V LVTTL       :         : 1         : N              
+VCCIO1                       : T3        : power  :                   : 3.3V    : 1         :                
+IDRR_5_0_Op[2]               : T4        : input  : 3.3-V LVTTL       :         : 1         : N              
+wr_cy                        : T5        : output : 3.3-V LVTTL       :         : 1         : N              
+z_in                         : T6        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : T7        :        :                   :         : 1         :                
+GND*                         : T8        :        :                   :         : 1         :                
+GND*                         : T9        :        :                   :         : 1         :                
+GND*                         : T10       :        :                   :         : 1         :                
+GND*                         : T11       :        :                   :         : 1         :                
+GND*                         : T12       :        :                   :         : 1         :                
+GND*                         : T13       :        :                   :         : 1         :                
+VCCIO1                       : T14       : power  :                   : 3.3V    : 1         :                
+GND*                         : T15       :        :                   :         : 1         :                
+GND                          : T16       : gnd    :                   :         :           :                

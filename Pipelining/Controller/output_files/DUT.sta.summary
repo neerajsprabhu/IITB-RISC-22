@@ -2,15 +2,35 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Setup 'IDRR_opcode_Op[1]'
-Slack : -2.640
-TNS   : -2.640
+Type  : Setup 'clk'
+Slack : -8.982
+TNS   : -252.510
 
-Type  : Hold 'IDRR_opcode_Op[1]'
-Slack : 1.099
+Type  : Setup 'haz_BEQ'
+Slack : -4.853
+TNS   : -10.856
+
+Type  : Hold 'haz_BEQ'
+Slack : -3.197
+TNS   : -3.197
+
+Type  : Hold 'clk'
+Slack : 2.824
 TNS   : 0.000
 
-Type  : Minimum Pulse Width 'IDRR_opcode_Op[1]'
+Type  : Recovery 'haz_BEQ'
+Slack : -2.756
+TNS   : -2.756
+
+Type  : Removal 'haz_BEQ'
+Slack : 0.671
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'clk'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'haz_BEQ'
 Slack : -2.289
 TNS   : -2.289
 
