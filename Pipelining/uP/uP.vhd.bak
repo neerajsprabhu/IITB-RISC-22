@@ -1,0 +1,17 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+library work;
+
+entity controller is
+    port(
+		IR : in std_logic_vector(15 downto 0);
+		cy, z : in std_logic;
+		clk : in std_logic;
+		
+		wr_IR, wr_RF, wr_T1, wr_T2, wr_T3, wr_inc, wr_Mem, wr_cy, wr_z : out std_logic;
+		select_Mux_RF_A3, select_Mux_RF_D3, dec : out std_logic_vector(2 downto 0);
+		select_Mux_RF_A1, select_Mux_ALU_B, select_Mux_T2, select_ALU : out std_logic_vector(1 downto 0);
+		select_Mux_Mem_A, select_Mux_Mem_D, select_Mux_RF_A2, select_Mux_T1, select_Mux_ALU_A : out std_logic
+		);
+end controller;

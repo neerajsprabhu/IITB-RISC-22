@@ -1,0 +1,29 @@
+library ieee;
+use ieee.std_logic_1164.all;
+entity DUT is
+   port(input_vector: in std_logic_vector(32 downto 0);
+       	output_vector: out std_logic_vector(15 downto 0));
+end entity;
+
+architecture DutWrap of DUT is
+   component mux21 is
+     port (
+        A0: in std_logic_vector(15 downto 0);
+        A1: in std_logic_vector(15 downto 0);
+        S: in std_logic;
+        Op: out std_logic_vector(15 downto 0)
+    ) ;
+	  end component;
+begin
+
+   add_instance: mux21
+			port map (
+
+					A1  => input_vector(32 downto 17),
+					A0  => input_vector(16 downto 1),
+					S => input_vector(0),
+				
+					Op => output_vector(15 downto 0));
+
+end DutWrap;
+
