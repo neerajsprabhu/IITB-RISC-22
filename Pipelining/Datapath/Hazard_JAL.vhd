@@ -4,10 +4,12 @@ use ieee.numeric_std.all;
 
 entity Hazard_JAL is
 	port(
-		match, indexout: in std_logic;
+		match: in std_logic;
+		indexout: in integer;
 		EXMEM_opcode: in std_logic_vector(3 downto 0);
 		
-		history, haz_JAL, indexin: out std_logic
+		history, haz_JAL: out std_logic;
+		indexin: out integer
 		);
 end Hazard_JAL;
 

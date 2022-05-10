@@ -4,12 +4,14 @@ use ieee.numeric_std.all;
 
 entity Hazard_JRI is
 	port(
-		match, indexout: in std_logic;
+		match: in std_logic;
+		indexout: in integer;
 		RREX_opcode: in std_logic_vector(3 downto 0);
 		ALU_C: in std_logic_vector(15 downto 0);
 		IDRR_PC_Op: in std_logic_vector(15 downto 0);
 		
-		history, haz_JRI, indexin: out std_logic
+		history, haz_JRI: out std_logic;
+		indexin: out integer
 		);
 end Hazard_JRI;
 

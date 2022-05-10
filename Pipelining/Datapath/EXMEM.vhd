@@ -4,7 +4,8 @@ use ieee.std_logic_1164.all;
 entity EXMEM is 
     port(
 		clk : in std_logic;
-		wr_EXMEM : in std_logic;
+		wr_EXMEM, EXMEM_match : in std_logic;
+		EXMEM_indexout : in integer;
 		EXMEM_opcode : in std_logic_vector(3 downto 0);
       EXMEM_inc, EXMEM_PC, EXMEM_RF_D1, EXMEM_LMSM, EXMEM_RF_D2, EXMEM_ALU_C, EXMEM_SE6, EXMEM_SE9 : in std_logic_vector(15 downto 0);
 		EXMEM_11_9, EXMEM_8_6, EXMEM_5_3, EXMEM_dec : in std_logic_vector(2 downto 0);
@@ -16,11 +17,33 @@ entity EXMEM is
 		EXMEM_11_9_Op, EXMEM_8_6_Op, EXMEM_5_3_Op, EXMEM_dec_Op : out std_logic_vector(2 downto 0);
 		EXMEM_8_0_Op : out std_logic_vector(8 downto 0);
 		EXMEM_5_0_Op : out std_logic_vector(5 downto 0);
-		EXMEM_cy_Op, EXMEM_z_Op : out std_logic
+		EXMEM_cy_Op, EXMEM_z_Op : out std_logic;
+		EXMEM_indexout_Op : out integer;
+		EXMEM_match_Op : out std_logic
 		);
 end EXMEM;
 
 architecture arch of EXMEM is
+
+	--1-bit Register
+	component reg1 is 
+		port(
+			wr: in std_logic;
+			clk: in std_logic;
+			data: in std_logic;
+			Op: out std_logic
+		);
+	end component;
+
+	--1-bit Register-Integer
+	component reg1_int is 
+		port(
+			wr: in std_logic;
+			clk: in std_logic;
+			data: in integer;
+			Op: out integer
+		);
+	end component;
 
 	--3-bit Register
 	component reg3 is 
@@ -89,5 +112,7 @@ eight_six: reg3 port map (wr=>wr_EXMEM, clk=>clk, data=>EXMEM_8_6, Op=>EXMEM_8_6
 five_three: reg3 port map (wr=>wr_EXMEM, clk=>clk, data=>EXMEM_5_3, Op=>EXMEM_5_3_Op);
 eight_zero: reg9 port map (wr=>wr_EXMEM, clk=>clk, data=>EXMEM_8_0, Op=>EXMEM_8_0_Op);
 five_zero: reg6 port map (wr=>wr_EXMEM, clk=>clk, data=>EXMEM_5_0, Op=>EXMEM_5_0_Op);
+match: reg1 port map (wr=>wr_EXMEM, clk=>clk, data=>EXMEM_match, Op=>EXMEM_match_Op);
+indexout: reg1_int port map (wr=>wr_EXMEM, clk=>clk, data=>EXMEM_indexout, Op=>EXMEM_indexout_Op);
 
 end arch;
