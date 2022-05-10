@@ -1,0 +1,17 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'IDRR_opcode_Op[1]'
+Slack : -2.640
+TNS   : -2.640
+
+Type  : Hold 'IDRR_opcode_Op[1]'
+Slack : 1.099
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'IDRR_opcode_Op[1]'
+Slack : -2.289
+TNS   : -2.289
+
+------------------------------------------------------------
