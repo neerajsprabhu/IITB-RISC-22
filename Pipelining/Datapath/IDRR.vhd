@@ -4,6 +4,7 @@ use ieee.std_logic_1164.all;
 entity IDRR is 
     port(
 		clk : in std_logic;
+		clr_IDRR: in std_logic;
 		wr_IDRR, IDRR_match : in std_logic;
 		IDRR_indexout : in integer;
 		IDRR_opcode : in std_logic_vector(3 downto 0);
@@ -28,6 +29,7 @@ architecture arch of IDRR is
 		port(
 			wr: in std_logic;
 			clk: in std_logic;
+			clr: in std_logic;
 			data: in std_logic;
 			Op: out std_logic
 		);
@@ -38,6 +40,7 @@ architecture arch of IDRR is
 		port(
 			wr: in std_logic;
 			clk: in std_logic;
+			clr: in std_logic;
 			data: in integer;
 			Op: out integer
 		);
@@ -48,6 +51,7 @@ architecture arch of IDRR is
 		port(
 			wr: in std_logic;
 			clk: in std_logic;
+			clr: in std_logic;
 			data: in std_logic_vector(2 downto 0);
 			Op: out std_logic_vector(2 downto 0)
 		);
@@ -58,6 +62,7 @@ architecture arch of IDRR is
 		port(
 			wr: in std_logic;
 			clk: in std_logic;
+			clr: in std_logic;
 			data: in std_logic_vector(3 downto 0);
 			Op: out std_logic_vector(3 downto 0)
 		);
@@ -68,6 +73,7 @@ architecture arch of IDRR is
 		port(
 			wr: in std_logic;
 			clk: in std_logic;
+			clr: in std_logic;
 			data: in std_logic_vector(5 downto 0);
 			Op: out std_logic_vector(5 downto 0)
 		);
@@ -78,6 +84,7 @@ architecture arch of IDRR is
 		port(
 			wr: in std_logic;
 			clk: in std_logic;
+			clr: in std_logic;
 			data: in std_logic_vector(8 downto 0);
 			Op: out std_logic_vector(8 downto 0)
 		);
@@ -88,6 +95,7 @@ architecture arch of IDRR is
 		port(
 			wr: in std_logic;
 			clk: in std_logic;
+			clr: in std_logic;
 			data: in std_logic_vector(15 downto 0);
 			Op: out std_logic_vector(15 downto 0)
 		);
@@ -95,15 +103,15 @@ architecture arch of IDRR is
 		
 begin
 
-opcode: reg4 port map (wr=>wr_IDRR, clk=>clk, data=>IDRR_opcode, Op=>IDRR_opcode_Op);
-inc: reg port map (wr=>wr_IDRR, clk=>clk, data=>IDRR_inc, Op=>IDRR_inc_Op);
-PC: reg port map (wr=>wr_IDRR, clk=>clk, data=>IDRR_PC, Op=>IDRR_PC_Op);
-eleven_nine: reg3 port map (wr=>wr_IDRR, clk=>clk, data=>IDRR_11_9, Op=>IDRR_11_9_Op);
-eight_six: reg3 port map (wr=>wr_IDRR, clk=>clk, data=>IDRR_8_6, Op=>IDRR_8_6_Op);
-five_three: reg3 port map (wr=>wr_IDRR, clk=>clk, data=>IDRR_5_3, Op=>IDRR_5_3_Op);
-eight_zero: reg9 port map (wr=>wr_IDRR, clk=>clk, data=>IDRR_8_0, Op=>IDRR_8_0_Op);
-five_zero: reg6 port map (wr=>wr_IDRR, clk=>clk, data=>IDRR_5_0, Op=>IDRR_5_0_Op);
-match: reg1 port map (wr=>wr_IDRR, clk=>clk, data=>IDRR_match, Op=>IDRR_match_Op);
-indexout: reg1_int port map (wr=>wr_IDRR, clk=>clk, data=>IDRR_indexout, Op=>IDRR_indexout_Op);
+opcode: reg4 port map (wr=>wr_IDRR, clk=>clk, data=>IDRR_opcode, Op=>IDRR_opcode_Op, clr=>clr_IDRR);
+inc: reg port map (wr=>wr_IDRR, clk=>clk, data=>IDRR_inc, Op=>IDRR_inc_Op, clr=>clr_IDRR);
+PC: reg port map (wr=>wr_IDRR, clk=>clk, data=>IDRR_PC, Op=>IDRR_PC_Op, clr=>clr_IDRR);
+eleven_nine: reg3 port map (wr=>wr_IDRR, clk=>clk, data=>IDRR_11_9, Op=>IDRR_11_9_Op, clr=>clr_IDRR);
+eight_six: reg3 port map (wr=>wr_IDRR, clk=>clk, data=>IDRR_8_6, Op=>IDRR_8_6_Op, clr=>clr_IDRR);
+five_three: reg3 port map (wr=>wr_IDRR, clk=>clk, data=>IDRR_5_3, Op=>IDRR_5_3_Op, clr=>clr_IDRR);
+eight_zero: reg9 port map (wr=>wr_IDRR, clk=>clk, data=>IDRR_8_0, Op=>IDRR_8_0_Op, clr=>clr_IDRR);
+five_zero: reg6 port map (wr=>wr_IDRR, clk=>clk, data=>IDRR_5_0, Op=>IDRR_5_0_Op, clr=>clr_IDRR);
+match: reg1 port map (wr=>wr_IDRR, clk=>clk, data=>IDRR_match, Op=>IDRR_match_Op, clr=>clr_IDRR);
+indexout: reg1_int port map (wr=>wr_IDRR, clk=>clk, data=>IDRR_indexout, Op=>IDRR_indexout_Op, clr=>clr_IDRR);
 
 end arch;

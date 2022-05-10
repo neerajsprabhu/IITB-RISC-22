@@ -6,6 +6,7 @@ entity reg6 is
       wr: in std_logic;
 		clk: in std_logic;
 		data: in std_logic_vector(5 downto 0);
+		clr: in std_logic;
 		Op: out std_logic_vector(5 downto 0)
 		);
 end reg6;
@@ -19,6 +20,9 @@ if rising_edge(clk) then
     Op <= data;
   else
     null;
+  end if;
+  if clr='1' then
+	 Op<="000000";
   end if;
 else
   null;

@@ -13,6 +13,7 @@ entity register_bank is
 		wr: in std_logic;
 		wr_r7: in std_logic;
 		clk: in std_logic;
+		clr_rf: in std_logic;
 		D1: out std_logic_vector(15 downto 0);
 		D2: out std_logic_vector(15 downto 0);
 		r7_out: out std_logic_vector(15 downto 0)
@@ -31,6 +32,9 @@ begin
 			end if;
 			if wr_r7='1' then
 				reg_bank(7)<=r7_in;
+			end if;
+			if clr_rf='1' then
+				reg_bank<=(others=>"0000000000000000");
 			end if;
 		end if;
 	end process;

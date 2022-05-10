@@ -6,6 +6,7 @@ entity IFID is
 			clk : in std_logic;
 			wr_IFID, IFID_match : in std_logic;
 			IFID_indexout : in integer;
+			clr_IFID: in std_logic;
 			IFID_inc, IFID_PC, IFID_IMem : in std_logic_vector(15 downto 0);
 			IFID_inc_Op, IFID_PC_Op, IFID_IMem_Op : out std_logic_vector(15 downto 0);
 			IFID_indexout_Op : out integer;
@@ -20,6 +21,7 @@ architecture arch of IFID is
 		port(
 			wr: in std_logic;
 			clk: in std_logic;
+			clr: in std_logic;
 			data: in std_logic;
 			Op: out std_logic
 		);
@@ -30,6 +32,7 @@ architecture arch of IFID is
 		port(
 			wr: in std_logic;
 			clk: in std_logic;
+			clr: in std_logic;
 			data: in integer;
 			Op: out integer
 		);
@@ -40,6 +43,7 @@ architecture arch of IFID is
 		port(
 			wr: in std_logic;
 			clk: in std_logic;
+			clr: in std_logic;
 			data: in std_logic_vector(15 downto 0);
 			Op: out std_logic_vector(15 downto 0)
 		);
@@ -47,10 +51,10 @@ architecture arch of IFID is
 		
 begin
 
-inc: reg port map (wr=>wr_IFID, clk=>clk, data=>IFID_inc, Op=>IFID_inc_Op);
-PC: reg port map (wr=>wr_IFID, clk=>clk, data=>IFID_PC, Op=>IFID_PC_Op);
-IMem: reg port map (wr=>wr_IFID, clk=>clk, data=>IFID_IMem, Op=>IFID_IMem_Op);
-match: reg1 port map (wr=>wr_IFID, clk=>clk, data=>IFID_match, Op=>IFID_match_Op);
-indexout: reg1_int port map (wr=>wr_IFID, clk=>clk, data=>IFID_indexout, Op=>IFID_indexout_Op);
+inc: reg port map (wr=>wr_IFID, clk=>clk, data=>IFID_inc, Op=>IFID_inc_Op, clr=>clr_IFID);
+PC: reg port map (wr=>wr_IFID, clk=>clk, data=>IFID_PC, Op=>IFID_PC_Op, clr=>clr_IFID);
+IMem: reg port map (wr=>wr_IFID, clk=>clk, data=>IFID_IMem, Op=>IFID_IMem_Op, clr=>clr_IFID);
+match: reg1 port map (wr=>wr_IFID, clk=>clk, data=>IFID_match, Op=>IFID_match_Op, clr=>clr_IFID);
+indexout: reg1_int port map (wr=>wr_IFID, clk=>clk, data=>IFID_indexout, Op=>IFID_indexout_Op, clr=>clr_IFID);
 
 end arch;

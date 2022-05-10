@@ -5,6 +5,7 @@ entity reg1_int is
     port(
       wr: in std_logic;
 		clk: in std_logic;
+		clr: in std_logic;
 		data: in integer;
 		Op: out integer
 		);
@@ -19,6 +20,9 @@ if rising_edge(clk) then
     Op <= data;
   else
     null;
+  end if;
+  if clr='1' then
+	 Op<=0;
   end if;
 else
   null;

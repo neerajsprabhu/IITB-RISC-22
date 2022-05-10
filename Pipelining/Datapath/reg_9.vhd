@@ -5,6 +5,7 @@ entity reg9 is
     port(
       wr: in std_logic;
 		clk: in std_logic;
+		clr: in std_logic;
 		data: in std_logic_vector(8 downto 0);
 		Op: out std_logic_vector(8 downto 0)
 		);
@@ -19,6 +20,9 @@ if rising_edge(clk) then
     Op <= data;
   else
     null;
+  end if;
+  if clr='1' then
+	 Op<="000000000";
   end if;
 else
   null;

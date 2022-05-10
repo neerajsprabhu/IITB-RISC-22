@@ -7,19 +7,19 @@ entity datapath is
     port(
 		wr_PC, wr_IR, wr_RF, wr_RF_r7, wr_inc, wr_DMem, wr_cy, wr_z : in std_logic;
 		wr_IFID, wr_IDRR, wr_RREX, wr_EXMEM, wr_MEMWB : in std_logic;
+		clr_IFID, clr_IDRR, clr_RREX, clr_EXMEM, clr_MEMWB: in std_logic;
 		select_Mux_RF_D3, dec, select_Mux_PC : in std_logic_vector(2 downto 0);
 		select_Mux_LUT, select_Mux_ALU_B, select_Mux_ALU2_B, select_ALU, select_ALU2, select_Mux_RF_A3 : in std_logic_vector(1 downto 0);
 		select_Mux_ALU_A, select_Mux_ALU2_A, select_Mux_RF_A1, select_Mux_RF_A2, select_Mux_DMem_A, select_Mux_DMem_Din : in std_logic;
 		select_Mux_LMSM : in std_logic;
 		clk : in std_logic;
 		cy_in, z_in : in std_logic;
-		--NEEDS TO BE REMOVED LATER!!
-		indexin : in integer;
 		
 		cy_out, z_out : out std_logic;
 		IDRR_opcode, RREX_opcode, EXMEM_opcode, MEMWB_opcode : out std_logic_vector(3 downto 0);
 		IDRR_5_0, RREX_5_0 : out std_logic_vector(5 downto 0);
-		haz_EX, haz_MEM, haz_WB, haz_BEQ, haz_JAL, haz_JLR, haz_JRI : out std_logic
+		haz_EX, haz_MEM, haz_WB, haz_BEQ, haz_JAL, haz_JLR, haz_JRI : out std_logic;
+		IDRR_11_9, IDRR_8_6, RREX_11_9: out std_logic_vector(2 downto 0)
 		);
 end datapath;
 
@@ -31,6 +31,7 @@ architecture arch of datapath is
 			wr: in std_logic;
 			clk: in std_logic;
 			data: in std_logic;
+			clr: in std_logic;
 			Op: out std_logic
 		);
 	end component;
@@ -41,6 +42,7 @@ architecture arch of datapath is
 			wr: in std_logic;
 			clk: in std_logic;
 			data: in std_logic_vector(15 downto 0);
+			clr: in std_logic;
 			Op: out std_logic_vector(15 downto 0)
 		);
 	end component;
@@ -49,6 +51,7 @@ architecture arch of datapath is
 	component IFID is
 		port(
 			clk : in std_logic;
+			clr_IFID: in std_logic;
 			wr_IFID, IFID_match : in std_logic;
 			IFID_indexout : in integer;
 			IFID_inc, IFID_PC, IFID_IMem : in std_logic_vector(15 downto 0);
@@ -62,6 +65,7 @@ architecture arch of datapath is
 	component IDRR is
 		port(
 			clk : in std_logic;
+			clr_IDRR: in std_logic;
 			wr_IDRR, IDRR_match : in std_logic;
 			IDRR_indexout : in integer;
 			IDRR_opcode : in std_logic_vector(3 downto 0);
@@ -83,6 +87,7 @@ architecture arch of datapath is
 	component RREX is
 		port(
 			clk : in std_logic;
+			clr_RREX: in std_logic;
 			wr_RREX, RREX_match : in std_logic;
 			RREX_indexout : in integer;
 			RREX_opcode : in std_logic_vector(3 downto 0);
@@ -104,6 +109,7 @@ architecture arch of datapath is
 	component EXMEM is 
 		port(
 			clk : in std_logic;
+			clr_EXMEM: in std_logic;
 			wr_EXMEM, EXMEM_match : in std_logic;
 			EXMEM_indexout : in integer;
 			EXMEM_opcode : in std_logic_vector(3 downto 0);
@@ -127,6 +133,7 @@ architecture arch of datapath is
 	component MEMWB is
 		port(
 			clk : in std_logic;
+			clr_MEMWB: in std_logic;
 			wr_MEMWB : in std_logic;
 			MEMWB_opcode : in std_logic_vector(3 downto 0);
 			MEMWB_inc, MEMWB_PC, MEMWB_RF_D2, MEMWB_ALU_C, MEMWB_ALU2_C, MEMWB_DMem_D : in std_logic_vector(15 downto 0);
@@ -154,6 +161,7 @@ architecture arch of datapath is
 			wr: in std_logic;
 			wr_r7: in std_logic;
 			clk: in std_logic;
+			clr_rf: in std_logic;
 			D1: out std_logic_vector(15 downto 0);
 			D2: out std_logic_vector(15 downto 0);
 			r7_out: out std_logic_vector(15 downto 0)
@@ -509,7 +517,7 @@ architecture arch of datapath is
 begin
 
 --PC
-PC: reg port map (wr=>wr_PC, clk=>clk, data=>PC_in, Op=>PC_Op);
+PC: reg port map (wr=>wr_PC, clk=>clk, data=>PC_in, Op=>PC_Op, clr=>'0');
 
 --Instruction Memory
 IMem: rom port map (A=>PC_Op, Dout=>IMem_Op);
@@ -552,6 +560,7 @@ Mux_PC_2: mux81 port map (A0=>branch, A1=>ALU2_C, A2=>RF_D2_Op, A3=>ALU_C, A4=>R
 --IF/ID Register
 IF_ID: IFID port map (
 							clk=>clk,
+							clr_IFID=>clr_IFID,
 							wr_IFID=>wr_IFID,
 							IFID_match=>match, IFID_match_Op=>IFID_match_Op, 
 							IFID_inc=>inc_Op, IFID_inc_Op=>IFID_inc_Op,
@@ -561,11 +570,12 @@ IF_ID: IFID port map (
 							);
 							
 --IR
-IR: reg port map (wr=>wr_IR, clk=>clk, data=>IFID_IMem_Op, Op=>IR_Op);
+IR: reg port map (wr=>wr_IR, clk=>clk, data=>IFID_IMem_Op, Op=>IR_Op, clr=>'0');
 
 --ID/RR Register
 ID_RR: IDRR port map (
 							clk=>clk,
+							clr_IDRR=>clr_IDRR,
 							wr_IDRR=>wr_IDRR,
 							IDRR_match=>IFID_match_Op, IDRR_match_Op=>IDRR_match_Op, 
 							IDRR_opcode=>IR_Op(15 downto 12), IDRR_opcode_Op=>IDRR_opcode_Op,
@@ -598,6 +608,7 @@ RF: register_bank port map (
 							wr=>wr_RF, 
 							wr_r7=>wr_RF_r7, 
 							clk=>clk, 
+							clr_rf=>'0',
 							D1=>RF_D1_Op, 
 							D2=>RF_D2_Op,
 							r7_out=>r7_Op
@@ -615,6 +626,7 @@ LMSMmux: mux21 port map (A0=>forward1, A1=>inc_LMSM_Op, S=>select_Mux_LMSM, Op=>
 --RR/EX Register
 RR_EX: RREX port map (
 							clk=>clk,
+							clr_RREX=>clr_RREX,
 							wr_RREX=>wr_RREX,
 							RREX_match=>IDRR_match_Op, RREX_match_Op=>RREX_match_Op, 
 							RREX_opcode=>IDRR_opcode_Op, RREX_opcode_Op=>RREX_opcode_Op,
@@ -660,14 +672,15 @@ Mux_ALU_B: mux41 port map (A0=>RREX_RF_D2_Op, A1=>S1_Op, A2=>SE6_Op, A3=>SE9_Op,
 ALU_1: alu port map (A=>ALU_A, B=>ALU_B, S=>select_ALU, Op=>ALU_C, carry=>cy, zero=>z);
 
 --Carry
-carry: reg1 port map (wr=>wr_cy, clk=>clk, data=>cy, Op=>cy_Op);
+carry: reg1 port map (wr=>wr_cy, clk=>clk, data=>cy, Op=>cy_Op, clr=>'0');
 
 --Zero
-zero: reg1 port map (wr=>wr_z, clk=>clk, data=>z, Op=>z_Op);
+zero: reg1 port map (wr=>wr_z, clk=>clk, data=>z, Op=>z_Op, clr=>'0');
 
 --EX/MEM Register
 EX_MEM: EXMEM port map (
 							clk=>clk,
+							clr_EXMEM=>clr_EXMEM,
 							wr_EXMEM=>wr_EXMEM,
 							EXMEM_match=>RREX_match_Op, EXMEM_match_Op=>EXMEM_match_Op, 
 							EXMEM_opcode=>RREX_opcode_Op, EXMEM_opcode_Op=>EXMEM_opcode_Op,
@@ -720,6 +733,7 @@ ALU_2: alu port map (A=>ALU2_A, B=>ALU2_B, S=>select_ALU2, Op=>ALU2_C, carry=>cy
 --MEM/WB Register
 MEM_WB: MEMWB port map (
 							clk=>clk,
+							clr_MEMWB=>clr_MEMWB,
 							wr_MEMWB=>wr_MEMWB,
 							MEMWB_opcode=>EXMEM_opcode_Op, MEMWB_opcode_Op=>MEMWB_opcode_Op,
 							MEMWB_11_9=>EXMEM_11_9_Op, MEMWB_11_9_Op=>MEMWB_11_9_Op, 
@@ -784,5 +798,9 @@ haz_BEQ<=haz_BEQ_Op;
 haz_JAL<=haz_JAL_Op; 
 haz_JLR<=haz_JLR_Op; 
 haz_JRI<=haz_JRI_Op;
+
+IDRR_11_9<=IDRR_11_9_Op;
+IDRR_8_6<=IDRR_8_6_Op;
+RREX_11_9<=RREX_11_9_Op;
 
 end arch;

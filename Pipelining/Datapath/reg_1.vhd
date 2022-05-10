@@ -6,6 +6,7 @@ entity reg1 is
       wr: in std_logic;
 		clk: in std_logic;
 		data: in std_logic;
+		clr: in std_logic;
 		Op: out std_logic
 		);
 end reg1;
@@ -19,6 +20,9 @@ if rising_edge(clk) then
     Op <= data;
   else
     null;
+  end if;
+  if clr='1' then
+	 Op<='0';
   end if;
 else
   null;
