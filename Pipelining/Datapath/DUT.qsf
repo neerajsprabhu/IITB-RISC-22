@@ -53,6 +53,9 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "NO HEAT SINK WITH STILL AIR"
+set_global_assignment -name VHDL_FILE Hazard_WB.vhd
+set_global_assignment -name VHDL_FILE Hazard_MEM.vhd
+set_global_assignment -name VHDL_FILE Hazard_EX.vhd
 set_global_assignment -name VHDL_FILE reg_4.vhd
 set_global_assignment -name VHDL_FILE reg_1_int.vhd
 set_global_assignment -name VHDL_FILE LUT.vhd
@@ -83,3 +86,7 @@ set_global_assignment -name VHDL_FILE IDRR.vhd
 set_global_assignment -name VHDL_FILE RREX.vhd
 set_global_assignment -name VHDL_FILE EXMEM.vhd
 set_global_assignment -name VHDL_FILE MEMWB.vhd
+set_global_assignment -name VHDL_FILE Hazard_BEQ.vhd
+set_global_assignment -name VHDL_FILE Hazard_JAL.vhd
+set_global_assignment -name VHDL_FILE Hazard_JLR.vhd
+set_global_assignment -name VHDL_FILE Hazard_JRI.vhd

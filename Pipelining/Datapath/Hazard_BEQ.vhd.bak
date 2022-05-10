@@ -1,0 +1,15 @@
+library ieee;
+use ieee.std_logic.all;
+use ieee.numeric_std.all;
+
+entity Hazard_BEQ is
+	port(
+		match: in std_logic;
+		
+		history: out std_logic;
+		);
+end Hazard_BEQ;
+
+architecture h_beq of Hazard_BEQ is
+begin
+	

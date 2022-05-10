@@ -1,5 +1,5 @@
 Fitter report for DUT
-Mon May 09 19:16:30 2022
+Tue May 10 06:21:16 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -57,7 +57,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------+
 ; Fitter Summary                                                      ;
 +-----------------------+---------------------------------------------+
-; Fitter Status         ; Successful - Mon May 09 19:16:30 2022       ;
+; Fitter Status         ; Successful - Tue May 10 06:21:16 2022       ;
 ; Quartus Prime Version ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name         ; DUT                                         ;
 ; Top-level Entity Name ; datapath                                    ;
@@ -132,7 +132,7 @@ https://fpgasoftware.intel.com/eula.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.4%      ;
-;     Processors 3-4         ;   0.4%      ;
+;     Processors 3-4         ;   0.3%      ;
 +----------------------------+-------------+
 
 
@@ -890,13 +890,13 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.14 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.16 seconds.
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/output_files/DUT.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5347 megabytes
-    Info: Processing ended: Mon May 09 19:16:30 2022
+    Info: Peak virtual memory: 5348 megabytes
+    Info: Processing ended: Tue May 10 06:21:16 2022
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 

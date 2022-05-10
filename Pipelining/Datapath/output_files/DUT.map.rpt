@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DUT
-Mon May 09 19:16:25 2022
+Tue May 10 06:21:11 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -51,7 +51,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Mon May 09 19:16:25 2022       ;
+; Analysis & Synthesis Status ; Successful - Tue May 10 06:21:11 2022       ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; DUT                                         ;
 ; Top-level Entity Name       ; datapath                                    ;
@@ -988,10 +988,19 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon May 09 19:16:11 2022
+    Info: Processing started: Tue May 10 06:20:55 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off datapath -c DUT
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file hazard_wb.vhd
+    Info (12022): Found design unit 1: Hazard_WB-behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/Hazard_WB.vhd Line: 15
+    Info (12023): Found entity 1: Hazard_WB File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/Hazard_WB.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file hazard_mem.vhd
+    Info (12022): Found design unit 1: Hazard_MEM-behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/Hazard_MEM.vhd Line: 15
+    Info (12023): Found entity 1: Hazard_MEM File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/Hazard_MEM.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file hazard_ex.vhd
+    Info (12022): Found design unit 1: Hazard_EX-behavior File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/Hazard_EX.vhd Line: 16
+    Info (12023): Found entity 1: Hazard_EX File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/Hazard_EX.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file reg_4.vhd
     Info (12022): Found design unit 1: reg4-reg1 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/reg_4.vhd Line: 13
     Info (12023): Found entity 1: reg4 File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/reg_4.vhd Line: 4
@@ -1083,6 +1092,18 @@ Info (12021): Found 2 design units, including 1 entities, in source file exmem.v
 Info (12021): Found 2 design units, including 1 entities, in source file memwb.vhd
     Info (12022): Found design unit 1: MEMWB-arch File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/MEMWB.vhd Line: 23
     Info (12023): Found entity 1: MEMWB File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/MEMWB.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file hazard_beq.vhd
+    Info (12022): Found design unit 1: Hazard_BEQ-h_beq File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/Hazard_BEQ.vhd Line: 14
+    Info (12023): Found entity 1: Hazard_BEQ File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/Hazard_BEQ.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file hazard_jal.vhd
+    Info (12022): Found design unit 1: Hazard_JAL-h_jal File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/Hazard_JAL.vhd Line: 14
+    Info (12023): Found entity 1: Hazard_JAL File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/Hazard_JAL.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file hazard_jlr.vhd
+    Info (12022): Found design unit 1: Hazard_JLR-h_jlr File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/Hazard_JLR.vhd Line: 16
+    Info (12023): Found entity 1: Hazard_JLR File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/Hazard_JLR.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file hazard_jri.vhd
+    Info (12022): Found design unit 1: Hazard_JRI-h_jri File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/Hazard_JRI.vhd Line: 16
+    Info (12023): Found entity 1: Hazard_JRI File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/Hazard_JRI.vhd Line: 5
 Info (12127): Elaborating entity "datapath" for the top level hierarchy
 Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(335): object "r7_Op" assigned a value but never read File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 335
 Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(345): object "IFID_indexout_Op" assigned a value but never read File: C:/Users/Neeraj Prabhu/Desktop/IITB/Semester 4/EE 309/IITB-RISC/IITB-RISC-22/Pipelining/Datapath/datapath.vhd Line: 345
@@ -3609,9 +3630,9 @@ Info (21057): Implemented 163 device resources after synthesis - the final resou
     Info (21059): Implemented 18 output pins
     Info (21061): Implemented 72 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1248 warnings
-    Info: Peak virtual memory: 4807 megabytes
-    Info: Processing ended: Mon May 09 19:16:25 2022
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:28
+    Info: Peak virtual memory: 4811 megabytes
+    Info: Processing ended: Tue May 10 06:21:11 2022
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:33
 
 
