@@ -13,9 +13,10 @@ entity controller is
 		
 		wr_PC, wr_IR, wr_RF, wr_RF_r7, wr_inc, wr_DMem, wr_cy, wr_z : out std_logic;
 		wr_IFID, wr_IDRR, wr_RREX, wr_EXMEM, wr_MEMWB : out std_logic;
-		select_Mux_RF_D3, dec : out std_logic_vector(2 downto 0);
-		select_Mux_ALU_B, select_Mux_ALU2_B, select_ALU, select_ALU2, select_Mux_RF_A3, select_Mux_jump_loc : out std_logic_vector(1 downto 0);
-		select_Mux_Mem_A, select_Mux_Mem_D, select_Mux_ALU_A, select_Mux_ALU2_A, select_Mux_RF_A1, select_Mux_RF_A2, select_Mux_DMem_A, select_Mux_DMem_Din : out std_logic;
+		clr_IFID, clr_IDRR, clr_RREX, clr_EXMEM, clr_MEMWB : out std_logic;
+		select_Mux_RF_D3, dec, select_Mux_PC  : out std_logic_vector(2 downto 0);
+		select_Mux_ALU_B, select_Mux_ALU2_B, select_ALU, select_ALU2, select_Mux_RF_A3: out std_logic_vector(1 downto 0);
+		select_Mux_ALU_A, select_Mux_ALU2_A, select_Mux_RF_A1, select_Mux_RF_A2, select_Mux_DMem_A, select_Mux_DMem_Din : out std_logic;
 		select_Mux_LMSM : out std_logic;
 		cy_in, z_in : out std_logic
 		);
@@ -48,7 +49,7 @@ begin
 		select_ALU<="00";
 		select_ALU2<="00";
 		select_Mux_RF_A3<="00";
-		select_Mux_jump_loc<="00";
+		select_Mux_PC<="000";
 		
 		select_Mux_ALU_A<='0';
 		select_Mux_ALU2_A<='0';
@@ -324,13 +325,44 @@ begin
 					null;
 					
 			end case;
-					
+			
+		elsif (haz_BEQ='1') then 
+			select_Mux_PC<="001";
+			clr_IFID<='1';
+			clr_IDRR<='1';
+			clr_RREX<='1';
+			
+		elsif (haz_JAL='1') then 
+			select_Mux_PC<="001";
+			clr_IFID<='1';
+			clr_IDRR<='1';
+			clr_RREX<='1';
+			
+		elsif (haz_JRI='1') then 
+			select_Mux_PC<="011";
+			clr_IFID<='1';
+			clr_IDRR<='1';
+			
+		elsif (haz_JLR='1') then 
+			select_Mux_PC<="010";
+			clr_IFID<='1';
+			
+		elsif (haz_WB='1') then 
+			select_Mux_PC<="100";
+			
+		elsif (haz_MEM='1') then 
+			select_Mux_PC<="101";
+			
+		elsif (haz_EX='1') then 
+			select_Mux_PC<="011";
+			
+		elsif (IDRR_opcode_Op="1100" or IDRR_opcode_Op="1101") then 
+			select_Mux_PC<="000";
+			
 		end if;
 				
 
 		dec<="000";
-		
-		select_Mux_jump_loc<="00";
 
 		select_Mux_LMSM<='0';
 		
