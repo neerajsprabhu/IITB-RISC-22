@@ -17,18 +17,13 @@ end Hazard_JLR;
 
 architecture h_jlr of Hazard_JLR is
 begin
-	process(match, IDRR_opcode, RF_d2, IFID_PC_Op)
+	process(match, IDRR_opcode, RF_D2, IFID_PC_Op)
 	begin
 		if IDRR_opcode="1000" then
-			if match='1' then
-				history<='1';
-				if RF_D2=IFID_PC_Op then
-					haz_JLR<='0';
-				else
-					haz_JLR<='1';
-				end if;
+			history<='1';
+			if (match='1' and RF_D2=IFID_PC_Op) then
+				haz_JLR<='0';
 			else
-				history<='0';
 				haz_JLR<='1';
 			end if;
 		end if;

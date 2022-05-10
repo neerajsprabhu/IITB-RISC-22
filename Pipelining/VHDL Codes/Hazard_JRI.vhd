@@ -20,16 +20,11 @@ begin
 	process(match, RREX_opcode, ALU_C, IDRR_PC_Op)
 	begin
 		if RREX_opcode="1011" then
-			if match='1' then
-				history<='1';
-				if ALU_C=IDRR_PC_Op then
-					haz_JRI<='0';
-				else
-					haz_JRI<='1';
-				end if;
+			history<='1';
+			if (match='1' and ALU_C=IDRR_PC_Op) then
+				haz_JRI<='0';
 			else
 				haz_JRI<='1';
-				history<='0';
 			end if;
 		end if;
 	end process;
