@@ -64,102 +64,102 @@ CHIP  "DUT"  ASSIGNED TO AN: 5M240ZM100C4
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
 GND                          : A1        : gnd    :                   :         :           :                
-input_vector[8]              : A2        : input  : 3.3-V LVTTL       :         : 2         : N              
-output_vector[3]             : A3        : output : 3.3-V LVTTL       :         : 2         : N              
-output_vector[4]             : A4        : output : 3.3-V LVTTL       :         : 2         : N              
-output_vector[11]            : A5        : output : 3.3-V LVTTL       :         : 2         : N              
-output_vector[28]            : A6        : output : 3.3-V LVTTL       :         : 2         : N              
-output_vector[30]            : A7        : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : A2        :        :                   :         : 2         :                
+input_vector[9]              : A3        : input  : 3.3-V LVTTL       :         : 2         : N              
+input_vector[7]              : A4        : input  : 3.3-V LVTTL       :         : 2         : N              
+output_vector[16]            : A5        : output : 3.3-V LVTTL       :         : 2         : N              
+input_vector[8]              : A6        : input  : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : A7        :        :                   :         : 2         :                
 GND*                         : A8        :        :                   :         : 2         :                
-output_vector[17]            : A9        : output : 3.3-V LVTTL       :         : 2         : N              
+input_vector[1]              : A9        : input  : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : A10       :        :                   :         : 2         :                
 GND*                         : A11       :        :                   :         : 2         :                
-output_vector[5]             : B1        : output : 3.3-V LVTTL       :         : 1         : N              
+input_vector[16]             : B1        : input  : 3.3-V LVTTL       :         : 1         : N              
 input_vector[13]             : B2        : input  : 3.3-V LVTTL       :         : 2         : N              
-input_vector[12]             : B3        : input  : 3.3-V LVTTL       :         : 2         : N              
-input_vector[7]              : B4        : input  : 3.3-V LVTTL       :         : 2         : N              
-output_vector[16]            : B5        : output : 3.3-V LVTTL       :         : 2         : N              
-output_vector[27]            : B6        : output : 3.3-V LVTTL       :         : 2         : N              
-GND*                         : B7        :        :                   :         : 2         :                
-GND*                         : B8        :        :                   :         : 2         :                
+output_vector[23]            : B3        : output : 3.3-V LVTTL       :         : 2         : N              
+input_vector[6]              : B4        : input  : 3.3-V LVTTL       :         : 2         : N              
+input_vector[5]              : B5        : input  : 3.3-V LVTTL       :         : 2         : N              
+input_vector[10]             : B6        : input  : 3.3-V LVTTL       :         : 2         : N              
+input_vector[4]              : B7        : input  : 3.3-V LVTTL       :         : 2         : N              
+input_vector[2]              : B8        : input  : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : B9        :        :                   :         : 2         :                
 GND*                         : B10       :        :                   :         : 2         :                
-GND*                         : B11       :        :                   :         : 2         :                
-output_vector[6]             : C1        : output : 3.3-V LVTTL       :         : 1         : N              
-output_vector[15]            : C2        : output : 3.3-V LVTTL       :         : 1         : N              
+output_vector[5]             : B11       : output : 3.3-V LVTTL       :         : 2         : N              
+output_vector[22]            : C1        : output : 3.3-V LVTTL       :         : 1         : N              
+input_vector[17]             : C2        : input  : 3.3-V LVTTL       :         : 1         : N              
 VCCIO2                       : C4        : power  :                   : 3.3V    : 2         :                
-output_vector[8]             : C5        : output : 3.3-V LVTTL       :         : 2         : N              
-input_vector[9]              : C6        : input  : 3.3-V LVTTL       :         : 2         : N              
-output_vector[10]            : C7        : output : 3.3-V LVTTL       :         : 2         : N              
+output_vector[20]            : C5        : output : 3.3-V LVTTL       :         : 2         : N              
+input_vector[3]              : C6        : input  : 3.3-V LVTTL       :         : 2         : N              
+input_vector[18]             : C7        : input  : 3.3-V LVTTL       :         : 2         : N              
 VCCIO2                       : C8        : power  :                   : 3.3V    : 2         :                
-GND*                         : C10       :        :                   :         : 2         :                
-GND*                         : C11       :        :                   :         : 2         :                
-input_vector[5]              : D1        : input  : 3.3-V LVTTL       :         : 1         : N              
-input_vector[14]             : D2        : input  : 3.3-V LVTTL       :         : 1         : N              
-output_vector[25]            : D3        : output : 3.3-V LVTTL       :         : 1         : N              
+output_vector[4]             : C10       : output : 3.3-V LVTTL       :         : 2         : N              
+output_vector[3]             : C11       : output : 3.3-V LVTTL       :         : 2         : N              
+input_vector[14]             : D1        : input  : 3.3-V LVTTL       :         : 1         : N              
+output_vector[12]            : D2        : output : 3.3-V LVTTL       :         : 1         : N              
+input_vector[12]             : D3        : input  : 3.3-V LVTTL       :         : 1         : N              
 GND                          : D5        : gnd    :                   :         :           :                
 GND                          : D7        : gnd    :                   :         :           :                
 GND*                         : D9        :        :                   :         : 2         :                
-GND*                         : D10       :        :                   :         : 2         :                
-GND*                         : D11       :        :                   :         : 2         :                
+output_vector[6]             : D10       : output : 3.3-V LVTTL       :         : 2         : N              
+input_vector[15]             : D11       : input  : 3.3-V LVTTL       :         : 2         : N              
 input_vector[0]              : E1        : input  : 3.3-V LVTTL       :         : 1         : N              
-input_vector[16]             : E2        : input  : 3.3-V LVTTL       :         : 1         : N              
+output_vector[24]            : E2        : output : 3.3-V LVTTL       :         : 1         : N              
 VCCIO1                       : E3        : power  :                   : 3.3V    : 1         :                
 GND                          : E4        : gnd    :                   :         :           :                
 GND                          : E8        : gnd    :                   :         :           :                
 VCCINT                       : E9        : power  :                   : 1.8V    :           :                
-input_vector[10]             : E10       : input  : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : E10       :        :                   :         : 2         :                
 GND*                         : E11       :        :                   :         : 2         :                
-output_vector[9]             : F1        : output : 3.3-V LVTTL       :         : 1         : N              
-input_vector[6]              : F2        : input  : 3.3-V LVTTL       :         : 1         : N              
-input_vector[18]             : F3        : input  : 3.3-V LVTTL       :         : 1         : N              
+input_vector[11]             : F1        : input  : 3.3-V LVTTL       :         : 1         : N              
+output_vector[25]            : F2        : output : 3.3-V LVTTL       :         : 1         : N              
+output_vector[26]            : F3        : output : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : F9        :        :                   :         : 2         :                
-GND*                         : F10       :        :                   :         : 2         :                
+output_vector[19]            : F10       : output : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : F11       :        :                   :         : 2         :                
-input_vector[2]              : G1        : input  : 3.3-V LVTTL       :         : 1         : N              
-input_vector[3]              : G2        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : G1        :        :                   :         : 1         :                
+output_vector[15]            : G2        : output : 3.3-V LVTTL       :         : 1         : N              
 VCCINT                       : G3        : power  :                   : 1.8V    :           :                
 GND                          : G4        : gnd    :                   :         :           :                
 GND                          : G8        : gnd    :                   :         :           :                
 VCCIO2                       : G9        : power  :                   : 3.3V    : 2         :                
 GND*                         : G10       :        :                   :         : 2         :                
-input_vector[11]             : G11       : input  : 3.3-V LVTTL       :         : 2         : N              
-input_vector[15]             : H1        : input  : 3.3-V LVTTL       :         : 1         : N              
-output_vector[18]            : H2        : output : 3.3-V LVTTL       :         : 1         : N              
-input_vector[17]             : H3        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : G11       :        :                   :         : 2         :                
+output_vector[29]            : H1        : output : 3.3-V LVTTL       :         : 1         : N              
+output_vector[1]             : H2        : output : 3.3-V LVTTL       :         : 1         : N              
+output_vector[21]            : H3        : output : 3.3-V LVTTL       :         : 1         : N              
 GND                          : H5        : gnd    :                   :         :           :                
 GND                          : H7        : gnd    :                   :         :           :                
 GND*                         : H9        :        :                   :         : 2         :                
-GND*                         : H10       :        :                   :         : 2         :                
+output_vector[17]            : H10       : output : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : H11       :        :                   :         : 2         :                
 TMS                          : J1        : input  :                   :         : 1         :                
 TDI                          : J2        : input  :                   :         : 1         :                
 VCCIO1                       : J4        : power  :                   : 3.3V    : 1         :                
-input_vector[1]              : J5        : input  : 3.3-V LVTTL       :         : 1         : N              
-output_vector[14]            : J6        : output : 3.3-V LVTTL       :         : 1         : N              
-output_vector[13]            : J7        : output : 3.3-V LVTTL       :         : 1         : N              
+output_vector[27]            : J5        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : J6        :        :                   :         : 1         :                
+output_vector[30]            : J7        : output : 3.3-V LVTTL       :         : 1         : N              
 VCCIO1                       : J8        : power  :                   : 3.3V    : 1         :                
 GND*                         : J10       :        :                   :         : 2         :                
 GND*                         : J11       :        :                   :         : 2         :                
 TCK                          : K1        : input  :                   :         : 1         :                
 TDO                          : K2        : output :                   :         : 1         :                
-output_vector[23]            : K3        : output : 3.3-V LVTTL       :         : 1         : N              
-output_vector[21]            : K4        : output : 3.3-V LVTTL       :         : 1         : N              
-output_vector[24]            : K5        : output : 3.3-V LVTTL       :         : 1         : N              
-output_vector[19]            : K6        : output : 3.3-V LVTTL       :         : 1         : N              
-output_vector[0]             : K7        : output : 3.3-V LVTTL       :         : 1         : N              
-GND*                         : K8        :        :                   :         : 1         :                
+GND*                         : K3        :        :                   :         : 1         :                
+output_vector[0]             : K4        : output : 3.3-V LVTTL       :         : 1         : N              
+output_vector[7]             : K5        : output : 3.3-V LVTTL       :         : 1         : N              
+output_vector[18]            : K6        : output : 3.3-V LVTTL       :         : 1         : N              
+output_vector[11]            : K7        : output : 3.3-V LVTTL       :         : 1         : N              
+output_vector[8]             : K8        : output : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : K9        :        :                   :         : 1         :                
 GND*                         : K10       :        :                   :         : 1         :                
 GND*                         : K11       :        :                   :         : 2         :                
-output_vector[29]            : L1        : output : 3.3-V LVTTL       :         : 1         : N              
-output_vector[7]             : L2        : output : 3.3-V LVTTL       :         : 1         : N              
-input_vector[4]              : L3        : input  : 3.3-V LVTTL       :         : 1         : N              
-output_vector[22]            : L4        : output : 3.3-V LVTTL       :         : 1         : N              
-output_vector[12]            : L5        : output : 3.3-V LVTTL       :         : 1         : N              
-output_vector[20]            : L6        : output : 3.3-V LVTTL       :         : 1         : N              
-output_vector[1]             : L7        : output : 3.3-V LVTTL       :         : 1         : N              
-output_vector[26]            : L8        : output : 3.3-V LVTTL       :         : 1         : N              
-output_vector[2]             : L9        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : L1        :        :                   :         : 1         :                
+output_vector[2]             : L2        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : L3        :        :                   :         : 1         :                
+output_vector[9]             : L4        : output : 3.3-V LVTTL       :         : 1         : N              
+output_vector[14]            : L5        : output : 3.3-V LVTTL       :         : 1         : N              
+output_vector[10]            : L6        : output : 3.3-V LVTTL       :         : 1         : N              
+output_vector[13]            : L7        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : L8        :        :                   :         : 1         :                
+output_vector[28]            : L9        : output : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : L10       :        :                   :         : 1         :                
 GND*                         : L11       :        :                   :         : 1         :                

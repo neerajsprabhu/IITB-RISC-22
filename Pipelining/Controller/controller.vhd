@@ -16,10 +16,9 @@ entity controller is
 		wr_IFID, wr_IDRR, wr_RREX, wr_EXMEM, wr_MEMWB : out std_logic;
 		clr_IFID, clr_IDRR, clr_RREX, clr_EXMEM, clr_MEMWB : out std_logic;
 		select_Mux_RF_D3, dec, select_Mux_PC  : out std_logic_vector(2 downto 0);
-		select_Mux_ALU_B, select_Mux_ALU2_B, select_ALU, select_ALU2, select_Mux_RF_A3: out std_logic_vector(1 downto 0);
+		select_Mux_LUT, select_Mux_ALU_B, select_Mux_ALU2_B, select_ALU, select_ALU2, select_Mux_RF_A3: out std_logic_vector(1 downto 0);
 		select_Mux_ALU_A, select_Mux_ALU2_A, select_Mux_RF_A1, select_Mux_RF_A2, select_Mux_DMem_A, select_Mux_DMem_Din : out std_logic;
 		select_Mux_LMSM : out std_logic;
-		select_Mux_LUT: out std_logic_vector(1 downto 0);
 		cy_in, z_in : out std_logic
 		);
 end controller;
@@ -30,7 +29,7 @@ architecture arch of controller is
 	
 begin
 	
-	process(IDRR_opcode_Op, RREX_opcode_Op, EXMEM_opcode_Op, MEMWB_opcode_Op, IDRR_5_0_Op, RREX_5_0_Op, cy, z, haz_EX, haz_MEM, haz_WB, haz_BEQ, haz_JAL, haz_JLR, haz_JRI)
+	process(IDRR_opcode_Op, RREX_opcode_Op, EXMEM_opcode_Op, MEMWB_opcode_Op, IDRR_11_9, RREX_11_9, IDRR_8_6, IDRR_5_0_Op, RREX_5_0_Op, cy, z, haz_EX, haz_MEM, haz_WB, haz_BEQ, haz_JAL, haz_JLR, haz_JRI)
 	begin
 		
 		--default values

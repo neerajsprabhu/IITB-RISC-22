@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DUT
-Sun Apr 17 14:08:18 2022
+Wed May 11 21:54:41 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -44,12 +44,12 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sun Apr 17 14:08:18 2022       ;
+; Analysis & Synthesis Status ; Successful - Wed May 11 21:54:41 2022       ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; DUT                                         ;
 ; Top-level Entity Name       ; DUT                                         ;
 ; Family                      ; MAX V                                       ;
-; Total logic elements        ; 193                                         ;
+; Total logic elements        ; 203                                         ;
 ; Total pins                  ; 50                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
@@ -142,49 +142,49 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                         ; Library ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------+---------+
-; controller.vhd                   ; yes             ; User VHDL File  ; D:/IITB-RISC-22/Multicycle/Controller/controller.vhd ;         ;
-; DUT.vhd                          ; yes             ; User VHDL File  ; D:/IITB-RISC-22/Multicycle/Controller/DUT.vhd        ;         ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                      ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                               ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------+---------+
+; controller.vhd                   ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd ;         ;
+; DUT.vhd                          ; yes             ; User VHDL File  ; D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/DUT.vhd        ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                    ;
-+---------------------------------------------+----------------------------------+
-; Resource                                    ; Usage                            ;
-+---------------------------------------------+----------------------------------+
-; Total logic elements                        ; 193                              ;
-;     -- Combinational with no register       ; 168                              ;
-;     -- Register only                        ; 7                                ;
-;     -- Combinational with a register        ; 18                               ;
-;                                             ;                                  ;
-; Logic element usage by number of LUT inputs ;                                  ;
-;     -- 4 input functions                    ; 55                               ;
-;     -- 3 input functions                    ; 50                               ;
-;     -- 2 input functions                    ; 79                               ;
-;     -- 1 input functions                    ; 2                                ;
-;     -- 0 input functions                    ; 0                                ;
-;                                             ;                                  ;
-; Logic elements by mode                      ;                                  ;
-;     -- normal mode                          ; 162                              ;
-;     -- arithmetic mode                      ; 31                               ;
-;     -- qfbk mode                            ; 0                                ;
-;     -- register cascade mode                ; 0                                ;
-;     -- synchronous clear/load mode          ; 0                                ;
-;     -- asynchronous clear/load mode         ; 0                                ;
-;                                             ;                                  ;
-; Total registers                             ; 25                               ;
-; Total logic cells in carry chains           ; 32                               ;
-; I/O pins                                    ; 50                               ;
-; Maximum fan-out node                        ; controller:add_instance|state.S3 ;
-; Maximum fan-out                             ; 44                               ;
-; Total fan-out                               ; 592                              ;
-; Average fan-out                             ; 2.44                             ;
-+---------------------------------------------+----------------------------------+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                     ;
++---------------------------------------------+-----------------------------------+
+; Resource                                    ; Usage                             ;
++---------------------------------------------+-----------------------------------+
+; Total logic elements                        ; 203                               ;
+;     -- Combinational with no register       ; 172                               ;
+;     -- Register only                        ; 9                                 ;
+;     -- Combinational with a register        ; 22                                ;
+;                                             ;                                   ;
+; Logic element usage by number of LUT inputs ;                                   ;
+;     -- 4 input functions                    ; 59                                ;
+;     -- 3 input functions                    ; 52                                ;
+;     -- 2 input functions                    ; 81                                ;
+;     -- 1 input functions                    ; 1                                 ;
+;     -- 0 input functions                    ; 1                                 ;
+;                                             ;                                   ;
+; Logic elements by mode                      ;                                   ;
+;     -- normal mode                          ; 172                               ;
+;     -- arithmetic mode                      ; 31                                ;
+;     -- qfbk mode                            ; 0                                 ;
+;     -- register cascade mode                ; 0                                 ;
+;     -- synchronous clear/load mode          ; 0                                 ;
+;     -- asynchronous clear/load mode         ; 0                                 ;
+;                                             ;                                   ;
+; Total registers                             ; 31                                ;
+; Total logic cells in carry chains           ; 32                                ;
+; I/O pins                                    ; 50                                ;
+; Maximum fan-out node                        ; controller:add_instance|state.S_3 ;
+; Maximum fan-out                             ; 35                                ;
+; Total fan-out                               ; 625                               ;
+; Average fan-out                             ; 2.47                              ;
++---------------------------------------------+-----------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -192,44 +192,50 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node   ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name          ; Entity Name ; Library Name ;
 +------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------+-------------+--------------+
-; |DUT                         ; 193 (0)     ; 25           ; 0          ; 50   ; 0            ; 168 (0)      ; 7 (0)             ; 18 (0)           ; 32 (0)          ; 0 (0)      ; |DUT                         ; DUT         ; work         ;
-;    |controller:add_instance| ; 193 (193)   ; 25           ; 0          ; 0    ; 0            ; 168 (168)    ; 7 (7)             ; 18 (18)          ; 32 (32)         ; 0 (0)      ; |DUT|controller:add_instance ; controller  ; work         ;
+; |DUT                         ; 203 (0)     ; 31           ; 0          ; 50   ; 0            ; 172 (0)      ; 9 (0)             ; 22 (0)           ; 32 (0)          ; 0 (0)      ; |DUT                         ; DUT         ; work         ;
+;    |controller:add_instance| ; 203 (203)   ; 31           ; 0          ; 0    ; 0            ; 172 (172)    ; 9 (9)             ; 22 (22)          ; 32 (32)         ; 0 (0)      ; |DUT|controller:add_instance ; controller  ; work         ;
 +------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |DUT|controller:add_instance|state                                                                                                                                                                                                                                                          ;
-+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+
-; Name      ; state.S24 ; state.S23 ; state.S22 ; state.S21 ; state.S20 ; state.S19 ; state.S18 ; state.S17 ; state.S16 ; state.S15 ; state.S14 ; state.S13 ; state.S12 ; state.S11 ; state.S10 ; state.S9 ; state.S8 ; state.S7 ; state.S6 ; state.S5 ; state.S4 ; state.S3 ; state.S2 ; state.S1 ; state.S0 ;
-+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+
-; state.S0  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ;
-; state.S1  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 1        ;
-; state.S2  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 1        ;
-; state.S3  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 1        ;
-; state.S4  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 1        ;
-; state.S5  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 1        ;
-; state.S6  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
-; state.S7  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
-; state.S8  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
-; state.S9  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
-; state.S10 ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
-; state.S11 ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
-; state.S12 ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
-; state.S13 ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
-; state.S14 ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
-; state.S15 ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
-; state.S16 ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
-; state.S17 ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
-; state.S18 ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
-; state.S19 ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
-; state.S20 ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
-; state.S21 ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
-; state.S22 ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
-; state.S23 ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
-; state.S24 ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
-+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |DUT|controller:add_instance|state                                                                                                                                                                                                                                                                                                                                     ;
++------------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+------------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+----------+----------+----------+----------+----------+----------+-----------+----------+----------+-----------+----------+----------+------------+
+; Name       ; state.S26 ; state.S25 ; state.S24 ; state.S23 ; state.S22 ; state.S21 ; state.S20 ; state.S_19 ; state.S19 ; state.S18 ; state.S17 ; state.S16 ; state.S15 ; state.S14 ; state.S13 ; state.S12 ; state.S11 ; state.S10 ; state.S9 ; state.S8 ; state.S7 ; state.S6 ; state.S5 ; state.S4 ; state.S_3 ; state.S3 ; state.S2 ; state.S_1 ; state.S1 ; state.S0 ; state.init ;
++------------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+------------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+----------+----------+----------+----------+----------+----------+-----------+----------+----------+-----------+----------+----------+------------+
+; state.init ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0        ; 0        ; 0         ; 0        ; 0        ; 0          ;
+; state.S0   ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0        ; 0        ; 0         ; 0        ; 1        ; 1          ;
+; state.S1   ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0        ; 0        ; 0         ; 1        ; 0        ; 1          ;
+; state.S_1  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0        ; 0        ; 1         ; 0        ; 0        ; 1          ;
+; state.S2   ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0        ; 1        ; 0         ; 0        ; 0        ; 1          ;
+; state.S3   ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 1        ; 0        ; 0         ; 0        ; 0        ; 1          ;
+; state.S_3  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1         ; 0        ; 0        ; 0         ; 0        ; 0        ; 1          ;
+; state.S4   ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0         ; 0        ; 0        ; 0         ; 0        ; 0        ; 1          ;
+; state.S5   ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0         ; 0        ; 0        ; 0         ; 0        ; 0        ; 1          ;
+; state.S6   ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0         ; 0        ; 0        ; 0         ; 0        ; 0        ; 1          ;
+; state.S7   ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0         ; 0        ; 0        ; 0         ; 0        ; 0        ; 1          ;
+; state.S8   ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0        ; 0        ; 0         ; 0        ; 0        ; 1          ;
+; state.S9   ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0        ; 0        ; 0         ; 0        ; 0        ; 1          ;
+; state.S10  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0        ; 0        ; 0         ; 0        ; 0        ; 1          ;
+; state.S11  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0        ; 0        ; 0         ; 0        ; 0        ; 1          ;
+; state.S12  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0        ; 0        ; 0         ; 0        ; 0        ; 1          ;
+; state.S13  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0        ; 0        ; 0         ; 0        ; 0        ; 1          ;
+; state.S14  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0        ; 0        ; 0         ; 0        ; 0        ; 1          ;
+; state.S15  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0        ; 0        ; 0         ; 0        ; 0        ; 1          ;
+; state.S16  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0          ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0        ; 0        ; 0         ; 0        ; 0        ; 1          ;
+; state.S17  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0          ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0        ; 0        ; 0         ; 0        ; 0        ; 1          ;
+; state.S18  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0          ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0        ; 0        ; 0         ; 0        ; 0        ; 1          ;
+; state.S19  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0          ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0        ; 0        ; 0         ; 0        ; 0        ; 1          ;
+; state.S_19 ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0        ; 0        ; 0         ; 0        ; 0        ; 1          ;
+; state.S20  ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0        ; 0        ; 0         ; 0        ; 0        ; 1          ;
+; state.S21  ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0        ; 0        ; 0         ; 0        ; 0        ; 1          ;
+; state.S22  ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0        ; 0        ; 0         ; 0        ; 0        ; 1          ;
+; state.S23  ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0        ; 0        ; 0         ; 0        ; 0        ; 1          ;
+; state.S24  ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0        ; 0        ; 0         ; 0        ; 0        ; 1          ;
+; state.S25  ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0        ; 0        ; 0         ; 0        ; 0        ; 1          ;
+; state.S26  ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0        ; 0        ; 0         ; 0        ; 0        ; 1          ;
++------------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+------------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+----------+----------+----------+----------+----------+----------+-----------+----------+----------+-----------+----------+----------+------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -241,18 +247,18 @@ Encoding Type:  One-Hot
 ; controller:add_instance|i[1]                        ; controller:add_instance|Selector0 ; yes                    ;
 ; controller:add_instance|i[2]                        ; controller:add_instance|Selector0 ; yes                    ;
 ; controller:add_instance|i[3]                        ; controller:add_instance|Selector0 ; yes                    ;
+; controller:add_instance|i[15]                       ; controller:add_instance|Selector0 ; yes                    ;
+; controller:add_instance|i[14]                       ; controller:add_instance|Selector0 ; yes                    ;
+; controller:add_instance|i[13]                       ; controller:add_instance|Selector0 ; yes                    ;
+; controller:add_instance|i[12]                       ; controller:add_instance|Selector0 ; yes                    ;
+; controller:add_instance|i[11]                       ; controller:add_instance|Selector0 ; yes                    ;
+; controller:add_instance|i[10]                       ; controller:add_instance|Selector0 ; yes                    ;
+; controller:add_instance|i[9]                        ; controller:add_instance|Selector0 ; yes                    ;
+; controller:add_instance|i[8]                        ; controller:add_instance|Selector0 ; yes                    ;
 ; controller:add_instance|i[7]                        ; controller:add_instance|Selector0 ; yes                    ;
 ; controller:add_instance|i[6]                        ; controller:add_instance|Selector0 ; yes                    ;
 ; controller:add_instance|i[5]                        ; controller:add_instance|Selector0 ; yes                    ;
 ; controller:add_instance|i[4]                        ; controller:add_instance|Selector0 ; yes                    ;
-; controller:add_instance|i[9]                        ; controller:add_instance|Selector0 ; yes                    ;
-; controller:add_instance|i[10]                       ; controller:add_instance|Selector0 ; yes                    ;
-; controller:add_instance|i[11]                       ; controller:add_instance|Selector0 ; yes                    ;
-; controller:add_instance|i[12]                       ; controller:add_instance|Selector0 ; yes                    ;
-; controller:add_instance|i[13]                       ; controller:add_instance|Selector0 ; yes                    ;
-; controller:add_instance|i[14]                       ; controller:add_instance|Selector0 ; yes                    ;
-; controller:add_instance|i[15]                       ; controller:add_instance|Selector0 ; yes                    ;
-; controller:add_instance|i[16]                       ; controller:add_instance|Selector0 ; yes                    ;
 ; controller:add_instance|i[17]                       ; controller:add_instance|Selector0 ; yes                    ;
 ; controller:add_instance|i[18]                       ; controller:add_instance|Selector0 ; yes                    ;
 ; controller:add_instance|i[19]                       ; controller:add_instance|Selector0 ; yes                    ;
@@ -268,7 +274,7 @@ Encoding Type:  One-Hot
 ; controller:add_instance|i[29]                       ; controller:add_instance|Selector0 ; yes                    ;
 ; controller:add_instance|i[30]                       ; controller:add_instance|Selector0 ; yes                    ;
 ; controller:add_instance|i[31]                       ; controller:add_instance|Selector0 ; yes                    ;
-; controller:add_instance|i[8]                        ; controller:add_instance|Selector0 ; yes                    ;
+; controller:add_instance|i[16]                       ; controller:add_instance|Selector0 ; yes                    ;
 ; Number of user-specified and inferred latches = 32  ;                                   ;                        ;
 +-----------------------------------------------------+-----------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
@@ -279,7 +285,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 25    ;
+; Total registers                              ; 31    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -304,133 +310,128 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Apr 17 14:08:08 2022
+    Info: Processing started: Wed May 11 21:54:34 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off control -c DUT
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file controller.vhd
-    Info (12022): Found design unit 1: controller-arch File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 19
-    Info (12023): Found entity 1: controller File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 6
+    Info (12022): Found design unit 1: controller-arch File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 19
+    Info (12023): Found entity 1: controller File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file dut.vhd
-    Info (12022): Found design unit 1: DUT-DutWrap File: D:/IITB-RISC-22/Multicycle/Controller/DUT.vhd Line: 8
-    Info (12023): Found entity 1: DUT File: D:/IITB-RISC-22/Multicycle/Controller/DUT.vhd Line: 3
+    Info (12022): Found design unit 1: DUT-DutWrap File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/DUT.vhd Line: 8
+    Info (12023): Found entity 1: DUT File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/DUT.vhd Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file testbench.vhd
-    Info (12022): Found design unit 1: Testbench-Behave File: D:/IITB-RISC-22/Multicycle/Controller/testbench.vhd Line: 9
-    Info (12023): Found entity 1: Testbench File: D:/IITB-RISC-22/Multicycle/Controller/testbench.vhd Line: 7
+    Info (12022): Found design unit 1: Testbench-Behave File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/testbench.vhd Line: 9
+    Info (12023): Found entity 1: Testbench File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/testbench.vhd Line: 7
 Info (12127): Elaborating entity "DUT" for the top level hierarchy
-Info (12128): Elaborating entity "controller" for hierarchy "controller:add_instance" File: D:/IITB-RISC-22/Multicycle/Controller/DUT.vhd Line: 24
-Warning (10492): VHDL Process Statement warning at controller.vhd(101): signal "cy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 101
-Warning (10492): VHDL Process Statement warning at controller.vhd(108): signal "z" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 108
-Warning (10492): VHDL Process Statement warning at controller.vhd(126): signal "cy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 126
-Warning (10492): VHDL Process Statement warning at controller.vhd(132): signal "z" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 132
-Warning (10492): VHDL Process Statement warning at controller.vhd(397): signal "z" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 397
-Warning (10631): VHDL Process Statement warning at controller.vhd(279): inferring latch(es) for signal or variable "i", which holds its previous value in one or more paths through the process File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[0]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[1]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[2]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[3]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[4]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[5]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[6]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[7]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[8]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[9]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[10]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[11]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[12]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[13]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[14]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[15]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[16]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[17]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[18]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[19]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[20]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[21]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[22]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[23]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[24]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[25]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[26]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[27]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[28]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[29]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[30]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Info (10041): Inferred latch for "i[31]" at controller.vhd(279) File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-Warning (13012): Latch controller:add_instance|i[0] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch controller:add_instance|i[1] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch controller:add_instance|i[2] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch controller:add_instance|i[3] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch controller:add_instance|i[7] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch controller:add_instance|i[6] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch controller:add_instance|i[5] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch controller:add_instance|i[4] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch controller:add_instance|i[9] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch controller:add_instance|i[10] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch controller:add_instance|i[11] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch controller:add_instance|i[12] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch controller:add_instance|i[13] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch controller:add_instance|i[14] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch controller:add_instance|i[15] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch controller:add_instance|i[16] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch controller:add_instance|i[17] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch controller:add_instance|i[18] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch controller:add_instance|i[19] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch controller:add_instance|i[20] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch controller:add_instance|i[21] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch controller:add_instance|i[22] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch controller:add_instance|i[23] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch controller:add_instance|i[24] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch controller:add_instance|i[25] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch controller:add_instance|i[26] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch controller:add_instance|i[27] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch controller:add_instance|i[28] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch controller:add_instance|i[29] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch controller:add_instance|i[30] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch controller:add_instance|i[31] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
-Warning (13012): Latch controller:add_instance|i[8] has unsafe behavior File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 279
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S3 File: D:/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Info (12128): Elaborating entity "controller" for hierarchy "controller:add_instance" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/DUT.vhd Line: 24
+Warning (10631): VHDL Process Statement warning at controller.vhd(288): inferring latch(es) for signal or variable "i", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+Info (10041): Inferred latch for "i[0]" at controller.vhd(288) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+Info (10041): Inferred latch for "i[1]" at controller.vhd(288) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+Info (10041): Inferred latch for "i[2]" at controller.vhd(288) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+Info (10041): Inferred latch for "i[3]" at controller.vhd(288) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+Info (10041): Inferred latch for "i[4]" at controller.vhd(288) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+Info (10041): Inferred latch for "i[5]" at controller.vhd(288) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+Info (10041): Inferred latch for "i[6]" at controller.vhd(288) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+Info (10041): Inferred latch for "i[7]" at controller.vhd(288) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+Info (10041): Inferred latch for "i[8]" at controller.vhd(288) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+Info (10041): Inferred latch for "i[9]" at controller.vhd(288) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+Info (10041): Inferred latch for "i[10]" at controller.vhd(288) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+Info (10041): Inferred latch for "i[11]" at controller.vhd(288) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+Info (10041): Inferred latch for "i[12]" at controller.vhd(288) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+Info (10041): Inferred latch for "i[13]" at controller.vhd(288) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+Info (10041): Inferred latch for "i[14]" at controller.vhd(288) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+Info (10041): Inferred latch for "i[15]" at controller.vhd(288) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+Info (10041): Inferred latch for "i[16]" at controller.vhd(288) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+Info (10041): Inferred latch for "i[17]" at controller.vhd(288) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+Info (10041): Inferred latch for "i[18]" at controller.vhd(288) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+Info (10041): Inferred latch for "i[19]" at controller.vhd(288) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+Info (10041): Inferred latch for "i[20]" at controller.vhd(288) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+Info (10041): Inferred latch for "i[21]" at controller.vhd(288) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+Info (10041): Inferred latch for "i[22]" at controller.vhd(288) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+Info (10041): Inferred latch for "i[23]" at controller.vhd(288) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+Info (10041): Inferred latch for "i[24]" at controller.vhd(288) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+Info (10041): Inferred latch for "i[25]" at controller.vhd(288) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+Info (10041): Inferred latch for "i[26]" at controller.vhd(288) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+Info (10041): Inferred latch for "i[27]" at controller.vhd(288) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+Info (10041): Inferred latch for "i[28]" at controller.vhd(288) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+Info (10041): Inferred latch for "i[29]" at controller.vhd(288) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+Info (10041): Inferred latch for "i[30]" at controller.vhd(288) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+Info (10041): Inferred latch for "i[31]" at controller.vhd(288) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+Warning (13012): Latch controller:add_instance|i[0] has unsafe behavior File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S_3 File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[1] has unsafe behavior File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S_3 File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[2] has unsafe behavior File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S_3 File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[3] has unsafe behavior File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S_3 File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[15] has unsafe behavior File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S_3 File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[14] has unsafe behavior File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S_3 File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[13] has unsafe behavior File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S_3 File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[12] has unsafe behavior File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S_3 File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[11] has unsafe behavior File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S_3 File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[10] has unsafe behavior File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S_3 File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[9] has unsafe behavior File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S_3 File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[8] has unsafe behavior File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S_3 File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[7] has unsafe behavior File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S_3 File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[6] has unsafe behavior File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S_3 File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[5] has unsafe behavior File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S_3 File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[4] has unsafe behavior File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S_3 File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[17] has unsafe behavior File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S_3 File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[18] has unsafe behavior File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S_3 File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[19] has unsafe behavior File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S_3 File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[20] has unsafe behavior File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S_3 File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[21] has unsafe behavior File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S_3 File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[22] has unsafe behavior File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S_3 File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[23] has unsafe behavior File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S_3 File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[24] has unsafe behavior File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S_3 File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[25] has unsafe behavior File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S_3 File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[26] has unsafe behavior File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S_3 File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[27] has unsafe behavior File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S_3 File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[28] has unsafe behavior File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S_3 File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[29] has unsafe behavior File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S_3 File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[30] has unsafe behavior File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S_3 File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[31] has unsafe behavior File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S_3 File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
+Warning (13012): Latch controller:add_instance|i[16] has unsafe behavior File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 288
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:add_instance|state.S_3 File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/controller.vhd Line: 23
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "output_vector[17]" is stuck at GND File: D:/IITB-RISC-22/Multicycle/Controller/DUT.vhd Line: 5
-Info (21057): Implemented 243 device resources after synthesis - the final resource count might be different
+    Warning (13410): Pin "output_vector[17]" is stuck at GND File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Multicycle/Controller/DUT.vhd Line: 5
+Info (21057): Implemented 253 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 19 input pins
     Info (21059): Implemented 31 output pins
-    Info (21061): Implemented 193 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 73 warnings
-    Info: Peak virtual memory: 4760 megabytes
-    Info: Processing ended: Sun Apr 17 14:08:18 2022
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:24
+    Info (21061): Implemented 203 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 68 warnings
+    Info: Peak virtual memory: 4762 megabytes
+    Info: Processing ended: Wed May 11 21:54:41 2022
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:16
 
 
