@@ -5,7 +5,8 @@ library work;
 
 entity uP is
     port(
-		clk : in std_logic
+		clk : in std_logic;
+		reset : in std_logic
 		);
 end uP;
 
@@ -19,7 +20,7 @@ architecture uParch of uP is
 			select_Mux_LUT, select_Mux_ALU_B, select_Mux_ALU2_B, select_ALU, select_ALU2, select_Mux_RF_A3 : in std_logic_vector(1 downto 0);
 			select_Mux_ALU_A, select_Mux_ALU2_A, select_Mux_RF_A1, select_Mux_RF_A2, select_Mux_DMem_A, select_Mux_DMem_Din : in std_logic;
 			select_Mux_LMSM : in std_logic;
-			clk : in std_logic;
+			clk, reset : in std_logic;
 			cy_in, z_in : in std_logic;
 			
 			cy_out, z_out : out std_logic;
@@ -98,6 +99,7 @@ DP: datapath port map (
 								select_Mux_DMem_Din=>select_Mux_DMem_Din_s,
 								select_Mux_LMSM=>select_Mux_LMSM_s,
 								clk=>clk,
+								reset=>reset,
 								cy_in=>cy_in_s, 
 								z_in=>z_in_s,
 			

@@ -22,11 +22,11 @@ begin
 							select_Mux_forward1<="11";
 						end if;
 						if(((IDRR_8_6=RREX_5_3) and (RREX_opcode="0001" or RREX_opcode="0010")) or ((IDRR_8_6=RREX_8_6) and (RREX_opcode="0000"))) then
-							select_Mux_forward1<="01";
+							select_Mux_forward2<="01";
 						elsif((IDRR_8_6=EXMEM_11_9) and (EXMEM_opcode="0111")) then
-							select_Mux_forward1<="10";
+							select_Mux_forward2<="10";
 						elsif(((IDRR_8_6=MEMWB_11_9) and (MEMWB_opcode="0111" or MEMWB_opcode="1001" or MEMWB_opcode="1010" or MEMWB_opcode="0100")) or ((IDRR_8_6=MEMWB_8_6) and (MEMWB_opcode="0000")) or ((IDRR_8_6=MEMWB_5_3) and (MEMWB_opcode="0001" or MEMWB_opcode="0010"))) then
-							select_Mux_forward1<="11";
+							select_Mux_forward2<="11";
 						end if;
 					end process;
 end fb;			

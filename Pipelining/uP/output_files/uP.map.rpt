@@ -1,5 +1,5 @@
 Analysis & Synthesis report for uP
-Wed Jun 08 19:20:05 2022
+Thu Jun 09 11:37:31 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -19,14 +19,10 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  11. Port Connectivity Checks: "uP:add_instance|datapath:DP|MEMWB:MEM_WB"
  12. Port Connectivity Checks: "uP:add_instance|datapath:DP|alu:ALU_2"
  13. Port Connectivity Checks: "uP:add_instance|datapath:DP|mux41:Mux_ALU2_B"
- 14. Port Connectivity Checks: "uP:add_instance|datapath:DP|reg1:zero"
- 15. Port Connectivity Checks: "uP:add_instance|datapath:DP|reg1:carry"
- 16. Port Connectivity Checks: "uP:add_instance|datapath:DP|register_bank:RF"
- 17. Port Connectivity Checks: "uP:add_instance|datapath:DP|reg:IR"
- 18. Port Connectivity Checks: "uP:add_instance|datapath:DP|mux81:Mux_PC_2"
- 19. Port Connectivity Checks: "uP:add_instance|datapath:DP|reg:PC"
- 20. Port Connectivity Checks: "uP:add_instance|datapath:DP"
- 21. Analysis & Synthesis Messages
+ 14. Port Connectivity Checks: "uP:add_instance|datapath:DP|register_bank:RF"
+ 15. Port Connectivity Checks: "uP:add_instance|datapath:DP|mux81:Mux_PC_2"
+ 16. Port Connectivity Checks: "uP:add_instance|datapath:DP"
+ 17. Analysis & Synthesis Messages
 
 
 
@@ -53,13 +49,13 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Wed Jun 08 19:20:05 2022       ;
+; Analysis & Synthesis Status ; Successful - Thu Jun 09 11:37:31 2022       ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; uP                                          ;
 ; Top-level Entity Name       ; DUT                                         ;
 ; Family                      ; MAX V                                       ;
 ; Total logic elements        ; 0                                           ;
-; Total pins                  ; 1                                           ;
+; Total pins                  ; 2                                           ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
@@ -227,7 +223,7 @@ https://fpgasoftware.intel.com/eula.
 ;     -- asynchronous clear/load mode         ; 0     ;
 ;                                             ;       ;
 ; Total registers                             ; 0     ;
-; I/O pins                                    ; 1     ;
+; I/O pins                                    ; 2     ;
 +---------------------------------------------+-------+
 
 
@@ -236,7 +232,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
-; |DUT                       ; 0 (0)       ; 0            ; 0          ; 1    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT                ; DUT         ; work         ;
+; |DUT                       ; 0 (0)       ; 0            ; 0          ; 2    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT                ; DUT         ; work         ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -312,41 +308,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------+-------+----------+-------------------------------------------+
 
 
-+-------------------------------------------------------------------+
-; Port Connectivity Checks: "uP:add_instance|datapath:DP|reg1:zero" ;
-+------+-------+----------+-----------------------------------------+
-; Port ; Type  ; Severity ; Details                                 ;
-+------+-------+----------+-----------------------------------------+
-; clr  ; Input ; Info     ; Stuck at GND                            ;
-+------+-------+----------+-----------------------------------------+
-
-
-+--------------------------------------------------------------------+
-; Port Connectivity Checks: "uP:add_instance|datapath:DP|reg1:carry" ;
-+------+-------+----------+------------------------------------------+
-; Port ; Type  ; Severity ; Details                                  ;
-+------+-------+----------+------------------------------------------+
-; clr  ; Input ; Info     ; Stuck at GND                             ;
-+------+-------+----------+------------------------------------------+
-
-
 +------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "uP:add_instance|datapath:DP|register_bank:RF"                                         ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
-; clr_rf ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; r7_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------+
-; Port Connectivity Checks: "uP:add_instance|datapath:DP|reg:IR" ;
-+------+-------+----------+--------------------------------------+
-; Port ; Type  ; Severity ; Details                              ;
-+------+-------+----------+--------------------------------------+
-; clr  ; Input ; Info     ; Stuck at GND                         ;
-+------+-------+----------+--------------------------------------+
 
 
 +------------------------------------------------------------------------+
@@ -357,15 +325,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; a6   ; Input ; Info     ; Stuck at GND                                 ;
 ; a7   ; Input ; Info     ; Stuck at GND                                 ;
 +------+-------+----------+----------------------------------------------+
-
-
-+----------------------------------------------------------------+
-; Port Connectivity Checks: "uP:add_instance|datapath:DP|reg:PC" ;
-+------+-------+----------+--------------------------------------+
-; Port ; Type  ; Severity ; Details                              ;
-+------+-------+----------+--------------------------------------+
-; clr  ; Input ; Info     ; Stuck at GND                         ;
-+------+-------+----------+--------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -390,13 +349,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Jun 08 19:19:58 2022
+    Info: Processing started: Thu Jun 09 11:37:23 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off uP -c uP
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Warning (12019): Can't analyze file -- file Testbench.vhdl is missing
 Info (12021): Found 2 design units, including 1 entities, in source file up.vhd
-    Info (12022): Found design unit 1: uP-uParch File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/uP.vhd Line: 12
+    Info (12022): Found design unit 1: uP-uParch File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/uP.vhd Line: 13
     Info (12023): Found entity 1: uP File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/uP.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file se9.vhd
     Info (12022): Found design unit 1: bitextender9-behavior File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/SE9.vhd Line: 11
@@ -408,7 +367,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file rrex.vh
     Info (12022): Found design unit 1: RREX-arch File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/RREX.vhd Line: 25
     Info (12023): Found entity 1: RREX File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/RREX.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file rom.vhd
-    Info (12022): Found design unit 1: rom-mem1 File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 12
+    Info (12022): Found design unit 1: rom-mem1 File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 13
     Info (12023): Found entity 1: rom File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file reg_bank.vhd
     Info (12022): Found design unit 1: register_bank-rb1 File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/reg_bank.vhd Line: 23
@@ -465,7 +424,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file mux21 _
 Info (12021): Found 2 design units, including 1 entities, in source file memwb.vhd
     Info (12022): Found design unit 1: MEMWB-arch File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/MEMWB.vhd Line: 24
     Info (12023): Found entity 1: MEMWB File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/MEMWB.vhd Line: 4
-Warning (12019): Can't analyze file -- file memory.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file lut.vhd
     Info (12022): Found design unit 1: BranchLUT-arch File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/LUT.vhd Line: 20
     Info (12023): Found entity 1: BranchLUT File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/LUT.vhd Line: 6
@@ -527,25 +485,1051 @@ Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
     Info (12022): Found design unit 1: alu-a1 File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/alu.vhd Line: 16
     Info (12023): Found entity 1: alu File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/alu.vhd Line: 4
 Info (12127): Elaborating entity "DUT" for the top level hierarchy
-Info (12128): Elaborating entity "uP" for hierarchy "uP:add_instance" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/DUT.vhd Line: 16
-Warning (10541): VHDL Signal Declaration warning at uP.vhd(56): used implicit default value for signal "IDRR_11_9_s" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/uP.vhd Line: 56
-Warning (10541): VHDL Signal Declaration warning at uP.vhd(56): used implicit default value for signal "IDRR_8_6_s" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/uP.vhd Line: 56
-Warning (10541): VHDL Signal Declaration warning at uP.vhd(56): used implicit default value for signal "RREX_11_9_s" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/uP.vhd Line: 56
-Warning (10036): Verilog HDL or VHDL warning at uP.vhd(60): object "clr_IFID_s" assigned a value but never read File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/uP.vhd Line: 60
-Warning (10036): Verilog HDL or VHDL warning at uP.vhd(60): object "clr_IDRR_s" assigned a value but never read File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/uP.vhd Line: 60
-Warning (10036): Verilog HDL or VHDL warning at uP.vhd(60): object "clr_RREX_s" assigned a value but never read File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/uP.vhd Line: 60
-Warning (10036): Verilog HDL or VHDL warning at uP.vhd(60): object "clr_EXMEM_s" assigned a value but never read File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/uP.vhd Line: 60
-Warning (10036): Verilog HDL or VHDL warning at uP.vhd(60): object "clr_MEMWB_s" assigned a value but never read File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/uP.vhd Line: 60
-Info (12128): Elaborating entity "datapath" for hierarchy "uP:add_instance|datapath:DP" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/uP.vhd Line: 70
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(462): object "r7_Op" assigned a value but never read File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 462
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(504): object "MEMWB_PC_Op" assigned a value but never read File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 504
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(504): object "MEMWB_RF_D2_Op" assigned a value but never read File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 504
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(507): object "MEMWB_5_0_Op" assigned a value but never read File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 507
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(511): object "cy_2" assigned a value but never read File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 511
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(511): object "z_2" assigned a value but never read File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 511
-Info (12128): Elaborating entity "reg" for hierarchy "uP:add_instance|datapath:DP|reg:PC" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 520
-Info (12128): Elaborating entity "rom" for hierarchy "uP:add_instance|datapath:DP|rom:IMem" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 523
-Info (12128): Elaborating entity "incr" for hierarchy "uP:add_instance|datapath:DP|incr:inc" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 526
+Info (12128): Elaborating entity "uP" for hierarchy "uP:add_instance" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/DUT.vhd Line: 17
+Warning (10541): VHDL Signal Declaration warning at uP.vhd(57): used implicit default value for signal "IDRR_11_9_s" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/uP.vhd Line: 57
+Warning (10541): VHDL Signal Declaration warning at uP.vhd(57): used implicit default value for signal "IDRR_8_6_s" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/uP.vhd Line: 57
+Warning (10541): VHDL Signal Declaration warning at uP.vhd(57): used implicit default value for signal "RREX_11_9_s" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/uP.vhd Line: 57
+Warning (10036): Verilog HDL or VHDL warning at uP.vhd(61): object "clr_IFID_s" assigned a value but never read File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/uP.vhd Line: 61
+Warning (10036): Verilog HDL or VHDL warning at uP.vhd(61): object "clr_IDRR_s" assigned a value but never read File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/uP.vhd Line: 61
+Warning (10036): Verilog HDL or VHDL warning at uP.vhd(61): object "clr_RREX_s" assigned a value but never read File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/uP.vhd Line: 61
+Warning (10036): Verilog HDL or VHDL warning at uP.vhd(61): object "clr_EXMEM_s" assigned a value but never read File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/uP.vhd Line: 61
+Warning (10036): Verilog HDL or VHDL warning at uP.vhd(61): object "clr_MEMWB_s" assigned a value but never read File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/uP.vhd Line: 61
+Info (12128): Elaborating entity "datapath" for hierarchy "uP:add_instance|datapath:DP" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/uP.vhd Line: 71
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(463): object "r7_Op" assigned a value but never read File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 463
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(505): object "MEMWB_PC_Op" assigned a value but never read File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 505
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(505): object "MEMWB_RF_D2_Op" assigned a value but never read File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 505
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(508): object "MEMWB_5_0_Op" assigned a value but never read File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 508
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(512): object "cy_2" assigned a value but never read File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 512
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(512): object "z_2" assigned a value but never read File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 512
+Info (12128): Elaborating entity "reg" for hierarchy "uP:add_instance|datapath:DP|reg:PC" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 521
+Info (12128): Elaborating entity "rom" for hierarchy "uP:add_instance|datapath:DP|rom:IMem" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 524
+Warning (10492): VHDL Process Statement warning at ROM.vhd(28): signal "addr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 28
+Warning (10631): VHDL Process Statement warning at ROM.vhd(20): inferring latch(es) for signal or variable "mem", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[0][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[0][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[0][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[0][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[0][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[0][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[0][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[0][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[0][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[0][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[0][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[0][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[0][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[0][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[0][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[0][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[1][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[1][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[1][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[1][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[1][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[1][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[1][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[1][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[1][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[1][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[1][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[1][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[1][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[1][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[1][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[1][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[2][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[2][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[2][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[2][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[2][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[2][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[2][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[2][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[2][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[2][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[2][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[2][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[2][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[2][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[2][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[2][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[3][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[3][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[3][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[3][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[3][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[3][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[3][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[3][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[3][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[3][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[3][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[3][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[3][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[3][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[3][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[3][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[4][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[4][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[4][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[4][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[4][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[4][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[4][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[4][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[4][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[4][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[4][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[4][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[4][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[4][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[4][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[4][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[5][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[5][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[5][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[5][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[5][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[5][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[5][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[5][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[5][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[5][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[5][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[5][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[5][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[5][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[5][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[5][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[6][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[6][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[6][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[6][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[6][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[6][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[6][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[6][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[6][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[6][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[6][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[6][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[6][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[6][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[6][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[6][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[7][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[7][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[7][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[7][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[7][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[7][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[7][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[7][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[7][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[7][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[7][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[7][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[7][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[7][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[7][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[7][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[8][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[8][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[8][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[8][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[8][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[8][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[8][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[8][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[8][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[8][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[8][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[8][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[8][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[8][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[8][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[8][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[9][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[9][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[9][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[9][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[9][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[9][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[9][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[9][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[9][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[9][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[9][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[9][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[9][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[9][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[9][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[9][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[10][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[10][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[10][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[10][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[10][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[10][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[10][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[10][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[10][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[10][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[10][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[10][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[10][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[10][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[10][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[10][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[11][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[11][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[11][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[11][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[11][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[11][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[11][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[11][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[11][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[11][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[11][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[11][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[11][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[11][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[11][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[11][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[12][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[12][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[12][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[12][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[12][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[12][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[12][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[12][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[12][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[12][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[12][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[12][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[12][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[12][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[12][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[12][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[13][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[13][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[13][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[13][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[13][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[13][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[13][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[13][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[13][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[13][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[13][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[13][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[13][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[13][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[13][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[13][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[14][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[14][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[14][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[14][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[14][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[14][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[14][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[14][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[14][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[14][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[14][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[14][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[14][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[14][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[14][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[14][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[15][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[15][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[15][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[15][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[15][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[15][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[15][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[15][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[15][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[15][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[15][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[15][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[15][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[15][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[15][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[15][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[16][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[16][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[16][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[16][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[16][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[16][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[16][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[16][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[16][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[16][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[16][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[16][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[16][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[16][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[16][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[16][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[17][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[17][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[17][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[17][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[17][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[17][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[17][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[17][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[17][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[17][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[17][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[17][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[17][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[17][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[17][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[17][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[18][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[18][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[18][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[18][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[18][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[18][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[18][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[18][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[18][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[18][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[18][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[18][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[18][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[18][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[18][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[18][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[19][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[19][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[19][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[19][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[19][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[19][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[19][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[19][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[19][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[19][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[19][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[19][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[19][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[19][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[19][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[19][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[20][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[20][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[20][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[20][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[20][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[20][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[20][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[20][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[20][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[20][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[20][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[20][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[20][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[20][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[20][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[20][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[21][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[21][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[21][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[21][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[21][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[21][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[21][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[21][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[21][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[21][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[21][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[21][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[21][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[21][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[21][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[21][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[22][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[22][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[22][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[22][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[22][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[22][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[22][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[22][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[22][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[22][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[22][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[22][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[22][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[22][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[22][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[22][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[23][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[23][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[23][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[23][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[23][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[23][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[23][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[23][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[23][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[23][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[23][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[23][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[23][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[23][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[23][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[23][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[24][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[24][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[24][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[24][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[24][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[24][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[24][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[24][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[24][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[24][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[24][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[24][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[24][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[24][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[24][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[24][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[25][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[25][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[25][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[25][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[25][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[25][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[25][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[25][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[25][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[25][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[25][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[25][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[25][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[25][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[25][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[25][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[26][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[26][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[26][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[26][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[26][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[26][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[26][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[26][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[26][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[26][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[26][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[26][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[26][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[26][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[26][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[26][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[27][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[27][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[27][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[27][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[27][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[27][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[27][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[27][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[27][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[27][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[27][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[27][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[27][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[27][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[27][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[27][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[28][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[28][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[28][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[28][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[28][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[28][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[28][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[28][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[28][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[28][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[28][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[28][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[28][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[28][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[28][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[28][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[29][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[29][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[29][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[29][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[29][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[29][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[29][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[29][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[29][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[29][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[29][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[29][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[29][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[29][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[29][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[29][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[30][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[30][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[30][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[30][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[30][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[30][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[30][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[30][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[30][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[30][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[30][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[30][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[30][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[30][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[30][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[30][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[31][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[31][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[31][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[31][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[31][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[31][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[31][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[31][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[31][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[31][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[31][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[31][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[31][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[31][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[31][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[31][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[32][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[32][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[32][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[32][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[32][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[32][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[32][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[32][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[32][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[32][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[32][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[32][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[32][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[32][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[32][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[32][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[33][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[33][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[33][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[33][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[33][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[33][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[33][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[33][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[33][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[33][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[33][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[33][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[33][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[33][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[33][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[33][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[34][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[34][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[34][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[34][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[34][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[34][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[34][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[34][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[34][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[34][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[34][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[34][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[34][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[34][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[34][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[34][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[35][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[35][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[35][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[35][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[35][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[35][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[35][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[35][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[35][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[35][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[35][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[35][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[35][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[35][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[35][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[35][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[36][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[36][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[36][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[36][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[36][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[36][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[36][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[36][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[36][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[36][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[36][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[36][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[36][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[36][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[36][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[36][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[37][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[37][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[37][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[37][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[37][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[37][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[37][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[37][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[37][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[37][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[37][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[37][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[37][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[37][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[37][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[37][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[38][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[38][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[38][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[38][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[38][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[38][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[38][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[38][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[38][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[38][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[38][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[38][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[38][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[38][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[38][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[38][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[39][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[39][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[39][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[39][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[39][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[39][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[39][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[39][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[39][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[39][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[39][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[39][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[39][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[39][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[39][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[39][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[40][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[40][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[40][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[40][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[40][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[40][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[40][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[40][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[40][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[40][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[40][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[40][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[40][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[40][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[40][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[40][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[41][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[41][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[41][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[41][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[41][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[41][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[41][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[41][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[41][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[41][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[41][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[41][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[41][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[41][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[41][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[41][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[42][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[42][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[42][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[42][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[42][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[42][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[42][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[42][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[42][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[42][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[42][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[42][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[42][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[42][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[42][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[42][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[43][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[43][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[43][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[43][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[43][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[43][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[43][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[43][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[43][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[43][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[43][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[43][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[43][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[43][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[43][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[43][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[44][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[44][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[44][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[44][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[44][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[44][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[44][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[44][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[44][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[44][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[44][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[44][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[44][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[44][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[44][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[44][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[45][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[45][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[45][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[45][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[45][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[45][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[45][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[45][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[45][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[45][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[45][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[45][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[45][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[45][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[45][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[45][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[46][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[46][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[46][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[46][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[46][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[46][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[46][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[46][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[46][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[46][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[46][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[46][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[46][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[46][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[46][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[46][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[47][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[47][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[47][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[47][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[47][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[47][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[47][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[47][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[47][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[47][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[47][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[47][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[47][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[47][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[47][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[47][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[48][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[48][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[48][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[48][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[48][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[48][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[48][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[48][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[48][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[48][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[48][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[48][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[48][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[48][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[48][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[48][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[49][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[49][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[49][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[49][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[49][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[49][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[49][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[49][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[49][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[49][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[49][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[49][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[49][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[49][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[49][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[49][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[50][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[50][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[50][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[50][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[50][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[50][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[50][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[50][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[50][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[50][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[50][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[50][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[50][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[50][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[50][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[50][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[51][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[51][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[51][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[51][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[51][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[51][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[51][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[51][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[51][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[51][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[51][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[51][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[51][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[51][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[51][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[51][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[52][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[52][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[52][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[52][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[52][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[52][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[52][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[52][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[52][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[52][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[52][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[52][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[52][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[52][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[52][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[52][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[53][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[53][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[53][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[53][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[53][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[53][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[53][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[53][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[53][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[53][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[53][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[53][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[53][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[53][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[53][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[53][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[54][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[54][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[54][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[54][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[54][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[54][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[54][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[54][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[54][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[54][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[54][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[54][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[54][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[54][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[54][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[54][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[55][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[55][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[55][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[55][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[55][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[55][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[55][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[55][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[55][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[55][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[55][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[55][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[55][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[55][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[55][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[55][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[56][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[56][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[56][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[56][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[56][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[56][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[56][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[56][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[56][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[56][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[56][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[56][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[56][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[56][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[56][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[56][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[57][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[57][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[57][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[57][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[57][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[57][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[57][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[57][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[57][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[57][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[57][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[57][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[57][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[57][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[57][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[57][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[58][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[58][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[58][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[58][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[58][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[58][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[58][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[58][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[58][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[58][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[58][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[58][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[58][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[58][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[58][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[58][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[59][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[59][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[59][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[59][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[59][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[59][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[59][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[59][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[59][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[59][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[59][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[59][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[59][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[59][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[59][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[59][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[60][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[60][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[60][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[60][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[60][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[60][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[60][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[60][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[60][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[60][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[60][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[60][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[60][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[60][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[60][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[60][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[61][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[61][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[61][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[61][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[61][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[61][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[61][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[61][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[61][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[61][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[61][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[61][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[61][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[61][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[61][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[61][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[62][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[62][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[62][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[62][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[62][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[62][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[62][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[62][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[62][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[62][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[62][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[62][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[62][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[62][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[62][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[62][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[63][0]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[63][1]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[63][2]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[63][3]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[63][4]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[63][5]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[63][6]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[63][7]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[63][8]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[63][9]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[63][10]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[63][11]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[63][12]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[63][13]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[63][14]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (10041): Inferred latch for "mem[63][15]" at ROM.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/ROM.vhd Line: 20
+Info (12128): Elaborating entity "incr" for hierarchy "uP:add_instance|datapath:DP|incr:inc" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 527
 Warning (10631): VHDL Process Statement warning at inc.vhd(15): inferring latch(es) for signal or variable "Op", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/inc.vhd Line: 15
 Info (10041): Inferred latch for "Op[0]" at inc.vhd(15) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/inc.vhd Line: 15
 Info (10041): Inferred latch for "Op[1]" at inc.vhd(15) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/inc.vhd Line: 15
@@ -563,7 +1547,7 @@ Info (10041): Inferred latch for "Op[12]" at inc.vhd(15) File: D:/IITB/Semester_
 Info (10041): Inferred latch for "Op[13]" at inc.vhd(15) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/inc.vhd Line: 15
 Info (10041): Inferred latch for "Op[14]" at inc.vhd(15) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/inc.vhd Line: 15
 Info (10041): Inferred latch for "Op[15]" at inc.vhd(15) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/inc.vhd Line: 15
-Info (12128): Elaborating entity "mux41_int" for hierarchy "uP:add_instance|datapath:DP|mux41_int:Mux_LUT_indexin" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 529
+Info (12128): Elaborating entity "mux41_int" for hierarchy "uP:add_instance|datapath:DP|mux41_int:Mux_LUT_indexin" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 530
 Warning (10631): VHDL Process Statement warning at mux41_int.vhd(18): inferring latch(es) for signal or variable "Op", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/mux41_int.vhd Line: 18
 Info (10041): Inferred latch for "Op[0]" at mux41_int.vhd(18) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/mux41_int.vhd Line: 18
 Info (10041): Inferred latch for "Op[1]" at mux41_int.vhd(18) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/mux41_int.vhd Line: 18
@@ -597,10 +1581,10 @@ Info (10041): Inferred latch for "Op[28]" at mux41_int.vhd(18) File: D:/IITB/Sem
 Info (10041): Inferred latch for "Op[29]" at mux41_int.vhd(18) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/mux41_int.vhd Line: 18
 Info (10041): Inferred latch for "Op[30]" at mux41_int.vhd(18) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/mux41_int.vhd Line: 18
 Info (10041): Inferred latch for "Op[31]" at mux41_int.vhd(18) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/mux41_int.vhd Line: 18
-Info (12128): Elaborating entity "mux41_1" for hierarchy "uP:add_instance|datapath:DP|mux41_1:Mux_LUT_history" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 532
+Info (12128): Elaborating entity "mux41_1" for hierarchy "uP:add_instance|datapath:DP|mux41_1:Mux_LUT_history" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 533
 Warning (10631): VHDL Process Statement warning at mux41_1.vhd(18): inferring latch(es) for signal or variable "Op", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/mux41_1.vhd Line: 18
 Info (10041): Inferred latch for "Op" at mux41_1.vhd(18) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/mux41_1.vhd Line: 18
-Info (12128): Elaborating entity "BranchLUT" for hierarchy "uP:add_instance|datapath:DP|BranchLUT:lut" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 535
+Info (12128): Elaborating entity "BranchLUT" for hierarchy "uP:add_instance|datapath:DP|BranchLUT:lut" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 536
 Warning (10631): VHDL Process Statement warning at LUT.vhd(29): inferring latch(es) for signal or variable "PC_stored", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/LUT.vhd Line: 29
 Warning (10631): VHDL Process Statement warning at LUT.vhd(29): inferring latch(es) for signal or variable "A_stored", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/LUT.vhd Line: 29
 Warning (10631): VHDL Process Statement warning at LUT.vhd(29): inferring latch(es) for signal or variable "inext", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/LUT.vhd Line: 29
@@ -1743,7 +2727,7 @@ Info (10041): Inferred latch for "inext[28]" at LUT.vhd(34) File: D:/IITB/Semest
 Info (10041): Inferred latch for "inext[29]" at LUT.vhd(34) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/LUT.vhd Line: 34
 Info (10041): Inferred latch for "inext[30]" at LUT.vhd(34) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/LUT.vhd Line: 34
 Info (10041): Inferred latch for "inext[31]" at LUT.vhd(34) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/LUT.vhd Line: 34
-Info (12128): Elaborating entity "mux21" for hierarchy "uP:add_instance|datapath:DP|mux21:Mux_PC" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 555
+Info (12128): Elaborating entity "mux21" for hierarchy "uP:add_instance|datapath:DP|mux21:Mux_PC" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 556
 Warning (10631): VHDL Process Statement warning at mux21.vhd(16): inferring latch(es) for signal or variable "Op", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/mux21.vhd Line: 16
 Info (10041): Inferred latch for "Op[0]" at mux21.vhd(16) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/mux21.vhd Line: 16
 Info (10041): Inferred latch for "Op[1]" at mux21.vhd(16) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/mux21.vhd Line: 16
@@ -1761,27 +2745,27 @@ Info (10041): Inferred latch for "Op[12]" at mux21.vhd(16) File: D:/IITB/Semeste
 Info (10041): Inferred latch for "Op[13]" at mux21.vhd(16) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/mux21.vhd Line: 16
 Info (10041): Inferred latch for "Op[14]" at mux21.vhd(16) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/mux21.vhd Line: 16
 Info (10041): Inferred latch for "Op[15]" at mux21.vhd(16) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/mux21.vhd Line: 16
-Info (12128): Elaborating entity "mux81" for hierarchy "uP:add_instance|datapath:DP|mux81:Mux_PC_2" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 558
-Info (12128): Elaborating entity "IFID" for hierarchy "uP:add_instance|datapath:DP|IFID:IF_ID" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 561
+Info (12128): Elaborating entity "mux81" for hierarchy "uP:add_instance|datapath:DP|mux81:Mux_PC_2" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 559
+Info (12128): Elaborating entity "IFID" for hierarchy "uP:add_instance|datapath:DP|IFID:IF_ID" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 562
 Info (12128): Elaborating entity "reg1" for hierarchy "uP:add_instance|datapath:DP|IFID:IF_ID|reg1:match" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/IFID.vhd Line: 57
 Info (12128): Elaborating entity "reg1_int" for hierarchy "uP:add_instance|datapath:DP|IFID:IF_ID|reg1_int:indexout" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/IFID.vhd Line: 58
-Info (12128): Elaborating entity "IDRR" for hierarchy "uP:add_instance|datapath:DP|IDRR:ID_RR" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 576
+Info (12128): Elaborating entity "IDRR" for hierarchy "uP:add_instance|datapath:DP|IDRR:ID_RR" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 577
 Info (12128): Elaborating entity "reg4" for hierarchy "uP:add_instance|datapath:DP|IDRR:ID_RR|reg4:opcode" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/IDRR.vhd Line: 106
 Info (12128): Elaborating entity "reg3" for hierarchy "uP:add_instance|datapath:DP|IDRR:ID_RR|reg3:eleven_nine" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/IDRR.vhd Line: 109
 Info (12128): Elaborating entity "reg9" for hierarchy "uP:add_instance|datapath:DP|IDRR:ID_RR|reg9:eight_zero" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/IDRR.vhd Line: 112
 Info (12128): Elaborating entity "reg6" for hierarchy "uP:add_instance|datapath:DP|IDRR:ID_RR|reg6:five_zero" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/IDRR.vhd Line: 113
-Info (12128): Elaborating entity "Hazard_JLR" for hierarchy "uP:add_instance|datapath:DP|Hazard_JLR:JLR_haz" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 593
+Info (12128): Elaborating entity "Hazard_JLR" for hierarchy "uP:add_instance|datapath:DP|Hazard_JLR:JLR_haz" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 594
 Warning (10631): VHDL Process Statement warning at Hazard_JLR.vhd(20): inferring latch(es) for signal or variable "history", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/Hazard_JLR.vhd Line: 20
 Warning (10631): VHDL Process Statement warning at Hazard_JLR.vhd(20): inferring latch(es) for signal or variable "haz_JLR", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/Hazard_JLR.vhd Line: 20
 Info (10041): Inferred latch for "haz_JLR" at Hazard_JLR.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/Hazard_JLR.vhd Line: 20
 Info (10041): Inferred latch for "history" at Hazard_JLR.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/Hazard_JLR.vhd Line: 20
-Info (12128): Elaborating entity "mux21_3" for hierarchy "uP:add_instance|datapath:DP|mux21_3:Mux_RF_A1" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 596
+Info (12128): Elaborating entity "mux21_3" for hierarchy "uP:add_instance|datapath:DP|mux21_3:Mux_RF_A1" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 597
 Warning (10631): VHDL Process Statement warning at mux21 _3.vhd(16): inferring latch(es) for signal or variable "Op", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/mux21 _3.vhd Line: 16
 Info (10041): Inferred latch for "Op[0]" at mux21 _3.vhd(16) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/mux21 _3.vhd Line: 16
 Info (10041): Inferred latch for "Op[1]" at mux21 _3.vhd(16) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/mux21 _3.vhd Line: 16
 Info (10041): Inferred latch for "Op[2]" at mux21 _3.vhd(16) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/mux21 _3.vhd Line: 16
-Info (12128): Elaborating entity "register_bank" for hierarchy "uP:add_instance|datapath:DP|register_bank:RF" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 602
-Info (12128): Elaborating entity "mux41" for hierarchy "uP:add_instance|datapath:DP|mux41:forwardingmux1" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 618
+Info (12128): Elaborating entity "register_bank" for hierarchy "uP:add_instance|datapath:DP|register_bank:RF" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 603
+Info (12128): Elaborating entity "mux41" for hierarchy "uP:add_instance|datapath:DP|mux41:forwardingmux1" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 619
 Warning (10631): VHDL Process Statement warning at mux41.vhd(18): inferring latch(es) for signal or variable "Op", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/mux41.vhd Line: 18
 Info (10041): Inferred latch for "Op[0]" at mux41.vhd(18) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/mux41.vhd Line: 18
 Info (10041): Inferred latch for "Op[1]" at mux41.vhd(18) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/mux41.vhd Line: 18
@@ -1799,16 +2783,16 @@ Info (10041): Inferred latch for "Op[12]" at mux41.vhd(18) File: D:/IITB/Semeste
 Info (10041): Inferred latch for "Op[13]" at mux41.vhd(18) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/mux41.vhd Line: 18
 Info (10041): Inferred latch for "Op[14]" at mux41.vhd(18) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/mux41.vhd Line: 18
 Info (10041): Inferred latch for "Op[15]" at mux41.vhd(18) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/mux41.vhd Line: 18
-Info (12128): Elaborating entity "RREX" for hierarchy "uP:add_instance|datapath:DP|RREX:RR_EX" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 627
-Info (12128): Elaborating entity "Hazard_JRI" for hierarchy "uP:add_instance|datapath:DP|Hazard_JRI:JRI_haz" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 648
+Info (12128): Elaborating entity "RREX" for hierarchy "uP:add_instance|datapath:DP|RREX:RR_EX" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 628
+Info (12128): Elaborating entity "Hazard_JRI" for hierarchy "uP:add_instance|datapath:DP|Hazard_JRI:JRI_haz" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 649
 Warning (10631): VHDL Process Statement warning at Hazard_JRI.vhd(20): inferring latch(es) for signal or variable "history", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/Hazard_JRI.vhd Line: 20
 Warning (10631): VHDL Process Statement warning at Hazard_JRI.vhd(20): inferring latch(es) for signal or variable "haz_JRI", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/Hazard_JRI.vhd Line: 20
 Info (10041): Inferred latch for "haz_JRI" at Hazard_JRI.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/Hazard_JRI.vhd Line: 20
 Info (10041): Inferred latch for "history" at Hazard_JRI.vhd(20) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/Hazard_JRI.vhd Line: 20
-Info (12128): Elaborating entity "Hazard_EX" for hierarchy "uP:add_instance|datapath:DP|Hazard_EX:EX_haz" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 651
-Info (12128): Elaborating entity "incr_LMSM" for hierarchy "uP:add_instance|datapath:DP|incr_LMSM:inc_LMSM" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 654
-Info (12128): Elaborating entity "bit1shift" for hierarchy "uP:add_instance|datapath:DP|bit1shift:S1" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 660
-Info (12128): Elaborating entity "bitextender6" for hierarchy "uP:add_instance|datapath:DP|bitextender6:SE6" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 663
+Info (12128): Elaborating entity "Hazard_EX" for hierarchy "uP:add_instance|datapath:DP|Hazard_EX:EX_haz" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 652
+Info (12128): Elaborating entity "incr_LMSM" for hierarchy "uP:add_instance|datapath:DP|incr_LMSM:inc_LMSM" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 655
+Info (12128): Elaborating entity "bit1shift" for hierarchy "uP:add_instance|datapath:DP|bit1shift:S1" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 661
+Info (12128): Elaborating entity "bitextender6" for hierarchy "uP:add_instance|datapath:DP|bitextender6:SE6" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 664
 Warning (10631): VHDL Process Statement warning at SE6.vhd(14): inferring latch(es) for signal or variable "Op", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/SE6.vhd Line: 14
 Info (10041): Inferred latch for "Op[0]" at SE6.vhd(14) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/SE6.vhd Line: 14
 Info (10041): Inferred latch for "Op[1]" at SE6.vhd(14) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/SE6.vhd Line: 14
@@ -1826,7 +2810,7 @@ Info (10041): Inferred latch for "Op[12]" at SE6.vhd(14) File: D:/IITB/Semester_
 Info (10041): Inferred latch for "Op[13]" at SE6.vhd(14) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/SE6.vhd Line: 14
 Info (10041): Inferred latch for "Op[14]" at SE6.vhd(14) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/SE6.vhd Line: 14
 Info (10041): Inferred latch for "Op[15]" at SE6.vhd(14) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/SE6.vhd Line: 14
-Info (12128): Elaborating entity "bitextender9" for hierarchy "uP:add_instance|datapath:DP|bitextender9:SE9" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 666
+Info (12128): Elaborating entity "bitextender9" for hierarchy "uP:add_instance|datapath:DP|bitextender9:SE9" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 667
 Warning (10631): VHDL Process Statement warning at SE9.vhd(14): inferring latch(es) for signal or variable "Op", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/SE9.vhd Line: 14
 Info (10041): Inferred latch for "Op[0]" at SE9.vhd(14) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/SE9.vhd Line: 14
 Info (10041): Inferred latch for "Op[1]" at SE9.vhd(14) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/SE9.vhd Line: 14
@@ -1844,7 +2828,7 @@ Info (10041): Inferred latch for "Op[12]" at SE9.vhd(14) File: D:/IITB/Semester_
 Info (10041): Inferred latch for "Op[13]" at SE9.vhd(14) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/SE9.vhd Line: 14
 Info (10041): Inferred latch for "Op[14]" at SE9.vhd(14) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/SE9.vhd Line: 14
 Info (10041): Inferred latch for "Op[15]" at SE9.vhd(14) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/SE9.vhd Line: 14
-Info (12128): Elaborating entity "alu" for hierarchy "uP:add_instance|datapath:DP|alu:ALU_1" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 672
+Info (12128): Elaborating entity "alu" for hierarchy "uP:add_instance|datapath:DP|alu:ALU_1" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 673
 Warning (10631): VHDL Process Statement warning at alu.vhd(33): inferring latch(es) for signal or variable "Op", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/alu.vhd Line: 33
 Warning (10631): VHDL Process Statement warning at alu.vhd(33): inferring latch(es) for signal or variable "carry", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/alu.vhd Line: 33
 Warning (10631): VHDL Process Statement warning at alu.vhd(33): inferring latch(es) for signal or variable "zero", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/alu.vhd Line: 33
@@ -1866,37 +2850,39 @@ Info (10041): Inferred latch for "Op[12]" at alu.vhd(33) File: D:/IITB/Semester_
 Info (10041): Inferred latch for "Op[13]" at alu.vhd(33) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/alu.vhd Line: 33
 Info (10041): Inferred latch for "Op[14]" at alu.vhd(33) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/alu.vhd Line: 33
 Info (10041): Inferred latch for "Op[15]" at alu.vhd(33) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/alu.vhd Line: 33
-Info (12128): Elaborating entity "EXMEM" for hierarchy "uP:add_instance|datapath:DP|EXMEM:EX_MEM" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 681
+Info (12128): Elaborating entity "EXMEM" for hierarchy "uP:add_instance|datapath:DP|EXMEM:EX_MEM" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 682
 Warning (10541): VHDL Signal Declaration warning at EXMEM.vhd(21): used implicit default value for signal "EXMEM_cy_Op" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/EXMEM.vhd Line: 21
 Warning (10541): VHDL Signal Declaration warning at EXMEM.vhd(21): used implicit default value for signal "EXMEM_z_Op" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/EXMEM.vhd Line: 21
-Info (12128): Elaborating entity "Hazard_MEM" for hierarchy "uP:add_instance|datapath:DP|Hazard_MEM:MEM_haz" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 707
-Info (12128): Elaborating entity "Hazard_BEQ" for hierarchy "uP:add_instance|datapath:DP|Hazard_BEQ:BEQ_haz" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 710
+Info (12128): Elaborating entity "Hazard_MEM" for hierarchy "uP:add_instance|datapath:DP|Hazard_MEM:MEM_haz" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 708
+Info (12128): Elaborating entity "Hazard_BEQ" for hierarchy "uP:add_instance|datapath:DP|Hazard_BEQ:BEQ_haz" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 711
 Warning (10631): VHDL Process Statement warning at Hazard_BEQ.vhd(18): inferring latch(es) for signal or variable "history", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/Hazard_BEQ.vhd Line: 18
 Warning (10631): VHDL Process Statement warning at Hazard_BEQ.vhd(18): inferring latch(es) for signal or variable "haz_BEQ", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/Hazard_BEQ.vhd Line: 18
 Info (10041): Inferred latch for "haz_BEQ" at Hazard_BEQ.vhd(18) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/Hazard_BEQ.vhd Line: 18
 Info (10041): Inferred latch for "history" at Hazard_BEQ.vhd(18) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/Hazard_BEQ.vhd Line: 18
-Info (12128): Elaborating entity "Hazard_JAL" for hierarchy "uP:add_instance|datapath:DP|Hazard_JAL:JAL_haz" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 713
+Info (12128): Elaborating entity "Hazard_JAL" for hierarchy "uP:add_instance|datapath:DP|Hazard_JAL:JAL_haz" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 714
 Warning (10631): VHDL Process Statement warning at Hazard_JAL.vhd(18): inferring latch(es) for signal or variable "haz_JAL", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/Hazard_JAL.vhd Line: 18
 Warning (10631): VHDL Process Statement warning at Hazard_JAL.vhd(18): inferring latch(es) for signal or variable "history", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/Hazard_JAL.vhd Line: 18
 Info (10041): Inferred latch for "history" at Hazard_JAL.vhd(18) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/Hazard_JAL.vhd Line: 18
 Info (10041): Inferred latch for "haz_JAL" at Hazard_JAL.vhd(18) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/Hazard_JAL.vhd Line: 18
-Info (12128): Elaborating entity "ram" for hierarchy "uP:add_instance|datapath:DP|ram:DMem" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 722
-Info (12128): Elaborating entity "MEMWB" for hierarchy "uP:add_instance|datapath:DP|MEMWB:MEM_WB" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 734
+Info (12128): Elaborating entity "ram" for hierarchy "uP:add_instance|datapath:DP|ram:DMem" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 723
+Info (12128): Elaborating entity "MEMWB" for hierarchy "uP:add_instance|datapath:DP|MEMWB:MEM_WB" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 735
 Warning (10541): VHDL Signal Declaration warning at MEMWB.vhd(20): used implicit default value for signal "MEMWB_cy_Op" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/MEMWB.vhd Line: 20
 Warning (10541): VHDL Signal Declaration warning at MEMWB.vhd(20): used implicit default value for signal "MEMWB_z_Op" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/MEMWB.vhd Line: 20
-Info (12128): Elaborating entity "Hazard_WB" for hierarchy "uP:add_instance|datapath:DP|Hazard_WB:WB_haz" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 756
-Info (12128): Elaborating entity "fwd_logic" for hierarchy "uP:add_instance|datapath:DP|fwd_logic:Fwd_Block" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 759
-Warning (10541): VHDL Signal Declaration warning at fwd_logic.vhd(9): used implicit default value for signal "select_Mux_forward2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/fwd_logic.vhd Line: 9
+Info (12128): Elaborating entity "Hazard_WB" for hierarchy "uP:add_instance|datapath:DP|Hazard_WB:WB_haz" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 757
+Info (12128): Elaborating entity "fwd_logic" for hierarchy "uP:add_instance|datapath:DP|fwd_logic:Fwd_Block" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 760
 Warning (10631): VHDL Process Statement warning at fwd_logic.vhd(15): inferring latch(es) for signal or variable "select_Mux_forward1", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/fwd_logic.vhd Line: 15
+Warning (10631): VHDL Process Statement warning at fwd_logic.vhd(15): inferring latch(es) for signal or variable "select_Mux_forward2", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/fwd_logic.vhd Line: 15
+Info (10041): Inferred latch for "select_Mux_forward2[0]" at fwd_logic.vhd(15) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/fwd_logic.vhd Line: 15
+Info (10041): Inferred latch for "select_Mux_forward2[1]" at fwd_logic.vhd(15) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/fwd_logic.vhd Line: 15
 Info (10041): Inferred latch for "select_Mux_forward1[0]" at fwd_logic.vhd(15) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/fwd_logic.vhd Line: 15
 Info (10041): Inferred latch for "select_Mux_forward1[1]" at fwd_logic.vhd(15) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/fwd_logic.vhd Line: 15
-Info (12128): Elaborating entity "mux41_3" for hierarchy "uP:add_instance|datapath:DP|mux41_3:Mux_RF_A3" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 777
+Info (12128): Elaborating entity "mux41_3" for hierarchy "uP:add_instance|datapath:DP|mux41_3:Mux_RF_A3" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 778
 Warning (10631): VHDL Process Statement warning at mux41_3.vhd(18): inferring latch(es) for signal or variable "Op", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/mux41_3.vhd Line: 18
 Info (10041): Inferred latch for "Op[0]" at mux41_3.vhd(18) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/mux41_3.vhd Line: 18
 Info (10041): Inferred latch for "Op[1]" at mux41_3.vhd(18) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/mux41_3.vhd Line: 18
 Info (10041): Inferred latch for "Op[2]" at mux41_3.vhd(18) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/mux41_3.vhd Line: 18
-Info (12128): Elaborating entity "bit7shift" for hierarchy "uP:add_instance|datapath:DP|bit7shift:S7" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 780
-Info (12128): Elaborating entity "controller" for hierarchy "uP:add_instance|controller:Ctrl" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/uP.vhd Line: 122
+Info (12128): Elaborating entity "bit7shift" for hierarchy "uP:add_instance|datapath:DP|bit7shift:S7" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/datapath.vhd Line: 781
+Info (12128): Elaborating entity "controller" for hierarchy "uP:add_instance|controller:Ctrl" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/uP.vhd Line: 124
 Warning (10541): VHDL Signal Declaration warning at controller.vhd(17): used implicit default value for signal "clr_EXMEM" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/controller.vhd Line: 17
 Warning (10541): VHDL Signal Declaration warning at controller.vhd(17): used implicit default value for signal "clr_MEMWB" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/controller.vhd Line: 17
 Warning (10631): VHDL Process Statement warning at controller.vhd(32): inferring latch(es) for signal or variable "wr_IFID", which holds its previous value in one or more paths through the process File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/controller.vhd Line: 32
@@ -1916,15 +2902,16 @@ Info (10041): Inferred latch for "wr_RREX" at controller.vhd(32) File: D:/IITB/S
 Info (10041): Inferred latch for "wr_IDRR" at controller.vhd(32) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/controller.vhd Line: 32
 Info (10041): Inferred latch for "wr_IFID" at controller.vhd(32) File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/controller.vhd Line: 32
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "input_vector[0]" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/DUT.vhd Line: 4
-Info (21057): Implemented 1 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 1 input pins
+    Warning (15610): No output dependent on input pin "input_vector[1]" File: D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/DUT.vhd Line: 4
+Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 63 warnings
-    Info: Peak virtual memory: 4785 megabytes
-    Info: Processing ended: Wed Jun 08 19:20:05 2022
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:16
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 65 warnings
+    Info: Peak virtual memory: 4782 megabytes
+    Info: Processing ended: Thu Jun 09 11:37:31 2022
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:18
 
 

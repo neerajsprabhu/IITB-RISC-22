@@ -12,7 +12,7 @@ entity datapath is
 		select_Mux_LUT, select_Mux_ALU_B, select_Mux_ALU2_B, select_ALU, select_ALU2, select_Mux_RF_A3 : in std_logic_vector(1 downto 0);
 		select_Mux_ALU_A, select_Mux_ALU2_A, select_Mux_RF_A1, select_Mux_RF_A2, select_Mux_DMem_A, select_Mux_DMem_Din : in std_logic;
 		select_Mux_LMSM : in std_logic;
-		clk : in std_logic;
+		clk, reset : in std_logic;
 		cy_in, z_in : in std_logic;
 		
 		cy_out, z_out : out std_logic;
@@ -269,6 +269,7 @@ architecture arch of datapath is
 	component rom is
 		port(
 			A: in std_logic_vector(15 downto 0);
+			clr: in std_logic;
 			Dout: out std_logic_vector(15 downto 0)
 		);
 	end component;
@@ -279,7 +280,7 @@ architecture arch of datapath is
 			wr: in std_logic;
 			A: in std_logic_vector(15 downto 0);
 			Din: in std_logic_vector(15 downto 0);
-			clk: in std_logic;
+			clk, clr: in std_logic;
 			Dout: out std_logic_vector(15 downto 0)
 		);
 	end component;
@@ -517,10 +518,10 @@ architecture arch of datapath is
 begin
 
 --PC
-PC: reg port map (wr=>wr_PC, clk=>clk, data=>PC_in, Op=>PC_Op, clr=>'0');
+PC: reg port map (wr=>wr_PC, clk=>clk, data=>PC_in, Op=>PC_Op, clr=>reset);
 
 --Instruction Memory
-IMem: rom port map (A=>PC_Op, Dout=>IMem_Op);
+IMem: rom port map (A=>PC_Op, clr=>reset, Dout=>IMem_Op);
 
 --Incrementer
 inc: incr port map (wr=>wr_inc, A=>PC_Op, Op=>inc_Op);
@@ -560,7 +561,7 @@ Mux_PC_2: mux81 port map (A0=>branch, A1=>ALU2_C, A2=>RF_D2_Op, A3=>ALU_C, A4=>R
 --IF/ID Register
 IF_ID: IFID port map (
 							clk=>clk,
-							clr_IFID=>clr_IFID,
+							clr_IFID=>(clr_IFID or reset),
 							wr_IFID=>wr_IFID,
 							IFID_match=>match, IFID_match_Op=>IFID_match_Op, 
 							IFID_inc=>inc_Op, IFID_inc_Op=>IFID_inc_Op,
@@ -570,12 +571,12 @@ IF_ID: IFID port map (
 							);
 							
 --IR
-IR: reg port map (wr=>wr_IR, clk=>clk, data=>IFID_IMem_Op, Op=>IR_Op, clr=>'0');
+IR: reg port map (wr=>wr_IR, clk=>clk, data=>IFID_IMem_Op, Op=>IR_Op, clr=>reset);
 
 --ID/RR Register
 ID_RR: IDRR port map (
 							clk=>clk,
-							clr_IDRR=>clr_IDRR,
+							clr_IDRR=>(clr_IDRR or reset),
 							wr_IDRR=>wr_IDRR,
 							IDRR_match=>IFID_match_Op, IDRR_match_Op=>IDRR_match_Op, 
 							IDRR_opcode=>IR_Op(15 downto 12), IDRR_opcode_Op=>IDRR_opcode_Op,
@@ -608,7 +609,7 @@ RF: register_bank port map (
 							wr=>wr_RF, 
 							wr_r7=>wr_RF_r7, 
 							clk=>clk, 
-							clr_rf=>'0',
+							clr_rf=>reset,
 							D1=>RF_D1_Op, 
 							D2=>RF_D2_Op,
 							r7_out=>r7_Op
@@ -626,7 +627,7 @@ LMSMmux: mux21 port map (A0=>forward1, A1=>inc_LMSM_Op, S=>select_Mux_LMSM, Op=>
 --RR/EX Register
 RR_EX: RREX port map (
 							clk=>clk,
-							clr_RREX=>clr_RREX,
+							clr_RREX=>(clr_RREX or reset),
 							wr_RREX=>wr_RREX,
 							RREX_match=>IDRR_match_Op, RREX_match_Op=>RREX_match_Op, 
 							RREX_opcode=>IDRR_opcode_Op, RREX_opcode_Op=>RREX_opcode_Op,
@@ -672,15 +673,15 @@ Mux_ALU_B: mux41 port map (A0=>RREX_RF_D2_Op, A1=>S1_Op, A2=>SE6_Op, A3=>SE9_Op,
 ALU_1: alu port map (A=>ALU_A, B=>ALU_B, S=>select_ALU, Op=>ALU_C, carry=>cy, zero=>z);
 
 --Carry
-carry: reg1 port map (wr=>wr_cy, clk=>clk, data=>cy, Op=>cy_Op, clr=>'0');
+carry: reg1 port map (wr=>wr_cy, clk=>clk, data=>cy, Op=>cy_Op, clr=>reset);
 
 --Zero
-zero: reg1 port map (wr=>wr_z, clk=>clk, data=>z, Op=>z_Op, clr=>'0');
+zero: reg1 port map (wr=>wr_z, clk=>clk, data=>z, Op=>z_Op, clr=>reset);
 
 --EX/MEM Register
 EX_MEM: EXMEM port map (
 							clk=>clk,
-							clr_EXMEM=>clr_EXMEM,
+							clr_EXMEM=>(clr_EXMEM or reset),
 							wr_EXMEM=>wr_EXMEM,
 							EXMEM_match=>RREX_match_Op, EXMEM_match_Op=>EXMEM_match_Op, 
 							EXMEM_opcode=>RREX_opcode_Op, EXMEM_opcode_Op=>EXMEM_opcode_Op,
@@ -719,7 +720,7 @@ Mux_DMem_A: mux21 port map (A0=>EXMEM_ALU_C_Op, A1=>EXMEM_LMSM_Op, S=>select_Mux
 Mux_DMem_Din: mux21 port map (A0=>EXMEM_RF_D1_Op, A1=>EXMEM_RF_D2_Op, S=>select_Mux_DMem_Din, Op=>DMem_Din);
 
 --Data Memory
-DMem: ram port map (wr=>wr_DMem, A=>DMem_A, Din=>DMem_Din, clk=>clk, Dout=>DMem_Dout);	
+DMem: ram port map (wr=>wr_DMem, A=>DMem_A, Din=>DMem_Din, clk=>clk, clr=>reset, Dout=>DMem_Dout);	
 
 --Mux_ALU2_A
 Mux_ALU2_A: mux21 port map (A0=>EXMEM_RF_D1_Op, A1=>EXMEM_PC_Op, S=>select_Mux_ALU2_A, Op=>ALU2_A);
@@ -733,7 +734,7 @@ ALU_2: alu port map (A=>ALU2_A, B=>ALU2_B, S=>select_ALU2, Op=>ALU2_C, carry=>cy
 --MEM/WB Register
 MEM_WB: MEMWB port map (
 							clk=>clk,
-							clr_MEMWB=>clr_MEMWB,
+							clr_MEMWB=>(clr_MEMWB or reset),
 							wr_MEMWB=>wr_MEMWB,
 							MEMWB_opcode=>EXMEM_opcode_Op, MEMWB_opcode_Op=>MEMWB_opcode_Op,
 							MEMWB_11_9=>EXMEM_11_9_Op, MEMWB_11_9_Op=>MEMWB_11_9_Op, 

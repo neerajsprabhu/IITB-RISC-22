@@ -1,5 +1,5 @@
 Fitter report for uP
-Wed Jun 08 19:20:07 2022
+Thu Jun 09 11:37:33 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -49,7 +49,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------+
 ; Fitter Summary                                                      ;
 +-----------------------+---------------------------------------------+
-; Fitter Status         ; Successful - Wed Jun 08 19:20:07 2022       ;
+; Fitter Status         ; Successful - Thu Jun 09 11:37:33 2022       ;
 ; Quartus Prime Version ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name         ; uP                                          ;
 ; Top-level Entity Name ; DUT                                         ;
@@ -57,7 +57,7 @@ https://fpgasoftware.intel.com/eula.
 ; Device                ; 5M40ZM64C4                                  ;
 ; Timing Models         ; Final                                       ;
 ; Total logic elements  ; 0 / 40 ( 0 % )                              ;
-; Total pins            ; 1 / 30 ( 3 % )                              ;
+; Total pins            ; 2 / 30 ( 7 % )                              ;
 ; Total virtual pins    ; 0                                           ;
 ; UFM blocks            ; 0 / 1 ( 0 % )                               ;
 +-----------------------+---------------------------------------------+
@@ -161,8 +161,8 @@ The pin-out file can be found in D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelinin
 ; Total LABs                                  ; 0 / 4 ( 0 % )      ;
 ; Logic elements in carry chains              ; 0                  ;
 ; Virtual pins                                ; 0                  ;
-; I/O pins                                    ; 1 / 30 ( 3 % )     ;
-;     -- Clock pins                           ; 0 / 2 ( 0 % )      ;
+; I/O pins                                    ; 2 / 30 ( 7 % )     ;
+;     -- Clock pins                           ; 1 / 2 ( 50 % )     ;
 ;                                             ;                    ;
 ; UFM blocks                                  ; 0 / 1 ( 0 % )      ;
 ;                                             ;                    ;
@@ -182,18 +182,19 @@ The pin-out file can be found in D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelinin
 +-----------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+----------------+
 ; Name            ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Location assigned by ; Slow Slew Rate ;
 +-----------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+----------------+
-; input_vector[0] ; G8    ; 1        ; 7            ; 0            ; 2           ; 0                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; input_vector[0] ; B7    ; 2        ; 8            ; 3            ; 1           ; 0                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; input_vector[1] ; D8    ; 2        ; 8            ; 2            ; 0           ; 0                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
 +-----------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+----------------+
 
 
-+----------------------------------------------------------+
-; I/O Bank Usage                                           ;
-+----------+----------------+---------------+--------------+
-; I/O Bank ; Usage          ; VCCIO Voltage ; VREF Voltage ;
-+----------+----------------+---------------+--------------+
-; 1        ; 1 / 17 ( 6 % ) ; 3.3V          ; --           ;
-; 2        ; 0 / 13 ( 0 % ) ; 3.3V          ; --           ;
-+----------+----------------+---------------+--------------+
++-----------------------------------------------------------+
+; I/O Bank Usage                                            ;
++----------+-----------------+---------------+--------------+
+; I/O Bank ; Usage           ; VCCIO Voltage ; VREF Voltage ;
++----------+-----------------+---------------+--------------+
+; 1        ; 0 / 17 ( 0 % )  ; 3.3V          ; --           ;
+; 2        ; 2 / 13 ( 15 % ) ; 3.3V          ; --           ;
++----------+-----------------+---------------+--------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -215,7 +216,7 @@ The pin-out file can be found in D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelinin
 ; B4       ;            ;          ; GND             ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; B5       ;            ;          ; GND             ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; B6       ;            ;          ; GND             ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; B7       ; 54         ; 2        ; GND*            ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; B7       ; 54         ; 2        ; input_vector[0] ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; B8       ; 57         ; 2        ; GND*            ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; C1       ;            ;          ; GND             ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; C2       ; 3          ; 1        ; GND*            ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -232,7 +233,7 @@ The pin-out file can be found in D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelinin
 ; D5       ;            ; 2        ; VCCIO2          ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; D6       ;            ;          ; VCCINT          ; power  ;              ; 1.8V    ; --         ;                 ; --       ; --           ;
 ; D7       ;            ;          ; GND             ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; D8       ; 50         ; 2        ; GND*            ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; D8       ; 50         ; 2        ; input_vector[1] ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; E1       ;            ;          ; GND             ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; E2       ; 8          ; 1        ; GND*            ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; E3       ;            ; 1        ; VCCIO1          ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -256,7 +257,7 @@ The pin-out file can be found in D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelinin
 ; G5       ;            ;          ; GND             ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; G6       ;            ;          ; GND             ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; G7       ; 37         ; 1        ; GND*            ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; G8       ; 39         ; 1        ; input_vector[0] ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; G8       ; 39         ; 1        ; GND*            ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; H1       ; 17         ; 1        ; #TDI            ; input  ;              ;         ; --         ;                 ; --       ; --           ;
 ; H2       ; 18         ; 1        ; #TCK            ; input  ;              ;         ; --         ;                 ; --       ; --           ;
 ; H3       ; 20         ; 1        ; GND*            ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -294,6 +295,7 @@ Note: User assignments will override these defaults. The user specified values a
 ; Pin Name        ; Reason                      ;
 +-----------------+-----------------------------+
 ; input_vector[0] ; Missing location assignment ;
+; input_vector[1] ; Missing location assignment ;
 +-----------------+-----------------------------+
 
 
@@ -302,7 +304,7 @@ Note: User assignments will override these defaults. The user specified values a
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
-; |DUT                       ; 0 (0)       ; 0            ; 0          ; 1    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT                ; DUT         ; work         ;
+; |DUT                       ; 0 (0)       ; 0            ; 0          ; 2    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT                ; DUT         ; work         ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -313,6 +315,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name            ; Pin Type ; Pad to Core 0 ;
 +-----------------+----------+---------------+
 ; input_vector[0] ; Input    ; (0)           ;
+; input_vector[1] ; Input    ; (0)           ;
 +-----------------+----------+---------------+
 
 
@@ -355,7 +358,7 @@ Info (171003): Fitter is performing an Auto Fit compilation, which may decrease 
 Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
 Info (176444): Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices
     Info (176445): Device 5M80ZM64C4 is compatible
-Critical Warning (169085): No exact pin location assignment(s) for 1 pins of 1 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
+Critical Warning (169085): No exact pin location assignment(s) for 2 pins of 2 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
 Warning (332046): Timing netlist is empty. No timing reports will be generated.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'uP.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332128): Timing requirements not specified -- optimizing circuit to achieve the following default global requirements
@@ -367,7 +370,7 @@ Info (186468): Started processing fast register assignments
 Info (186469): Finished processing fast register assignments
 Info (176235): Finished register packing
 Info (176214): Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
-    Info (176211): Number of I/O pins in group: 1 (unused VREF, 3.3V VCCIO, 1 input, 0 output, 0 bidirectional)
+    Info (176211): Number of I/O pins in group: 2 (unused VREF, 3.3V VCCIO, 2 input, 0 output, 0 bidirectional)
         Info (176212): I/O standards used: 3.3-V LVTTL.
 Info (176215): I/O bank details before I/O pin placement
     Info (176214): Statistics of I/O banks
@@ -387,13 +390,13 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.01 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.02 seconds.
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file D:/IITB/Semester_4/EE309/IITB-RISC-22/Pipelining/uP/output_files/uP.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5312 megabytes
-    Info: Processing ended: Wed Jun 08 19:20:07 2022
+    Info: Peak virtual memory: 5313 megabytes
+    Info: Processing ended: Thu Jun 09 11:37:33 2022
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

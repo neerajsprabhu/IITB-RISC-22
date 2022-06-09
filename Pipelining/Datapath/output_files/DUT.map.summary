@@ -1,9 +1,9 @@
-Analysis & Synthesis Status : Successful - Tue May 10 09:53:08 2022
+Analysis & Synthesis Status : Successful - Thu Jun 09 11:31:37 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : DUT
 Top-level Entity Name : datapath
 Family : MAX V
-Total logic elements : 2,769
-Total pins : 95
+Total logic elements : 0
+Total pins : 96
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

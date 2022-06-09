@@ -82,7 +82,6 @@ set_global_assignment -name VHDL_FILE mux41.vhd
 set_global_assignment -name VHDL_FILE mux21.vhd
 set_global_assignment -name VHDL_FILE "mux21 _3.vhd"
 set_global_assignment -name VHDL_FILE MEMWB.vhd
-set_global_assignment -name VHDL_FILE memory.vhd
 set_global_assignment -name VHDL_FILE LUT.vhd
 set_global_assignment -name VHDL_FILE inc_LMSM.vhd
 set_global_assignment -name VHDL_FILE inc.vhd
